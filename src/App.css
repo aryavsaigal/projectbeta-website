@@ -263,6 +263,55 @@ body {
   background-position: top right;
 }
 
+.window {
+  position: fixed;
+  width: 55vw;
+  height: 75vh;
+  background-color: rgb(32, 32, 32);
+  outline: 1px solid rgb(96, 96, 96);
+  top: 50px;
+  left: 1600px;
+  box-shadow: 0 7.5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.window--header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  height: 40px;
+  border-bottom: 1px solid rgb(96, 96, 96);
+  display: flex;
+  align-items: center;
+  cursor: move;
+}
+
+.window--header>* {
+  margin: 0 10px;
+}
+
+.window--header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.window--header img {
+  width: 30px;
+}
+
+.window--header .window--close {
+  width: 15px;
+  margin-left: auto;
+  margin-right: 0px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: 0.2s;
+}
+
+.window--header .window--close:hover {
+  background-color: rgb(255, 85, 85);
+}
 
 ::-webkit-scrollbar {
   width: 10px;

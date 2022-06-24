@@ -1,6 +1,6 @@
 import React from "react";
 import DesktopButtons from "./DesktopButtons.js";
-import foldersrc from "../images/folder.png";
+import foldersrc from "../../images/folder.png";
 
 export default function Desktop() {
   return (

@@ -1,7 +1,7 @@
 import "./App.css";
-import Taskbar from "./components/Taskbar";
-import Desktop from "./components/Desktop";
-import Homepage from "./components/Homepage";
+import Taskbar from "./components/main/Taskbar";
+import Desktop from "./components/main/Desktop";
+import Homepage from "./components/home/Homepage";
 
 function App() {
   return (

@@ -153,6 +153,8 @@ body {
 
 #h1_light {
   font-family: "Code Pro Light";
+  font-weight: lighter;
+  letter-spacing: -2.5px;
 }
 
 #h1_bold {

@@ -69,7 +69,6 @@ body {
 }
 
 .desktopbtn--container {
-  background-color: red;
   display: flex;
   flex-direction: column;
   width: fit-content;
@@ -82,7 +81,6 @@ body {
 .desktopbtn {
   margin-bottom: 20px;
   margin-right: 10px;
-  background-color: chartreuse;
   width: 80px;
   position: relative;
   cursor: pointer;

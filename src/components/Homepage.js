@@ -1,23 +1,12 @@
 import React from "react";
-import logo_src from "../images/logo-white.png";
-import downarrow_src from "../images/nav-down.png";
+import TitleScreen from "./TitleScreen";
+import HomeInfoCards from "./HomeInfoCards";
 
 export default function Homepage() {
   return (
     <div className="homepage">
-      <div className="homepage--title_container">
-        <img src={logo_src} alt="PB Logo" />
-        <h1>
-          <span id="h1_light">Project</span>
-          <span id="h1_bold">Beta</span>
-        </h1>
-      </div>
-      <p className="homepage--date">06|08|2022 - 13|08|2022</p>
-      <img
-        className="homepage--downarrow"
-        src={downarrow_src}
-        alt="Down arrow"
-      />
+      <TitleScreen />
+      <HomeInfoCards />
     </div>
   );
 }

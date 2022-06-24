@@ -15,36 +15,57 @@ body {
 
 .taskbar {
   width: 100%;
-  background-color: rgb(41, 41, 41);
+  background-color: rgb(29, 29, 29);
   height: 40px;
   position: fixed;
   object-position: center center;
   bottom: 0px;
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.taskbar--logo {
+.taskbar>.taskbar--logo {
   padding: 5px;
   margin: 0 5px;
+  width: 30px;
+}
+
+.taskbar a img,
+.taskbar img {
+  padding: 10px;
+  margin: 0 5px;
+  width: 20px;
 }
 
 .taskbar--searchbar {
-  border: 3px solid rgb(98, 98, 98);
+  outline: 3px solid rgb(98, 98, 98);
   background-color: rgb(73, 73, 73);
   width: 300px;
+  height: 34px;
   position: relative;
   user-select: none;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  justify-content: flex-start;
+}
+
+.taskbar--searchbar img {
+  margin: 0 5px;
+  width: 20px;
 }
 
 .taskbar--searchbar p {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto 0;
   width: fit-content;
+  height: fit-content;
   color: rgb(175, 175, 175);
-  line-height: 0;
+}
+
+.taskbar--timer {
+  margin: 0 10px;
+  padding: 0;
 }
 
 .desktopbtn--container {

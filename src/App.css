@@ -3,6 +3,21 @@
   src: url("./fonts/Segoe\ UI.ttf");
 }
 
+@font-face {
+  font-family: "Code Bold";
+  src: url("./fonts/Code\ Bold.otf");
+}
+
+@font-face {
+  font-family: "Code Pro Light";
+  src: url("./fonts/Code\ Pro\ Light.otf");
+}
+
+@font-face {
+  font-family: "Ubuntu Mono";
+  src: url("./fonts/UbuntuMono-Regular.ttf");
+}
+
 html,
 body {
   color: white;
@@ -23,6 +38,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  z-index: 10001;
 }
 
 .taskbar>.taskbar--logo {
@@ -76,6 +92,8 @@ body {
   margin: 10px;
   max-height: calc(100vh - 40px);
   flex-wrap: wrap;
+  z-index: 10000;
+  padding-top: 10px;
 }
 
 .desktopbtn {
@@ -97,5 +115,73 @@ body {
   text-align: center;
   margin: 0;
   font-size: 12px;
-  text-shadow: 0 0px 2px black;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.400), -1px -1px 3px rgba(0, 0, 0, 0.400), 1px -1px 3px rgba(0, 0, 0, 0.400), -1px 1px 3px rgba(0, 0, 0, 0.400);
+}
+
+.homepage {
+  width: 100%;
+  height: calc(100vh - 40px);
+  position: relative;
+}
+
+.homepage--title_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+}
+
+.homepage--title_container>img {
+  width: 200px;
+}
+
+.homepage--title_container>h1 {
+  margin: 40px;
+  font-size: 70px;
+}
+
+#h1_light {
+  font-family: "Code Pro Light";
+}
+
+#h1_bold {
+  font-family: "Code Bold";
+}
+
+.homepage--date {
+  color: #ca4a16;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bolder;
+  bottom: 15vh;
+  font-size: 22px;
+  font-family: "Ubuntu Mono";
+}
+
+.homepage--downarrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
+  width: 40px;
+  animation-name: idle_move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes idle_move {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }

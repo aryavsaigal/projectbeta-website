@@ -317,13 +317,11 @@ body {
 }
 
 .window--content {
-  background-color: white;
   position: absolute;
   width: 100%;
   height: calc(100% - 40px);
   top: 40px;
   left: 0px;
-  color: black;
 }
 
 

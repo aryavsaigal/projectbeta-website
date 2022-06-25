@@ -13,12 +13,6 @@ export default function Window(props) {
     cursor_y: 0,
   });
   const obj = React.useRef();
-  const bounds = {
-    top: 0,
-    left: 0,
-    bottom: document.documentElement.clientHeight - 40,
-    right: document.documentElement.clientWidth,
-  };
 
   React.useEffect(() => {
     obj.current.style.left = `${props.x}px`;
@@ -87,9 +81,7 @@ export default function Window(props) {
         />
         <img src={close_src} className="window--close" alt="Close button" />
       </div>
-      <div className="window--content">
-        <h1>{JSON.stringify(bounds)}</h1>
-      </div>
+      <div className="window--content"></div>
     </div>
   );
 }

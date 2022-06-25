@@ -37,7 +37,6 @@ export default function Timer() {
       };
 
       setCountdown(countdown);
-      console.log(diff);
     }, 1000);
   }
   function addDoubleZero(num) {

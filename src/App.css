@@ -269,8 +269,6 @@ body {
   height: 75vh;
   background-color: rgb(32, 32, 32);
   outline: 1px solid rgb(96, 96, 96);
-  top: 50px;
-  left: 1600px;
   box-shadow: 0 7.5px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -283,7 +281,7 @@ body {
   border-bottom: 1px solid rgb(96, 96, 96);
   display: flex;
   align-items: center;
-  cursor: move;
+
 }
 
 .window--header>* {
@@ -300,9 +298,14 @@ body {
   width: 30px;
 }
 
+.window--header .window--move {
+  margin-left: auto;
+  width: 20px;
+  cursor: move;
+}
+
 .window--header .window--close {
   width: 15px;
-  margin-left: auto;
   margin-right: 0px;
   cursor: pointer;
   padding: 10px 20px;
@@ -312,6 +315,17 @@ body {
 .window--header .window--close:hover {
   background-color: rgb(255, 85, 85);
 }
+
+.window--content {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 40px);
+  top: 40px;
+  left: 0px;
+  color: black;
+}
+
 
 ::-webkit-scrollbar {
   width: 10px;

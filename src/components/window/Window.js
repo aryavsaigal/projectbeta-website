@@ -86,9 +86,7 @@ export default function Window(props) {
         />
         <img src={close_src} className="window--close" alt="Close button" />
       </div>
-      <div className="window--content">
-        <h1>{JSON.stringify(bounds)}</h1>
-      </div>
+      <div className="window--content"></div>
     </div>
   );
 }

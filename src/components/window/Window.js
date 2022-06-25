@@ -23,6 +23,7 @@ export default function Window(props) {
   React.useEffect(() => {
     obj.current.style.left = `${props.x}px`;
     obj.current.style.top = `${props.y}px`;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function handleDragStart(event) {

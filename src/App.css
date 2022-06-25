@@ -324,6 +324,11 @@ body {
   left: 0px;
 }
 
+.explorer {
+  display: grid;
+  grid-template: 100% / 100px 1fr;
+}
+
 
 ::-webkit-scrollbar {
   width: 10px;

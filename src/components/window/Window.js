@@ -3,6 +3,8 @@ import logo_src from "../../images/logo-white.png";
 import close_src from "../../images/close.png";
 import move_src from "../../images/nav-move.png";
 
+import Explorer from "./Explorer";
+
 export default function Window(props) {
   const [location, setLocation] = React.useState({
     abs_x: props.x,
@@ -45,7 +47,6 @@ export default function Window(props) {
       location.abs_y + (event.clientY - location.cursor_y)
     }px`;
   }
-
   function handleDragEnd(event) {
     setLocation((e) => {
       return {
@@ -79,9 +80,16 @@ export default function Window(props) {
           onDragEnd={handleDragEnd}
           draggable={true}
         />
-        <img src={close_src} className="window--close" alt="Close button" />
+        <img
+          src={close_src}
+          className="window--close"
+          alt="Close button"
+          onClick={props.removeWindow}
+        />
       </div>
-      <div className="window--content"></div>
+      <div className="window--content">
+        <Explorer />
+      </div>
     </div>
   );
 }

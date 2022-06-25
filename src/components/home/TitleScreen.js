@@ -1,6 +1,6 @@
 import React from "react";
 import logo_src from "../../images/logo-white.png";
-import downarrow_src from "../../images/nav-down.png";
+import downarrow_src from "../../images/navigation/nav-down.png";
 
 export default function TitleScreen() {
   return (

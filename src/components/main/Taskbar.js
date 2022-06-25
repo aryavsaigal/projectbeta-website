@@ -1,12 +1,12 @@
 import React from "react";
 
 import logo_src from "../../images/logo-white.png";
-import search_src from "../../images/search.png";
+import search_src from "../../images/navigation/search.png";
 
 import ig_src from "../../images/link-ig.png";
 import gh_src from "../../images/link-gh.png";
 import fb_src from "../../images/link-fb.png";
-import notif_src from "../../images/notif.png";
+import notif_src from "../../images/navigation/notif.png";
 
 import Timer from "./Timer";
 

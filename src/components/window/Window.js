@@ -1,7 +1,7 @@
 import React from "react";
 import logo_src from "../../images/logo-white.png";
-import close_src from "../../images/close.png";
-import move_src from "../../images/nav-move.png";
+import close_src from "../../images/navigation/close.png";
+import move_src from "../../images/navigation/nav-move.png";
 
 import Explorer from "./Explorer";
 

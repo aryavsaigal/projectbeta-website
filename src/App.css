@@ -1,9 +1,4 @@
 @font-face {
-  font-family: "Segoe UI";
-  src: url("./fonts/Segoe\ UI.ttf");
-}
-
-@font-face {
   font-family: "Code Bold";
   src: url("./fonts/Code\ Bold.otf");
 }
@@ -18,6 +13,11 @@
   src: url("./fonts/UbuntuMono-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Ubuntu";
+  src: url("./fonts/Ubuntu-Regular.ttf");
+}
+
 html,
 body {
   color: white;
@@ -25,7 +25,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgb(0, 17, 50);
-  font-family: "Segoe UI";
+  font-family: "Ubuntu";
 }
 
 .taskbar {
@@ -82,6 +82,7 @@ body {
 .taskbar--timer {
   margin: 0 10px;
   padding: 0;
+  font-family: "Ubuntu Mono";
 }
 
 .desktopbtn--container {
@@ -326,7 +327,38 @@ body {
 
 .explorer {
   display: grid;
-  grid-template: 100% / 100px 1fr;
+  grid-template: 1fr / 120px auto;
+  height: 100%;
+}
+
+.explorer--sidebar {
+  border-right: 1px solid rgb(96, 96, 96);
+  flex-direction: column;
+  height: calc(100% - 20px);
+  position: relative;
+  padding: 10px;
+}
+
+.explorer--sidebar>div {
+  align-items: center;
+  display: flex;
+}
+
+.explorer--sidebar>div>p {
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.explorer--sidebar>div>img {
+  width: 18px;
+}
+
+.explorer--foldergrid {
+  display: flex;
+  padding: 10px;
+  height: calc(100% - 20px);
+  width: calc(100% - 20px);
+  flex-wrap: wrap;
 }
 
 

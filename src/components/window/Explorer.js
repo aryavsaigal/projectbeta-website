@@ -4,6 +4,8 @@ import star_src from "../../images/explorer-star.png";
 import thispc_src from "../../images/explorer-thispc.png";
 import network_src from "../../images/explorer-network.png";
 
+import EventsFolder from "../data/EventsFolder";
+
 export default function Explorer(props) {
   return (
     <div className="explorer">
@@ -21,7 +23,9 @@ export default function Explorer(props) {
           <p>Network</p>
         </div>
       </div>
-      <div className="explorer--foldergrid"></div>
+      <div className="explorer--foldergrid">
+        <EventsFolder />
+      </div>
     </div>
   );
 }

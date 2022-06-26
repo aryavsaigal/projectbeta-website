@@ -3,20 +3,31 @@ import TitleScreen from "./TitleScreen";
 import HomeInfoCards from "./HomeInfoCards";
 import Window from "../window/Window";
 
+import Desktop from "./../main/Desktop";
+
 export default function Homepage() {
   // {app:"explorer","id":"1"}
-  // const [windowHandler, setWindowHandler] = React.useState([
-  //   { app: "explorer", id: "1" },
-  // ]);
+  const [windowHandler, setWindowHandler] = React.useState([
+    { id: "1", x: 100, y: 100, z: 200, visible: true, dir: "Alumni.zip" },
+    { id: "2", x: 150, y: 150, z: 300, visible: true, dir: "Events" },
+    { id: "3", x: 200, y: 200, z: 400, visible: true, dir: "Sponsors" },
+  ]);
 
-  function addWindow(app) {}
+  function addWindow(app) {
+    const newWindowArray = windowHandler.map((e) =>
+      e.dir === app ? { ...e, visible: true } : e
+    );
+    setWindowHandler(newWindowArray);
+
+    console.log(windowHandler);
+  }
   function removeWindow(app) {
-    // let sample = windowHandler;
-    // sample.splice(
-    //   sample.findIndex((e) => e.app === app),
-    //   1
-    // );
-    // console.log(sample);
+    const newWindowArray = windowHandler.map((e) =>
+      e.dir === app ? { ...e, visible: false } : e
+    );
+    setWindowHandler(newWindowArray);
+
+    console.log(windowHandler);
   }
 
   // const [windowAssigner, setWindowAssigner] = React.useState({
@@ -42,42 +53,25 @@ export default function Homepage() {
   //   );
   // });
 
+  function createWindows() {
+    return windowHandler.map((item) => (
+      <Window
+        {...item}
+        key={item.id}
+        removeWindow={removeWindow}
+        addWindow={addWindow}
+      />
+    ));
+  }
+
   return (
-    <div className="homepage">
-      <TitleScreen />
-      <HomeInfoCards />
-      <div>
-        <Window
-          id={1}
-          x={100}
-          y={50}
-          z={400}
-          visible={true}
-          removeWindow={removeWindow}
-          addWindow={addWindow}
-          dir={["Alumni.zip"]}
-        />
-        <Window
-          id={2}
-          x={150}
-          y={100}
-          z={300}
-          visible={true}
-          removeWindow={removeWindow}
-          addWindow={addWindow}
-          dir={["Events"]}
-        />
-        <Window
-          id={3}
-          x={200}
-          y={150}
-          z={200}
-          visible={true}
-          removeWindow={removeWindow}
-          addWindow={addWindow}
-          dir={["Sponsors"]}
-        />
+    <>
+      <Desktop addWindow={addWindow} />
+      <div className="homepage">
+        <TitleScreen />
+        <HomeInfoCards />
+        <div>{createWindows()}</div>
       </div>
-    </div>
+    </>
   );
 }

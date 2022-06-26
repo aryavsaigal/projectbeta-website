@@ -2,16 +2,22 @@ import React from "react";
 import DesktopButtons from "./DesktopButtons.js";
 import foldersrc from "../../images/folders/folder.png";
 
-export default function Desktop() {
-  return (
-    <div className="desktopbtn--container">
-      <DesktopButtons src={foldersrc} name="Desktop" />
-      <DesktopButtons src={foldersrc} name="Sponsors" />
-      <DesktopButtons src={foldersrc} name="Schedule.jpg" />
-      <DesktopButtons src={foldersrc} name="Events" />
-      <DesktopButtons src={foldersrc} name="Team.pdf" />
-      <DesktopButtons src={foldersrc} name="Alumni.zip" />
-      <DesktopButtons src={foldersrc} name="Contact.pdf" />
-    </div>
-  );
+export default function Desktop(props) {
+  const desktopbtndata = [
+    { src: foldersrc, btn_name: "Desktop" },
+    { src: foldersrc, btn_name: "Sponsors" },
+    { src: foldersrc, btn_name: "Schedule.jpg" },
+    { src: foldersrc, btn_name: "Events" },
+    { src: foldersrc, btn_name: "Team.pdf" },
+    { src: foldersrc, btn_name: "Alumni.zip" },
+    { src: foldersrc, btn_name: "Contact.pdf" },
+  ];
+
+  function CreateDesktopButtons() {
+    return desktopbtndata.map((e) => (
+      <DesktopButtons src={e.src} name={e.btn_name} id={e.src} {...props} />
+    ));
+  }
+
+  return <div className="desktopbtn--container">{CreateDesktopButtons()}</div>;
 }

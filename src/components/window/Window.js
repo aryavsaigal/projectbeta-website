@@ -25,6 +25,9 @@ export default function Window(props) {
     obj.current.style.zIndex = `${props.z}`;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  React.useEffect(() => {
+    obj.current.style.display = props.visible ? "initial" : "none";
+  }, [props]);
 
   function handleDragStart(event) {
     setLocation((e) => {
@@ -69,13 +72,10 @@ export default function Window(props) {
       location.abs_y + (event.clientY - location.cursor_y)
     }px`;
   }
-  function closeWindow() {
-    obj.current.style.display = "none";
-  }
 
   function setWindowContent(dir) {
-    if (dir[0].indexOf(".") === -1) return <Explorer {...props} />;
-    else if (dir[0] === "Alumni.zip") return <Textfile {...props} />;
+    if (dir.indexOf(".") === -1) return <Explorer {...props} />;
+    else if (dir === "Alumni.zip") return <Textfile {...props} />;
   }
   const windowContent = setWindowContent(props.dir);
 
@@ -83,7 +83,7 @@ export default function Window(props) {
     <div className="window" id={`window--${props.id}`} ref={obj}>
       <div className="window--header">
         <img src={logo_src} alt="PB Logo" />
-        <h3>C:/ProjectBeta/{props.dir.join("/")}</h3>
+        <h3>C:/ProjectBeta/{props.dir}</h3>
         <img
           src={move_src}
           className="window--move"
@@ -97,7 +97,7 @@ export default function Window(props) {
           src={close_src}
           className="window--close"
           alt="Close button"
-          onClick={closeWindow}
+          onClick={() => props.removeWindow(props.dir)}
         />
       </div>
       <div className="window--content">{windowContent}</div>

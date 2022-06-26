@@ -30,9 +30,7 @@ export default function Textfile(props) {
   }
   return (
     <div className="textfile">
-      <p className="txtcontent">
-        {props.dir[0] === "Alumni.zip" && AlumniText()}
-      </p>
+      <p className="txtcontent">{props.dir === "Alumni.zip" && AlumniText()}</p>
     </div>
   );
 }

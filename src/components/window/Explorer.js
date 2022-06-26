@@ -25,8 +25,8 @@ export default function Explorer(props) {
         </div>
       </div>
       <div className="explorer--foldergrid">
-        {props.dir[0] === "Events" && <EventsFolder {...props} />}
-        {props.dir[0] === "Sponsors" && <SponsorsFolder {...props} />}
+        {props.dir === "Events" && <EventsFolder {...props} />}
+        {props.dir === "Sponsors" && <SponsorsFolder {...props} />}
       </div>
     </div>
   );

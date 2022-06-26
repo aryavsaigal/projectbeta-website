@@ -14,45 +14,34 @@ export default function Homepage() {
   ]);
 
   function addWindow(app) {
-    const newWindowArray = windowHandler.map((e) =>
+    let maxZ = 0;
+    windowHandler.forEach((e) => {
+      if (e.z > maxZ) maxZ = e.z;
+    });
+    let newWindowArray = windowHandler.map((e) => {
+      return e.dir === app && e.z !== maxZ ? { ...e, z: maxZ + 1 } : e;
+    });
+    newWindowArray = newWindowArray.map((e) =>
       e.dir === app ? { ...e, visible: true } : e
     );
     setWindowHandler(newWindowArray);
-
-    console.log(windowHandler);
   }
   function removeWindow(app) {
     const newWindowArray = windowHandler.map((e) =>
       e.dir === app ? { ...e, visible: false } : e
     );
     setWindowHandler(newWindowArray);
-
-    console.log(windowHandler);
   }
-
-  // const [windowAssigner, setWindowAssigner] = React.useState({
-  //   start_x: 50,
-  //   start_y: 50,
-  //   id: 0,
-  // });
-
-  // const windowArrary = windowHandler.map((item) => {
-  //   setWindowAssigner((prevState) => ({
-  //     start_x: prevState.start_x + 50,
-  //     start_y: prevState.start_y + 50,
-  //     id: prevState.id + 1,
-  //   }));
-  //   return (
-  //     <Window
-  //       id={windowAssigner.id}
-  //       x={windowAssigner.x}
-  //       y={windowAssigner.y}
-  //       removeWindow={removeWindow}
-  //       addWindow={addWindow}
-  //     />
-  //   );
-  // });
-
+  function focusWindow(app) {
+    let maxZ = 0;
+    windowHandler.forEach((e) => {
+      if (e.z > maxZ) maxZ = e.z;
+    });
+    const newWindowArray = windowHandler.map((e) => {
+      return e.dir === app && e.z !== maxZ ? { ...e, z: maxZ + 1 } : e;
+    });
+    setWindowHandler(newWindowArray);
+  }
   function createWindows() {
     return windowHandler.map((item) => (
       <Window
@@ -60,6 +49,7 @@ export default function Homepage() {
         key={item.id}
         removeWindow={removeWindow}
         addWindow={addWindow}
+        focusWindow={focusWindow}
       />
     ));
   }

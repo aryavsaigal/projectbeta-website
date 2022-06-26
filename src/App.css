@@ -26,6 +26,7 @@ body {
   height: 100%;
   background-color: #002b36;
   font-family: "Ubuntu";
+  box-sizing: border-box;
 }
 
 .taskbar {
@@ -52,6 +53,7 @@ body {
   padding: 10px;
   margin: 0 5px;
   width: 20px;
+  user-select: none;
 }
 
 .taskbar--searchbar {
@@ -103,12 +105,21 @@ body {
   width: 80px;
   position: relative;
   cursor: pointer;
+  outline: 1px solid rgba(123, 207, 255, 0);
+  transition-delay: 0.3s;
+}
+
+.desktopbtn:active {
+  background-color: rgba(123, 196, 255, 0.437);
+  outline: 1px solid rgb(123, 180, 255);
+  transition-delay: 0s;
 }
 
 .desktopbtn--icon {
   width: 50px;
   margin: 0 15px;
   filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.444));
+  user-select: none;
 }
 
 .desktopbtn--name {
@@ -141,6 +152,7 @@ body {
   display: flex;
   align-items: center;
   margin: auto;
+  user-select: none;
 }
 
 .titlescreen--title_container>img {
@@ -183,6 +195,7 @@ body {
   animation-name: idle_move;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+  user-select: none;
 }
 
 @keyframes idle_move {
@@ -245,6 +258,7 @@ body {
   width: 150px;
   top: 0;
   right: 0;
+  user-select: none;
 }
 
 .window {
@@ -280,12 +294,14 @@ body {
 
 .window--header img {
   width: 30px;
+  user-select: none;
 }
 
 .window--header .window--move {
   margin-left: auto;
   width: 20px;
   cursor: move;
+  user-select: none;
 }
 
 .window--header .window--close {
@@ -294,6 +310,7 @@ body {
   cursor: pointer;
   padding: 10px 20px;
   transition: 0.2s;
+  user-select: none;
 }
 
 .window--header .window--close:hover {
@@ -313,6 +330,8 @@ body {
   position: absolute;
   width: 100%;
   overflow-y: scroll;
+  box-sizing: border-box;
+  max-height: 100%;
 }
 
 .explorer {
@@ -349,22 +368,32 @@ body {
   width: fit-content;
   height: fit-content;
   flex-wrap: wrap;
-  /* background-color: blue; */
 }
 
 .explorer--foldergrid>div {
   margin-bottom: 10px;
-  margin-right: 17.5px;
+  margin-right: 10px;
   width: 120px;
-
   cursor: pointer;
-  /* background-color: red; */
+  outline: 1px solid rgba(123, 180, 255, 0);
+  transition-delay: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 10px;
+}
+
+.explorer--foldergrid>div:active {
+  background-color: rgba(123, 196, 255, 0.437);
+  outline: 1px solid rgb(123, 180, 255);
+  transition-delay: 0s;
 }
 
 .explorer--foldergrid>div>img {
   width: 100px;
   margin: 0 15px;
   filter: drop-shadow(0 5px 5px rgba(245, 245, 245, 0.444));
+  user-select: none;
 }
 
 .explorer--foldergrid>div>p {
@@ -378,10 +407,10 @@ body {
 .textfile {
   background-color: white;
   color: black;
+  padding: 10px;
 }
 
-.textfile p {
-  margin: 10px;
+.textfile div {
   font-family: "Ubuntu Mono";
   white-space: pre-line;
 }

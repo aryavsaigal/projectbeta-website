@@ -8,16 +8,16 @@ import eventsData from "../data/Events";
 import SponsorsFolder from "../data/SponsorsFolder";
 
 export default function Explorer(props) {
-  function EventsGrid() {
+  function setEventsGrid() {
     const generator = eventsData();
-    generator.forEach((e) => e.name.replace(/ /g, "_"));
     return generator.map((e) => (
-      <div>
+      <div key={e.name.replace(/ /g, "_") + ".pdf"}>
         <img src={e.img_src} alt={`${e.name} Logo`} />
-        <p>{e.name}</p>
+        <p>{e.name.replace(/ /g, "_") + ".pdf"}</p>
       </div>
     ));
   }
+  const [eventsGrid, unused] = React.useState(setEventsGrid());
 
   return (
     <div className="explorer">
@@ -36,7 +36,7 @@ export default function Explorer(props) {
         </div>
       </div>
       <div className="explorer--foldergrid">
-        {props.dir === "Events" && <EventsGrid {...props} />}
+        {props.dir === "Events" && eventsGrid}
         {props.dir === "Sponsors" && <SponsorsFolder {...props} />}
       </div>
     </div>

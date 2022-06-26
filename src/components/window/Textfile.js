@@ -1,33 +1,37 @@
 import React from "react";
 
 export default function Textfile(props) {
-  const alumniText =
-    "-----\n\
-  2020\n\
-  \n\
-  Parth Sarthi - President\n\
-  Shorya Mehra - Vice President\n\
-  Krish Goel - Head of AI and IoT\n\
-  Jayani Tripathi - Head of AI and IoT\n\
-  Amartya Charkrborthy - Head of Graphic Design\n\
-  Kartikay Kataria - Head of Graphic Design\n\
-  Yashwin Chaudhary - head of PC Gaming\n\
-  Tejas Gandhi - Head of Console Gaming\n\
-  \n\
-  -----\n\
-  2019\n\
-  Vibhhu Sharma - President\n\
-  Krish Goel - Vice President\n\
-  Sarthak Bhatnagar - Head of Gaming\n\
-  \n\
-  -----\n\
-  2018\n\
-  ";
-
+  function AlumniText() {
+    return (
+      <>
+        <div>-----</div>
+        <div>2020</div>
+        <div>{"\n"}</div>
+        <div> Parth Sarthi - President</div>
+        <div> Shorya Mehra - Vice President</div>
+        <div> Krish Goel - Head of AI and IoT</div>
+        <div> Jayani Tripathi - Head of AI and IoT</div>
+        <div> Amartya Charkrborthy - Head of Graphic Design</div>
+        <div> Kartikay Kataria - Head of Graphic Design</div>
+        <div> Yashwin Chaudhary - head of PC Gaming</div>
+        <div> Tejas Gandhi - Head of Console Gaming</div>
+        <div>{"\n"}</div>
+        <div>-----</div>
+        <div>2019</div>
+        <div>{"\n"}</div>
+        <div> Vibhhu Sharma - President</div>
+        <div> Krish Goel - Vice President</div>
+        <div> Sarthak Bhatnagar - Head of Gaming</div>
+        <div>{"\n"}</div>
+        <div>-----</div>
+        <div>2018</div>
+      </>
+    );
+  }
   return (
     <div className="textfile">
       <p className="txtcontent">
-        {props.dir[0] === "Alumni.zip" && alumniText}
+        {props.dir[0] === "Alumni.zip" && AlumniText()}
       </p>
     </div>
   );

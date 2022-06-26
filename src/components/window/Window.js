@@ -19,10 +19,10 @@ export default function Window(props) {
     cursor_y: 0,
   });
   const obj = React.useRef();
-
   React.useEffect(() => {
     obj.current.style.left = `${props.x}px`;
     obj.current.style.top = `${props.y}px`;
+    obj.current.style.zIndex = `${props.z}`;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -69,6 +69,9 @@ export default function Window(props) {
       location.abs_y + (event.clientY - location.cursor_y)
     }px`;
   }
+  function closeWindow() {
+    obj.current.style.display = "none";
+  }
 
   function setWindowContent(dir) {
     if (dir[0].indexOf(".") === -1) return <Explorer {...props} />;
@@ -94,7 +97,7 @@ export default function Window(props) {
           src={close_src}
           className="window--close"
           alt="Close button"
-          onClick={props.removeWindow}
+          onClick={closeWindow}
         />
       </div>
       <div className="window--content">{windowContent}</div>

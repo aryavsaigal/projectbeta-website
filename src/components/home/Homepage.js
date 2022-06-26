@@ -51,22 +51,28 @@ export default function Homepage() {
           id={1}
           x={100}
           y={50}
+          z={400}
+          visible={true}
           removeWindow={removeWindow}
           addWindow={addWindow}
           dir={["Alumni.zip"]}
         />
         <Window
-          id={1}
+          id={2}
           x={150}
           y={100}
+          z={300}
+          visible={true}
           removeWindow={removeWindow}
           addWindow={addWindow}
           dir={["Events"]}
         />
         <Window
-          id={1}
+          id={3}
           x={200}
           y={150}
+          z={200}
+          visible={true}
           removeWindow={removeWindow}
           addWindow={addWindow}
           dir={["Sponsors"]}

@@ -24,7 +24,7 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(0, 17, 50);
+  background-color: #002b36;
   font-family: "Ubuntu";
 }
 
@@ -163,7 +163,7 @@ body {
 }
 
 .titlescreen--date {
-  color: #ca4a16;
+  color: #cb4b16;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -208,60 +208,43 @@ body {
   grid-gap: 25px;
 }
 
-.home_infocards--container hr {
-  height: 2px;
-  border-width: 0;
-  color: rgba(181, 181, 181, 0.352);
-  background-color: rgba(255, 255, 255, 0.367)
-}
 
 .home_infocards--container>div {
   background-color: #073642;
   border-radius: 10px;
   padding: 15px;
+  position: relative;
+  border-bottom: 10px solid #eee8d5;
 }
 
 .home_infocards--container h2 {
   color: #fcf7e3;
   font-size: 35px;
   font-family: "Ubuntu Mono";
-  margin: 20px 30px;
+  margin: 20px 0px;
 }
 
 .home_infocards--container a {
   color: #eee8d5;
-  font-family: "Ubuntu Mono";
   font-weight: bold;
 }
 
 .home_infocards--container>div p {
-  padding: 5px;
+  padding: 0px;
   font-size: 16px;
-}
-
-.home_infocards--2022 {
-  border-bottom: 10px solid #586e75;
-  background-image: url("./images/homeinfocard-star.png");
-  background-repeat: no-repeat;
-  background-size: 100px;
-  background-position: top right;
-}
-
-.home_infocards--about {
-  border-bottom: 10px solid #586e75;
-  background-image: url("./images/homeinfocard-info.png");
-  background-repeat: no-repeat;
-  background-size: 100px;
-  background-position: top right;
+  text-align: justify;
 }
 
 .home_infocards--contact {
   grid-column: span 2;
-  border-bottom: 10px solid #586e75;
-  background-image: url("./images/homeinfocard-call.png");
-  background-repeat: no-repeat;
-  background-size: 100px;
-  background-position: top right;
+}
+
+.home_infocards--container img {
+  opacity: 0.5;
+  position: absolute;
+  width: 150px;
+  top: 0;
+  right: 0;
 }
 
 .window {

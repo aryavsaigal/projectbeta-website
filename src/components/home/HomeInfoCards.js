@@ -1,11 +1,14 @@
 import React from "react";
 
+import star_src from "../../images/homeinfocard-star.png";
+import info_src from "../../images/homeinfocard-info.png";
+import call_src from "../../images/homeinfocard-call.png";
+
 export default function HomeInfoCards() {
   return (
     <div className="home_infocards--container">
       <div className="home_infocards--2022">
         <h2>2022</h2>
-        <hr />
         <p>
           ProjectBeta 6.0 invites out! Click{" "}
           <a href="https://drive.google.com/file/d/17LrfkBwqoPM_AP97ZhC0lnEwDGMMcgdj/view?usp=sharing">
@@ -19,10 +22,10 @@ export default function HomeInfoCards() {
           Continuing the tradition of passing on a unique skillset, the tech
           guild promises to touch new heights this year.
         </p>
+        <img src={star_src} alt="Star icon" />
       </div>
       <div className="home_infocards--about">
         <h2>About</h2>
-        <hr />
         <p>
           ProjectBeta is the tech club of{" "}
           <a href="http://sanskritischool.edu.in/">Sanskriti School</a>. <br />
@@ -36,14 +39,15 @@ export default function HomeInfoCards() {
           the school in various competitions and has grown to become one of the
           foremost clubs of its kind in New Delhi.
         </p>
+        <img src={info_src} alt="Star icon" />
       </div>
       <div className="home_infocards--contact">
         <h2>Contact</h2>
-        <hr />
         <p>
           Want to send an email? Call? Mail a letter? Or simply fill a form? Go
           to the Contact page!
         </p>
+        <img src={call_src} alt="Star icon" />
       </div>
     </div>
   );

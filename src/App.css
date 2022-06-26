@@ -26,6 +26,7 @@ body {
   height: 100%;
   background-color: rgb(0, 17, 50);
   font-family: "Ubuntu";
+  box-sizing: border-box;
 }
 
 .taskbar {
@@ -93,7 +94,7 @@ body {
   margin: 10px;
   max-height: calc(100vh - 40px);
   flex-wrap: wrap;
-  z-index: 10;
+  z-index: 1;
   padding-top: 10px;
 }
 
@@ -103,12 +104,21 @@ body {
   width: 80px;
   position: relative;
   cursor: pointer;
+  outline: 1px solid rgba(123, 207, 255, 0);
+  transition-delay: 0.3s;
+}
+
+.desktopbtn:active {
+  background-color: rgba(123, 196, 255, 0.437);
+  outline: 1px solid rgb(123, 180, 255);
+  transition-delay: 0s;
 }
 
 .desktopbtn--icon {
   width: 50px;
   margin: 0 15px;
   filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.444));
+  user-select: none;
 }
 
 .desktopbtn--name {
@@ -141,6 +151,7 @@ body {
   display: flex;
   align-items: center;
   margin: auto;
+  user-select: none;
 }
 
 .titlescreen--title_container>img {
@@ -297,12 +308,14 @@ body {
 
 .window--header img {
   width: 30px;
+  user-select: none;
 }
 
 .window--header .window--move {
   margin-left: auto;
   width: 20px;
   cursor: move;
+  user-select: none;
 }
 
 .window--header .window--close {
@@ -311,6 +324,8 @@ body {
   cursor: pointer;
   padding: 10px 20px;
   transition: 0.2s;
+  user-select: none;
+  z-index: 100000;
 }
 
 .window--header .window--close:hover {
@@ -327,9 +342,11 @@ body {
 
 .window--content>div {
   height: 100%;
+  max-height: 100%;
   position: absolute;
   width: 100%;
   overflow-y: scroll;
+  box-sizing: border-box;
 }
 
 .explorer {
@@ -371,16 +388,27 @@ body {
 
 .explorer--foldergrid>div {
   margin-bottom: 10px;
-  margin-right: 17.5px;
+  margin-right: 10px;
   width: 120px;
-
   cursor: pointer;
-  /* background-color: red; */
+  outline: 1px solid rgba(123, 180, 255, 0);
+  transition-delay: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  padding: 5px;
+}
+
+.explorer--foldergrid>div:active {
+  background-color: rgba(123, 196, 255, 0.437);
+  outline: 1px solid rgb(123, 180, 255);
+  transition-delay: 0s;
 }
 
 .explorer--foldergrid>div>img {
   width: 100px;
   margin: 0 15px;
+  user-select: none;
   filter: drop-shadow(0 5px 5px rgba(245, 245, 245, 0.444));
 }
 
@@ -395,10 +423,10 @@ body {
 .textfile {
   background-color: white;
   color: black;
+  padding: 10px;
 }
 
-.textfile p {
-  margin: 10px;
+.textfile div {
   font-family: "Ubuntu Mono";
   white-space: pre-line;
 }

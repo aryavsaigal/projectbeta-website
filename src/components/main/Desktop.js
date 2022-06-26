@@ -15,13 +15,7 @@ export default function Desktop(props) {
 
   function CreateDesktopButtons() {
     return desktopbtndata.map((e) => (
-      <DesktopButtons
-        key={e.btn_name}
-        src={e.src}
-        name={e.btn_name}
-        id={e.src}
-        {...props}
-      />
+      <DesktopButtons src={e.src} name={e.btn_name} id={e.src} {...props} />
     ));
   }
 

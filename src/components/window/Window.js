@@ -22,10 +22,10 @@ export default function Window(props) {
   React.useEffect(() => {
     obj.current.style.left = `${props.x}px`;
     obj.current.style.top = `${props.y}px`;
+    obj.current.style.zIndex = `${props.z}`;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   React.useEffect(() => {
-    obj.current.style.zIndex = `${props.z}`;
     obj.current.style.display = props.visible ? "initial" : "none";
   }, [props]);
 
@@ -80,14 +80,7 @@ export default function Window(props) {
   const windowContent = setWindowContent(props.dir);
 
   return (
-    <div
-      className="window"
-      id={`window--${props.id}`}
-      ref={obj}
-      onDoubleClick={() => {
-        props.focusWindow(props.dir);
-      }}
-    >
+    <div className="window" id={`window--${props.id}`} ref={obj}>
       <div className="window--header">
         <img src={logo_src} alt="PB Logo" />
         <h3>C:/ProjectBeta/{props.dir}</h3>

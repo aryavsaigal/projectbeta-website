@@ -14,42 +14,44 @@ export default function Homepage() {
   ]);
 
   function addWindow(app) {
-    let maxZ = 0;
-    windowHandler.forEach((e) => {
-      if (e.z > maxZ) maxZ = e.z;
-    });
-    let newWindowArray = windowHandler.map((e) => {
-      console.log(e.dir, e.dir === app && e.z !== maxZ);
-      return e.dir === app && e.z !== maxZ ? { ...e, z: maxZ + 1 } : e;
-    });
-    newWindowArray = newWindowArray.map((e) =>
+    const newWindowArray = windowHandler.map((e) =>
       e.dir === app ? { ...e, visible: true } : e
     );
     setWindowHandler(newWindowArray);
+
+    console.log(windowHandler);
   }
   function removeWindow(app) {
     const newWindowArray = windowHandler.map((e) =>
       e.dir === app ? { ...e, visible: false } : e
     );
     setWindowHandler(newWindowArray);
+
+    console.log(windowHandler);
   }
 
-  function focusWindow(app) {
-    let maxZ = 0;
-    windowHandler.forEach((e) => {
-      if (e.z > maxZ) maxZ = e.z;
-    });
-    console.log(maxZ);
-    const newWindowArray = windowHandler.map((e) => {
-      console.log(e.dir, e.dir === app && e.z !== maxZ);
-      return e.dir === app && e.z !== maxZ ? { ...e, z: maxZ + 1 } : e;
-    });
-    console.log("new", newWindowArray);
+  // const [windowAssigner, setWindowAssigner] = React.useState({
+  //   start_x: 50,
+  //   start_y: 50,
+  //   id: 0,
+  // });
 
-    console.log("before", windowHandler);
-    setWindowHandler(newWindowArray);
-    console.log("after", windowHandler);
-  }
+  // const windowArrary = windowHandler.map((item) => {
+  //   setWindowAssigner((prevState) => ({
+  //     start_x: prevState.start_x + 50,
+  //     start_y: prevState.start_y + 50,
+  //     id: prevState.id + 1,
+  //   }));
+  //   return (
+  //     <Window
+  //       id={windowAssigner.id}
+  //       x={windowAssigner.x}
+  //       y={windowAssigner.y}
+  //       removeWindow={removeWindow}
+  //       addWindow={addWindow}
+  //     />
+  //   );
+  // });
 
   function createWindows() {
     return windowHandler.map((item) => (
@@ -58,7 +60,6 @@ export default function Homepage() {
         key={item.id}
         removeWindow={removeWindow}
         addWindow={addWindow}
-        focusWindow={focusWindow}
       />
     ));
   }

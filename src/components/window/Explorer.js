@@ -5,6 +5,7 @@ import thispc_src from "../../images/explorer-thispc.png";
 import network_src from "../../images/explorer-network.png";
 
 import EventsFolder from "../data/EventsFolder";
+import SponsorsFolder from "../data/SponsorsFolder";
 
 export default function Explorer(props) {
   return (
@@ -24,7 +25,8 @@ export default function Explorer(props) {
         </div>
       </div>
       <div className="explorer--foldergrid">
-        <EventsFolder />
+        {props.dir[0] === "Events" && <EventsFolder {...props} />}
+        {props.dir[0] === "Sponsors" && <SponsorsFolder {...props} />}
       </div>
     </div>
   );

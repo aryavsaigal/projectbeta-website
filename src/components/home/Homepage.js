@@ -5,18 +5,18 @@ import Window from "../window/Window";
 
 export default function Homepage() {
   // {app:"explorer","id":"1"}
-  const [windowHandler, setWindowHandler] = React.useState([
-    { app: "explorer", id: "1" },
-  ]);
+  // const [windowHandler, setWindowHandler] = React.useState([
+  //   { app: "explorer", id: "1" },
+  // ]);
 
   function addWindow(app) {}
   function removeWindow(app) {
-    let sample = windowHandler;
-    sample.splice(
-      sample.findIndex((e) => e.app === app),
-      1
-    );
-    console.log(sample);
+    // let sample = windowHandler;
+    // sample.splice(
+    //   sample.findIndex((e) => e.app === app),
+    //   1
+    // );
+    // console.log(sample);
   }
 
   // const [windowAssigner, setWindowAssigner] = React.useState({
@@ -47,7 +47,30 @@ export default function Homepage() {
       <TitleScreen />
       <HomeInfoCards />
       <div>
-        <Window id={1} x={100} y={50} removeWindow={removeWindow} />
+        <Window
+          id={1}
+          x={100}
+          y={50}
+          removeWindow={removeWindow}
+          addWindow={addWindow}
+          dir={["Alumni.zip"]}
+        />
+        <Window
+          id={1}
+          x={150}
+          y={100}
+          removeWindow={removeWindow}
+          addWindow={addWindow}
+          dir={["Events"]}
+        />
+        <Window
+          id={1}
+          x={200}
+          y={150}
+          removeWindow={removeWindow}
+          addWindow={addWindow}
+          dir={["Sponsors"]}
+        />
       </div>
     </div>
   );

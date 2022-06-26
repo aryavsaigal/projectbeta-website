@@ -325,10 +325,16 @@ body {
   left: 0px;
 }
 
+.window--content>div {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  overflow-y: scroll;
+}
+
 .explorer {
   display: grid;
   grid-template: 1fr / 120px auto;
-  height: 100%;
 }
 
 .explorer--sidebar {
@@ -365,7 +371,7 @@ body {
 
 .explorer--foldergrid>div {
   margin-bottom: 10px;
-  margin-right: 20px;
+  margin-right: 17.5px;
   width: 120px;
 
   cursor: pointer;
@@ -386,6 +392,18 @@ body {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.400), -1px -1px 3px rgba(0, 0, 0, 0.400), 1px -1px 3px rgba(0, 0, 0, 0.400), -1px 1px 3px rgba(0, 0, 0, 0.400);
 }
 
+.textfile {
+  background-color: white;
+  color: black;
+}
+
+.textfile p {
+  margin: 10px;
+  font-family: "Ubuntu Mono";
+  white-space: pre-line;
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }

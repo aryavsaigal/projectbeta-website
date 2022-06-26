@@ -4,8 +4,12 @@ import close_src from "../../images/navigation/close.png";
 import move_src from "../../images/navigation/nav-move.png";
 
 import Explorer from "./Explorer";
+import Textfile from "./Textfile";
 
 export default function Window(props) {
+  /**
+   * @param {Object} props
+   */
   const [location, setLocation] = React.useState({
     abs_x: props.x,
     abs_y: props.y,
@@ -66,11 +70,17 @@ export default function Window(props) {
     }px`;
   }
 
+  function setWindowContent(dir) {
+    if (dir[0].indexOf(".") === -1) return <Explorer {...props} />;
+    else if (dir[0] === "Alumni.zip") return <Textfile {...props} />;
+  }
+  const windowContent = setWindowContent(props.dir);
+
   return (
     <div className="window" id={`window--${props.id}`} ref={obj}>
       <div className="window--header">
         <img src={logo_src} alt="PB Logo" />
-        <h3>C:/ProjectBeta/</h3>
+        <h3>C:/ProjectBeta/{props.dir.join("/")}</h3>
         <img
           src={move_src}
           className="window--move"
@@ -87,9 +97,7 @@ export default function Window(props) {
           onClick={props.removeWindow}
         />
       </div>
-      <div className="window--content">
-        <Explorer />
-      </div>
+      <div className="window--content">{windowContent}</div>
     </div>
   );
 }

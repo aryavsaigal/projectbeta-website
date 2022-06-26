@@ -5,6 +5,7 @@ import move_src from "../../images/navigation/nav-move.png";
 
 import Explorer from "./Explorer";
 import Textfile from "./Textfile";
+import ImageViewer from "./ImageViewer";
 
 export default function Window(props) {
   /**
@@ -76,6 +77,7 @@ export default function Window(props) {
   function setWindowContent(dir) {
     if (dir.indexOf(".") === -1) return <Explorer {...props} />;
     else if (dir === "Alumni.zip") return <Textfile {...props} />;
+    else if (dir.endsWith(".png")) return <ImageViewer {...props} />;
   }
   const windowContent = setWindowContent(props.dir);
 

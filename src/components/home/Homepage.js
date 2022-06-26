@@ -9,8 +9,9 @@ export default function Homepage() {
   // {app:"explorer","id":"1"}
   const [windowHandler, setWindowHandler] = React.useState([
     { id: "1", x: 100, y: 100, z: 100, visible: false, dir: "Alumni.zip" },
-    { id: "2", x: 150, y: 150, z: 103, visible: false, dir: "Events" },
+    { id: "2", x: 150, y: 150, z: 101, visible: false, dir: "Events" },
     { id: "3", x: 200, y: 200, z: 102, visible: false, dir: "Sponsors" },
+    { id: "4", x: 200, y: 200, z: 103, visible: false, dir: "Schedule.png" },
   ]);
 
   function addWindow(app) {

@@ -6,7 +6,7 @@ export default function Desktop(props) {
   const desktopbtndata = [
     { src: foldersrc, btn_name: "Desktop" },
     { src: foldersrc, btn_name: "Sponsors" },
-    { src: foldersrc, btn_name: "Schedule.jpg" },
+    { src: foldersrc, btn_name: "Schedule.png" },
     { src: foldersrc, btn_name: "Events" },
     { src: foldersrc, btn_name: "Team.pdf" },
     { src: foldersrc, btn_name: "Alumni.zip" },

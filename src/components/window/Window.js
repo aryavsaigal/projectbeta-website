@@ -6,6 +6,8 @@ import move_src from "../../images/navigation/nav-move.png";
 import Explorer from "./Explorer";
 import Textfile from "./Textfile";
 import ImageViewer from "./ImageViewer";
+import Team from "./Team";
+import Events from "./Events";
 
 export default function Window(props) {
   /**
@@ -78,6 +80,8 @@ export default function Window(props) {
     if (dir.indexOf(".") === -1) return <Explorer {...props} />;
     else if (dir === "Alumni.zip") return <Textfile {...props} />;
     else if (dir.endsWith(".png")) return <ImageViewer {...props} />;
+    else if (dir === "Team.pdf") return <Team {...props} />;
+    else if (dir.search("/Events/")) return <Events {...props} />;
   }
   const windowContent = setWindowContent(props.dir);
 

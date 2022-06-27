@@ -4,7 +4,7 @@ import star_src from "../../images/explorer-star.png";
 import thispc_src from "../../images/explorer-thispc.png";
 import network_src from "../../images/explorer-network.png";
 
-import eventsData from "../data/Events";
+import eventsData from "../data/eventsData";
 import SponsorsFolder from "../data/SponsorsFolder";
 
 export default function Explorer(props) {

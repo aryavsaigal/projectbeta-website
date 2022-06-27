@@ -1,7 +1,7 @@
 import sample_src from "../../images/events/sample.png";
 
 export default function EventsFolder() {
-  const eventsData = [
+  return [
     { name: "Hypertext{}", img_src: sample_src },
     { name: "Function Overload", img_src: sample_src },
     { name: "Designathon", img_src: sample_src },
@@ -13,6 +13,4 @@ export default function EventsFolder() {
     { name: "BetaTest", img_src: sample_src },
     { name: "64 Wit", img_src: sample_src },
   ];
-
-  return eventsData;
 }

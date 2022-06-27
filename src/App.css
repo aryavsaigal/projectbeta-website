@@ -428,6 +428,40 @@ body {
   max-width: 100%;
 }
 
+.team {
+  background-color: rgb(91, 91, 91);
+}
+
+.team--board {
+  background-color: green;
+  display: grid;
+  grid-template: 1fr / repeat(3, 1fr);
+  height: 300px;
+  width: auto;
+  grid-gap: 15px;
+  margin: 15px;
+}
+
+.team--board div {
+  background-repeat: repeat;
+  background-size: 10px;
+  background-position: right bottom;
+  border-radius: 10px;
+  position: relative;
+}
+
+.team>div>div>.team--text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  background-image: linear-gradient(to bottom, transparent, black);
+  border: none;
+  border-radius: 0 0 10px 10px;
+  outline: none;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;

@@ -2,32 +2,32 @@ import React from "react";
 
 import teamData from "../data/teamData";
 
+import star_src from "../../images/explorer-star.png";
+import thispc_src from "../../images/explorer-thispc.png";
+import network_src from "../../images/explorer-network.png";
+
 export default function Team() {
   const [rawTeamData, unused] = React.useState(teamData);
-  const [tempNum, setTempNum] = React.useState(0);
-  function generateBoardCards() {
-    return rawTeamData.board.map((e, i) => (
-      <div
-        key={i}
-        style={{
-          background: `url(${e.img_src})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center center",
-        }}
-      >
-        <div className="team--text">
-          <h1>{e.name}</h1>
-        </div>
-      </div>
-    ));
-  }
 
   React.useEffect(() => console.log(rawTeamData), []);
 
   return (
-    <div className="team">
-      <div className="team--board"> {generateBoardCards()}</div>
+    <div className="explorer">
+      <div className="explorer--sidebar">
+        <div>
+          <img src={star_src} alt="Quick Access icon" />
+          <p>Quick Access</p>
+        </div>
+        <div>
+          <img src={thispc_src} alt="Quick Access icon" />
+          <p>This PC</p>
+        </div>
+        <div>
+          <img src={network_src} alt="Quick Access icon" />
+          <p>Network</p>
+        </div>
+      </div>
+      <div className="explorer--foldergrid"></div>
     </div>
   );
 }

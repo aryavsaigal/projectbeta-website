@@ -5,25 +5,18 @@ import Window from "../window/Window";
 
 import Desktop from "./../main/Desktop";
 
+import windowsData from "../data/windowsData";
+
 export default function Homepage() {
   // {app:"explorer","id":"1"}
-  const [windowHandler, setWindowHandler] = React.useState([
-    { id: "1", x: 100, y: 50, z: 100, visible: false, dir: "Events" },
-    {
-      id: "1.1",
-      x: 100,
-      y: 50,
-      z: 100,
-      visible: true,
-      dir: "Events/Hypertext{}.pdf",
-    },
-    { id: "2", x: 150, y: 200, z: 101, visible: false, dir: "Schedule.png" },
-    { id: "3", x: 200, y: 150, z: 102, visible: false, dir: "Alumni.zip" },
-    { id: "4", x: 250, y: 200, z: 103, visible: false, dir: "Sponsors" },
-    // { id: "5", x: 300, y: 100, z: 103, visible: true, dir: "Team.pdf" },
-  ]);
+  const [windowHandler, setWindowHandler] = React.useState(windowsData());
 
   function addWindow(app) {
+    if (app === "Desktop") {
+      let newWindowArray = windowHandler.map((e) => ({ ...e, visible: false }));
+      setWindowHandler(newWindowArray);
+      return;
+    }
     let maxZ = 0;
     windowHandler.forEach((e) => {
       if (e.z > maxZ) maxZ = e.z;
@@ -53,10 +46,12 @@ export default function Homepage() {
     setWindowHandler(newWindowArray);
   }
   function createWindows() {
-    return windowHandler.map((item) => (
+    return windowHandler.map((item, i) => (
       <Window
         {...item}
         key={item.id}
+        x={100}
+        y={50}
         removeWindow={removeWindow}
         addWindow={addWindow}
         focusWindow={focusWindow}

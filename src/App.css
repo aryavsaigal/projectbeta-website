@@ -487,9 +487,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* border: 1px solid rgb(82, 82, 82); */
+  border: 1px solid rgb(82, 82, 82);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
-  border-radius: 10px;
 }
 
 .events--fieldscontainer img {

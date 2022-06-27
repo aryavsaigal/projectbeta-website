@@ -8,15 +8,19 @@ import { eventsData } from "../data/eventsData";
 import SponsorsFolder from "../data/SponsorsFolder";
 
 export default function Explorer(props) {
-  function setEventsGrid() {
-    return eventsData.map((e) => (
-      <div key={e.name + ".pdf"}>
+  const [eventsGrid, unused] = React.useState(
+    eventsData.map((e) => (
+      <div
+        key={e.name + ".pdf"}
+        onClick={() => {
+          props.addWindow(`Events/${e.name}.pdf`);
+        }}
+      >
         <img src={e.img_src} alt={`${e.name} Logo`} />
         <p>{e.name + ".pdf"}</p>
       </div>
-    ));
-  }
-  const [eventsGrid, unused] = React.useState(setEventsGrid());
+    ))
+  );
 
   return (
     <div className="explorer">

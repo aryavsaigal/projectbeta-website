@@ -13,6 +13,7 @@ export default function Events(props) {
       (e) => e.name === props.dir.replace(".pdf", "").replace("Events/", "")
     )[0]
   );
+
   const EventsFields = () => {
     return rawEventsData.fields.map((e) => {
       const cardInfo =

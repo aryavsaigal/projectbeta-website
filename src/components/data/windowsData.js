@@ -12,7 +12,7 @@ export default function windowsData() {
     returnValue.push({
       id: `1.${i + 1}`,
       z: 110 + i,
-      visible: true,
+      visible: false,
       dir: `Events/${e.name}.pdf`,
     })
   );

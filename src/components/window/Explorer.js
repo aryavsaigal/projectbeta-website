@@ -4,16 +4,15 @@ import star_src from "../../images/explorer-star.png";
 import thispc_src from "../../images/explorer-thispc.png";
 import network_src from "../../images/explorer-network.png";
 
-import eventsData from "../data/eventsData";
+import { eventsData } from "../data/eventsData";
 import SponsorsFolder from "../data/SponsorsFolder";
 
 export default function Explorer(props) {
   function setEventsGrid() {
-    const generator = eventsData();
-    return generator.map((e) => (
-      <div key={e.name.replace(/ /g, "_") + ".pdf"}>
+    return eventsData.map((e) => (
+      <div key={e.name + ".pdf"}>
         <img src={e.img_src} alt={`${e.name} Logo`} />
-        <p>{e.name.replace(/ /g, "_") + ".pdf"}</p>
+        <p>{e.name + ".pdf"}</p>
       </div>
     ));
   }

@@ -9,14 +9,14 @@ export default function Homepage() {
   // {app:"explorer","id":"1"}
   const [windowHandler, setWindowHandler] = React.useState([
     { id: "1", x: 100, y: 50, z: 100, visible: false, dir: "Events" },
-    // {
-    //   id: "1.1",
-    //   x: 100,
-    //   y: 50,
-    //   z: 100,
-    //   visible: true,
-    //   dir: "Events/Hypertext{}.pdf",
-    // },
+    {
+      id: "1.1",
+      x: 100,
+      y: 50,
+      z: 100,
+      visible: true,
+      dir: "Events/Hypertext{}.pdf",
+    },
     { id: "2", x: 150, y: 200, z: 101, visible: false, dir: "Schedule.png" },
     { id: "3", x: 200, y: 150, z: 102, visible: false, dir: "Alumni.zip" },
     { id: "4", x: 250, y: 200, z: 103, visible: false, dir: "Sponsors" },

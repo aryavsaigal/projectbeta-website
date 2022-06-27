@@ -4,69 +4,63 @@ export default function EventsFolder() {
   return {
     board: [
       {
-        name: "John Doe",
-        hod: "Audio Engineering",
+        name: "Simar Tandon",
+        hod: "Group Discussion",
         img_src: stock_photo,
-        quote:
-          "This is a sample quote. I can guarantee this is a legitimate quote and definitely did not make it up myself. Please do not try to verify it . Trust me.",
+        quote: "This is a sample quote.",
         title: "President",
       },
       {
-        name: "John Doe",
-        hod: "Group Discussion",
+        name: "Aadi Jain",
+        hod: "Web Development",
         img_src: stock_photo,
-        quote:
-          "This is a sample quote. I can guarantee this is a legitimate quote and definitely did not make it up myself. Please do not try to verify it . Trust me.",
+        quote: "This is a sample quote.",
         title: "Vice President",
       },
       {
-        name: "John Doe",
-        hod: "Web Development",
+        name: "Adit Magotra",
+        hod: "Programming",
         img_src: stock_photo,
-        quote:
-          "This is a sample quote. I can guarantee this is a legitimate quote and definitely did not make it up myself. Please do not try to verify it . Trust me.",
+        quote: "This is a sample quote.",
         title: "Secretary",
       },
     ],
     core: [
       {
         name: "John Doe",
-        hod: "Department 3",
+        hod: "Department",
         img_src: stock_photo,
-        quote:
-          "This is a sample quote. I can guarantee this is a legitimate quote and definitely did not make it up myself. Please do not try to verify it . Trust me.",
+        quote: "This is a sample quote.",
       },
       {
         name: "John Doe",
-        hod: "Department 4",
+        hod: "Department",
         img_src: stock_photo,
-        quote:
-          "This is a sample quote. I can guarantee this is a legitimate quote and definitely did not make it up myself. Please do not try to verify it . Trust me.",
+        quote: "This is a sample quote.",
       },
       {
         name: "John Doe",
-        hod: "Department 5",
+        hod: "Department",
         img_src: stock_photo,
-        quote:
-          "This is a sample quote. I can guarantee this is a legitimate quote and definitely did not make it up myself. Please do not try to verify it . Trust me.",
+        quote: "This is a sample quote.",
       },
       {
         name: "John Doe",
-        hod: "Department 6",
+        hod: "Department",
         img_src: stock_photo,
-        quote:
-          "This is a sample quote. I can guarantee this is a legitimate quote and definitely did not make it up myself. Please do not try to verify it . Trust me.",
+        quote: "This is a sample quote.",
       },
     ],
     members: [
       "John Doe",
-      "Johnny Doester",
-      "Jonnathan Doertson",
-      "Johnereg Doeffly",
       "John Doe",
-      "Johnny Doester",
-      "Jonnathan Doertson",
-      "Johnereg Doeffly",
+      "John Doe",
+      "John Doe",
+      "John Doe",
+      "John Doe",
+      "John Doe",
+      "John Doe",
+      "John Doe",
     ],
   };
 }

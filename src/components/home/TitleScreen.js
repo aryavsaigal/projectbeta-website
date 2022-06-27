@@ -12,7 +12,7 @@ export default function TitleScreen() {
           <span id="h1_bold">Beta</span>
         </h1>
       </div>
-      <p className="titlescreen--date">06|08|2022 - 13|08|2022</p>
+      <p className="titlescreen--date">07|08|2022 - 13|08|2022</p>
       <img
         className="titlescreen--downarrow"
         src={downarrow_src}

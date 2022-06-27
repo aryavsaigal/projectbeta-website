@@ -17,7 +17,7 @@ export default function Timer() {
 
   function updateTimer() {
     setTimeout(() => {
-      const target = new Date("Aug 6, 2022 00:00:00").getTime();
+      const target = new Date("Aug 7, 2022 00:00:00").getTime();
       const time = new Date().getTime();
       const diff = target - time > 0 ? target - time : time - target;
       let newsign = "-";

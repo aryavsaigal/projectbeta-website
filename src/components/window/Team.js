@@ -36,37 +36,21 @@ export default function Team() {
 
   return (
     <div className="team">
-      <div className="team--sidebar">
-        <div>
-          <img src={star_src} alt="Quick Access icon" />
-          <p>Quick Access</p>
-        </div>
-        <div>
-          <img src={thispc_src} alt="This PC icon" />
-          <p>This PC</p>
-        </div>
-        <div>
-          <img src={network_src} alt="Network icon" />
-          <p>Network</p>
-        </div>
+      <div className="team--category">
+        <img src={right_arrow} alt="Right Arrow Icon" />
+        <p>Board</p> <hr />
       </div>
-      <div className="team--mainlist">
-        <div className="team--category">
-          <img src={right_arrow} alt="Right Arrow Icon" />
-          <p>Board</p> <hr />
-        </div>
-        {boardCards}
-        <div className="team--category">
-          <img src={right_arrow} alt="Right Arrow Icon" />
-          <p>Core</p> <hr />
-        </div>
-        {coreCards}
-        <div className="team--category">
-          <img src={right_arrow} alt="Right Arrow Icon" />
-          <p>Members</p> <hr />
-        </div>
-        <div className="team--membergrid">{memberCards}</div>
+      {boardCards}
+      <div className="team--category">
+        <img src={right_arrow} alt="Right Arrow Icon" />
+        <p>Core</p> <hr />
       </div>
+      {coreCards}
+      <div className="team--category">
+        <img src={right_arrow} alt="Right Arrow Icon" />
+        <p>Members</p> <hr />
+      </div>
+      <div className="team--membergrid">{memberCards}</div>
     </div>
   );
 }

@@ -413,6 +413,7 @@ body {
 .textfile div {
   font-family: "Ubuntu Mono";
   white-space: pre-line;
+  font-size: 20px;
 }
 
 .imageviewer {
@@ -428,35 +429,8 @@ body {
   max-width: 100%;
 }
 
-.team {
-  display: grid;
-  grid-template: 1fr / 120px auto;
-}
+.team {}
 
-.team--sidebar {
-  border-right: 1px solid rgb(96, 96, 96);
-  flex-direction: column;
-  height: calc(100% - 20px);
-  position: relative;
-  padding: 10px;
-  user-select: none;
-  position: sticky;
-  top: 0;
-}
-
-.team--sidebar>div {
-  align-items: center;
-  display: flex;
-}
-
-.team--sidebar>div>p {
-  font-size: 12px;
-  margin-left: 5px;
-}
-
-.team--sidebar>div>img {
-  width: 18px;
-}
 
 .team--category {
   padding: 10px;

@@ -30,11 +30,11 @@ export default function Explorer(props) {
           <p>Quick Access</p>
         </div>
         <div>
-          <img src={thispc_src} alt="Quick Access icon" />
+          <img src={thispc_src} alt="This PC icon" />
           <p>This PC</p>
         </div>
         <div>
-          <img src={network_src} alt="Quick Access icon" />
+          <img src={network_src} alt="Network icon" />
           <p>Network</p>
         </div>
       </div>

@@ -5,21 +5,27 @@ export default function EventsFolder() {
     board: [
       {
         name: "John Doe",
+        hod: "Audio Engineering",
+        img_src: stock_photo,
+        quote:
+          "This is a sample quote. I can guarantee this is a legitimate quote and definitely did not make it up myself. Please do not try to verify it . Trust me.",
         title: "President",
-        hod: "Department 1",
-        img_src: stock_photo,
       },
       {
         name: "John Doe",
+        hod: "Group Discussion",
+        img_src: stock_photo,
+        quote:
+          "This is a sample quote. I can guarantee this is a legitimate quote and definitely did not make it up myself. Please do not try to verify it . Trust me.",
         title: "Vice President",
-        hod: "Department 2",
-        img_src: stock_photo,
       },
       {
         name: "John Doe",
-        title: "Secretary",
-        hod: "Department 2",
+        hod: "Web Development",
         img_src: stock_photo,
+        quote:
+          "This is a sample quote. I can guarantee this is a legitimate quote and definitely did not make it up myself. Please do not try to verify it . Trust me.",
+        title: "Secretary",
       },
     ],
     core: [
@@ -27,23 +33,40 @@ export default function EventsFolder() {
         name: "John Doe",
         hod: "Department 3",
         img_src: stock_photo,
+        quote:
+          "This is a sample quote. I can guarantee this is a legitimate quote and definitely did not make it up myself. Please do not try to verify it . Trust me.",
       },
       {
         name: "John Doe",
         hod: "Department 4",
         img_src: stock_photo,
+        quote:
+          "This is a sample quote. I can guarantee this is a legitimate quote and definitely did not make it up myself. Please do not try to verify it . Trust me.",
       },
       {
         name: "John Doe",
         hod: "Department 5",
         img_src: stock_photo,
+        quote:
+          "This is a sample quote. I can guarantee this is a legitimate quote and definitely did not make it up myself. Please do not try to verify it . Trust me.",
       },
       {
         name: "John Doe",
         hod: "Department 6",
         img_src: stock_photo,
+        quote:
+          "This is a sample quote. I can guarantee this is a legitimate quote and definitely did not make it up myself. Please do not try to verify it . Trust me.",
       },
     ],
-    members: ["John Doe", "John Doe", "John Doe", "John Doe"],
+    members: [
+      "John Doe",
+      "Johnny Doester",
+      "Jonnathan Doertson",
+      "Johnereg Doeffly",
+      "John Doe",
+      "Johnny Doester",
+      "Jonnathan Doertson",
+      "Johnereg Doeffly",
+    ],
   };
 }

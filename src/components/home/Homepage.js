@@ -16,18 +16,27 @@ export default function Homepage() {
       let newWindowArray = windowHandler.map((e) => ({ ...e, visible: false }));
       setWindowHandler(newWindowArray);
       return;
+    } else {
+      let maxZ = 0;
+      console.log(app);
+      windowHandler.forEach((e) => {
+        if (e.z > maxZ) maxZ = e.z;
+      });
+      let newWindowArray = windowHandler.map((e) => {
+        return e.dir === app && e.z !== maxZ ? { ...e, z: maxZ + 1 } : e;
+      });
+      newWindowArray = newWindowArray.map((e) =>
+        e.dir === app ? { ...e, visible: true } : e
+      );
+      console.log("Before");
+      console.log(newWindowArray);
+      console.log(windowHandler);
+      setWindowHandler(newWindowArray);
+      console.log("After");
+      console.log(newWindowArray);
+      console.log(windowHandler);
+      console.log("-------");
     }
-    let maxZ = 0;
-    windowHandler.forEach((e) => {
-      if (e.z > maxZ) maxZ = e.z;
-    });
-    let newWindowArray = windowHandler.map((e) => {
-      return e.dir === app && e.z !== maxZ ? { ...e, z: maxZ + 1 } : e;
-    });
-    newWindowArray = newWindowArray.map((e) =>
-      e.dir === app ? { ...e, visible: true } : e
-    );
-    setWindowHandler(newWindowArray);
   }
   function removeWindow(app) {
     const newWindowArray = windowHandler.map((e) =>

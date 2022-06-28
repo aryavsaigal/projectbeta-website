@@ -8,6 +8,7 @@ import Textfile from "./Textfile";
 import ImageViewer from "./ImageViewer";
 import Team from "./Team";
 import Events from "./Events";
+import Contact from "./Contact";
 
 export default function Window(props) {
   /**
@@ -81,6 +82,7 @@ export default function Window(props) {
     else if (dir === "Alumni.zip") return <Textfile {...props} />;
     else if (dir.endsWith(".png")) return <ImageViewer {...props} />;
     else if (dir === "Team.pdf") return <Team {...props} />;
+    else if (dir === "Contact.pdf") return <Contact {...props} />;
     else if (dir.search("/Events/")) return <Events {...props} />;
   }
   const windowContent = setWindowContent(props.dir);

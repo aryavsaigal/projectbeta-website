@@ -2,9 +2,6 @@ import React from "react";
 
 import teamData from "../data/teamData";
 
-import star_src from "../../images/explorer-star.png";
-import thispc_src from "../../images/explorer-thispc.png";
-import network_src from "../../images/explorer-network.png";
 import right_arrow from "../../images/navigation/nav-right.png";
 
 export default function Team() {
@@ -36,19 +33,20 @@ export default function Team() {
 
   return (
     <div className="team">
+      <h2>Team</h2>
       <div className="team--category">
         <img src={right_arrow} alt="Right Arrow Icon" />
-        <p>Board</p> <hr />
+        <p>Board {`(${rawTeamData.board.length})`}</p> <hr />
       </div>
       {boardCards}
       <div className="team--category">
         <img src={right_arrow} alt="Right Arrow Icon" />
-        <p>Core</p> <hr />
+        <p>Core {`(${rawTeamData.core.length})`}</p> <hr />
       </div>
       {coreCards}
       <div className="team--category">
         <img src={right_arrow} alt="Right Arrow Icon" />
-        <p>Members</p> <hr />
+        <p>Members {`(${rawTeamData.members.length})`}</p> <hr />
       </div>
       <div className="team--membergrid">{memberCards}</div>
     </div>

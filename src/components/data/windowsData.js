@@ -7,6 +7,7 @@ export default function windowsData() {
     { id: "3", z: 102, visible: false, dir: "Alumni.zip" },
     { id: "4", z: 103, visible: false, dir: "Sponsors" },
     { id: "5", z: 104, visible: false, dir: "Team.pdf" },
+    { id: "6", z: 105, visible: false, dir: "Contact.pdf" },
   ];
   eventsData.map((e, i) =>
     returnValue.push({

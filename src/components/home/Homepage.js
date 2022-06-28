@@ -18,7 +18,6 @@ export default function Homepage() {
       return;
     } else {
       let maxZ = 0;
-      console.log(app);
       windowHandler.forEach((e) => {
         if (e.z > maxZ) maxZ = e.z;
       });
@@ -28,14 +27,7 @@ export default function Homepage() {
       newWindowArray = newWindowArray.map((e) =>
         e.dir === app ? { ...e, visible: true } : e
       );
-      console.log("Before");
-      console.log(newWindowArray);
-      console.log(windowHandler);
       setWindowHandler(newWindowArray);
-      console.log("After");
-      console.log(newWindowArray);
-      console.log(windowHandler);
-      console.log("-------");
     }
   }
   function removeWindow(app) {

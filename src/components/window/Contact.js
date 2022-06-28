@@ -48,9 +48,9 @@ export default function Contact() {
           <div className="contact--socialgrid">
             <SocialMedia />
             <a href="https://www.instagram.com/projectbeta.club/">
-              Instagram Username
+              @projectbeta.club
             </a>
-            <a href="https://github.com/Project-Beta">GitHub Username</a>
+            <a href="https://github.com/Project-Beta">@projectbeta.tech</a>
             <a href="https://www.facebook.com/ProjectBetaOfficial">
               Facebook Username
             </a>

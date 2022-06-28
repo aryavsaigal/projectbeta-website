@@ -54,6 +54,7 @@ body {
   margin: 0 5px;
   width: 20px;
   user-select: none;
+  cursor: pointer;
 }
 
 .taskbar--searchbar {
@@ -128,6 +129,87 @@ body {
   margin: 0;
   font-size: 12px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.400), -1px -1px 3px rgba(0, 0, 0, 0.400), 1px -1px 3px rgba(0, 0, 0, 0.400), -1px 1px 3px rgba(0, 0, 0, 0.400);
+}
+
+.notif--container {
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  background-color: rgb(29, 29, 29);
+  width: 300px;
+  height: fit-content;
+  z-index: 10000;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
+  transition: 0.5s;
+}
+
+.notif--main {
+  height: fit-content;
+  max-height: 75vh;
+  width: auto;
+  margin: 10px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: 30px 25px 1fr;
+  grid-template-columns: 1fr;
+}
+
+.notif--main h2 {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.notif--main p {
+  margin: 5px 10px;
+  font-size: 15px;
+}
+
+.notif--list {
+  overflow-y: auto;
+}
+
+.notif--list .notif--self {
+  margin: 15px 5px 0;
+  height: fit-content;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  background-color: rgb(47, 47, 47);
+  border: 1px solid rgb(82, 82, 82);
+}
+
+
+.notif--heading {
+  display: flex;
+  height: fit-content;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.notif--self hr {
+  flex-grow: 1;
+  margin: 1px 1px 10px;
+}
+
+.notif--self h4 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.notif--self img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.notif--self p {
+  margin: 5px;
+}
+
+.notif--self small {
+  margin: 5px;
+  margin-top: 15px;
+  font-family: "Ubuntu Mono";
 }
 
 .homepage {
@@ -649,15 +731,31 @@ a:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: transparent;
-  border-radius: 10px;
+  background: rgb(69, 69, 69);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(255, 255, 255);
+  background: rgb(127, 127, 127);
 }
 
 ::selection {
   background-color: #cb4b16;
   color: white;
+}
+
+.homepage::-webkit-scrollbar {
+  width: 10px;
+}
+
+.homepage::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.homepage::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.homepage::-webkit-scrollbar-thumb:hover {
+  background: white;
 }

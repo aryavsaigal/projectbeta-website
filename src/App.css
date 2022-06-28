@@ -29,6 +29,10 @@ body {
   box-sizing: border-box;
 }
 
+* {
+  scroll-behavior: smooth;
+}
+
 .taskbar {
   width: 100%;
   background-color: rgb(29, 29, 29);
@@ -107,13 +111,16 @@ body {
   position: relative;
   cursor: pointer;
   outline: 1px solid rgba(123, 207, 255, 0);
-  transition-delay: 0.3s;
+}
+
+.desktopbtn:hover {
+  background-color: rgba(123, 196, 255, 0.255);
+  outline: 1px solid rgba(123, 180, 255, 0.725);
 }
 
 .desktopbtn:active {
   background-color: rgba(123, 196, 255, 0.437);
   outline: 1px solid rgb(123, 180, 255);
-  transition-delay: 0s;
 }
 
 .desktopbtn--icon {
@@ -303,13 +310,25 @@ body {
   grid-gap: 25px;
 }
 
-
 .home_infocards--container>div {
   background-color: #073642;
   border-radius: 10px;
   padding: 15px;
   position: relative;
   border-bottom: 10px solid #eee8d5;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.home_infocards--container>div:hover {
+  box-shadow: 0 40px 30px rgba(0, 0, 0, 0.266);
+  transform: translateY(-10px);
+}
+
+.home_infocards--2022:hover img,
+.home_infocards--about:hover img,
+.home_infocards--contact:hover img {
+  width: 200px;
 }
 
 .home_infocards--container h2 {
@@ -346,6 +365,7 @@ a:hover {
   top: 0;
   right: 0;
   user-select: none;
+  transition: 0.3s;
 }
 
 .window {
@@ -477,8 +497,8 @@ a:hover {
 }
 
 .explorer--foldergrid>div>img {
-  width: 100px;
-  margin: 0 15px;
+  width: 90px;
+  margin: 0px 15px 20px;
   filter: drop-shadow(0 5px 5px rgba(245, 245, 245, 0.444));
   user-select: none;
 }
@@ -719,19 +739,24 @@ a:hover {
 
 .contact--socialgrid img {
   width: 40px;
+  user-select: none;
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 15px;
 }
 
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 
+::-webkit-scrollbar-track:hover {
+  background: rgb(53, 53, 53);
+}
+
 ::-webkit-scrollbar-thumb {
-  background: rgb(69, 69, 69);
+  background: rgb(76, 76, 76);
 }
 
 ::-webkit-scrollbar-thumb:hover {

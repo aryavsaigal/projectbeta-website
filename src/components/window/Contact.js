@@ -26,7 +26,7 @@ export default function Contact() {
           </div>
           <div>
             <p>Adit Magotra - Secretary</p>
-            <a href="tel:91 1234567890">+91 1234567890</a>
+            <a href="tel:91 99588 77036">+91 99588 77036</a>
           </div>
           <div>
             <p>Anuja Mittal - Faculty In-charge</p>
@@ -52,7 +52,7 @@ export default function Contact() {
             </a>
             <a href="https://github.com/Project-Beta">@projectbeta.tech</a>
             <a href="https://www.facebook.com/ProjectBetaOfficial">
-              Facebook Username
+              @ProjectBetaOfficial
             </a>
           </div>
         </div>

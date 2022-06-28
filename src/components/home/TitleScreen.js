@@ -13,11 +13,13 @@ export default function TitleScreen() {
         </h1>
       </div>
       <p className="titlescreen--date">07|08|2022 - 13|08|2022</p>
-      <img
-        className="titlescreen--downarrow"
-        src={downarrow_src}
-        alt="Down arrow"
-      />
+      <a href="#lookdown">
+        <img
+          className="titlescreen--downarrow"
+          src={downarrow_src}
+          alt="Down arrow"
+        />
+      </a>
     </div>
   );
 }

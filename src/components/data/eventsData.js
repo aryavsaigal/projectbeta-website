@@ -1,4 +1,4 @@
-import sample_src from "../../images/events/sample.png";
+import sample_src from "../../images/folders/file-sample.png";
 
 export const eventsData = [
   {

@@ -483,17 +483,19 @@ a:hover {
   width: 120px;
   cursor: pointer;
   outline: 1px solid rgba(123, 180, 255, 0);
-  transition-delay: 0.3s;
   display: flex;
   flex-direction: column;
   justify-items: center;
   padding: 10px;
 }
 
+.explorer--foldergrid>div:hover {
+  background-color: rgba(255, 255, 255, 0.214);
+}
+
 .explorer--foldergrid>div:active {
-  background-color: rgba(123, 196, 255, 0.437);
-  outline: 1px solid rgb(123, 180, 255);
-  transition-delay: 0s;
+  background-color: rgba(255, 255, 255, 0.437);
+
 }
 
 .explorer--foldergrid>div>img {

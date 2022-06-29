@@ -17,14 +17,14 @@ export default function Taskbar() {
   const [anyNotif, unused] = React.useState(notifData.length);
   const [notifToggled, setNotifToggled] = React.useState([
     false,
-    "-75vh",
+    "-85vh",
     anyNotif > 0 ? notif_unread_src : notif_off_src,
   ]);
 
   function toggleNotif() {
     setNotifToggled((e) => [
       !e[0],
-      e[0] ? "-75vh" : "50px",
+      e[0] ? "-85vh" : "50px",
       e[2] === notif_on_src ? notif_off_src : notif_on_src,
     ]);
   }

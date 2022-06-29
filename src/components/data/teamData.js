@@ -9,7 +9,7 @@ import dhimant_nath from "../../images/team/dhimant_nath.jpeg";
 import gauri_tandon from "../../images/team/gauri_tandon.jpeg";
 import gayatri from "../../images/team/gayatri.jpeg";
 import kanha_singh from "../../images/team/kanha_singh.jpeg";
-import navvye_anand from "../../images/team/navvye_anand.png";
+import navvye_anand from "../../images/team/navvye_anand.jpeg";
 import puranjay_chawla from "../../images/team/puranjay_chawla.jpeg";
 import rishi_mathur from "../../images/team/rishi_mathur.jpeg";
 import shreeya_mishra from "../../images/team/shreeya_mishra.jpeg";
@@ -47,7 +47,8 @@ export default function teamData() {
         name: "Navvye Anand",
         hod: "Web Development",
         img_src: navvye_anand,
-        quote: "This is a sample quote.",
+        quote:
+          "There are two types of people in this world, those who like Mikhail Tal and those who don’t know how to play chess",
       },
       {
         name: "Taran Singh",
@@ -77,7 +78,7 @@ export default function teamData() {
         name: "Vidushi Jain",
         hod: "Logistics",
         img_src: stock_photo,
-        quote: "This is a sample quote.",
+        quote: "Too much darkness could kill, but too much light can blind.",
       },
       {
         name: "Chirag Sehgal",

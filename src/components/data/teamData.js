@@ -13,6 +13,7 @@ import navvye_anand from "../../images/team/navvye_anand.png";
 import puranjay_chawla from "../../images/team/puranjay_chawla.jpeg";
 import rishi_mathur from "../../images/team/rishi_mathur.jpeg";
 import shreeya_mishra from "../../images/team/shreeya_mishra.jpeg";
+import sia_jha_nath from "../../images/team/sia_jha_nath.jpeg";
 import simar_tandon from "../../images/team/simar_tandon.jpeg";
 import taran_singh from "../../images/team/taran_singh.jpeg";
 
@@ -58,7 +59,7 @@ export default function teamData() {
         name: "Dhimant Nath",
         hod: "PC Gaming",
         img_src: dhimant_nath,
-        quote: "This is a sample quote.",
+        quote: "Anime is overrated and mid",
       },
       {
         name: "Kanha Singh",
@@ -112,7 +113,8 @@ export default function teamData() {
         name: "Gayatri",
         hod: "Graphic Design",
         img_src: gayatri,
-        quote: "This is a sample quote.",
+        quote:
+          'you have something called "determination." so as long as you hold on... so as long as you do what\'s in your heart... i believe you can do the right thing.',
       },
       {
         name: "Gauri Tandon",
@@ -129,8 +131,8 @@ export default function teamData() {
       {
         name: "Sia Jha Nath",
         hod: "Pitching",
-        img_src: stock_photo,
-        quote: "This is a sample quote.",
+        img_src: sia_jha_nath,
+        quote: "A little nervous breakdown can work wonders",
       },
       {
         name: "Aryav Saigal",
@@ -148,7 +150,8 @@ export default function teamData() {
         name: "Shreeya Mehra",
         hod: "Quizzing",
         img_src: shreeya_mishra,
-        quote: "This is a sample quote.",
+        quote:
+          "The rest of the world may follow the rules, but I must follow my heart.",
       },
       {
         name: "Inika Harikrishnan",

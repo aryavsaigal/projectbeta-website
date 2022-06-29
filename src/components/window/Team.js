@@ -15,6 +15,7 @@ export default function Team() {
         <h3>
           {e.title} {"&"} HoD {e.hod}
         </h3>
+        <hr />
         <p>"{e.quote}"</p>
       </div>
     </div>
@@ -25,6 +26,7 @@ export default function Team() {
       <div>
         <h1>{e.name}</h1>
         <h3>HoD {e.hod}</h3>
+        <hr />
         <p>"{e.quote}"</p>
       </div>
     </div>

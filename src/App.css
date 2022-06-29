@@ -577,6 +577,10 @@ a:hover {
   margin: 35px 30px;
 }
 
+.team--boardcore div {
+  width: 70%;
+}
+
 .team--boardcore>img {
   width: 150px;
   height: 150px;
@@ -588,16 +592,24 @@ a:hover {
   margin: 0;
 }
 
-.team--boardcore h3,
-.team--boardcore h4 {
+.team--boardcore h3 {
   margin: 10px 0;
-  font-family: "Ubuntu Mono";
+  font-weight: lighter;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.team--boardcore hr {
+  width: 50%;
+  margin: 10px 0;
+  background-color: rgb(107, 106, 106);
+  border-color: transparent;
 }
 
 .team--boardcore p {
-  margin-top: 25px;
   font-style: italic;
   color: lightgrey;
+  margin: 0;
 }
 
 .team--membergrid {
@@ -668,6 +680,10 @@ a:hover {
 .events--fieldscontainer h2 {
   margin-top: 15px;
   font-size: 30px;
+}
+
+.events--desc {
+  padding: 20px;
 }
 
 .contact {

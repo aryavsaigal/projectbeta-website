@@ -41,6 +41,7 @@ export default function Events(props) {
     <div className="events">
       <h1>{rawEventsData.name}</h1>
       <div className="events--fieldscontainer">{EventsFields()}</div>
+      <div className="events--desc">{rawEventsData.desc}</div>
     </div>
   );
 }

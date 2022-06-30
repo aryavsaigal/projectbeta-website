@@ -24,7 +24,7 @@ export default function teamData() {
         name: "Simar Tandon",
         hod: "Group Discussion",
         img_src: simar_tandon,
-        quote: "men and eb garamond- mid as hell",
+        quote: "A little nervous breakdown can work wonders",
         title: "President",
       },
       {
@@ -54,7 +54,7 @@ export default function teamData() {
         name: "Taran Singh",
         hod: "PC Gaming",
         img_src: taran_singh,
-        quote: "This is a sample quote.",
+        quote: 'ayo can my quote be "I cant think of a quote"',
       },
       {
         name: "Dhimant Nath",
@@ -94,7 +94,7 @@ export default function teamData() {
       },
       {
         name: "Arnav Whig",
-        hod: "Audio Engineering",
+        hod: "Audio Engineering & Cryptic Hunt",
         img_src: arnav_whig,
         quote: "This is a sample quote.",
       },
@@ -133,13 +133,13 @@ export default function teamData() {
         name: "Sia Jha Nath",
         hod: "Pitching",
         img_src: sia_jha_nath,
-        quote: "A little nervous breakdown can work wonders",
+        quote: "I have to get stronger—like a stray crow.",
       },
       {
         name: "Aryav Saigal",
         hod: "AI/IoT Robotics",
         img_src: stock_photo,
-        quote: "This is a sample quote.",
+        quote: 'ayo can my quote be "I cant think of a quote"',
       },
       {
         name: "Shreyas Vertia",

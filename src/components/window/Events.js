@@ -40,6 +40,7 @@ export default function Events(props) {
   return (
     <div className="events">
       <h1>{rawEventsData.name}</h1>
+      <img src={rawEventsData.img_src} alt="Event" className="events--bg" />
       <div className="events--fieldscontainer">{EventsFields()}</div>
       <div className="events--desc">{rawEventsData.desc}</div>
     </div>

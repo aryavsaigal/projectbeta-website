@@ -2,6 +2,7 @@ import React from "react";
 import TitleScreen from "./TitleScreen";
 import HomeInfoCards from "./HomeInfoCards";
 import Window from "../window/Window";
+import MobileMenu from "../main/MobileMenu";
 
 import Desktop from "./../main/Desktop";
 
@@ -62,11 +63,12 @@ export default function Homepage() {
 
   return (
     <>
-      <Desktop addWindow={addWindow} />
+      <Desktop addWindow={addWindow} mobile={false} />
       <div className="homepage">
         <TitleScreen />
         <HomeInfoCards />
-        <div>{createWindows()}</div>
+        <MobileMenu addWindow={addWindow} />
+        <div className="window--collection">{createWindows()}</div>
       </div>
     </>
   );

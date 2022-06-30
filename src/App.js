@@ -1,6 +1,6 @@
 import "./App.css";
+import "./Mobile.css";
 import Taskbar from "./components/main/Taskbar";
-
 import Homepage from "./components/home/Homepage";
 
 function App() {

@@ -24,7 +24,7 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  background-color: #002b36;
+  background: linear-gradient(150deg, #141e30, #243b55);
   font-family: "Ubuntu";
   box-sizing: border-box;
 }
@@ -501,8 +501,8 @@ a:hover {
 
 .explorer--foldergrid>div>img {
   width: 90px;
+  max-height: 90px;
   margin: 0px 15px 20px;
-  filter: drop-shadow(0 5px 5px rgba(245, 245, 245, 0.444));
   user-select: none;
 }
 
@@ -642,6 +642,19 @@ a:hover {
   color: #cb4b16;
 }
 
+.events--bg {
+  opacity: 0.5;
+  position: absolute;
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 10px 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
 .events--fieldscontainer {
   height: 300px;
   width: auto;
@@ -658,9 +671,10 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgb(52, 52, 52);
+  background-color: rgba(52, 52, 52, 0.556);
   border: 1px solid rgb(82, 82, 82);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
+  backdrop-filter: blur(5px);
 }
 
 .events--fieldscontainer img {

@@ -32,5 +32,9 @@ export default function Desktop(props) {
     ));
   }
 
-  return <div className="desktopbtn--container">{CreateDesktopButtons()}</div>;
+  return (
+    <div className={!props.mobile ? "desktopbtn--container" : "mobile--shelf"}>
+      {CreateDesktopButtons()}
+    </div>
+  );
 }

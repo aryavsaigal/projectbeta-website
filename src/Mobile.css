@@ -86,6 +86,7 @@
   z-index: 10002;
   transition: 0.3s;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
+  overflow: hidden;
 }
 
 .mobile--sidebar hr {
@@ -129,10 +130,13 @@
   }
 
   .notif--main {
-    height: 200px;
+
+    flex-basis: fit-content;
     background-color: rgb(16, 106, 148);
     border-radius: 5px;
     grid-gap: 2.5px;
+    min-height: 200px;
+    max-height: auto;
   }
 
   .notif--main h2 {
@@ -204,7 +208,7 @@
   }
 
   .mobile--sidebar--social img {
-    width: 35px;
+    width: 30px;
   }
 
   .mobile--sidebar--statusquo {

@@ -4,7 +4,7 @@
   bottom: 10px;
   left: 10px;
   right: 10px;
-  height: 40px;
+  height: 50px;
   display: none;
   align-items: center;
   width: calc(100% - 40px);
@@ -18,12 +18,11 @@
 }
 
 .mobile--navbar img {
-  width: 20px;
-  cursor: pointer;
+  width: 25px;
 }
 
 .mobile--navbar img:nth-child(2) {
-  width: 30px;
+  width: 35px;
 }
 
 .mobile--shelf--container {
@@ -70,7 +69,7 @@
 
 .mobile--sidebar {
   position: fixed;
-  bottom: 65px;
+  bottom: 75px;
   top: 10px;
   right: -250px;
   height: auto;
@@ -93,8 +92,6 @@
   width: 80%;
   margin: 5px auto;
 }
-
-
 
 @media all and (max-width: 900px) {
   .homepage {
@@ -130,7 +127,6 @@
   }
 
   .notif--main {
-
     flex-basis: fit-content;
     background-color: rgb(16, 106, 148);
     border-radius: 5px;
@@ -208,7 +204,7 @@
   }
 
   .mobile--sidebar--social img {
-    width: 30px;
+    width: 35px;
   }
 
   .mobile--sidebar--statusquo {

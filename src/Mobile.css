@@ -77,7 +77,7 @@
   align-items: center;
   flex-direction: column;
   width: 250px;
-  max-width: calc(100% - 40px);
+  max-width: calc(100% - 20px);
   /* background-color: rgb(29, 29, 29); */
   background-color: rgb(71, 175, 248);
   border-radius: 10px;
@@ -115,6 +115,10 @@
   .desktopbtn {
     padding: 5px;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
   }
 
   .desktopbtn--icon {
@@ -230,11 +234,26 @@
 
   .titlescreen--date {
     font-size: 17.5px;
-    bottom: 70px
+    bottom: 24vh;
   }
 
   .titlescreen--downarrow {
     width: 30px;
+    left: calc(50% - 15px);
+    bottom: 7.5vh;
+  }
+
+  .titlescreen--register {
+    font-size: 13px;
+    padding: 15px;
+    width: 70%;
+
+  }
+
+  .titlescreen--register:hover {
+    letter-spacing: initial;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.155);
   }
 
   .home_infocards--container {
@@ -270,20 +289,31 @@
   }
 
   .window--collection {
-    background-color: brown;
-    position: fixed;
+    background-color: rgb(164, 62, 145);
+    position: sticky;
     top: 0;
+    display: none;
+    height: calc(100% - 70px);
     left: 0;
+    margin: 0 10px;
+    width: auto;
+    z-index: 99;
   }
 
   .window {
     position: relative;
     background-color: yellow;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    border-radius: 5px;
+    left: unset;
+    top: unset;
   }
 
-  .window--move {
+  /* .window--move {
     display: none;
-  }
+  } */
 
   .window--close {
     margin-left: auto;

@@ -34,6 +34,7 @@ export default function Window(props) {
   }, [props]);
 
   function handleDragStart(event) {
+    console.log("You have entered dragging mode!");
     setLocation((e) => {
       return {
         ...e,
@@ -42,6 +43,16 @@ export default function Window(props) {
       };
     });
   }
+  function handleTouchStart(event) {
+    setLocation((e) => {
+      return {
+        ...e,
+        cursor_x: event.touches[0].clientX,
+        cursor_y: event.touches[0].clientY,
+      };
+    });
+  }
+
   function handleDrag(event) {
     setLocation((e) => {
       return {
@@ -58,6 +69,23 @@ export default function Window(props) {
       location.abs_y + (event.clientY - location.cursor_y)
     }px`;
   }
+  function handleTouch(event) {
+    setLocation((e) => {
+      return {
+        ...e,
+        dyn_x: e.abs_x + (event.touches[0].clientX - e.cursor_x),
+        dyn_y: e.abs_y + (event.touches[0].clientY - e.cursor_y),
+      };
+    });
+
+    obj.current.style.left = `${
+      location.abs_x + (event.touches[0].clientX - location.cursor_x)
+    }px`;
+    obj.current.style.top = `${
+      location.abs_y + (event.touches[0].clientY - location.cursor_y)
+    }px`;
+  }
+
   function handleDragEnd(event) {
     setLocation((e) => {
       return {
@@ -74,6 +102,24 @@ export default function Window(props) {
     }px`;
     obj.current.style.top = `${
       location.abs_y + (event.clientY - location.cursor_y)
+    }px`;
+  }
+  function handleTouchEnd(event) {
+    setLocation((e) => {
+      return {
+        ...e,
+        abs_x: e.abs_x + (event.changedTouches[0].clientX - e.cursor_x),
+        abs_y: e.abs_y + (event.changedTouches[0].clientY - e.cursor_y),
+        dyn_x: 0,
+        dyn_y: 0,
+      };
+    });
+
+    obj.current.style.left = `${
+      location.abs_x + (event.changedTouches[0].clientX - location.cursor_x)
+    }px`;
+    obj.current.style.top = `${
+      location.abs_y + (event.changedTouches[0].clientY - location.cursor_y)
     }px`;
   }
 
@@ -107,8 +153,14 @@ export default function Window(props) {
             handleDragStart(e);
             props.focusWindow(props.dir);
           }}
+          onTouchStart={(e) => {
+            handleTouchStart(e);
+            props.focusWindow(props.dir);
+          }}
           onDrag={handleDrag}
+          onTouchMove={handleTouch}
           onDragEnd={handleDragEnd}
+          onTouchEnd={handleTouchEnd}
           draggable={true}
         />
         <img

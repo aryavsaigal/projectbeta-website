@@ -33,6 +33,17 @@ body {
   scroll-behavior: smooth;
 }
 
+.loadingscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  display: none;
+  z-index: 10000000
+}
+
 .taskbar {
   width: 100%;
   background-color: rgb(29, 29, 29);
@@ -110,6 +121,9 @@ body {
   width: 80px;
   position: relative;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   outline: 1px solid rgba(123, 207, 255, 0);
 }
 
@@ -242,6 +256,7 @@ body {
   align-items: center;
   margin: auto;
   user-select: none;
+  z-index: 50;
 }
 
 .titlescreen--title_container>img {
@@ -253,6 +268,7 @@ body {
   font-size: 70px;
 }
 
+
 #h1_light {
   font-family: "Code Pro Light";
   font-weight: lighter;
@@ -263,13 +279,42 @@ body {
   font-family: "Code Bold";
 }
 
+.titlescreen--register {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  text-align: center;
+  bottom: 12.5vh;
+  font-size: 20px;
+  position: absolute;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.155);
+  backdrop-filter: blur(10px);
+  border-radius: 40px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.titlescreen--register:hover {
+  letter-spacing: 2px;
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+
+.titlescreen--register:active {
+  letter-spacing: 4px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(22, 107, 181);
+}
+
 .titlescreen--date {
   color: #cb4b16;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   font-weight: bolder;
-  bottom: 15vh;
+  bottom: 25vh;
   font-size: 22px;
   font-family: "Ubuntu Mono";
   width: 90vw;
@@ -279,7 +324,7 @@ body {
 .titlescreen--downarrow {
   position: absolute;
   left: calc(50% - 20px);
-  transform: translateX(-50%);
+  transform: translateX(-20px);
   bottom: 50px;
   width: 40px;
   animation-name: idle_move;
@@ -647,9 +692,8 @@ a:hover {
   position: absolute;
   width: auto;
   height: auto;
-  max-height: 100%;
-  max-width: 100%;
-  margin: 10px 20px;
+  max-height: 75%;
+  max-width: 75%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%)

@@ -65,10 +65,10 @@ export default function Homepage() {
     <>
       <Desktop addWindow={addWindow} mobile={false} />
       <div className="homepage">
+        <div className="window--collection">{createWindows()}</div>
         <TitleScreen />
         <HomeInfoCards />
         <MobileMenu addWindow={addWindow} />
-        <div className="window--collection">{createWindows()}</div>
       </div>
     </>
   );

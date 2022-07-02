@@ -15,23 +15,86 @@ export default function Events(props) {
   );
 
   const EventsFields = () => {
-    return rawEventsData.fields.map((e) => {
-      const cardInfo =
-        e.name === "teams"
-          ? ["Teams per school", "Team(s)", school_src]
-          : e.name === "people"
-          ? ["Students per school", "Student(s)", ppl_src]
+    return rawEventsData.fields.map((e, i) => {
+      const teamsOrppl =
+        rawEventsData.fields[0].name === "team" &&
+        rawEventsData.fields[0].value === "0";
+      const eventname =
+        e.name === "team"
+          ? "Participation Mode"
+          : e.name === "max"
+          ? `${teamsOrppl ? "Students" : "Teams"} per school`
           : e.name === "eligible"
-          ? ["Eligibility", "Grade", pass_src]
+          ? "Eligiblity"
           : e.name === "medium"
-          ? ["Medium", "mode", medium_src]
-          : undefined;
+          ? "Medium"
+          : null;
+      const img_src =
+        e.name === "team"
+          ? school_src
+          : e.name === "max"
+          ? ppl_src
+          : e.name === "eligible"
+          ? pass_src
+          : e.name === "medium"
+          ? medium_src
+          : null;
+      function FieldValue() {
+        if (e.name === "team") {
+          if (e.value === "0")
+            return (
+              <>
+                <h2>Individually</h2>
+                <h3>based</h3>
+              </>
+            );
+          else
+            return (
+              <>
+                <h2>Teams</h2>
+                <h3>of {e.value}</h3>
+              </>
+            );
+        } else if (e.name === "medium") {
+          if (e.value === "Both")
+            return (
+              <>
+                <h3>1st Round: Online</h3>
+                <h3>2nd Round: Offline</h3>
+              </>
+            );
+          else {
+            return (
+              <>
+                <h2>{e.value}</h2>
+                <h3>mode</h3>
+              </>
+            );
+          }
+        } else if (e.name === "max") {
+          return (
+            <>
+              {e.value === "0" && (
+                <h2 style={{ fontSize: "40px", height: "50px" }}>ထ</h2>
+              )}
+              {e.value !== "0" && <h2>{e.value}</h2>}
+              <h3>{teamsOrppl ? "Student(s)" : "Teams(s)"}</h3>
+            </>
+          );
+        } else if (e.name === "eligible") {
+          return (
+            <>
+              <h2>{e.value}</h2>
+              <h3>grades</h3>
+            </>
+          );
+        }
+      }
       return (
         <div key={e.name}>
-          <img src={cardInfo[2]} alt="" />
-          <p>{cardInfo[0]}</p>
-          <h2>{e.value}</h2>
-          <h3>{cardInfo[1]}</h3>
+          <img src={img_src} alt="" />
+          <p>{eventname}</p>
+          <FieldValue />
         </div>
       );
     });

@@ -26,9 +26,9 @@ export default function Team() {
       <div>
         <h1>{e.name}</h1>
         <h3>HoD {e.hod}</h3>
+        <hr />
         {e.quote !== "This is a sample quote." && (
           <>
-            <hr />
             <p>"{e.quote}"</p>
           </>
         )}

@@ -11,8 +11,8 @@ export default function Contact() {
     ["Ruchi Mehra - Faculty In-charge", "91 98110 89272"],
   ]);
 
-  const phoneRecordElems = phonerecord.map((e) => (
-    <div>
+  const phoneRecordElems = phonerecord.map((e, i) => (
+    <div key={i}>
       <p>{e[0]}</p>
       <a href={`tel:${e[1]}`}>+{e[1]}</a>
     </div>

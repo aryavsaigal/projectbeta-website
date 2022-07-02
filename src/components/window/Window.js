@@ -35,7 +35,7 @@ export default function Window(props) {
   React.useEffect(() => {
     function toggleDisplayMode() {
       if (window.innerWidth <= 900) {
-        obj.current.style.top = `0px`;
+        obj.current.style.top = `10px`;
         obj.current.style.left = `0px`;
         console.log("Mobile mode");
       } else {

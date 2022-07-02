@@ -722,16 +722,17 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   background-color: rgba(52, 52, 52, 0.556);
   border: 1px solid rgb(82, 82, 82);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
   backdrop-filter: blur(5px);
+  padding: 20px 10px;
 }
 
 .events--fieldscontainer img {
   width: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .events--fieldscontainer h2,
@@ -741,7 +742,7 @@ a:hover {
 }
 
 .events--fieldscontainer p {
-  font-family: "Ubuntu Mono";
+  margin-bottom: auto;
 }
 
 .events--fieldscontainer h2 {

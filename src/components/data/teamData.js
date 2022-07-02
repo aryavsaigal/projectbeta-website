@@ -41,7 +41,7 @@ export default function teamData() {
         name: "Adit Magotra",
         hod: "Programming",
         img_src: adit_magotra,
-        quote: "This is a sample quote.",
+        quote: "Don't follow your dreams. Follow me on GitHub @AlphaLazer ⚡",
         title: "Secretary",
       },
     ],
@@ -87,7 +87,8 @@ export default function teamData() {
         name: "Chirag Sehgal",
         hod: "A/V Editing & Cryptic Hunt",
         img_src: chirag_sehgal,
-        quote: "This is a sample quote.",
+        quote:
+          "If it keeps up, man will atrophy all his limbs but the push-button finger.",
       },
       {
         name: "Aniket Kumar",

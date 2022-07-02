@@ -44,12 +44,12 @@ export default function Team() {
         <img src={right_arrow} alt="Right Arrow Icon" />
         <p>Board {`(${rawTeamData.board.length})`}</p> <hr />
       </div>
-      {boardCards}
+      <div className="team--boardcore--container">{boardCards}</div>
       <div className="team--category">
         <img src={right_arrow} alt="Right Arrow Icon" />
         <p>Core {`(${rawTeamData.core.length})`}</p> <hr />
       </div>
-      {coreCards}
+      <div className="team--boardcore--container">{coreCards}</div>
       <div className="team--category">
         <img src={right_arrow} alt="Right Arrow Icon" />
         <p>Members {`(${rawTeamData.members.length})`}</p> <hr />

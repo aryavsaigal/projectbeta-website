@@ -6,7 +6,7 @@ export default function DualWield() {
       <h3>
         <u>
           <strong>
-            Console: PS4
+            Console: PS4 and PS5/Xbox/Nintendo Switch
             <br />
             Tournament Type: Knockout Ladder
           </strong>
@@ -20,10 +20,7 @@ export default function DualWield() {
       <ul>
         <strong>
           <li>
-            <p>Brawlhalla</p>
-          </li>
-          <li>
-            <p>Fortnite</p>
+            <p>Fall Guys</p>
           </li>
           <li>
             <p>Rocket League</p>
@@ -37,7 +34,7 @@ export default function DualWield() {
       </h3>
       <ul>
         <li>
-          <p>There will be only 3 winners.</p>
+          <p>There will be 3 winners.</p>
         </li>
         <li>
           <p>All games will be recorded.</p>
@@ -53,7 +50,7 @@ export default function DualWield() {
         </li>
         <li>
           <p>
-            Use of hacks or mods will result in disqualification of the team.
+            Use of hacks or mods will result in disqualification of the player.
           </p>
         </li>
       </ul>

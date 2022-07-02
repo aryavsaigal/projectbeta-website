@@ -95,7 +95,11 @@
   margin: 5px auto;
 }
 
+
+
 @media all and (max-width: 900px) {
+
+
   .homepage {
     height: 100%
   }
@@ -299,14 +303,342 @@
     border-radius: 10px;
   }
 
+  .window--header {
+    height: 30px;
+  }
+
+  .window--header h3 {
+    font-size: 10px;
+  }
+
+  .window--header img {
+    width: 20px;
+    user-select: none;
+  }
+
   .window--move {
     display: none;
   }
 
-  .window--close {
+  .window--header .window--close {
     margin-left: auto;
     border-radius: 0 10px 0 0;
+    padding: 15px;
   }
+
+  .window--content {
+    height: calc(100% - 30px);
+    top: 30px;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .explorer {
+    display: block;
+  }
+
+  .explorer--sidebar {
+    display: none;
+  }
+
+  .explorer--foldergrid {
+    justify-content: space-evenly;
+  }
+
+  .explorer--foldergrid>div {
+    margin-bottom: 0px;
+    margin-right: 0px;
+    min-width: 100px;
+    flex: 1;
+    cursor: pointer;
+    outline: 1px solid rgba(123, 180, 255, 0);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .explorer--foldergrid>div>img {
+    width: 50px;
+    max-height: 50px;
+    margin: 0px 5px 10px;
+    user-select: none;
+  }
+
+  .explorer--foldergrid>div>p {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-size: 11px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.400), -1px -1px 3px rgba(0, 0, 0, 0.400), 1px -1px 3px rgba(0, 0, 0, 0.400), -1px 1px 3px rgba(0, 0, 0, 0.400);
+  }
+
+  .textfile {
+    background-color: white;
+    color: black;
+    padding: 5px;
+  }
+
+  .textfile div {
+    font-family: "Ubuntu Mono";
+    white-space: pre-line;
+    font-size: 15px;
+  }
+
+  .team {
+    background-color: transparent;
+    width: 100%;
+  }
+
+  .team h2 {
+    text-align: center;
+    font-size: 25px;
+    margin: 15px 0 5px;
+    color: #cb4b16;
+  }
+
+
+  .team--category {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    user-select: none;
+  }
+
+  .team--category img {
+    width: 20px;
+  }
+
+  .team--category hr {
+    flex-grow: 1;
+    margin: 10px;
+  }
+
+  .team--category p {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .team--boardcore--container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .team--boardcore {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    align-items: center;
+    flex: 1;
+
+  }
+
+  .team--boardcore div {
+    width: 100%;
+    margin-top: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .team--boardcore>img {
+    width: 125px;
+    height: 125px;
+    margin-right: 0px;
+    user-select: none;
+  }
+
+  .team--boardcore h1 {
+    margin: 0;
+    font-size: 17px;
+
+  }
+
+  .team--boardcore h3 {
+    margin: 10px 0;
+    font-weight: lighter;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .team--boardcore hr {
+    width: 50%;
+    margin: 10px auto;
+    background-color: rgb(107, 106, 106);
+    border-color: transparent;
+  }
+
+  .team--boardcore p {
+    font-style: italic;
+    color: lightgrey;
+    margin: 0;
+    font-size: 10px;
+  }
+
+  .team--membergrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+    grid-auto-rows: 60px;
+    grid-auto-flow: row;
+    grid-gap: 10px;
+    padding: 30px;
+  }
+
+  .team--membergrid p {
+    display: flex;
+    padding: 5px;
+    border: 1px solid white;
+    text-align: center;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .events {
+    padding: 10px;
+  }
+
+  .events h1 {
+    text-align: center;
+    color: #cb4b16;
+    font-size: 25px;
+    z-index: 1000;
+  }
+
+  .events--bg {
+    opacity: 0.25;
+    position: absolute;
+    width: auto;
+    height: auto;
+    max-height: 75%;
+    max-width: 75%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+  }
+
+  .events--fieldscontainer {
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 5px;
+  }
+
+  .events--fieldscontainer div {
+    margin: 5px;
+    flex: 1;
+    flex-basis: 100px;
+    height: auto;
+    width: calc(50% - 20px);
+  }
+
+  .events--fieldscontainer img {
+    width: 17.5vw;
+    max-width: 80px;
+    margin-bottom: 5px;
+  }
+
+  .events--fieldscontainer h2,
+  .events--fieldscontainer h3,
+  .events--fieldscontainer p {
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .events--fieldscontainer p {
+    margin-bottom: auto;
+    font-size: 12px;
+  }
+
+  .events--fieldscontainer h2 {
+    font-size: 20px;
+  }
+
+  .events--fieldscontainer h3 {
+    font-size: 15px;
+  }
+
+  .events--desc {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .events--desc ul,
+  .events--desc ol {
+    padding-left: 20px;
+  }
+
+
+  .contact h1 {
+    font-size: 25px;
+  }
+
+  .contact p {
+    font-size: 14px;
+  }
+
+  .contact--grid {
+    grid-template: repeat(3, auto) / 1fr;
+    grid-gap: 10px;
+  }
+
+  .contact--grid div {
+    border-radius: 5px;
+  }
+
+  .contact--grid div h2 {
+    margin: 5px;
+    font-size: 20px;
+  }
+
+  .contact--grid .contact--phone div {
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    background-color: rgb(52, 52, 52);
+    border: 1px solid rgb(82, 82, 82);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
+  }
+
+  .contact--grid div div {
+    background-color: unset;
+    border: unset;
+    box-shadow: unset;
+  }
+
+  .contact--grid div div p {
+    text-align: center;
+    margin: 0px;
+  }
+
+  .contact--phone {
+    grid-row: span 3;
+  }
+
+  .contact--socialgrid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template: repeat(3, auto) / 30px 150px;
+    grid-gap: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .contact--socialgrid>* {
+    text-align: left;
+  }
+
+  .contact--socialgrid img {
+    width: 30px;
+  }
+
 
   ::-webkit-scrollbar {
     width: 0px;

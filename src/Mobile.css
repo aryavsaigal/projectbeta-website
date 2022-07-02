@@ -10,10 +10,10 @@
   width: calc(100% - 40px);
   /* background-color: rgb(29, 29, 29); */
   background-color: #00040575;
+  backdrop-filter: blur(12px);
   border-radius: 10px;
   justify-content: space-between;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
-  backdrop-filter: blur(12px);
   padding: 0 10px;
   z-index: 10001;
 }
@@ -44,8 +44,8 @@
   align-items: center;
   justify-content: flex-start;
   /* background-color: rgb(29, 29, 29); */
-  background-color: rgba(142, 201, 60, 0.267);
-  backdrop-filter: blur(10px);
+  background-color: #00040575;
+  backdrop-filter: blur(12px);
   border-radius: 10px;
   padding: 0 10px;
   overflow-x: auto;
@@ -80,7 +80,8 @@
   width: 250px;
   max-width: calc(100% - 20px);
   /* background-color: rgb(29, 29, 29); */
-  background-color: rgb(71, 175, 248);
+  background-color: #031b20b3;
+  backdrop-filter: blur(12px);
   border-radius: 10px;
   overflow-x: auto;
   z-index: 10002;
@@ -133,7 +134,6 @@
 
   .notif--main {
     flex-basis: fit-content;
-    background-color: rgb(16, 106, 148);
     border-radius: 5px;
     grid-gap: 2.5px;
     min-height: 200px;
@@ -156,7 +156,8 @@
     margin: 5px 10px;
     padding: 7.5px;
     flex-direction: column;
-    background-color: rgb(32, 55, 83);
+    background-color: #5757574a;
+    backdrop-filter: blur(12px);
     border: none;
     border-radius: 4.5px;
   }

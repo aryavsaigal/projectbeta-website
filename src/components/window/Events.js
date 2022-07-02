@@ -78,7 +78,7 @@ export default function Events(props) {
                 <h2 style={{ fontSize: "40px", height: "50px" }}>ထ</h2>
               )}
               {e.value !== "0" && <h2>{e.value}</h2>}
-              <h3>{teamsOrppl ? "Student(s)" : "Teams(s)"}</h3>
+              <h3>{teamsOrppl ? "Student(s)" : "Team(s)"}</h3>
             </>
           );
         } else if (e.name === "eligible") {

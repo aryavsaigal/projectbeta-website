@@ -4,6 +4,7 @@ import aadi_jain from "../../images/team/aadi_jain.jpeg";
 import adit_magotra from "../../images/team/adit_magotra.jpeg";
 import aniket_kumar from "../../images/team/aniket_kumar.jpeg";
 import arnav_whig from "../../images/team/arnav_whig.jpeg";
+import aryav_saigal from "../../images/team/aryav_saigal.jpeg";
 import chirag_sehgal from "../../images/team/chirag_sehgal.jpeg";
 import dhimant_nath from "../../images/team/dhimant_nath.jpeg";
 import gauri_tandon from "../../images/team/gauri_tandon.jpeg";
@@ -153,14 +154,14 @@ export default function teamData() {
         img_src: undefiend_photo,
         quote: 'ayo can my quote be "I cant think of a quote"',
       },
-      // {
-      //   name: "Shreyas Vertia",
-      //   hod: "AI/IoT Robotics",
-      //   img_src: undefiend_photo,
-      //   quote: "This is a sample quote.",
-      // },
       {
-        name: "Shreeya Mehra",
+        name: "Shreyas Vertia",
+        hod: "AI/IoT Robotics",
+        img_src: undefiend_photo,
+        quote: "They call me pollo grande",
+      },
+      {
+        name: "Shreeya Mishra",
         hod: "Quizzing",
         img_src: shreeya_mishra,
         quote:

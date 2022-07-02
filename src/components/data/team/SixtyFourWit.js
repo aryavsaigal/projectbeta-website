@@ -28,9 +28,11 @@ export default function SixtyFourWit() {
       <ul>
         <li>
           <p>
-            On the google meet, the event heads will be presenting slides with
-            questions on them for a set amount of time, after which they will
-            move on to the next slide with the next question.
+            The quiz will be conducted via two rounds, the preliminary round
+            would be online over google meet. On the google meet, the event
+            heads will be presenting slides with questions on them for a set
+            amount of time, after which they will move on to the next slide with
+            the next question.
           </p>
         </li>
         <li>
@@ -49,12 +51,14 @@ export default function SixtyFourWit() {
         </li>
         <li>
           <p>
-            There will be no negative marking, each correct answer will gain the
-            assigned number of points and wrong answers will fetch zero points.
+            Finals would be an offline event wherein participants would be
+            expected to answer the questions which would be read aloud by the
+            event heads. Within the final round, in the first half participants
+            would be allocated one question to answer which may be passed due to
+            inability of a team to answer. <br /> <br />
+            The second half would function off a buzzer system, wherein the
+            participants answer on a first cum basis
           </p>
-        </li>
-        <li>
-          <p>Top 3 scorers will be declared the winners of the event.</p>
         </li>
       </ul>
     </>

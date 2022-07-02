@@ -49,8 +49,26 @@ body {
   height: 100%;
   width: 100%;
   background-color: black;
-  display: none;
-  z-index: 10000000
+  display: flex;
+  z-index: 10000000;
+  transition: 0.3s;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingscreen img {
+  width: 50vw;
+  height: 50vw;
+}
+
+@keyframes loadingFadeOut {
+  from {
+    opacity: 1
+  }
+
+  to {
+    opacity: 0
+  }
 }
 
 .taskbar {
@@ -745,6 +763,7 @@ footer {
 .events--fieldscontainer h3,
 .events--fieldscontainer p {
   margin: 5px;
+  text-align: center;
 }
 
 .events--fieldscontainer p {

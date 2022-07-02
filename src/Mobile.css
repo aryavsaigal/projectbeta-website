@@ -358,6 +358,10 @@
     padding: 10px;
   }
 
+  .explorer--foldergrid>div:hover {
+    border-radius: 10px;
+  }
+
   .explorer--foldergrid>div>img {
     width: 50px;
     max-height: 50px;
@@ -377,6 +381,7 @@
     background-color: white;
     color: black;
     padding: 5px;
+    border-radius: 0 0 5px 5px;
   }
 
   .textfile div {
@@ -536,6 +541,7 @@
     flex-basis: 100px;
     height: auto;
     width: calc(50% - 20px);
+    border-radius: 5px;
   }
 
   .events--fieldscontainer img {

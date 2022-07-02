@@ -453,6 +453,7 @@
     height: 125px;
     margin-right: 0px;
     user-select: none;
+    border-radius: 5px;
   }
 
   .team--boardcore h1 {
@@ -488,19 +489,13 @@
     grid-auto-rows: 60px;
     grid-auto-flow: row;
     grid-gap: 10px;
+
     padding: 30px;
   }
 
   .team--membergrid p {
-    display: flex;
-    padding: 5px;
-    border: 1px solid white;
-    text-align: center;
     font-size: 13px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+    border-radius: 7.5px;
   }
 
   .events {

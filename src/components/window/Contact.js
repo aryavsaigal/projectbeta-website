@@ -3,6 +3,20 @@ import React from "react";
 import SocialMedia from "../main/SocialMedia";
 
 export default function Contact() {
+  const [phonerecord, unused] = React.useState([
+    ["Simar Tandon - President", "91 98715 99988"],
+    ["Aadi Jain - Vice President", "91 97735 00570"],
+    ["Adit Magotra - Secretary", "91 99588 77036"],
+    ["Anuja Mittal - Faculty In-charge", "91 99539 5074"],
+    ["Ruchi Mehra - Faculty In-charge", "91 98110 89272"],
+  ]);
+
+  const phoneRecordElems = phonerecord.map((e) => (
+    <div>
+      <p>{e[0]}</p>
+      <a href={`tel:${e[1]}`}>+{e[1]}</a>
+    </div>
+  ));
   return (
     <div className="contact">
       <h1>Contact</h1>
@@ -16,26 +30,7 @@ export default function Contact() {
       <div className="contact--grid">
         <div className="contact--phone">
           <h2>Phone</h2>
-          <div>
-            <p>Simar Tandon - President</p>
-            <a href="tel:91 98715 99988">+91 98715 99988</a>
-          </div>
-          <div>
-            <p>Aadi Jain - Vice President</p>
-            <a href="tel:91 97735 00570">+91 97735 00570</a>
-          </div>
-          <div>
-            <p>Adit Magotra - Secretary</p>
-            <a href="tel:91 99588 77036">+91 99588 77036</a>
-          </div>
-          <div>
-            <p>Anuja Mittal - Faculty In-charge</p>
-            <a href="tel:91 99539 50743">+91 91 99539 50743</a>
-          </div>
-          <div>
-            <p>Ruchi Mehra - Faculty In-charge</p>
-            <a href="tel:91 91 98110 89272">+91 91 98110 89272</a>
-          </div>
+          {phoneRecordElems}
         </div>
         <div className="contact--email">
           <h2>Email</h2>

@@ -15,8 +15,8 @@ export default function Window(props) {
    * @param {Object} props
    */
   const [location, setLocation] = React.useState({
-    abs_x: props.x,
-    abs_y: props.y,
+    abs_x: window.innerWidth <= 900 ? 0 : props.x,
+    abs_y: window.innerWidth <= 900 ? 0 : props.y,
     dyn_x: 0,
     dyn_y: 0,
     cursor_x: 0,
@@ -32,6 +32,25 @@ export default function Window(props) {
     obj.current.style.zIndex = `${props.z}`;
     obj.current.style.display = props.visible ? "initial" : "none";
   }, [props]);
+  React.useEffect(() => {
+    function toggleDisplayMode() {
+      if (window.innerWidth <= 900) {
+        obj.current.style.top = `0px`;
+        obj.current.style.left = `0px`;
+        console.log("Mobile mode");
+      } else {
+        obj.current.style.top = `${location.abs_y}px`;
+        obj.current.style.left = `${location.abs_x}px`;
+        console.log("Desktop mode");
+      }
+    }
+
+    window.addEventListener("resize", toggleDisplayMode());
+
+    return () => {
+      window.removeEventListener("resize", toggleDisplayMode());
+    };
+  }, []);
 
   function handleDragStart(event) {
     console.log("You have entered dragging mode!");

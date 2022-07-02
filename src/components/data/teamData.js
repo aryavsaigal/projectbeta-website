@@ -1,4 +1,4 @@
-import stock_photo from "../../images/team/stock-photo.jpg";
+import undefiend_photo from "../../images/team/undefined.png";
 
 import aadi_jain from "../../images/team/aadi_jain.jpeg";
 import adit_magotra from "../../images/team/adit_magotra.jpeg";
@@ -8,14 +8,17 @@ import chirag_sehgal from "../../images/team/chirag_sehgal.jpeg";
 import dhimant_nath from "../../images/team/dhimant_nath.jpeg";
 import gauri_tandon from "../../images/team/gauri_tandon.jpeg";
 import gayatri from "../../images/team/gayatri.jpeg";
+import kabir_verdi_jain from "../../images/team/kabir_verdi_jain.jpeg";
 import kanha_singh from "../../images/team/kanha_singh.jpeg";
 import navvye_anand from "../../images/team/navvye_anand.jpeg";
+import paavan_gupta from "../../images/team/paavan_gupta.jpeg";
 import puranjay_chawla from "../../images/team/puranjay_chawla.jpeg";
 import rishi_mathur from "../../images/team/rishi_mathur.jpeg";
 import shreeya_mishra from "../../images/team/shreeya_mishra.jpeg";
 import sia_jha_nath from "../../images/team/sia_jha_nath.jpeg";
 import simar_tandon from "../../images/team/simar_tandon.jpeg";
 import taran_singh from "../../images/team/taran_singh.jpeg";
+import vidushi_jain from "../../images/team/vidhushi_jain.jpeg";
 
 export default function teamData() {
   return {
@@ -66,18 +69,18 @@ export default function teamData() {
         name: "Kanha Singh",
         hod: "Programming",
         img_src: kanha_singh,
-        quote: "This is a sample quote.",
+        quote: "You sir, are a fish",
       },
       {
         name: "Kabir Verdi Jain",
         hod: "Logistics",
-        img_src: stock_photo,
+        img_src: kabir_verdi_jain,
         quote: "This is a sample quote.",
       },
       {
         name: "Vidushi Jain",
         hod: "Logistics",
-        img_src: stock_photo,
+        img_src: vidushi_jain,
         quote: "Too much darkness could kill, but too much light can blind.",
       },
       {
@@ -102,14 +105,14 @@ export default function teamData() {
         name: "Rishi Mathur",
         hod: "Console Gaming & Cryptic Hunt",
         img_src: rishi_mathur,
-        quote: "This is a sample quote.",
+        quote: "Chad, Console Gamer, Average cryptic hunt enjoyer",
       },
-      {
-        name: "Gerick Razdan",
-        hod: "Console Gaming",
-        img_src: stock_photo,
-        quote: "This is a sample quote.",
-      },
+      // {
+      //   name: "Gerick Razdan",
+      //   hod: "Console Gaming",
+      //   img_src: undefiend_photo,
+      //   quote: "This is a sample quote.",
+      // },
       {
         name: "Gayatri",
         hod: "Graphic Design",
@@ -138,15 +141,15 @@ export default function teamData() {
       {
         name: "Aryav Saigal",
         hod: "AI/IoT Robotics",
-        img_src: stock_photo,
+        img_src: undefiend_photo,
         quote: 'ayo can my quote be "I cant think of a quote"',
       },
-      {
-        name: "Shreyas Vertia",
-        hod: "AI/IoT Robotics",
-        img_src: stock_photo,
-        quote: "This is a sample quote.",
-      },
+      // {
+      //   name: "Shreyas Vertia",
+      //   hod: "AI/IoT Robotics",
+      //   img_src: undefiend_photo,
+      //   quote: "This is a sample quote.",
+      // },
       {
         name: "Shreeya Mehra",
         hod: "Quizzing",
@@ -154,17 +157,17 @@ export default function teamData() {
         quote:
           "The rest of the world may follow the rules, but I must follow my heart.",
       },
-      {
-        name: "Inika Harikrishnan",
-        hod: "Quizzing",
-        img_src: stock_photo,
-        quote: "This is a sample quote.",
-      },
+      // {
+      //   name: "Inika Harikrishnan",
+      //   hod: "Quizzing",
+      //   img_src: undefiend_photo,
+      //   quote: "This is a sample quote.",
+      // },
       {
         name: "Paavan Gupta",
         hod: "Group Discussion",
-        img_src: stock_photo,
-        quote: "This is a sample quote.",
+        img_src: paavan_gupta,
+        quote: "I am in a band 1023MB, we haven't had any gigs yet.",
       },
     ],
     members: [

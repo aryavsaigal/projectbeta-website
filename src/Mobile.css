@@ -226,6 +226,7 @@
   .titlescreen--title_container img {
     width: 50vw;
     max-width: 200px;
+    height: fit-content;
   }
 
   .titlescreen--title_container h1 {
@@ -234,13 +235,13 @@
 
   .titlescreen--date {
     font-size: 17.5px;
-    bottom: 24vh;
+    bottom: 40px;
   }
 
   .titlescreen--downarrow {
     width: 30px;
     left: calc(50% - 15px);
-    bottom: 7.5vh;
+    bottom: 10px;
   }
 
   .titlescreen--register {
@@ -292,7 +293,7 @@
     background-color: rgb(164, 62, 145);
     position: sticky;
     top: 0;
-    display: none;
+    display: block;
     height: calc(100% - 70px);
     left: 0;
     margin: 0 10px;
@@ -301,7 +302,7 @@
   }
 
   .window {
-    position: relative;
+    position: fixed;
     background-color: yellow;
     width: 100%;
     margin: 0;

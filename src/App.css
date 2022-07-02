@@ -33,6 +33,15 @@ body {
   scroll-behavior: smooth;
 }
 
+.background {
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0
+}
+
 .loadingscreen {
   position: fixed;
   top: 0;
@@ -297,16 +306,10 @@ body {
 }
 
 .titlescreen--register:hover {
-  letter-spacing: 2px;
-  color: rgb(0, 0, 0);
   background-color: white;
+  color: rgb(0, 0, 0);
 }
 
-.titlescreen--register:active {
-  letter-spacing: 4px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(22, 107, 181);
-}
 
 .titlescreen--date {
   color: #cb4b16;
@@ -319,6 +322,7 @@ body {
   font-family: "Ubuntu Mono";
   width: 90vw;
   text-align: center;
+  border-color: #dc6e20;
 }
 
 .titlescreen--downarrow {
@@ -357,17 +361,19 @@ body {
 }
 
 .home_infocards--container>div {
-  background-color: #073642;
+  background-color: #00000049;
+  backdrop-filter: blur(5px);
   border-radius: 10px;
   padding: 15px;
   position: relative;
-  border-bottom: 10px solid #eee8d5;
   transition: 0.3s;
   overflow: hidden;
+  border: 1px solid #000;
+  border-bottom: 10px solid #eee8d5;
 }
 
 .home_infocards--container>div:hover {
-  box-shadow: 0 40px 30px rgba(0, 0, 0, 0.266);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.266);
   transform: translateY(-10px);
 }
 
@@ -685,10 +691,11 @@ a:hover {
 .events h1 {
   text-align: center;
   color: #cb4b16;
+  z-index: 1000;
 }
 
 .events--bg {
-  opacity: 0.5;
+  opacity: 0.25;
   position: absolute;
   width: auto;
   height: auto;
@@ -704,6 +711,7 @@ a:hover {
   width: auto;
   display: flex;
   padding: 0 5px;
+  z-index: 1000;
 }
 
 .events--fieldscontainer div {

@@ -3,7 +3,7 @@ import TitleScreen from "./TitleScreen";
 import HomeInfoCards from "./HomeInfoCards";
 import Window from "../window/Window";
 import MobileMenu from "../main/MobileMenu";
-
+import Background from "./Background";
 import Desktop from "./../main/Desktop";
 
 import windowsData from "../data/windowsData";
@@ -13,6 +13,7 @@ export default function Homepage() {
   const [windowHandler, setWindowHandler] = React.useState(windowsData());
 
   function addWindow(app) {
+    // console.log(windowHandler);
     if (app === "Desktop") {
       let newWindowArray = windowHandler.map((e) => ({ ...e, visible: false }));
       setWindowHandler(newWindowArray);
@@ -25,10 +26,12 @@ export default function Homepage() {
       let newWindowArray = windowHandler.map((e) => {
         return e.dir === app && e.z !== maxZ ? { ...e, z: maxZ + 1 } : e;
       });
-      newWindowArray = newWindowArray.map((e) =>
+      let newnewWindowArray = newWindowArray.map((e) =>
         e.dir === app ? { ...e, visible: true } : e
       );
-      setWindowHandler(newWindowArray);
+      // console.log("tbc", newnewWindowArray);
+      setWindowHandler(newnewWindowArray);
+      // console.log(windowHandler);
     }
   }
   function removeWindow(app) {
@@ -69,6 +72,7 @@ export default function Homepage() {
         <TitleScreen />
         <HomeInfoCards />
         <MobileMenu addWindow={addWindow} />
+        <Background />
       </div>
     </>
   );

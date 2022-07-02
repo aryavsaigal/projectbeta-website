@@ -71,8 +71,8 @@ export const eventsData = [
     name: "Side Quest",
     img_src: sidequest_src,
     fields: [
-      { name: "team", value: "0" },
-      { name: "max", value: "0" },
+      { name: "team", value: "5" },
+      { name: "max", value: "1" },
       { name: "eligible", value: "9-12th" },
       { name: "medium", value: "Online" },
     ],

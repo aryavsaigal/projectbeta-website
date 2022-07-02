@@ -11,6 +11,7 @@ import gayatri from "../../images/team/gayatri.jpeg";
 import kabir_verdi_jain from "../../images/team/kabir_verdi_jain.jpeg";
 import kanha_singh from "../../images/team/kanha_singh.jpeg";
 import navvye_anand from "../../images/team/navvye_anand.jpeg";
+import nitish_sehgal from "../../images/team/nitish_sehgal.jpeg";
 import paavan_gupta from "../../images/team/paavan_gupta.jpeg";
 import puranjay_chawla from "../../images/team/puranjay_chawla.jpeg";
 import rishi_mathur from "../../images/team/rishi_mathur.jpeg";
@@ -95,6 +96,13 @@ export default function teamData() {
         hod: "A/V Editing",
         img_src: aniket_kumar,
         quote: "chinta walli baat hi nahi hai",
+      },
+      {
+        name: "Nitish Sehgal",
+        hod: "A/V Editing",
+        img_src: nitish_sehgal,
+        quote:
+          "Mediocrity knows nothing higher than itself, but talent instantly recognizes genius",
       },
       {
         name: "Arnav Whig",

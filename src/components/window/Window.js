@@ -37,11 +37,9 @@ export default function Window(props) {
       if (window.innerWidth <= 900) {
         obj.current.style.top = `10px`;
         obj.current.style.left = `0px`;
-        console.log("Mobile mode");
       } else {
         obj.current.style.top = `${location.abs_y}px`;
         obj.current.style.left = `${location.abs_x}px`;
-        console.log("Desktop mode");
       }
     }
 

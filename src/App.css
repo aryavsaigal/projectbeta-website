@@ -48,10 +48,10 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
+  background-color: #1B2C44;
   display: flex;
   z-index: 10000000;
-  transition: 0.3s;
+  transition: 1s;
   justify-content: center;
   align-items: center;
 }
@@ -59,6 +59,8 @@ body {
 .loadingscreen img {
   width: 50vw;
   height: 50vw;
+  user-select: none;
+  display: none;
 }
 
 @keyframes loadingFadeOut {
@@ -248,6 +250,7 @@ body {
   width: 30px;
   height: 30px;
   margin-right: 10px;
+  user-select: none;
 }
 
 .notif--self p {

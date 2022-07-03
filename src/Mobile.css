@@ -298,8 +298,8 @@
   .window {
     width: calc(100% - 20px);
     margin: 0 10px;
-    height: auto;
-    bottom: 70px;
+    height: calc(100% - 80px);
+    /* bottom: 70px; */
     border-radius: 10px;
   }
 

@@ -10,7 +10,13 @@ import windowsData from "../data/windowsData";
 
 export default function Homepage() {
   // {app:"explorer","id":"1"}
-  const [windowHandler, setWindowHandler] = React.useState(windowsData());
+  const [windowHandler, setWindowHandler] = React.useState(
+    windowsData().map((e, i) => ({
+      ...e,
+      visible: false,
+      z: 100 + i,
+    }))
+  );
 
   function addWindow(app) {
     // console.log(windowHandler);
@@ -19,19 +25,23 @@ export default function Homepage() {
       setWindowHandler(newWindowArray);
       return;
     } else {
-      let maxZ = 0;
-      windowHandler.forEach((e) => {
-        if (e.z > maxZ) maxZ = e.z;
-      });
-      let newWindowArray = windowHandler.map((e) => {
-        return e.dir === app && e.z !== maxZ ? { ...e, z: maxZ + 1 } : e;
-      });
-      let newnewWindowArray = newWindowArray.map((e) =>
-        e.dir === app ? { ...e, visible: true } : e
+      console.log(
+        windowHandler.map((e) => {
+          if (e.dir === app) {
+            console.log({ ...e, visible: true });
+            return { ...e, visible: true };
+          } else return { ...e };
+        })
       );
-      // console.log("tbc", newnewWindowArray);
-      setWindowHandler(newnewWindowArray);
-      // console.log(windowHandler);
+      setWindowHandler((prev) =>
+        prev.map((e) => {
+          if (e.dir === app) {
+            console.log({ ...e, visible: true });
+            return { ...e, visible: true };
+          } else return { ...e };
+        })
+      );
+      console.log(windowHandler);
     }
   }
   function removeWindow(app) {
@@ -55,8 +65,6 @@ export default function Homepage() {
       <Window
         {...item}
         key={item.id}
-        x={100}
-        y={50}
         removeWindow={removeWindow}
         addWindow={addWindow}
         focusWindow={focusWindow}

@@ -140,7 +140,7 @@ body {
   margin: 10px;
   max-height: calc(100vh - 40px);
   flex-wrap: wrap;
-  z-index: 10;
+  z-index: 1;
   padding-top: 10px;
 }
 

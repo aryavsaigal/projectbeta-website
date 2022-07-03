@@ -328,7 +328,7 @@
   .window--header .window--close {
     margin-left: auto;
     border-radius: 0 10px 0 0;
-    padding: 15px;
+    padding: 5px 10px;
   }
 
   .window--content {

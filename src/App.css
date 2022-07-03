@@ -56,7 +56,7 @@ body {
   align-items: center;
 }
 
-.loadingscreen img {
+.loadingscreen video {
   width: 50vw;
   height: 50vw;
   user-select: none;

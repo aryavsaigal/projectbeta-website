@@ -539,6 +539,7 @@
     height: auto;
     width: calc(50% - 20px);
     border-radius: 5px;
+    backdrop-filter: blur(0px);
   }
 
   .events--fieldscontainer img {

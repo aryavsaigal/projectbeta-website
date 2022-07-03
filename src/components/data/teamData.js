@@ -1,4 +1,4 @@
-import undefiend_photo from "../../images/team/undefined.png";
+import undefined_photo from "../../images/team/undefined.png";
 
 import aadi_jain from "../../images/team/aadi_jain.jpeg";
 import adit_magotra from "../../images/team/adit_magotra.jpeg";

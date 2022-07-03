@@ -101,7 +101,8 @@
 
 
   .homepage {
-    height: 100%
+    height: 100%;
+    margin-bottom: 80px;
   }
 
   .taskbar {
@@ -293,6 +294,10 @@
 
   .home_infocards--container>div:hover {
     transform: none;
+  }
+
+  footer {
+    margin-bottom: 80px;
   }
 
   .window {

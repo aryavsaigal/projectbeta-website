@@ -19,7 +19,7 @@ export default function Background() {
             minWidth: 200.0,
             scale: 1.0,
             scaleMobile: 1.0,
-            backgroundColor: 0x1b2d44,
+            backgroundColor: 0x1a293e,
             color: 0x813f22,
             showDots: false,
           })
@@ -35,7 +35,7 @@ export default function Background() {
             minWidth: 200.0,
             scale: 1.0,
             scaleMobile: 2.0,
-            backgroundColor: 0x1b2d44,
+            backgroundColor: 0x1a293e,
             color: 0x813f22,
             showDots: false,
             points: 4.0,

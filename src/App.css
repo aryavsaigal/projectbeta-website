@@ -425,16 +425,17 @@ a:hover {
 footer {
   text-align: center;
   margin: 20px;
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 footer small {
-  opacity: 75%;
+  opacity: 0.6;
   font-family: "Ubuntu Mono";
+  color: white
 }
 
 footer small a {
-
+  color: white;
   font-weight: normal;
 }
 

@@ -4,7 +4,7 @@ export default function Authority_450() {
   return (
     <>
       <p>
-        <strong>Judges: </strong>Shreyas Vartia and Aryav Saigal
+        <strong>Judges: </strong>Shreyas Vertia and Aryav Saigal
       </p>
       <ul>
         <li>

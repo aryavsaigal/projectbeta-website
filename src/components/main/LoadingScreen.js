@@ -14,7 +14,7 @@ export default function LoadingScreen() {
     obj_child.current.style.display = "none";
     let wait = setTimeout(() => {
       obj_parent.current.style.display = "none";
-    }, 500);
+    }, 1000);
     return () => {
       clearTimeout(wait);
     };

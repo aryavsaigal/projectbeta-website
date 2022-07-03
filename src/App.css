@@ -58,7 +58,8 @@ body {
 
 .loadingscreen video {
   width: 50vw;
-  height: 50vw;
+  height: auto;
+  max-width: 300px;
   user-select: none;
   display: none;
 }

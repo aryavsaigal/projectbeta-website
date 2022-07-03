@@ -5,7 +5,7 @@ export default function Hypertext() {
     <>
       <ul>
         <li>
-          <p>Duration - 3 Days (72 Hours) </p>
+          <p>Duration - 3 Days (72 Hours)</p>
         </li>
         <li>
           <p>Languages allowed - HTML, CSS, and JavaScript</p>
@@ -16,25 +16,25 @@ export default function Hypertext() {
         <li>
           <p>
             Participants are allowed to use all libraries and frameworks of
-            supported languages. 
+            supported languages.
           </p>
         </li>
         <li>
           <p>
             The participants may take help from online resources such as
-            StackOverflow and W3Schools. 
+            StackOverflow and W3Schools.
           </p>
         </li>
         <li>
           <p>
             The use of templates/tools from other sites such as Wix,
-            Webflow,colorlib, etc. is not allowed. 
+            Webflow,colorlib, etc. is not allowed.
           </p>
         </li>
         <li>
           <p>
             Participants must send a .zip folder of their website named
-            “schoolname_website” along with its hosted  link(optional) to the
+            “schoolname_website” along with its hosted link(optional) to the
             submission forum specified on discord.
           </p>
         </li>
@@ -42,7 +42,7 @@ export default function Hypertext() {
           <p>
             The participants are expected to host their website on a free
             hosting service (Netlify, GitHub, Hostinger etc.). Hosting is
-            optional, but participants will receive bonus points for doing so. 
+            optional, but participants will receive bonus points for doing so.
           </p>
         </li>
         <li>

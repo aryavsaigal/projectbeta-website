@@ -58,7 +58,7 @@ export default function ItsDebatable() {
         <li>
           <p>
             Participants are required to submit their video in the form of a
-            drive link by ______ using the given form:
+            drive link by 10th August 2022 (11:59PM) using the given form:
             <br />
             <a href="https://forms.gle/89fmeJ6zgev51RGcA">
               https://forms.gle/89fmeJ6zgev51RGcA

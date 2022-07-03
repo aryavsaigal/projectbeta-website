@@ -612,6 +612,10 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
   }
 
+  .contact--grid .contact--phone div p {
+    margin: 10px 0;
+  }
+
   .contact--grid div div {
     background-color: unset;
     border: unset;

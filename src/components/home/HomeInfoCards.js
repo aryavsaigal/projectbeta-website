@@ -54,8 +54,9 @@ export default function HomeInfoCards() {
       <footer>
         © ProjectBeta 2022
         <br />
-        <small style={{ opacity: "75%", fontFamily: "Ubuntu Mono" }}>
-          {"</>"} by Suyash Chandel
+        <small>
+          {"</>"} by{" "}
+          <a href="https://suyashc1000.github.io/portfolio/">Suyash Chandel</a>
         </small>
       </footer>
     </>

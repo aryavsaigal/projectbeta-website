@@ -110,7 +110,7 @@ export default function teamData() {
         name: "Arnav Whig",
         hod: "Audio Engineering & Cryptic Hunt",
         img_src: arnav_whig,
-        quote: "This is a sample quote.",
+        quote: "PLS4LIFE",
       },
       {
         name: "Rishi Mathur",

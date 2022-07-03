@@ -4,9 +4,9 @@ import SocialMedia from "../main/SocialMedia";
 
 export default function Contact() {
   const [phonerecord, unused] = React.useState([
-    ["Simar Tandon - President", "91 98715 99988"],
+    ["Simar Tandon - President", "91 98715 99988", "critto#3569"],
     ["Aadi Jain - Vice President", "91 97735 00570"],
-    ["Adit Magotra - Secretary", "91 99588 77036"],
+    ["Adit Magotra - Secretary", "91 99588 77036", "The_AlphaLaser#0227"],
     ["Anuja Mittal - Faculty In-charge", "91 99539 5074"],
     ["Ruchi Mehra - Faculty In-charge", "91 98110 89272"],
   ]);
@@ -14,7 +14,10 @@ export default function Contact() {
   const phoneRecordElems = phonerecord.map((e, i) => (
     <div key={i}>
       <p>{e[0]}</p>
-      <a href={`tel:${e[1]}`}>+{e[1]}</a>
+      <p>
+        Phone: <a href={`tel:${e[1]}`}>+{e[1]}</a>
+      </p>
+      {e[2] && <p>Discord: {e[2]}</p>}
     </div>
   ));
   return (

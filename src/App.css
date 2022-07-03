@@ -428,6 +428,16 @@ footer {
   opacity: 0.5;
 }
 
+footer small {
+  opacity: 75%;
+  font-family: "Ubuntu Mono";
+}
+
+footer small a {
+
+  font-weight: normal;
+}
+
 .home_infocards--container>div p {
   padding: 0px;
   font-size: 16px;
@@ -824,6 +834,10 @@ footer {
   background-color: rgb(52, 52, 52);
   border: 1px solid rgb(82, 82, 82);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
+}
+
+.contact--grid .contact--phone div p:nth-child(1) {
+  font-weight: bold;
 }
 
 .contact--grid div div {

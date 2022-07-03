@@ -10,7 +10,7 @@
   width: calc(100% - 40px);
   /* background-color: rgb(29, 29, 29); */
   background-color: #00040575;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(7.5px);
   border-radius: 10px;
   justify-content: space-between;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
@@ -45,7 +45,6 @@
   justify-content: flex-start;
   /* background-color: rgb(29, 29, 29); */
   background-color: #00040575;
-  backdrop-filter: blur(12px);
   border-radius: 10px;
   padding: 0 10px;
   overflow-x: auto;
@@ -80,8 +79,7 @@
   width: 250px;
   max-width: calc(100% - 20px);
   /* background-color: rgb(29, 29, 29); */
-  background-color: #031b20b3;
-  backdrop-filter: blur(12px);
+  background-color: #031b20f1;
   border-radius: 10px;
   overflow-x: auto;
   z-index: 10002;
@@ -162,7 +160,6 @@
     padding: 7.5px;
     flex-direction: column;
     background-color: #5757574a;
-    backdrop-filter: blur(12px);
     border: none;
     border-radius: 4.5px;
   }
@@ -255,7 +252,7 @@
     font-size: 13px;
     padding: 15px;
     width: 70%;
-
+    backdrop-filter: blur(2.5px);
   }
 
   .titlescreen--register:hover {
@@ -283,7 +280,7 @@
 
   .home_infocards--container>div {
     box-shadow: 0 30px 40px rgba(0, 0, 0, 0.266);
-
+    backdrop-filter: blur(0px);
   }
 
   .home_infocards--2022:hover img,

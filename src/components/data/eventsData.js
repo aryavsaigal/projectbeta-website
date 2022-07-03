@@ -82,8 +82,8 @@ export const eventsData = [
     name: "It's Debatable",
     img_src: itsdebatable_src,
     fields: [
-      { name: "team", value: "1" },
-      { name: "max", value: "2" },
+      { name: "team", value: "0" },
+      { name: "max", value: "0" },
       { name: "eligible", value: "9-12th" },
       { name: "medium", value: "Both" },
     ],

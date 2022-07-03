@@ -51,7 +51,13 @@ export default function HomeInfoCards() {
           <img src={call_src} alt="Star icon" />
         </div>
       </div>
-      <footer>© ProjectBeta 2022</footer>
+      <footer>
+        © ProjectBeta 2022
+        <br />
+        <small style={{ opacity: "75%", fontFamily: "Ubuntu Mono" }}>
+          {"</>"} by Suyash Chandel
+        </small>
+      </footer>
     </>
   );
 }

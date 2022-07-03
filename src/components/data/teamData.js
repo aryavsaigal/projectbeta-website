@@ -17,6 +17,7 @@ import paavan_gupta from "../../images/team/paavan_gupta.jpeg";
 import puranjay_chawla from "../../images/team/puranjay_chawla.jpeg";
 import rishi_mathur from "../../images/team/rishi_mathur.jpeg";
 import shreeya_mishra from "../../images/team/shreeya_mishra.jpeg";
+import shreyas_vertia from "../../images/team/shreyas_vertia.jpeg";
 import sia_jha_nath from "../../images/team/sia_jha_nath.jpeg";
 import simar_tandon from "../../images/team/simar_tandon.jpeg";
 import taran_singh from "../../images/team/taran_singh.jpeg";
@@ -75,13 +76,13 @@ export default function teamData() {
       },
       {
         name: "Kabir Verdi Jain",
-        hod: "Logistics",
+        hod: "Logistics & Club Coordinator",
         img_src: kabir_verdi_jain,
         quote: "This is a sample quote.",
       },
       {
         name: "Vidushi Jain",
-        hod: "Logistics",
+        hod: "Logistics & Club Coordinator",
         img_src: vidushi_jain,
         quote: "Too much darkness could kill, but too much light can blind.",
       },
@@ -151,13 +152,13 @@ export default function teamData() {
       {
         name: "Aryav Saigal",
         hod: "AI/IoT Robotics",
-        img_src: undefiend_photo,
+        img_src: aryav_saigal,
         quote: 'ayo can my quote be "I cant think of a quote"',
       },
       {
         name: "Shreyas Vertia",
         hod: "AI/IoT Robotics",
-        img_src: undefiend_photo,
+        img_src: shreyas_vertia,
         quote: "They call me pollo grande",
       },
       {

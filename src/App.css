@@ -730,7 +730,8 @@ footer {
   max-width: 75%;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
+  user-select: none;
 }
 
 .events--fieldscontainer {
@@ -760,6 +761,8 @@ footer {
 .events--fieldscontainer img {
   width: 100px;
   margin-bottom: 10px;
+  user-select: none;
+
 }
 
 .events--fieldscontainer h2,

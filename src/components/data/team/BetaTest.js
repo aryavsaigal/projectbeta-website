@@ -6,7 +6,8 @@ export default function BetaTest() {
       <ul>
         <li>
           <p>
-            Hunt will begin at ___ 2022, 00:00 and will end at ___ 2022, 00:00.
+            Hunt will begin at 9th August 2022, 00:00 and will end at 10th
+            August 2022, 00:00.
           </p>
         </li>
         <li>

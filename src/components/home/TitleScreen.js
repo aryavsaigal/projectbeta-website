@@ -15,9 +15,9 @@ export default function TitleScreen() {
       <p className="titlescreen--date">07|08|2022 - 13|08|2022</p>
       <p
         className="titlescreen--register"
-        // onClick={() =>
-        //   (window.location.href = "https://www.youtube.com/watch?v=RkC0l4iekYo")
-        // }
+        onClick={() =>
+          (window.location.href = "https://forms.gle/hX8SZ9T5UXQeaJ72A")
+        }
       >
         CLICK HERE TO REGISTER
       </p>

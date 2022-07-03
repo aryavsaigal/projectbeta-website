@@ -25,41 +25,46 @@ export default function Homepage() {
       setWindowHandler(newWindowArray);
       return;
     } else {
-      console.log(
-        windowHandler.map((e) => {
-          if (e.dir === app) {
-            console.log({ ...e, visible: true });
-            return { ...e, visible: true };
-          } else return { ...e };
-        })
-      );
+      let maxZ = 0;
+      windowHandler.forEach((e) => {
+        if (e.z > maxZ) maxZ = e.z;
+      });
+      const isFolder = app.startsWith("Events/");
+
       setWindowHandler((prev) =>
         prev.map((e) => {
           if (e.dir === app) {
-            console.log({ ...e, visible: true });
-            return { ...e, visible: true };
+            if (e.z < maxZ) {
+              return {
+                ...e,
+                visible: true,
+                z: isFolder ? maxZ + 5 : maxZ + 1,
+              };
+            } else return { ...e, visible: true };
           } else return { ...e };
         })
       );
-      console.log(windowHandler);
     }
   }
+
   function removeWindow(app) {
     const newWindowArray = windowHandler.map((e) =>
       e.dir === app ? { ...e, visible: false } : e
     );
     setWindowHandler(newWindowArray);
   }
+
   function focusWindow(app) {
     let maxZ = 0;
     windowHandler.forEach((e) => {
       if (e.z > maxZ) maxZ = e.z;
     });
     const newWindowArray = windowHandler.map((e) => {
-      return e.dir === app && e.z !== maxZ ? { ...e, z: maxZ + 1 } : e;
+      return e.dir === app && e.z < maxZ ? { ...e, z: maxZ + 1 } : e;
     });
     setWindowHandler(newWindowArray);
   }
+
   function createWindows() {
     return windowHandler.map((item, i) => (
       <Window

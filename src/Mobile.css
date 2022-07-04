@@ -103,6 +103,11 @@
     margin-bottom: 80px;
   }
 
+  .loadingscreen .skip {
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
   .taskbar {
     display: none;
   }
@@ -391,6 +396,11 @@
     font-family: "Ubuntu Mono";
     white-space: pre-line;
     font-size: 15px;
+  }
+
+  .imageviewer .downloadicon {
+    width: 20px;
+    padding: 10px;
   }
 
   .team {

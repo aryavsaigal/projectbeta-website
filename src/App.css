@@ -64,6 +64,24 @@ body {
   display: none;
 }
 
+.loadingscreen .skip {
+  position: fixed;
+  bottom: 20px;
+  font-size: 20px;
+  padding: 10px 20px;
+  transition: 0.5s;
+  user-select: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.33);
+  opacity: 0;
+}
+
+.loadingscreen .skip:hover {
+  transition: 0.2s;
+  background-color: white;
+  color: #1B2C44;
+}
+
 @keyframes loadingFadeOut {
   from {
     opacity: 1
@@ -265,7 +283,7 @@ body {
 }
 
 .homepage {
-  height: calc(100vh - 40px);
+  height: calc(100vh - 25px);
   width: 100%;
   position: fixed;
   overflow-y: auto;
@@ -618,6 +636,20 @@ footer {
   height: auto;
   max-height: 100%;
   max-width: 100%;
+}
+
+.imageviewer .downloadicon {
+  position: absolute;
+  top: 0;
+  width: 25px;
+  height: auto;
+  padding: 20px;
+  right: 0;
+  opacity: 0.5;
+}
+
+.imageviewer .downloadicon:hover {
+  opacity: 1;
 }
 
 .team {

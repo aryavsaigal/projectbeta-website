@@ -6,9 +6,9 @@ This website was made using **HTML, CSS, Javascript and ReactJS**
 ---
 ### Credits
 
-Suyash Chandel - _Software Development, UX/UI Design_
+[Suyash Chandel](https://github.com/SuyashC1000) - _Software Development, UX/UI Design_
 
-Aadi Jain - _Conceptualisation, Project Management, Creative Guidance_
+[Aadi Jain](https://github.com/diofthecreed) - _Conceptualisation, Project Management, Creative Guidance_
 
 Simar Tandon - _Project Management, Proxy Content, Creative Guidance_
 

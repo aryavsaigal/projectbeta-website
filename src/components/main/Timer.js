@@ -47,9 +47,9 @@ export default function Timer() {
 
   return (
     <div className="taskbar--timer">
-      T {countdown.sign} {addDoubleZero(countdown.dd)}dd:{" "}
-      {addDoubleZero(countdown.hh)}hh: {addDoubleZero(countdown.mm)}mm:{" "}
-      {addDoubleZero(countdown.ss)}ss
+      T {countdown.sign} {addDoubleZero(countdown.dd)}d:{" "}
+      {addDoubleZero(countdown.hh)}h: {addDoubleZero(countdown.mm)}m:{" "}
+      {addDoubleZero(countdown.ss)}s
     </div>
   );
 }

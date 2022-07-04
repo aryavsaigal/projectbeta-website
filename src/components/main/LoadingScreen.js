@@ -6,10 +6,7 @@ export default function LoadingScreen() {
   const obj_parent = React.useRef();
   const obj_child = React.useRef();
   React.useLayoutEffect(() => {
-    if (
-      window.innerWidth < 900 &&
-      /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
-    )
+    if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent))
       obj_parent.current.style.display = "none";
     else obj_child.current.style.display = "block";
   }, []);
@@ -25,10 +22,7 @@ export default function LoadingScreen() {
     };
   }
 
-  if (
-    /^((?!chrome|android).)*safari/i.test(navigator.userAgent) &&
-    window.innerWidth < 900
-  )
+  if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent))
     return <div className="loadingscreen" ref={obj_parent}></div>;
   else
     return (

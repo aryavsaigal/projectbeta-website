@@ -325,6 +325,7 @@ body {
   color: rgb(255, 255, 255);
   cursor: pointer;
   transition: 0.3s;
+  user-select: none;
 }
 
 .titlescreen--register:hover {
@@ -376,7 +377,8 @@ body {
 .home_infocards--container {
   height: fit-content;
   width: 85vw;
-  margin: 100px auto;
+  margin: 0;
+  padding: 100px 7.5vw;
   display: grid;
   grid-template: 2fr 1fr / 1fr 1fr;
   grid-gap: 25px;
@@ -770,7 +772,7 @@ footer {
 .events--fieldscontainer h3,
 .events--fieldscontainer h4,
 .events--fieldscontainer p {
-  margin: 5px;
+  margin: 2px;
   text-align: center;
 }
 

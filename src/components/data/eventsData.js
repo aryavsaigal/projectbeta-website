@@ -1,6 +1,6 @@
 import React from "react";
 
-import sample_src from "../../images/folders/file-sample.png";
+// import sample_src from "../../images/folders/file-sample.png";
 import hypertext_src from "../../images/events/hypertext.png";
 import designathon_src from "../../images/events/designathon.png";
 import authority450_src from "../../images/events/authority450.png";
@@ -10,6 +10,7 @@ import dualwield_src from "../../images/events/dualwield.png";
 import sixtyfourwit_src from "../../images/events/sixtyfourwit.png";
 import itsdebatable_src from "../../images/events/itsdebatable.png";
 import projectremix_src from "../../images/events/projectremix.png";
+import betatest_src from "../../images/events/betatest.png";
 
 import ProjectRemix from "./team/ProjectRemix";
 import Authority450 from "./team/Authority450";
@@ -39,7 +40,7 @@ export const eventsData = [
     img_src: functionoverload_src,
     fields: [
       { name: "team", value: "0" },
-      { name: "max", value: "0" },
+      { name: "max", value: "1" },
       { name: "eligible", value: "9-12th" },
       { name: "medium", value: "Both" },
     ],
@@ -82,7 +83,7 @@ export const eventsData = [
     name: "It's Debatable",
     img_src: itsdebatable_src,
     fields: [
-      { name: "team", value: "1" },
+      { name: "team", value: "0" },
       { name: "max", value: "2" },
       { name: "eligible", value: "9-12th" },
       { name: "medium", value: "Both" },
@@ -94,7 +95,7 @@ export const eventsData = [
     img_src: projectremix_src,
     fields: [
       { name: "team", value: "0" },
-      { name: "max", value: "0" },
+      { name: "max", value: "1" },
       { name: "eligible", value: "9-12th" },
       { name: "medium", value: "Online" },
     ],
@@ -113,7 +114,7 @@ export const eventsData = [
   },
   {
     name: "BetaTest",
-    img_src: sample_src,
+    img_src: betatest_src,
     fields: [
       { name: "team", value: "0" },
       { name: "max", value: "0" },
@@ -126,7 +127,7 @@ export const eventsData = [
     name: "64 Wit",
     img_src: sixtyfourwit_src,
     fields: [
-      { name: "team", value: "1" },
+      { name: "team", value: "0" },
       { name: "max", value: "1" },
       { name: "eligible", value: "9-12th" },
       { name: "medium", value: "Both" },

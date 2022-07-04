@@ -230,7 +230,7 @@
   .titlescreen--title_container img {
     width: 50vw;
     max-width: 200px;
-    height: fit-content;
+    height: auto;
   }
 
   .titlescreen--title_container h1 {
@@ -303,7 +303,6 @@
     width: calc(100% - 20px);
     margin: 0 10px;
     height: calc(100% - 80px);
-    /* bottom: 70px; */
     border-radius: 10px;
   }
 

@@ -16,14 +16,14 @@ export default function Events(props) {
 
   const EventsFields = () => {
     return rawEventsData.fields.map((e, i) => {
-      const teamsOrppl =
+      const isIndividual =
         rawEventsData.fields[0].name === "team" &&
         rawEventsData.fields[0].value === "0";
       const eventname =
         e.name === "team"
           ? "Participation Mode"
           : e.name === "max"
-          ? `${teamsOrppl ? "Students" : "Teams"} per school`
+          ? `${isIndividual ? "Students" : "Teams"} per school`
           : e.name === "eligible"
           ? "Eligiblity"
           : e.name === "medium"
@@ -51,7 +51,7 @@ export default function Events(props) {
           else
             return (
               <>
-                <h2>Teams</h2>
+                <h2>Team{rawEventsData.fields[1].value !== "1" ? "s" : ""}</h2>
                 <h3>of {e.value}</h3>
               </>
             );
@@ -78,7 +78,15 @@ export default function Events(props) {
                 <h2 style={{ fontSize: "40px", height: "50px" }}>ထ</h2>
               )}
               {e.value !== "0" && <h2>{e.value}</h2>}
-              <h3>{teamsOrppl ? "Student(s)" : "Team(s)"}</h3>
+              <h3>
+                {isIndividual && e.value !== "1"
+                  ? "Students"
+                  : isIndividual && e.value === "1"
+                  ? "Student"
+                  : !isIndividual && e.value !== "1"
+                  ? "Teams"
+                  : "Team"}
+              </h3>
             </>
           );
         } else if (e.name === "eligible") {

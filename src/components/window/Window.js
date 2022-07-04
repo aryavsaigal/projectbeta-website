@@ -33,8 +33,8 @@ export default function Window(props) {
     <Draggable
       handle=".window--move"
       defaultPosition={{
-        x: window.innerWidth <= 900 ? 0 : 100,
-        y: window.innerWidth <= 900 ? 10 : 50,
+        x: window.innerWidth <= 900 ? 0 : props.x,
+        y: window.innerWidth <= 900 ? 10 : props.y,
       }}
       onStart={() => props.focusWindow(props.dir)}
     >

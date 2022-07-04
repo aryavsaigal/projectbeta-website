@@ -70,6 +70,8 @@ export default function Homepage() {
       <Window
         {...item}
         key={item.id}
+        x={100 + i * 15}
+        y={50 + i * 15}
         removeWindow={removeWindow}
         addWindow={addWindow}
         focusWindow={focusWindow}

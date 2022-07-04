@@ -224,7 +224,7 @@
   .titlescreen--title_container {
     flex-direction: column;
     transform: translate(-50%, -40%);
-    top: 40%;
+    top: 35%;
   }
 
   .titlescreen--title_container img {
@@ -239,7 +239,7 @@
 
   .titlescreen--date {
     font-size: 17.5px;
-    bottom: 40px;
+    bottom: 120px;
   }
 
   .titlescreen--downarrow {
@@ -254,6 +254,7 @@
     width: 70%;
     background-color: #3e4b5c;
     backdrop-filter: blur(0px);
+    bottom: 60px;
   }
 
   .titlescreen--register:hover {
@@ -567,6 +568,10 @@
 
   .events--fieldscontainer h3 {
     font-size: 15px;
+  }
+
+  .events--fieldscontainer h4 {
+    font-size: 13px;
   }
 
   .events--desc {

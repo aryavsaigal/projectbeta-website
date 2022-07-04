@@ -768,6 +768,7 @@ footer {
 
 .events--fieldscontainer h2,
 .events--fieldscontainer h3,
+.events--fieldscontainer h4,
 .events--fieldscontainer p {
   margin: 5px;
   text-align: center;
@@ -780,6 +781,10 @@ footer {
 .events--fieldscontainer h2 {
   margin-top: 15px;
   font-size: 30px;
+}
+
+.events--fieldscontainer h4 {
+  font-size: 17.5px;
 }
 
 .events--desc {

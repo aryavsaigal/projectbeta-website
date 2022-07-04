@@ -31,9 +31,9 @@ export default function Events(props) {
           : null;
       const img_src =
         e.name === "team"
-          ? school_src
-          : e.name === "max"
           ? ppl_src
+          : e.name === "max"
+          ? school_src
           : e.name === "eligible"
           ? pass_src
           : e.name === "medium"
@@ -59,8 +59,8 @@ export default function Events(props) {
           if (e.value === "Both")
             return (
               <>
-                <h3>1st Round: Online</h3>
-                <h3>2nd Round: Offline</h3>
+                <h4>1st Round: Online</h4>
+                <h4>2nd Round: Offline</h4>
               </>
             );
           else {

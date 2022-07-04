@@ -12,7 +12,7 @@ Aadi Jain - _Conceptualisation, Project Management, Creative Guidance_
 
 Simar Tandon - _Project Management, Proxy Content, Creative Guidance_
 
-The Graphic Design Department - _Event Logos, Schedule_
+Gauri Tandon and Gayatri - _Event Logos, Schedule_
 
 The ProjectBeta Core - _Content on Team Page_
 

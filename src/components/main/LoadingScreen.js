@@ -6,7 +6,12 @@ export default function LoadingScreen() {
   const obj_parent = React.useRef();
   const obj_child = React.useRef();
   React.useLayoutEffect(() => {
-    obj_child.current.style.display = "block";
+    if (
+      window.innerWidth < 900 &&
+      /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+    )
+      obj_parent.current.style.display = "none";
+    else obj_child.current.style.display = "block";
   }, []);
 
   function handleEnd() {
@@ -20,16 +25,22 @@ export default function LoadingScreen() {
     };
   }
 
-  return (
-    <div className="loadingscreen" ref={obj_parent}>
-      <video
-        ref={obj_child}
-        src={pbbootup_src}
-        type="video/mp4"
-        onEnded={handleEnd}
-        autoPlay
-        muted
-      ></video>
-    </div>
-  );
+  if (
+    /^((?!chrome|android).)*safari/i.test(navigator.userAgent) &&
+    window.innerWidth < 900
+  )
+    return <div className="loadingscreen" ref={obj_parent}></div>;
+  else
+    return (
+      <div className="loadingscreen" ref={obj_parent}>
+        <video
+          ref={obj_child}
+          src={pbbootup_src}
+          type="video/mp4"
+          onEnded={handleEnd}
+          autoPlay
+          muted
+        ></video>
+      </div>
+    );
 }

@@ -14,6 +14,10 @@ export default function Textfile(props) {
         <div>Kushagra Ganesh - Head of Gaming {"(Console)"} </div>
         <div>Ayush Kishor - Head of Pitching</div>
         <div>Venkatesh Gaur - Head of Quizzing</div>
+        <div>Aarushi Khuranna - Corporate Cabinet</div>
+        <div>Asmit Kumar - Corporate Cabinet</div>
+        <div>Anusha Verma - Corporate Cabinet</div>
+        <div>Annika Saigal - Corporate Cabinet</div>
         <div>{"\n"}</div>
         <div>-----</div>
         <div>2020</div>

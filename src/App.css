@@ -428,17 +428,6 @@ footer {
   opacity: 0.75;
 }
 
-footer small {
-  opacity: 0.6;
-  font-family: "Ubuntu Mono";
-  color: white
-}
-
-footer small a {
-  color: white;
-  font-weight: normal;
-}
-
 .home_infocards--container>div p {
   padding: 0px;
   font-size: 16px;

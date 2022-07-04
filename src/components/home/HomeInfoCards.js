@@ -51,14 +51,7 @@ export default function HomeInfoCards() {
           <img src={call_src} alt="Star icon" />
         </div>
       </div>
-      <footer>
-        © ProjectBeta 2022
-        <br />
-        <small>
-          {"</>"} by{" "}
-          <a href="https://suyashc1000.github.io/portfolio/">Suyash Chandel</a>
-        </small>
-      </footer>
+      <footer>© ProjectBeta 2022</footer>
     </>
   );
 }

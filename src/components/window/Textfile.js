@@ -4,6 +4,8 @@ export default function Textfile(props) {
   function AlumniText() {
     return (
       <>
+        <div>Alumni</div>
+        <div>{"\n"}</div>
         <div>-----</div>
         <div>2021</div>
         <div>{"\n"}</div>

@@ -562,12 +562,12 @@
   .events--fieldscontainer h2,
   .events--fieldscontainer h3,
   .events--fieldscontainer p {
-    margin: 5px 0;
+    margin: 0;
     text-align: center;
   }
 
   .events--fieldscontainer p {
-    margin-bottom: auto;
+    margin-bottom: 15px;
     font-size: 12px;
   }
 

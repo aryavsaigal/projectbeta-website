@@ -17,7 +17,7 @@ import paavan_gupta from "../../images/team/paavan_gupta.jpeg";
 import puranjay_chawla from "../../images/team/puranjay_chawla.jpeg";
 import rishi_mathur from "../../images/team/rishi_mathur.jpeg";
 import shreeya_mishra from "../../images/team/shreeya_mishra.jpeg";
-import shreyas_vertia from "../../images/team/shreyas_vertia.jpeg";
+import shreyas_vartia from "../../images/team/shreyas_vertia.jpeg";
 import sia_jha_nath from "../../images/team/sia_jha_nath.jpeg";
 import simar_tandon from "../../images/team/simar_tandon.jpeg";
 import taran_singh from "../../images/team/taran_singh.jpeg";
@@ -156,9 +156,9 @@ export default function teamData() {
         quote: 'ayo can my quote be "I cant think of a quote"',
       },
       {
-        name: "Shreyas Vertia",
+        name: "Shreyas Vartia",
         hod: "AI/IoT Robotics",
-        img_src: shreyas_vertia,
+        img_src: shreyas_vartia,
         quote: "They call me pollo grande",
       },
       {

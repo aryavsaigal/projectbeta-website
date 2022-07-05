@@ -930,7 +930,7 @@ footer {
 }
 
 .homepage::-webkit-scrollbar {
-  width: 10px;
+  width: 0px;
 }
 
 .homepage::-webkit-scrollbar-track {

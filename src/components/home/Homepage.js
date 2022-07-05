@@ -17,30 +17,22 @@ export default function Homepage() {
       z: 500,
     }))
   );
+  const zMax = 500;
 
   function addWindow(app) {
-    // console.log(windowHandler);
     if (app === "Desktop") {
       let newWindowArray = windowHandler.map((e) => ({ ...e, visible: false }));
       setWindowHandler(newWindowArray);
       return;
     } else {
-      let maxZ = 0;
-      windowHandler.forEach((e) => {
-        if (e.z > maxZ) maxZ = e.z;
-      });
-      const isFolder = app.startsWith("Events/");
-
       setWindowHandler((prev) =>
         prev.map((e) => {
           if (e.dir === app) {
-            if (e.z < maxZ) {
-              return {
-                ...e,
-                visible: true,
-                z: isFolder ? maxZ + 2 : maxZ,
-              };
-            } else return { ...e, visible: true };
+            return {
+              ...e,
+              visible: true,
+              z: zMax,
+            };
           } else return { ...e, z: e.z - 1 };
         })
       );
@@ -55,12 +47,10 @@ export default function Homepage() {
   }
 
   function focusWindow(app) {
-    let maxZ = 0;
-    windowHandler.forEach((e) => {
-      if (e.z > maxZ) maxZ = e.z;
-    });
     const newWindowArray = windowHandler.map((e) => {
-      return e.dir === app && e.z < maxZ ? { ...e, z: maxZ + 1 } : e;
+      return e.dir === app && e.z <= zMax
+        ? { ...e, z: zMax }
+        : { ...e, z: e.z - 1 };
     });
     setWindowHandler(newWindowArray);
   }

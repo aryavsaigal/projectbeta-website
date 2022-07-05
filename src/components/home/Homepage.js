@@ -14,7 +14,7 @@ export default function Homepage() {
     windowsData().map((e, i) => ({
       ...e,
       visible: false,
-      z: 100 + i,
+      z: 500,
     }))
   );
 
@@ -38,10 +38,10 @@ export default function Homepage() {
               return {
                 ...e,
                 visible: true,
-                z: isFolder ? maxZ + 5 : maxZ + 1,
+                z: isFolder ? maxZ + 2 : maxZ,
               };
             } else return { ...e, visible: true };
-          } else return { ...e };
+          } else return { ...e, z: e.z - 1 };
         })
       );
     }

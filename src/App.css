@@ -54,6 +54,7 @@ body {
   transition: 1s;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .loadingscreen video {
@@ -64,9 +65,27 @@ body {
   display: none;
 }
 
+.loadingscreen img {
+  width: 35vw;
+  height: auto;
+  max-width: 200px;
+  user-select: none;
+  /* display: none; */
+}
+
+.loadingscreen--safaricontainer {
+  display: none;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
 .loadingscreen .skip {
   position: fixed;
   bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 20px;
   padding: 10px 20px;
   transition: 0.5s;
@@ -475,6 +494,7 @@ footer {
   background-color: rgb(32, 32, 32);
   outline: 1px solid rgb(96, 96, 96);
   box-shadow: 0 7.5px 15px rgba(0, 0, 0, 0.5);
+  display: none;
 }
 
 .window--header {

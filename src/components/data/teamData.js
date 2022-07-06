@@ -1,4 +1,4 @@
-import undefined_photo from "../../images/team/undefined.png";
+// import undefined_photo from "../../images/team/undefined.png";
 
 import aadi_jain from "../../images/team/aadi_jain.jpeg";
 import adit_magotra from "../../images/team/adit_magotra.jpeg";
@@ -9,6 +9,7 @@ import chirag_sehgal from "../../images/team/chirag_sehgal.jpeg";
 import dhimant_nath from "../../images/team/dhimant_nath.jpeg";
 import gauri_tandon from "../../images/team/gauri_tandon.jpeg";
 import gayatri from "../../images/team/gayatri.jpeg";
+import inika_harikrishnan from "../../images/team/inika_harikrishnan.jpeg";
 import kabir_verdi_jain from "../../images/team/kabir_verdi_jain.jpeg";
 import kanha_singh from "../../images/team/kanha_singh.jpeg";
 import navvye_anand from "../../images/team/navvye_anand.jpeg";
@@ -153,7 +154,7 @@ export default function teamData() {
         name: "Aryav Saigal",
         hod: "AI/IoT Robotics",
         img_src: aryav_saigal,
-        quote: 'ayo can my quote be "I cant think of a quote"',
+        quote: "better call saul",
       },
       {
         name: "Shreyas Vartia",
@@ -168,12 +169,12 @@ export default function teamData() {
         quote:
           "The rest of the world may follow the rules, but I must follow my heart.",
       },
-      // {
-      //   name: "Inika Harikrishnan",
-      //   hod: "Quizzing",
-      //   img_src: undefiend_photo,
-      //   quote: "This is a sample quote.",
-      // },
+      {
+        name: "Inika Harikrishnan",
+        hod: "Quizzing",
+        img_src: inika_harikrishnan,
+        quote: "this is a cow farm, OF COURSE there’s cows outside",
+      },
       {
         name: "Paavan Gupta",
         hod: "Group Discussion",

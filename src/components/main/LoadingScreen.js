@@ -1,15 +1,24 @@
 import React from "react";
 
-import pbbootup_src from "../../images/PBbootup.mp4";
+import pbbootup_vid from "../../images/PBbootup.mp4";
+import pbbootup_img from "../../images/logo-white.png";
 
 export default function LoadingScreen() {
   const obj_parent = React.useRef();
-  const video_elem = React.useRef();
+  const vid_elem = React.useRef();
+  const img_elem = React.useRef();
   const skip_button = React.useRef();
+
+  const browserException = /^((?!chrome|android).)*safari/i.test(
+    navigator.userAgent
+  );
+  // const browserException = /chrome/i.test(navigator.userAgent);
+
   React.useLayoutEffect(() => {
-    if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent))
-      obj_parent.current.style.display = "none";
-    else video_elem.current.style.display = "block";
+    if (browserException) img_elem.current.style.display = "block";
+    else vid_elem.current.style.display = "block";
+
+    if (browserException) setTimeout(() => handleEnd(), 2500);
     setTimeout(() => {
       skip_button.current.style.opacity = 1;
     }, 10000);
@@ -17,7 +26,8 @@ export default function LoadingScreen() {
 
   function handleEnd() {
     obj_parent.current.style.opacity = "0";
-    video_elem.current.style.display = "none";
+    if (browserException) img_elem.current.style.display = "block";
+    else vid_elem.current.style.display = "block";
     let wait = setTimeout(() => {
       obj_parent.current.style.display = "none";
     }, 1000);
@@ -26,10 +36,14 @@ export default function LoadingScreen() {
     };
   }
 
-  if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent))
+  if (browserException)
     return (
       <div className="loadingscreen" ref={obj_parent}>
-        <p ref={skip_button} className="skip">
+        <div className="loadingscreen--safaricontainer" ref={img_elem}>
+          <img src={pbbootup_img} alt="PB Logo" />
+          <h1>Loading</h1>
+        </div>
+        <p ref={skip_button} className="skip" onClick={handleEnd}>
           SKIP
         </p>
       </div>
@@ -38,8 +52,8 @@ export default function LoadingScreen() {
     return (
       <div className="loadingscreen" ref={obj_parent}>
         <video
-          ref={video_elem}
-          src={pbbootup_src}
+          ref={vid_elem}
+          src={pbbootup_vid}
           type="video/mp4"
           onEnded={handleEnd}
           autoPlay

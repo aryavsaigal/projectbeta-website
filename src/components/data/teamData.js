@@ -6,7 +6,7 @@ import aniket_kumar from "../../images/team/aniket_kumar.jpeg";
 import arnav_whig from "../../images/team/arnav_whig.jpeg";
 import aryav_saigal from "../../images/team/aryav_saigal.jpeg";
 import chirag_sehgal from "../../images/team/chirag_sehgal.jpeg";
-import dhimant_nath from "../../images/team/dhimant_nath.jpeg";
+import dhimanth_nath from "../../images/team/dhimanth_nath.jpeg";
 import gauri_tandon from "../../images/team/gauri_tandon.jpeg";
 import gayatri from "../../images/team/gayatri.jpeg";
 import inika_harikrishnan from "../../images/team/inika_harikrishnan.jpeg";
@@ -64,9 +64,9 @@ export default function teamData() {
         quote: 'ayo can my quote be "I cant think of a quote"',
       },
       {
-        name: "Dhimant Nath",
+        name: "Dhimanth Nath",
         hod: "PC Gaming",
-        img_src: dhimant_nath,
+        img_src: dhimanth_nath,
         quote: "Anime is overrated and mid",
       },
       {

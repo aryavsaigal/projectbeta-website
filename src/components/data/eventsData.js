@@ -42,7 +42,7 @@ export const eventsData = [
       { name: "team", value: "0" },
       { name: "max", value: "1" },
       { name: "eligible", value: "9-12th" },
-      { name: "medium", value: "Both" },
+      { name: "medium", value: "Offline" },
     ],
     desc: <FunctionOverload />,
   },

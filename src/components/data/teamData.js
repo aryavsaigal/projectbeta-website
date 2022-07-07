@@ -9,6 +9,7 @@ import chirag_sehgal from "../../images/team/chirag_sehgal.jpeg";
 import dhimanth_nath from "../../images/team/dhimanth_nath.jpeg";
 import gauri_tandon from "../../images/team/gauri_tandon.jpeg";
 import gayatri from "../../images/team/gayatri.jpeg";
+import gerick_razdan from "../../images/team/gerick_razdan.jpeg";
 import inika_harikrishnan from "../../images/team/inika_harikrishnan.jpeg";
 import kabir_verdi_jain from "../../images/team/kabir_verdi_jain.jpeg";
 import kanha_singh from "../../images/team/kanha_singh.jpeg";
@@ -45,7 +46,7 @@ export default function teamData() {
         name: "Adit Magotra",
         hod: "Programming",
         img_src: adit_magotra,
-        quote: "Don't follow your dreams. Follow me on GitHub @AlphaLazer ⚡",
+        quote: "Don't follow your dreams. Follow me on GitHub @AlphaLaser ⚡",
         title: "Secretary",
       },
     ],
@@ -119,12 +120,12 @@ export default function teamData() {
         img_src: rishi_mathur,
         quote: "Chad, Console Gamer, Average cryptic hunt enjoyer",
       },
-      // {
-      //   name: "Gerick Razdan",
-      //   hod: "Console Gaming",
-      //   img_src: undefiend_photo,
-      //   quote: "This is a sample quote.",
-      // },
+      {
+        name: "Gerick Razdan",
+        hod: "Console Gaming",
+        img_src: gerick_razdan,
+        quote: "All part of the master plan",
+      },
       {
         name: "Gayatri",
         hod: "Graphic Design",

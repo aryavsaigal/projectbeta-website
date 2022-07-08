@@ -43,7 +43,6 @@
   display: none;
   align-items: center;
   justify-content: flex-start;
-  /* background-color: rgb(29, 29, 29); */
   background-color: #00040575;
   border-radius: 10px;
   padding: 0 10px;
@@ -405,6 +404,13 @@
   .imageviewer .downloadicon {
     width: 20px;
     padding: 10px;
+  }
+
+  .imageviewer .downloadicon:hover {
+    background-color: #2a466a;
+    backdrop-filter: none;
+    box-shadow: none;
+    border-radius: 10px;
   }
 
   .team {

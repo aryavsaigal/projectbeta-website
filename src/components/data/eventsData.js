@@ -12,16 +12,16 @@ import itsdebatable_src from "../../images/events/itsdebatable.png";
 import projectremix_src from "../../images/events/projectremix.png";
 import betatest_src from "../../images/events/betatest.png";
 
-import ProjectRemix from "./team/ProjectRemix";
-import Authority450 from "./team/Authority450";
-import BetaTest from "./team/BetaTest";
-import Designathon from "./team/Designathon";
-import DualWield from "./team/DualWield";
-import FunctionOverload from "./team/FunctionOverload";
-import ItsDebatable from "./team/ItsDebatable";
-import Hypertext from "./team/Hypertext";
-import SideQuest from "./team/SideQuest";
-import SixtyFourWit from "./team/SixtyFourWit";
+import ProjectRemix from "./events/ProjectRemix";
+import Authority450 from "./events/Authority450";
+import BetaTest from "./events/BetaTest";
+import Designathon from "./events/Designathon";
+import DualWield from "./events/DualWield";
+import FunctionOverload from "./events/FunctionOverload";
+import ItsDebatable from "./events/ItsDebatable";
+import Hypertext from "./events/Hypertext";
+import SideQuest from "./events/SideQuest";
+import SixtyFourWit from "./events/SixtyFourWit";
 
 export const eventsData = [
   {

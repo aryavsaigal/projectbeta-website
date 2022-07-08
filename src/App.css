@@ -648,28 +648,32 @@ footer {
 .imageviewer {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .imageviewer img {
   width: auto;
   height: auto;
-  max-height: 100%;
   max-width: 100%;
+  margin: auto;
 }
 
 .imageviewer .downloadicon {
+  margin: 10px;
   position: absolute;
   top: 0;
   width: 25px;
   height: auto;
-  padding: 20px;
+  padding: 15px;
   right: 0;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .imageviewer .downloadicon:hover {
   opacity: 1;
+  background-color: #3e4b5c6a;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
 }
 
 .team {

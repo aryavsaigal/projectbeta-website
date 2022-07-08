@@ -80,7 +80,7 @@ export default function teamData() {
         name: "Kabir Verdi Jain",
         hod: "Logistics & Club Coordinator",
         img_src: kabir_verdi_jain,
-        quote: "This is a sample quote.",
+        quote: "Day by Day",
       },
       {
         name: "Vidushi Jain",

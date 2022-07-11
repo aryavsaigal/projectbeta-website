@@ -1,5 +1,5 @@
-import "./App.css";
-import "./Mobile.css";
+import "./css/App.css";
+import "./css/Mobile.css";
 import Taskbar from "./components/main/Taskbar";
 import Homepage from "./components/home/Homepage";
 import LoadingScreen from "./components/main/LoadingScreen";

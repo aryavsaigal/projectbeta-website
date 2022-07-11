@@ -10,14 +10,15 @@ import windowsData from "../data/windowsData";
 
 export default function Homepage() {
   // {app:"explorer","id":"1"}
+  const zMax = 500;
   const [windowHandler, setWindowHandler] = React.useState(
     windowsData().map((e, i) => ({
       ...e,
       visible: false,
       z: 500,
+      zMax: zMax,
     }))
   );
-  const zMax = 500;
 
   function addWindow(app) {
     if (app === "Desktop") {
@@ -68,6 +69,23 @@ export default function Homepage() {
       />
     ));
   }
+
+  function secretCombos(e) {
+    if (e.ctrlKey && e.altKey) {
+      switch (e.key) {
+        case "z": {
+          addWindow("Unknown.exe");
+          break;
+        }
+        default:
+          break;
+      }
+    }
+  }
+
+  React.useEffect(() => {
+    document.addEventListener("keydown", secretCombos);
+  }, []);
 
   return (
     <>

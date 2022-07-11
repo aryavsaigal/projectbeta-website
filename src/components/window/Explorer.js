@@ -12,7 +12,7 @@ export default function Explorer(props) {
     eventsData.map((e) => (
       <div
         key={e.name + ".pdf"}
-        onClick={() => {
+        onDoubleClick={() => {
           props.addWindow(`Events/${e.name}.pdf`);
         }}
       >
@@ -25,7 +25,7 @@ export default function Explorer(props) {
   return (
     <div className="explorer">
       <div className="explorer--sidebar">
-        <div>
+        <div class>
           <img src={star_src} alt="Quick Access icon" />
           <p>Quick Access</p>
         </div>
@@ -33,7 +33,11 @@ export default function Explorer(props) {
           <img src={thispc_src} alt="This PC icon" />
           <p>This PC</p>
         </div>
-        <div>
+        <div
+          onClick={(event) => {
+            if (event.detail === 5) props.addWindow("Shortcuts.png");
+          }}
+        >
           <img src={network_src} alt="Network icon" />
           <p>Network</p>
         </div>

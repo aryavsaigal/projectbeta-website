@@ -9,6 +9,7 @@ import ImageViewer from "./ImageViewer";
 import Team from "./Team";
 import Events from "./Events";
 import Contact from "./Contact";
+import Unknown from "./Unknown";
 
 import Draggable from "react-draggable"; // Both at the same time
 
@@ -25,6 +26,7 @@ export default function Window(props) {
     else if (dir.endsWith(".png")) return <ImageViewer {...props} />;
     else if (dir === "Team.pdf") return <Team {...props} />;
     else if (dir === "Contact.pdf") return <Contact {...props} />;
+    else if (dir === "Unknown.exe") return <Unknown {...props} />;
     else if (dir.search("/Events/")) return <Events {...props} />;
   }
   const windowContent = setWindowContent(props.dir);
@@ -42,13 +44,15 @@ export default function Window(props) {
         className="window"
         id={`window--${props.id}`}
         ref={obj}
-        onDoubleClick={() => {
-          props.focusWindow(props.dir);
+        onClick={(event) => {
+          if (props.z !== props.zMax) {
+            props.focusWindow(props.dir);
+          }
         }}
       >
         <div className="window--header">
           <img src={logo_src} alt="PB Logo" />
-          <h3>C:/ProjectBeta/{props.dir}</h3>
+          <h3>C:/ProjectBeta/{props.dir}</h3>{" "}
           <img
             src={move_src}
             className="window--move"
@@ -59,7 +63,9 @@ export default function Window(props) {
             src={close_src}
             className="window--close"
             alt="Close button"
-            onClick={() => props.removeWindow(props.dir)}
+            onClick={(event) => {
+              props.removeWindow(props.dir);
+            }}
           />
         </div>
         <div className="window--content">{windowContent}</div>

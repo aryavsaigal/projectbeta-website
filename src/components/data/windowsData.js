@@ -8,6 +8,8 @@ export default function windowsData() {
     { id: "4", dir: "Team.pdf" },
     { id: "5", dir: "Alumni.zip" },
     { id: "6", dir: "Contact.pdf" },
+    { id: "7", dir: "Unknown.exe" },
+    { id: "8", dir: "Shortcuts.png" },
   ];
   eventsData.map((e, i) =>
     returnValue.push({

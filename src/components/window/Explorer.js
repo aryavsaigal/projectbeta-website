@@ -15,6 +15,9 @@ export default function Explorer(props) {
         onDoubleClick={() => {
           props.addWindow(`Events/${e.name}.pdf`);
         }}
+        onClick={() => {
+          if (window.innerWidth < 900) props.addWindow(`Events/${e.name}.pdf`);
+        }}
       >
         <img src={e.img_src} alt={`${e.name} Logo`} />
         <p>{e.name + ".pdf"}</p>
@@ -25,7 +28,7 @@ export default function Explorer(props) {
   return (
     <div className="explorer">
       <div className="explorer--sidebar">
-        <div class>
+        <div>
           <img src={star_src} alt="Quick Access icon" />
           <p>Quick Access</p>
         </div>

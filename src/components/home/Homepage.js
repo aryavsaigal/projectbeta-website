@@ -16,7 +16,6 @@ export default function Homepage() {
       ...e,
       visible: false,
       z: 500,
-      zMax: zMax,
     }))
   );
 
@@ -41,8 +40,14 @@ export default function Homepage() {
   }
 
   function removeWindow(app) {
+    let nextZmax = 0;
+    windowHandler.forEach((e) => {
+      if (e.z > nextZmax && e.z !== zMax) nextZmax = e.z;
+    });
     const newWindowArray = windowHandler.map((e) =>
-      e.dir === app ? { ...e, visible: false } : e
+      e.dir === app
+        ? { ...e, visible: false }
+        : { ...e, z: e.z + (zMax - nextZmax) }
     );
     setWindowHandler(newWindowArray);
   }
@@ -63,6 +68,7 @@ export default function Homepage() {
         key={item.id}
         x={100 + i * 15}
         y={50 + i * 15}
+        zMax={zMax}
         removeWindow={removeWindow}
         addWindow={addWindow}
         focusWindow={focusWindow}
@@ -75,6 +81,15 @@ export default function Homepage() {
       switch (e.key) {
         case "z": {
           addWindow("Unknown.exe");
+          break;
+        }
+        case "p": {
+          document.querySelectorAll("*:not(img)").forEach((e) => {
+            e.style.color = "lime";
+            e.style.fontFamily = "Courier";
+            e.style.letterSpacing = "-1px";
+            e.style.backgroundColor = "black";
+          });
           break;
         }
         default:

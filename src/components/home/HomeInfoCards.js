@@ -12,8 +12,11 @@ export default function HomeInfoCards() {
         <div className="home_infocards--2022">
           <h2>2022</h2>
           <p>
-            ProjectBeta 6.0 invites out! Click <a href="#">here</a> to view.{" "}
-            <br />
+            ProjectBeta 6.0 invites out! Click{" "}
+            <a href="#" target="_blank" rel="noreferrer">
+              here
+            </a>{" "}
+            to view. <br />
             <br />
             ProjectBeta is back in the year 2022, with its 6th Annual
             Inter-School Conference on Technology and Entrepreneurship, bringing
@@ -28,8 +31,14 @@ export default function HomeInfoCards() {
           <h2>About</h2>
           <p>
             ProjectBeta is the tech club of{" "}
-            <a href="http://sanskritischool.edu.in/">Sanskriti School</a>.{" "}
-            <br />
+            <a
+              href="http://sanskritischool.edu.in/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Sanskriti School
+            </a>
+            . <br />
             <br />
             Taking its humble roots as a small group of talented individuals in
             2013, ProjectBeta has since matured into a diverse team who have

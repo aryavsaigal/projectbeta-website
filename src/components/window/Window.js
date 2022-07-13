@@ -44,7 +44,7 @@ export default function Window(props) {
         className="window"
         id={`window--${props.id}`}
         ref={obj}
-        onClick={(event) => {
+        onClick={() => {
           if (props.z !== props.zMax) {
             props.focusWindow(props.dir);
           }
@@ -52,7 +52,8 @@ export default function Window(props) {
       >
         <div className="window--header">
           <img src={logo_src} alt="PB Logo" />
-          <h3>C:/ProjectBeta/{props.dir}</h3>{" "}
+          <h3>C:/ProjectBeta/{props.dir}</h3>
+          {/* <h1>{props.z}</h1> */}
           <img
             src={move_src}
             className="window--move"

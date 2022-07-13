@@ -45,11 +45,25 @@ export default function Contact() {
           <h2>Social</h2>
           <div className="contact--socialgrid">
             <SocialMedia />
-            <a href="https://www.instagram.com/projectbeta.club/">
+            <a
+              href="https://www.instagram.com/projectbeta.club/"
+              target="_blank"
+              rel="noreferrer"
+            >
               @projectbeta.club
             </a>
-            <a href="https://github.com/Project-Beta">@projectbeta.tech</a>
-            <a href="https://www.facebook.com/ProjectBetaOfficial">
+            <a
+              href="https://github.com/Project-Beta"
+              target="_blank"
+              rel="noreferrer"
+            >
+              @projectbeta.tech
+            </a>
+            <a
+              href="https://www.facebook.com/ProjectBetaOfficial"
+              target="_blank"
+              rel="noreferrer"
+            >
               @ProjectBetaOfficial
             </a>
           </div>

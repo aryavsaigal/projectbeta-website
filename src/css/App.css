@@ -829,9 +829,9 @@ footer {
 }
 
 .events--fieldscontainer div {
-  height: 200px;
+  height: min(200px, 15vw);
   margin: 5px;
-  flex: 1 1 160px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -840,11 +840,11 @@ footer {
   border: 1px solid var(--windowOutlineColor);
   box-shadow: 0 10px 20px var(--shadowBlack);
   backdrop-filter: blur(5px);
-  padding: 20px 10px;
+  padding: min(20px, 1vw) 10px;
 }
 
 .events--fieldscontainer img {
-  width: min(100px, 10vw);
+  width: min(100px, 6vw);
   margin-bottom: 10px;
   user-select: none;
 
@@ -860,15 +860,21 @@ footer {
 
 .events--fieldscontainer p {
   margin-bottom: auto;
+  font-size: min(16px, 1vw);
 }
 
 .events--fieldscontainer h2 {
   margin-top: 15px;
   font-size: 30px;
+  font-size: min(30px, 2.2vw);
+}
+
+.events--fieldscontainer h3 {
+  font-size: (19px, 1.3px);
 }
 
 .events--fieldscontainer h4 {
-  font-size: 17.5px;
+  font-size: min(17.5px, 1.05vw);
 }
 
 .events--desc {

@@ -3,12 +3,12 @@ import React from "react";
 import { VANTA } from "vanta";
 import NET from "vanta/dist/vanta.net.min";
 
-export default function Background() {
+export default function Background(props) {
   const [vantaEffect, setVantaEffect] = React.useState(0);
   const obj = React.useRef(null);
   React.useEffect(() => {
     if (!vantaEffect) {
-      if (window.innerWidth > 900)
+      if (!props.isMobile)
         setVantaEffect(
           NET({
             el: obj.current,
@@ -24,7 +24,7 @@ export default function Background() {
             showDots: false,
           })
         );
-      else if (window.innerWidth <= 900)
+      else if (props.isMobile)
         setVantaEffect(
           NET({
             el: obj.current,

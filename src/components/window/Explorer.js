@@ -16,7 +16,7 @@ export default function Explorer(props) {
           props.addWindow(`Events/${e.name}.pdf`);
         }}
         onClick={() => {
-          if (window.innerWidth < 900) props.addWindow(`Events/${e.name}.pdf`);
+          if (props.isMobile) props.addWindow(`Events/${e.name}.pdf`);
         }}
       >
         <img src={e.img_src} alt={`${e.name} Logo`} />

@@ -11,6 +11,9 @@ import windowsData from "../data/windowsData";
 export default function Homepage() {
   // {app:"explorer","id":"1"}
   const zMax = 500;
+  const isMobile = React.useState(
+    window.innerWidth <= 900 || window.innerHeight >= window.innerWidth
+  )[0];
   const [windowHandler, setWindowHandler] = React.useState(
     windowsData().map((e, i) => ({
       ...e,
@@ -69,6 +72,7 @@ export default function Homepage() {
         x={100 + i * 15}
         y={50 + i * 15}
         zMax={zMax}
+        isMobile={isMobile}
         removeWindow={removeWindow}
         addWindow={addWindow}
         focusWindow={focusWindow}
@@ -104,13 +108,13 @@ export default function Homepage() {
 
   return (
     <>
-      <Desktop addWindow={addWindow} mobile={false} />
+      <Desktop addWindow={addWindow} isMobile={isMobile} mobile={false} />
       <div className="homepage">
         <div className="window--collection">{createWindows()}</div>
         <TitleScreen />
         <HomeInfoCards />
-        <MobileMenu addWindow={addWindow} />
-        <Background />
+        <MobileMenu addWindow={addWindow} isMobile={isMobile} />
+        <Background isMobile={isMobile} />
       </div>
     </>
   );

@@ -6,8 +6,8 @@ export default function BetaTest() {
       <ul>
         <li>
           <p>
-            Hunt will begin at 9th August 2022, 00:00 and will end at 10th
-            August 2022, 00:00.
+            The hunt will begin on 9th August 2022 at 00:00:00 hours and will
+            conclude on 10th August at 11:59:59 hours.
           </p>
         </li>
         <li>

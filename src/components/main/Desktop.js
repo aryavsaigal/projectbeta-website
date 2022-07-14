@@ -27,6 +27,7 @@ export default function Desktop(props) {
         src={e.src}
         name={e.btn_name}
         id={e.src}
+        isMobile={props.isMobile}
         {...props}
       />
     ));

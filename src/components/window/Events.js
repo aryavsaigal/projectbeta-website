@@ -44,7 +44,7 @@ export default function Events(props) {
           if (e.value === "0")
             return (
               <>
-                <h2>Individually</h2>
+                <h2>Single</h2>
                 <h3>based</h3>
               </>
             );

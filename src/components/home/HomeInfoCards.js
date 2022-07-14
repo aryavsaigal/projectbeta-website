@@ -13,7 +13,7 @@ export default function HomeInfoCards() {
           <h2>2022</h2>
           <p>
             ProjectBeta 6.0 invites out! Click{" "}
-            <a href="#" target="_blank" rel="noreferrer">
+            <a href="https://raw.githubusercontent.com/Project-Beta/projectbeta-website/master/src/invite.pdf">
               here
             </a>{" "}
             to view. <br />

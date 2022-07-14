@@ -7,8 +7,8 @@ export default function DesktopButtons(props) {
       onDoubleClick={(event) => {
         if (event.detail === 2) props.addWindow(props.name);
       }}
-      onClick={(event) => {
-        if (window.innerWidth < 900) props.addWindow(props.name);
+      onClick={() => {
+        props.addWindow(props.name);
       }}
     >
       <img className="desktopbtn--icon" src={props.src} alt="folder icon" />

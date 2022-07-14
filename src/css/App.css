@@ -625,13 +625,13 @@ footer {
 .explorer--foldergrid>div {
   margin-bottom: 10px;
   margin-right: 10px;
-  width: 120px;
+  width: min(130px, 10vw);
   cursor: pointer;
   outline: 1px solid transparent;
   display: flex;
   flex-direction: column;
   justify-items: center;
-  padding: 10px;
+  padding: min(10px, 0.8vw);
 }
 
 .explorer--foldergrid>div:hover {
@@ -643,8 +643,8 @@ footer {
 }
 
 .explorer--foldergrid>div>img {
-  width: 90px;
-  max-height: 90px;
+  width: min(90px, 7vw);
+  /* max-height: 90px; */
   margin: 0px 15px 20px;
   user-select: none;
 }
@@ -653,7 +653,7 @@ footer {
   width: 100%;
   text-align: center;
   margin: 0;
-  font-size: 12px;
+  font-size: min(12px, 1vw);
   text-shadow: 1px 1px 3px var(--shadowBlack), -1px -1px 3px var(--shadowBlack), 1px -1px 3px var(--shadowBlack), -1px 1px 3px var(--shadowBlack);
 }
 
@@ -752,12 +752,13 @@ footer {
 
 .team--boardcore h1 {
   margin: 0;
+  font-size: min(32px, 2.6vw);
 }
 
 .team--boardcore h3 {
   margin: 10px 0;
   font-weight: lighter;
-  font-size: 20px;
+  font-size: min(20px, 1.8vw);
   margin-bottom: 10px;
 }
 
@@ -771,12 +772,13 @@ footer {
 .team--boardcore p {
   font-style: italic;
   color: var(--fontGrey);
+  font-size: min(16px, 1.3vw);
   margin: 0;
 }
 
 .team--membergrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-auto-rows: 70px;
   grid-auto-flow: row;
   grid-gap: 10px;
@@ -818,18 +820,18 @@ footer {
 }
 
 .events--fieldscontainer {
-  height: 300px;
-  width: auto;
+  height: fit-content;
+  width: 100%;
   display: flex;
+  flex-flow: wrap;
   padding: 0 5px;
   z-index: 1000;
 }
 
 .events--fieldscontainer div {
-  height: 100%;
+  height: 200px;
   margin: 10px 5px;
-  flex: 1;
-  height: auto;
+  flex: 1 1 175px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -842,7 +844,7 @@ footer {
 }
 
 .events--fieldscontainer img {
-  width: 100px;
+  width: min(100px, 7vw);
   margin-bottom: 10px;
   user-select: none;
 
@@ -888,8 +890,16 @@ footer {
 
 .contact--grid {
   display: grid;
-  grid-template: 90px 1fr 150px / 1fr 1fr;
+  grid-template-rows: 90px 1fr 150px;
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
+  grid-auto-columns: auto;
+}
+
+@media screen and (max-width: 1300px) {
+  .contact--grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contact--grid div {

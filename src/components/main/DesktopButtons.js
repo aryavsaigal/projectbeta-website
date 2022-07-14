@@ -8,7 +8,7 @@ export default function DesktopButtons(props) {
         if (event.detail === 2) props.addWindow(props.name);
       }}
       onClick={() => {
-        props.addWindow(props.name);
+        if (props.isMobile) props.addWindow(props.name);
       }}
     >
       <img className="desktopbtn--icon" src={props.src} alt="folder icon" />

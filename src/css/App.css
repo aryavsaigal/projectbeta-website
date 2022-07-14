@@ -744,8 +744,8 @@ footer {
 }
 
 .team--boardcore>img {
-  width: 150px;
-  height: 150px;
+  width: min(150px, 10vw);
+  height: min(150px, 10vw);
   margin-right: 30px;
   user-select: none;
 }
@@ -830,8 +830,8 @@ footer {
 
 .events--fieldscontainer div {
   height: 200px;
-  margin: 10px 5px;
-  flex: 1 1 175px;
+  margin: 5px;
+  flex: 1 1 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -844,7 +844,7 @@ footer {
 }
 
 .events--fieldscontainer img {
-  width: min(100px, 7vw);
+  width: min(100px, 10vw);
   margin-bottom: 10px;
   user-select: none;
 

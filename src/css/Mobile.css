@@ -8,12 +8,11 @@
   display: none;
   align-items: center;
   width: calc(100% - 40px);
-  /* background-color: rgb(29, 29, 29); */
-  background-color: #00040575;
+  background-color: var(--shadowBlack);
   backdrop-filter: blur(7.5px);
   border-radius: 10px;
   justify-content: space-between;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
+  box-shadow: 0 10px 20px var(--shadowBlack);
   padding: 0 10px;
   z-index: 10001;
 }
@@ -43,11 +42,11 @@
   display: none;
   align-items: center;
   justify-content: flex-start;
-  background-color: #00040575;
+  background-color: var(--shadowBlack);
   border-radius: 10px;
   padding: 0 10px;
   overflow-x: auto;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
+  box-shadow: 0 10px 20px var(--shadowBlack);
 }
 
 .mobile--shelf .desktopbtn {
@@ -57,13 +56,13 @@
 
 .mobile--shelf .desktopbtn:hover {
   outline: none;
-  background-color: rgba(255, 255, 255, 0.566);
+  background-color: var(--tintWhite);
 }
 
 .mobile--shelf .desktopbtn:active {
   outline: none;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
+  background-color: var(--bgWhite);
+  box-shadow: 0 10px 20px var(--shadowBlack);
 }
 
 .mobile--sidebar {
@@ -77,13 +76,12 @@
   flex-direction: column;
   width: 250px;
   max-width: calc(100% - 20px);
-  /* background-color: rgb(29, 29, 29); */
   background-color: #031b20f1;
   border-radius: 10px;
   overflow-x: auto;
   z-index: 10002;
   transition: 0.3s;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
+  box-shadow: 0 10px 20px var(--shadowBlack);
   overflow: hidden;
 }
 
@@ -260,15 +258,14 @@
     font-size: 13px;
     padding: 15px;
     width: 70%;
-    background-color: #3e4b5c;
     backdrop-filter: blur(0px);
     bottom: 60px;
   }
 
   .titlescreen--register:hover {
     letter-spacing: initial;
-    color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0.155);
+    color: var(--fontWhite);
+    background-color: var(--shadowWhite);
   }
 
   .home_infocards--container {
@@ -289,7 +286,6 @@
   }
 
   .home_infocards--container>div {
-    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.266);
     backdrop-filter: blur(0px);
   }
 
@@ -360,8 +356,6 @@
     margin-right: 0px;
     min-width: 100px;
     flex: 1;
-    cursor: pointer;
-    outline: 1px solid rgba(123, 180, 255, 0);
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -385,12 +379,12 @@
     text-align: center;
     margin: 0;
     font-size: 11px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.400), -1px -1px 3px rgba(0, 0, 0, 0.400), 1px -1px 3px rgba(0, 0, 0, 0.400), -1px 1px 3px rgba(0, 0, 0, 0.400);
+    text-shadow: 1px 1px 3px var(--shadowBlack), -1px -1px 3px var(--shadowBlack), 1px -1px 3px var(--shadowBlack), -1px 1px 3px var(--shadowBlack);
   }
 
   .textfile {
-    background-color: white;
-    color: black;
+    background-color: var(--bgWhite);
+    color: var(--fontBlack);
     padding: 5px;
     border-radius: 0 0 5px 5px;
   }
@@ -407,7 +401,7 @@
   }
 
   .imageviewer .downloadicon:hover {
-    background-color: #2a466a;
+    background-color: var(--accentBgColor);
     backdrop-filter: none;
     box-shadow: none;
     border-radius: 10px;
@@ -419,10 +413,8 @@
   }
 
   .team h2 {
-    text-align: center;
     font-size: 25px;
     margin: 15px 0 5px;
-    color: #cb4b16;
   }
 
 
@@ -461,7 +453,6 @@
     margin: 10px;
     align-items: center;
     flex: 1;
-
   }
 
   .team--boardcore div {
@@ -495,13 +486,9 @@
   .team--boardcore hr {
     width: 50%;
     margin: 10px auto;
-    background-color: rgb(107, 106, 106);
-    border-color: transparent;
   }
 
   .team--boardcore p {
-    font-style: italic;
-    color: lightgrey;
     margin: 0;
     font-size: 10px;
   }
@@ -526,10 +513,7 @@
   }
 
   .events h1 {
-    text-align: center;
-    color: #cb4b16;
     font-size: 25px;
-    z-index: 1000;
   }
 
   .events--bg {
@@ -627,12 +611,9 @@
   }
 
   .contact--grid .contact--phone div {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     margin: 10px;
-    background-color: rgb(52, 52, 52);
-    border: 1px solid rgb(82, 82, 82);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
   }
 
   .contact--grid .contact--phone div p {
@@ -677,22 +658,4 @@
     width: 0px;
     height: 0px;
   }
-
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  ::-webkit-scrollbar-track:hover {
-    background: rgb(53, 53, 53);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: rgb(76, 76, 76);
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(127, 127, 127);
-  }
-
-
 }

@@ -38,7 +38,11 @@ export default function ItsDebatable() {
             Participants are required to submit their video in the form of a
             drive link by 10th August using the given form:
             <br />
-            <a href="https://forms.gle/89fmeJ6zgev51RGcA">
+            <a
+              href="https://forms.gle/89fmeJ6zgev51RGcA"
+              target="_blank"
+              rel="noreferrer"
+            >
               https://forms.gle/89fmeJ6zgev51RGcA
             </a>
           </p>

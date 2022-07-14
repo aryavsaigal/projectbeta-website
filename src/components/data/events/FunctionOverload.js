@@ -24,7 +24,18 @@ export default function FunctionOverload() {
           <p>The event will take place on Hackerrank</p>
         </li>
         <li>
-          <p>Accepted languages: Python, C++ , Java</p>
+          <p>
+            Accepted languages: All available languages on Hackerrank, or refer
+            to:{" "}
+            <a
+              href="https://support.hackerrank.com/hc/en-us/articles/115007990608-Supported-Programming-Languages"
+              target="_blank"
+              rel="noreferrer"
+            >
+              https://support.hackerrank.com/hc/en-us/articles/115007990608-Supported-Programming-Languages
+            </a>
+            .
+          </p>
         </li>
         <li>
           <p>Judging criteria:</p>

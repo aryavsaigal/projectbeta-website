@@ -40,7 +40,11 @@ export default function Authority_450() {
           <p>
             Participants will be required to submit their AI and Documentation
             at 23:59 hours on the 12th of August, either through email to{" "}
-            <a href="mailto:projectbeta@sanskritischool.edu.in">
+            <a
+              href="mailto:projectbeta@sanskritischool.edu.in"
+              target="_blank"
+              rel="noreferrer"
+            >
               projectbeta@sanskritischool.edu.in
             </a>{" "}
             or by Github.

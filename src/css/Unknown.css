@@ -26,31 +26,32 @@
   width: calc(100% - 10px);
   text-align: center;
   padding: 10px 5px;
-  background-color: rgb(36, 36, 36);
-  color: white;
+  background-color: var(--windowElementColor);
+  color: var(--fontWhite);
   margin: 10px 0;
   font-size: 20px;
   font-family: "Ubuntu";
-  outline: 2px solid rgb(123, 123, 123);
+  outline: 2px solid var(--windowOutlineColor);
   border: none;
+
 }
 
 .pwdprompt input:focus {
-  background-color: rgb(206, 206, 206);
-  color: rgb(42, 42, 42);
+  background-color: var(--fontGrey);
+  color: var(--fontBlack);
 }
 
 .pwdprompt input:disabled {
-  background-color: rgb(93, 93, 93);
-  color: rgb(42, 42, 42);
+  background-color: var(--bgGrey);
+  color: var(--windowColor);
 }
 
 .pwdprompt button {
   margin: 0 auto;
   text-align: center;
   padding: 7.5px 5px;
-  background-color: rgb(103, 103, 103);
-  color: white;
+  background-color: var(--bgGrey);
+  color: var(--fontWhite);
   margin: 10px 0;
   font-size: 20px;
   font-family: "Ubuntu";
@@ -60,11 +61,11 @@
 }
 
 .pwdprompt button:hover {
-  background-color: #cb4b16;
+  background-color: var(--PBorange);
 }
 
 .pwdprompt small {
-  color: rgb(255, 96, 96);
+  color: var(--alertRed);
 }
 
 .hint img {

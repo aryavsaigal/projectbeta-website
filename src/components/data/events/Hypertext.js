@@ -66,7 +66,11 @@ export default function Hypertext() {
         <li>
           <p>
             Participants have to mail their submissions to{" "}
-            <a href="mailto:projectbeta@sanskritischool.edu.in">
+            <a
+              href="mailto:projectbeta@sanskritischool.edu.in"
+              target="_blank"
+              rel="noreferrer"
+            >
               projectbeta@sanskritischool.edu.in
             </a>
           </p>

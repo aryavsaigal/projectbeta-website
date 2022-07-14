@@ -20,17 +20,45 @@
 
 html,
 body {
-  color: white;
+  color: var(--fontWhite);
   margin: 0;
   width: 100%;
   height: 100%;
-  background-color: #1B2C44;
+  background-color: var(--accentBgColor);
   font-family: "Ubuntu";
   box-sizing: border-box;
 }
 
 * {
   scroll-behavior: smooth;
+}
+
+:root {
+  --PBorange: #cb4b16;
+  --PBwhite: #eee8d5;
+  --fontWhite: white;
+  --fontGrey: #afafaf;
+  --fontBlack: black;
+  --bgWhite: white;
+  --bgGrey: #494949;
+  --bgBlack: black;
+  --shadowBlack: #00000080;
+  --shadowWhite: #ffffff28;
+
+  --accentBgColor: #1b2c44;
+  --tintWhite: #ffffff6f;
+  --tintBlack: #00000049;
+  --windowColor: #202020;
+  --taskbarColor: #1d1d1d;
+  --regBtnColor: ;
+  --windowOutlineColor: #606060;
+  --windowElementColor: #3434348e;
+
+  --alertRed: #ff3131;
+  --desktopIconFill: #7bc4ff41;
+  --desktopIconBorder: #7bb4ffb9;
+  --desktopIconFillActive: #7bc4ff6f;
+  --desktopIconBorderActive: #7bb4ff;
 }
 
 .background {
@@ -48,7 +76,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #1B2C44;
+  background-color: var(--accentBgColor);
   display: flex;
   z-index: 10000000;
   transition: 1s;
@@ -91,14 +119,14 @@ body {
   transition: 0.5s;
   user-select: none;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.33);
+  color: var(--shadowBlack);
   opacity: 0;
 }
 
 .loadingscreen .skip:hover {
   transition: 0.2s;
-  background-color: white;
-  color: #1B2C44;
+  background-color: var(--bgWhite);
+  color: var(--accentBgColor);
 }
 
 @keyframes loadingFadeOut {
@@ -113,7 +141,7 @@ body {
 
 .taskbar {
   width: 100%;
-  background-color: rgb(29, 29, 29);
+  background-color: var(--taskbarColor);
   height: 40px;
   position: fixed;
   object-position: center center;
@@ -132,7 +160,7 @@ body {
 
 .taskbar a img,
 .taskbar img {
-  padding: 10px;
+  padding: 7.5px 10px;
   margin: 0 5px;
   width: 20px;
   user-select: none;
@@ -140,8 +168,8 @@ body {
 }
 
 .taskbar--searchbar {
-  outline: 3px solid rgb(98, 98, 98);
-  background-color: rgb(73, 73, 73);
+  outline: 3px solid var(--windowOutlineColor);
+  background-color: var(--bgGrey);
   width: 300px;
   height: 34px;
   position: relative;
@@ -161,7 +189,7 @@ body {
   margin: auto 0;
   width: fit-content;
   height: fit-content;
-  color: rgb(175, 175, 175);
+  color: var(--fontGrey);
 }
 
 .taskbar--timer {
@@ -191,23 +219,23 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  outline: 1px solid rgba(123, 207, 255, 0);
+  outline: 1px solid transparent;
 }
 
 .desktopbtn:hover {
-  background-color: rgba(123, 196, 255, 0.255);
-  outline: 1px solid rgba(123, 180, 255, 0.725);
+  background-color: var(--desktopIconFill);
+  outline: 1px solid var(--desktopIconBorder);
 }
 
 .desktopbtn:active {
-  background-color: rgba(123, 196, 255, 0.437);
-  outline: 1px solid rgb(123, 180, 255);
+  background-color: var(--desktopIconFillActive);
+  outline: 1px solid var(--desktopIconBorderActive);
 }
 
 .desktopbtn--icon {
   width: 50px;
   margin: 0 15px;
-  filter: drop-shadow(0 5px 2px rgba(0, 0, 0, 0.444));
+  filter: drop-shadow(0 5px 2px var(--shadowBlack));
   user-select: none;
 }
 
@@ -216,18 +244,18 @@ body {
   text-align: center;
   margin: 0;
   font-size: 12px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.400), -1px -1px 3px rgba(0, 0, 0, 0.400), 1px -1px 3px rgba(0, 0, 0, 0.400), -1px 1px 3px rgba(0, 0, 0, 0.400);
+  text-shadow: 1px 1px 3px var(--shadowBlack), -1px -1px 3px var(--shadowBlack), 1px -1px 3px var(--shadowBlack), -1px 1px 3px var(--shadowBlack);
 }
 
 .notif--container {
   position: fixed;
   bottom: 50px;
   right: 10px;
-  background-color: rgb(29, 29, 29);
+  background-color: var(--windowColor);
   width: 300px;
   height: fit-content;
   z-index: 10000;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
+  box-shadow: 0 10px 20px var(--taskbarColor);
   transition: 0.5s;
 }
 
@@ -262,8 +290,8 @@ body {
   display: flex;
   padding: 10px;
   flex-direction: column;
-  background-color: rgb(47, 47, 47);
-  border: 1px solid rgb(82, 82, 82);
+  background-color: var(--windowElementColor);
+  border: 1px solid var(--windowOutlineColor);
 }
 
 
@@ -356,23 +384,22 @@ body {
   font-size: 20px;
   position: absolute;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.155);
+  background-color: var(--shadowWhite);
   backdrop-filter: blur(10px);
   border-radius: 40px;
-  color: rgb(255, 255, 255);
   cursor: pointer;
   transition: 0.3s;
   user-select: none;
 }
 
 .titlescreen--register:hover {
-  background-color: white;
-  color: rgb(0, 0, 0);
+  background-color: var(--bgWhite);
+  color: var(--fontBlack);
 }
 
 
 .titlescreen--date {
-  color: #cb4b16;
+  color: var(--PBorange);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -382,7 +409,6 @@ body {
   font-family: "Ubuntu Mono";
   width: 90vw;
   text-align: center;
-  border-color: #dc6e20;
 }
 
 .titlescreen--downarrow {
@@ -429,12 +455,12 @@ body {
   position: relative;
   transition: 0.3s;
   overflow: hidden;
-  border: 1px solid #000;
-  border-bottom: 10px solid #eee8d5;
+  border: 1px solid var(--fontBlack);
+  border-bottom: 10px solid var(--PBwhite);
 }
 
 .home_infocards--container>div:hover {
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.266);
+  box-shadow: 0 30px 20px rgba(0, 0, 0, 0.25);
   transform: translateY(-10px);
 }
 
@@ -445,19 +471,19 @@ body {
 }
 
 .home_infocards--container h2 {
-  color: #fcf7e3;
+  color: var(--PBwhite);
   font-size: 35px;
   font-family: "Ubuntu Mono";
   margin: 20px 0px;
 }
 
 a {
-  color: #eee8d5;
+  color: var(--PBwhite);
   font-weight: bold;
 }
 
 a:hover {
-  color: #cb4b16;
+  color: var(--PBorange);
   font-weight: bold;
 }
 
@@ -491,9 +517,9 @@ footer {
   position: fixed;
   width: 55vw;
   height: 75vh;
-  background-color: rgb(32, 32, 32);
-  outline: 1px solid rgb(96, 96, 96);
-  box-shadow: 0 7.5px 15px rgba(0, 0, 0, 0.5);
+  background-color: var(--windowColor);
+  outline: 1px solid var(--windowOutlineColor);
+  box-shadow: 0 7.5px 15px var(--shadowBlack);
   display: none;
 }
 
@@ -503,7 +529,7 @@ footer {
   width: 100%;
   left: 0;
   height: 40px;
-  border-bottom: 1px solid rgb(96, 96, 96);
+  border-bottom: 1px solid var(--windowOutlineColor);
   display: flex;
   align-items: center;
 }
@@ -540,7 +566,7 @@ footer {
 }
 
 .window--header .window--close:hover {
-  background-color: rgb(255, 85, 85);
+  background-color: var(--alertRed);
 }
 
 .window--content {
@@ -566,7 +592,7 @@ footer {
 }
 
 .explorer--sidebar {
-  border-right: 1px solid rgb(96, 96, 96);
+  border-right: 1px solid var(--windowOutlineColor);
   flex-direction: column;
   height: calc(100% - 20px);
   position: relative;
@@ -601,7 +627,7 @@ footer {
   margin-right: 10px;
   width: 120px;
   cursor: pointer;
-  outline: 1px solid rgba(123, 180, 255, 0);
+  outline: 1px solid transparent;
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -609,12 +635,11 @@ footer {
 }
 
 .explorer--foldergrid>div:hover {
-  background-color: rgba(255, 255, 255, 0.214);
+  background-color: var(--shadowWhite);
 }
 
 .explorer--foldergrid>div:active {
-  background-color: rgba(255, 255, 255, 0.437);
-
+  background-color: var(--tintWhite);
 }
 
 .explorer--foldergrid>div>img {
@@ -629,12 +654,12 @@ footer {
   text-align: center;
   margin: 0;
   font-size: 12px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.400), -1px -1px 3px rgba(0, 0, 0, 0.400), 1px -1px 3px rgba(0, 0, 0, 0.400), -1px 1px 3px rgba(0, 0, 0, 0.400);
+  text-shadow: 1px 1px 3px var(--shadowBlack), -1px -1px 3px var(--shadowBlack), 1px -1px 3px var(--shadowBlack), -1px 1px 3px var(--shadowBlack);
 }
 
 .textfile {
-  background-color: white;
-  color: black;
+  background-color: var(--bgWhite);
+  color: var(--fontBlack);
   padding: 10px;
 }
 
@@ -670,9 +695,9 @@ footer {
 
 .imageviewer .downloadicon:hover {
   opacity: 1;
-  background-color: #3e4b5c6a;
+  background-color: var(--accentBgColor);
   backdrop-filter: blur(3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
+  box-shadow: 0 10px 20px var(--shadowBlack);
 }
 
 .team {
@@ -683,7 +708,7 @@ footer {
   text-align: center;
   font-size: 50px;
   margin: 30px 0 10px;
-  color: #cb4b16;
+  color: var(--PBorange);
 }
 
 
@@ -739,13 +764,13 @@ footer {
 .team--boardcore hr {
   width: 50%;
   margin: 10px 0;
-  background-color: rgb(107, 106, 106);
+  background-color: var(--windowOutlineColor);
   border-color: transparent;
 }
 
 .team--boardcore p {
   font-style: italic;
-  color: lightgrey;
+  color: var(--fontGrey);
   margin: 0;
 }
 
@@ -761,7 +786,7 @@ footer {
 .team--membergrid p {
   display: flex;
   padding: 5px;
-  border: 1px solid white;
+  border: 1px solid var(--fontWhite);
   text-align: center;
   display: flex;
   justify-content: center;
@@ -775,7 +800,7 @@ footer {
 
 .events h1 {
   text-align: center;
-  color: #cb4b16;
+  color: var(--PBorange);
   z-index: 1000;
 }
 
@@ -809,9 +834,9 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  background-color: rgba(52, 52, 52, 0.556);
-  border: 1px solid rgb(82, 82, 82);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
+  background-color: var(--windowElementColor);
+  border: 1px solid var(--windowOutlineColor);
+  box-shadow: 0 10px 20px var(--shadowBlack);
   backdrop-filter: blur(5px);
   padding: 20px 10px;
 }
@@ -857,7 +882,7 @@ footer {
   text-align: center;
   font-size: 40px;
   margin: 0;
-  color: #cb4b16;
+  color: var(--PBorange);
 }
 
 
@@ -868,9 +893,9 @@ footer {
 }
 
 .contact--grid div {
-  background-color: rgb(52, 52, 52);
-  border: 1px solid rgb(82, 82, 82);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
+  background-color: var(--windowElementColor);
+  border: 1px solid var(--windowOutlineColor);
+  box-shadow: 0 10px 20px var(--shadowBlack);
   padding: 10px;
   text-align: center;
 }
@@ -883,9 +908,9 @@ footer {
   padding: 20px;
   text-align: center;
   margin: 10px;
-  background-color: rgb(52, 52, 52);
-  border: 1px solid rgb(82, 82, 82);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.521);
+  background-color: var(--windowElementColor);
+  border: 1px solid var(--windowOutlineColor);
+  box-shadow: 0 10px 20px var(--shadowBlack);
 }
 
 .contact--grid .contact--phone div p:nth-child(1) {
@@ -948,8 +973,8 @@ footer {
 }
 
 ::selection {
-  background-color: #cb4b16;
-  color: white;
+  background-color: var(--PBorange);
+  color: var(--fontWhite);
 }
 
 .homepage::-webkit-scrollbar {
@@ -957,14 +982,5 @@ footer {
 }
 
 .homepage::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.homepage::-webkit-scrollbar-thumb {
-  background: transparent;
-  border-radius: 10px;
-}
-
-.homepage::-webkit-scrollbar-thumb:hover {
-  background: white;
+  width: 0px;
 }

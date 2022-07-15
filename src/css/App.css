@@ -76,7 +76,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: var(--accentBgColor);
+  background-color: #1B2C44;
   display: flex;
   z-index: 10000000;
   transition: 1s;
@@ -536,6 +536,7 @@ footer {
 
 .window--header>* {
   margin: 0 10px;
+  user-select: none;
 }
 
 .window--header h3 {
@@ -549,20 +550,15 @@ footer {
   user-select: none;
 }
 
-.window--header .window--move {
-  margin-left: auto;
-  width: 20px;
-  cursor: move;
-  user-select: none;
-}
-
 .window--header .window--close {
   width: 15px;
+  position: absolute;
+  top: 0;
+  right: 0;
   margin-right: 0px;
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 12.5px 20px;
   transition: 0.2s;
-  user-select: none;
 }
 
 .window--header .window--close:hover {
@@ -860,21 +856,22 @@ footer {
 
 .events--fieldscontainer p {
   margin-bottom: auto;
+  padding-bottom: 5px;
   font-size: min(16px, 1vw);
 }
 
 .events--fieldscontainer h2 {
   margin-top: 15px;
   font-size: 30px;
-  font-size: min(30px, 2.2vw);
+  font-size: min(26px, 1.7vw);
 }
 
 .events--fieldscontainer h3 {
-  font-size: (19px, 1.3px);
+  font-size: min(19px, 1.2vw);
 }
 
 .events--fieldscontainer h4 {
-  font-size: min(17.5px, 1.05vw);
+  font-size: min(17.5px, 1.02vw);
 }
 
 .events--desc {

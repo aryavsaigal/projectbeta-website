@@ -44,7 +44,7 @@ export default function Events(props) {
           if (e.value === "0")
             return (
               <>
-                <h2>Single</h2>
+                <h2>Individually</h2>
                 <h3>based</h3>
               </>
             );
@@ -75,7 +75,15 @@ export default function Events(props) {
           return (
             <>
               {e.value === "0" && (
-                <h2 style={{ fontSize: "40px", height: "50px" }}>ထ</h2>
+                <h2
+                  style={{
+                    fontSize: "min(40px, 3vw)",
+                    display: "block",
+                    position: "fixed",
+                  }}
+                >
+                  ထ
+                </h2>
               )}
               {e.value !== "0" && <h2>{e.value}</h2>}
               <h3>

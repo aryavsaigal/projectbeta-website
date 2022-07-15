@@ -127,7 +127,7 @@ export const eventsData = [
     name: "64 Wit",
     img_src: sixtyfourwit_src,
     fields: [
-      { name: "team", value: "0" },
+      { name: "team", value: "1" },
       { name: "max", value: "1" },
       { name: "eligible", value: "9-12th" },
       { name: "medium", value: "Both" },

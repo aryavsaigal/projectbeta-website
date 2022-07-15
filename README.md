@@ -12,7 +12,7 @@ This website was made using **HTML, CSS, Javascript and ReactJS**
 
 Simar Tandon - _Project Management, Proxy Content, Creative Guidance_
 
-Navvye Anand - _Project Management, Creative Guidance_
+[Navvye Anand](https://github.com/navvye) - _Project Management, Creative Guidance_
 
 Gauri Tandon and Gayatri - _Event Logos, Schedule_
 

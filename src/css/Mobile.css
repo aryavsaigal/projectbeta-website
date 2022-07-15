@@ -324,14 +324,11 @@ all and (max-aspect-ratio:1/1) {
     user-select: none;
   }
 
-  .window--move {
-    display: none;
-  }
 
   .window--header .window--close {
     margin-left: auto;
     border-radius: 0 10px 0 0;
-    padding: 5px 10px;
+    padding: 7.5px 10px;
   }
 
   .window--content {

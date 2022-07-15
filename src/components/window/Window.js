@@ -1,7 +1,7 @@
 import React from "react";
 import logo_src from "../../images/logo-white.png";
 import close_src from "../../images/navigation/close.png";
-import move_src from "../../images/navigation/nav-move.png";
+// import move_src from "../../images/navigation/nav-move.png";
 
 import Explorer from "./Explorer";
 import Textfile from "./Textfile";
@@ -33,7 +33,7 @@ export default function Window(props) {
 
   return (
     <Draggable
-      handle=".window--move"
+      handle={props.isMobile ? "#some-random-element" : ".window--header"}
       defaultPosition={{
         x: props.isMobile ? 0 : props.x,
         y: props.isMobile ? 10 : props.y,
@@ -51,15 +51,9 @@ export default function Window(props) {
         }}
       >
         <div className="window--header">
-          <img src={logo_src} alt="PB Logo" />
+          <img src={logo_src} alt="PB Logo" draggable="false" />
           <h3>C:/ProjectBeta/{props.dir}</h3>
           {/* <h1>{props.z}</h1> */}
-          <img
-            src={move_src}
-            className="window--move"
-            alt="Move button"
-            draggable={false}
-          />
           <img
             src={close_src}
             className="window--close"

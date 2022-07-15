@@ -47,13 +47,6 @@ export default function Notifications(props) {
     </div>
   ));
 
-  // const obj = React.useRef();
-
-  // React.useEffect(() => {
-  //   if (rawNotifData.length === 0) obj.current.style.height = "0px";
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, []);
-
   return (
     <div className="notif--main">
       <h2>Notifications</h2>

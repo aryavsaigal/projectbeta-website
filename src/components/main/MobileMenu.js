@@ -46,7 +46,7 @@ export default function MobileMenu(props) {
       </div>
       <div
         className="mobile--sidebar"
-        style={{ right: mobileToggled.sidebar ? "10px" : "-250px" }}
+        style={{ right: mobileToggled.sidebar ? "10px" : "-275px" }}
       >
         <Notifications />
         <hr />

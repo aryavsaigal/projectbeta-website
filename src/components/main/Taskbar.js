@@ -14,11 +14,22 @@ import Notifications from "./Notifications";
 import { notifData } from "../data/notifData";
 
 export default function Taskbar() {
-  const [anyNotif, unused] = React.useState(notifData.length);
+  const [newNotifs, setNewNotifs] = React.useState(countNewNotifs());
+
+  function countNewNotifs() {
+    let count = 0;
+    const expiryDuration = 60 * 1000 * 60 * 24 * 3;
+    notifData.forEach((e) => {
+      const elapsed = Date.now() - new Date(e.time);
+      if (elapsed < expiryDuration) count++;
+    });
+    return count;
+  }
+
   const [notifToggled, setNotifToggled] = React.useState([
     false,
     "-85vh",
-    anyNotif > 0 ? notif_unread_src : notif_off_src,
+    newNotifs > 0 ? notif_unread_src : notif_off_src,
   ]);
 
   function toggleNotif() {

@@ -119,7 +119,7 @@ body {
   transition: 0.5s;
   user-select: none;
   cursor: pointer;
-  color: var(--shadowBlack);
+  color: var(--shadowWhite);
   opacity: 0;
 }
 
@@ -301,6 +301,12 @@ body {
   height: fit-content;
   margin-bottom: 5px;
   align-items: center;
+}
+
+#notif--new {
+  border: 1px solid var(--bgWhite);
+  border-style: double;
+  background-color: var(--shadowWhite);
 }
 
 .notif--self hr {

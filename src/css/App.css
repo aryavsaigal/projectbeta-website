@@ -243,6 +243,7 @@ body {
   width: 100%;
   text-align: center;
   margin: 0;
+  z-index: 50;
   font-size: 12px;
   text-shadow: 1px 1px 3px var(--shadowBlack), -1px -1px 3px var(--shadowBlack), 1px -1px 3px var(--shadowBlack), -1px 1px 3px var(--shadowBlack);
 }
@@ -340,6 +341,7 @@ body {
 .titlescreen {
   width: 100%;
   height: calc(100vh - 40px);
+  min-height: 600px;
   position: relative;
 }
 
@@ -380,7 +382,7 @@ body {
   transform: translateX(-50%);
   width: 400px;
   text-align: center;
-  bottom: 12.5vh;
+  bottom: 90px;
   font-size: 20px;
   position: absolute;
   padding: 20px;
@@ -404,7 +406,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   font-weight: bolder;
-  bottom: 25vh;
+  bottom: 170px;
   font-size: 22px;
   font-family: "Ubuntu Mono";
   width: 90vw;
@@ -415,8 +417,9 @@ body {
   position: absolute;
   left: calc(50% - 20px);
   transform: translateX(-20px);
-  bottom: 50px;
+  bottom: 30px;
   width: 40px;
+  opacity: 0.4;
   animation-name: idle_move;
   animation-duration: 2s;
   animation-iteration-count: infinite;
@@ -967,6 +970,10 @@ footer {
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 15px;
+}
+
+::-webkit-scrollbar:hover {
+  width: 25px;
 }
 
 ::-webkit-scrollbar-track {

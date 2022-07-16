@@ -2,14 +2,14 @@ import { eventsData } from "./eventsData";
 
 export default function windowsData() {
   let returnValue = [
+    { id: "0.1", dir: "Unknown.exe" },
+    { id: "0.2", dir: "Shortcuts.png" },
     { id: "1", dir: "Events" },
     { id: "2", dir: "Schedule.png" },
     { id: "3", dir: "Sponsors" },
     { id: "4", dir: "Team.pdf" },
     { id: "5", dir: "Alumni.zip" },
     { id: "6", dir: "Contact.pdf" },
-    { id: "7", dir: "Unknown.exe" },
-    { id: "8", dir: "Shortcuts.png" },
   ];
   eventsData.map((e, i) =>
     returnValue.push({

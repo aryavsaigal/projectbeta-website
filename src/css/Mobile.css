@@ -237,8 +237,8 @@ all and (max-aspect-ratio:1/1) {
 
   .titlescreen--title_container {
     flex-direction: column;
-    transform: translate(-50%, -50%);
-    top: 50%;
+    transform: translate(-50%, -30%);
+    top: 30%;
   }
 
   .titlescreen--title_container img {
@@ -253,13 +253,13 @@ all and (max-aspect-ratio:1/1) {
 
   .titlescreen--date {
     font-size: 17.5px;
-    bottom: 120px;
+    bottom: 190px;
   }
 
   .titlescreen--downarrow {
     width: 30px;
     left: calc(50% - 15px);
-    bottom: 40px;
+    bottom: 120px;
   }
 
   .titlescreen--register {
@@ -267,7 +267,7 @@ all and (max-aspect-ratio:1/1) {
     padding: 15px;
     width: 70%;
     backdrop-filter: blur(0px);
-    bottom: 60px;
+    bottom: 140px;
   }
 
   .titlescreen--register:hover {

@@ -90,7 +90,7 @@ export default function Homepage() {
         case "p": {
           document.querySelectorAll("*:not(img)").forEach((e) => {
             e.style.color = "lime";
-            e.style.fontFamily = "Courier";
+            e.style.fontFamily = "Ubuntu Mono";
             e.style.letterSpacing = "-1px";
             e.style.backgroundColor = "black";
           });

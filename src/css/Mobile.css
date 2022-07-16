@@ -155,14 +155,17 @@ all and (max-aspect-ratio:1/1) {
   }
 
   .notif--main h2 {
-    margin: 5px 10px;
     font-size: 17.5px;
     text-align: center;
   }
 
   .notif--main p {
-    margin: 0px 10px;
     font-size: 15px;
+    text-align: center;
+  }
+
+  .notif--main small {
+    font-size: 12px;
     text-align: center;
   }
 
@@ -234,8 +237,8 @@ all and (max-aspect-ratio:1/1) {
 
   .titlescreen--title_container {
     flex-direction: column;
-    transform: translate(-50%, -40%);
-    top: 35%;
+    transform: translate(-50%, -50%);
+    top: 50%;
   }
 
   .titlescreen--title_container img {
@@ -256,7 +259,7 @@ all and (max-aspect-ratio:1/1) {
   .titlescreen--downarrow {
     width: 30px;
     left: calc(50% - 15px);
-    bottom: 10px;
+    bottom: 40px;
   }
 
   .titlescreen--register {
@@ -548,13 +551,14 @@ all and (max-aspect-ratio:1/1) {
     height: auto;
     width: calc(50% - 20px);
     border-radius: 5px;
+    padding: 20px 10px;
     backdrop-filter: blur(0px);
   }
 
   .events--fieldscontainer img {
     width: 17.5vw;
     max-width: 80px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   .events--fieldscontainer h2,
@@ -566,19 +570,19 @@ all and (max-aspect-ratio:1/1) {
 
   .events--fieldscontainer p {
     margin-bottom: 15px;
-    font-size: 12px;
+    font-size: min(11px, 2.3vw);
   }
 
   .events--fieldscontainer h2 {
-    font-size: 20px;
+    font-size: min(20px, 4vw);
   }
 
   .events--fieldscontainer h3 {
-    font-size: 15px;
+    font-size: min(15px, 3vw);
   }
 
   .events--fieldscontainer h4 {
-    font-size: 13px;
+    font-size: min(12px, 2.6vw);
   }
 
   .events--desc {

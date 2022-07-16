@@ -266,7 +266,6 @@ body {
   width: auto;
   margin: 10px;
   display: grid;
-  grid-gap: 10px;
   grid-template-rows: 30px 25px 1fr;
   grid-template-columns: 1fr;
 }
@@ -277,8 +276,13 @@ body {
 }
 
 .notif--main p {
-  margin: 5px 10px;
+  margin: 7.5px 10px 0;
   font-size: 15px;
+}
+
+.notif--main small {
+  margin: 0px 10px 15px;
+  font-size: 12px;
 }
 
 .notif--list {
@@ -846,6 +850,11 @@ footer {
   box-shadow: 0 10px 20px var(--shadowBlack);
   backdrop-filter: blur(5px);
   padding: min(20px, 1vw) 10px;
+}
+
+.events--fieldscontainer div .infinity {
+  width: min(8vw, 45px);
+  margin-bottom: 5px;
 }
 
 .events--fieldscontainer img {

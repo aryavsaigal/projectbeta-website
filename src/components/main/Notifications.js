@@ -76,6 +76,9 @@ export default function Notifications(props) {
         {newNotifs === 0 ? "No" : newNotifs} new notification
         {newNotifs !== 1 ? "s" : ""}
       </p>
+      <small>{`${rawNotifData.length} total notification${
+        rawNotifData.length === 1 ? "" : "s"
+      }`}</small>
       <div className="notif--list">{notifs}</div>
     </div>
   );

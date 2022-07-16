@@ -7,6 +7,8 @@ import ppl_src from "../../images/events/events-ppl.png";
 import pass_src from "../../images/events/events-pass.png";
 import medium_src from "../../images/events/events-medium.png";
 
+import infinity_symbol_src from "../../images/infinity_symbol.png";
+
 export default function Events(props) {
   const [rawEventsData, setRawEventsData] = React.useState(
     eventsData.filter(
@@ -75,15 +77,11 @@ export default function Events(props) {
           return (
             <>
               {e.value === "0" && (
-                <h2
-                  style={{
-                    fontSize: "min(40px, 3vw)",
-                    display: "block",
-                    position: "fixed",
-                  }}
-                >
-                  ထ
-                </h2>
+                <img
+                  src={infinity_symbol_src}
+                  alt="Infinity Symbol"
+                  className="infinity"
+                />
               )}
               {e.value !== "0" && <h2>{e.value}</h2>}
               <h3>

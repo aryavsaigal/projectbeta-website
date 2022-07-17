@@ -143,7 +143,7 @@ export default function teamData() {
         name: "Puranjay Chawla",
         hod: "Pitching",
         img_src: puranjay_chawla,
-        quote: "This is a sample quote.",
+        quote: '"I am always ready sweety" -FM Sam Manekshaw',
       },
       {
         name: "Sia Jha Nath",

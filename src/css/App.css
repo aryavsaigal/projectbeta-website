@@ -695,7 +695,7 @@ footer {
 }
 
 .textfile {
-  padding: 10px;
+  padding: 20px;
 }
 
 .textfile div {
@@ -707,6 +707,11 @@ footer {
   font-size: 50px;
   margin: 30px 0 10px;
   color: var(--PBorange);
+}
+
+.textfile ul,
+.textfile ol {
+  padding-left: 20px;
 }
 
 .zipfile {
@@ -754,7 +759,7 @@ footer {
 .imageviewer a .downloadicon {
   margin: 10px;
   position: fixed;
-  right: 25px;
+  right: 10px;
   top: 35px;
   width: 25px;
   height: auto;

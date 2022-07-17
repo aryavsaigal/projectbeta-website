@@ -271,7 +271,7 @@ all and (max-aspect-ratio:1/1) {
   }
 
   .titlescreen--register p {
-    padding: 20px;
+    padding: 17.5px;
   }
 
   .titlescreen--register hr {
@@ -401,7 +401,7 @@ all and (max-aspect-ratio:1/1) {
   }
 
   .textfile {
-    padding: 20px;
+    padding: 15px;
   }
 
   .zipfile {

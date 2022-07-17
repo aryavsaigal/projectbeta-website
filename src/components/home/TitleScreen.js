@@ -18,7 +18,7 @@ export default function TitleScreen() {
           REGISTER
         </p>
         <hr />
-        <p onClick={() => window.open("https://discord.gg/pPBFbARv")}>
+        <p onClick={() => window.open("https://discord.gg/qW3DZbCN")}>
           DISCORD
         </p>
       </div>

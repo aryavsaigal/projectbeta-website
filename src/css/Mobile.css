@@ -253,13 +253,13 @@ all and (max-aspect-ratio:1/1) {
 
   .titlescreen--date {
     font-size: 17.5px;
-    bottom: 170px;
+    bottom: 190px;
   }
 
   .titlescreen--downarrow {
     width: 30px;
     left: calc(50% - 15px);
-    bottom: 80px;
+    bottom: 100px;
   }
 
   .titlescreen--register {
@@ -267,7 +267,7 @@ all and (max-aspect-ratio:1/1) {
     padding: 0px;
     width: min(400px, 70%);
     backdrop-filter: blur(0px);
-    bottom: 120px;
+    bottom: 140px;
   }
 
   .titlescreen--register p {
@@ -294,10 +294,17 @@ all and (max-aspect-ratio:1/1) {
 
   .home_infocards--container>div p {
     font-size: 14px;
+    z-index: 10;
   }
 
   .home_infocards--container>div {
     backdrop-filter: blur(0px);
+  }
+
+  .home_infocards--2022 img,
+  .home_infocards--about img,
+  .home_infocards--contact img {
+    z-index: -10;
   }
 
   .home_infocards--2022:hover img,

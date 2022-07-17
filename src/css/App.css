@@ -431,6 +431,10 @@ body {
   margin: 20px 0px;
   width: 0;
   height: auto;
+  color: var(--bgWhite);
+  background-color: var(--bgWhite);
+  border-color: var(--bgWhite);
+  outline-color: var(--bgWhite);
 }
 
 

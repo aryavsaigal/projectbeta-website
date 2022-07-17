@@ -40,7 +40,7 @@ export default function MobileMenu(props) {
       </div>
       <div
         className="mobile--shelf--container"
-        style={{ bottom: mobileToggled.shelf ? "75px" : "-150px" }}
+        style={{ bottom: mobileToggled.shelf ? "70px" : "-150px" }}
       >
         <Desktop {...props} mobile={true} />
       </div>

@@ -233,8 +233,8 @@ body {
 }
 
 .desktopbtn--icon {
-  width: 50px;
-  margin: 0 15px;
+  width: 45px;
+  margin: 0 auto;
   filter: drop-shadow(0 5px 2px var(--shadowBlack));
   user-select: none;
 }
@@ -243,6 +243,7 @@ body {
   width: 100%;
   text-align: center;
   margin: 0;
+  margin-top: 5px;
   z-index: 50;
   font-size: 12px;
   text-shadow: 1px 1px 3px var(--shadowBlack), -1px -1px 3px var(--shadowBlack), 1px -1px 3px var(--shadowBlack), -1px 1px 3px var(--shadowBlack);
@@ -682,7 +683,7 @@ footer {
 .explorer--foldergrid>div>img {
   width: min(90px, 7vw);
   /* max-height: 90px; */
-  margin: 0px 15px 20px;
+  margin: 0px auto 20px;
   user-select: none;
 }
 
@@ -1009,7 +1010,12 @@ footer {
   box-shadow: 0 10px 20px var(--shadowBlack);
 }
 
+.contact--grid .contact--phone div p {
+  font-size: 14px;
+}
+
 .contact--grid .contact--phone div p:nth-child(1) {
+  font-size: 16px;
   font-weight: bold;
 }
 

@@ -99,7 +99,7 @@ export default function Events(props) {
           return (
             <>
               <h2>{e.value}</h2>
-              <h3>Grade</h3>
+              <h3>Grade{e.value == "Open to All" ? "s" : ""}</h3>
             </>
           );
         }

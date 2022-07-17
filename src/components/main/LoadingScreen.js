@@ -18,7 +18,7 @@ export default function LoadingScreen() {
     if (browserException) img_elem.current.style.display = "block";
     else vid_elem.current.style.display = "block";
 
-    if (browserException) setTimeout(() => handleEnd(), 2500);
+    if (browserException) setTimeout(() => handleEnd(), 1000);
     setTimeout(() => {
       skip_button.current.style.opacity = 1;
     }, 10000);

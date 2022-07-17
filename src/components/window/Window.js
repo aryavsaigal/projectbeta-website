@@ -9,6 +9,7 @@ import ImageViewer from "./ImageViewer";
 import Team from "./Team";
 import Events from "./Events";
 import Contact from "./Contact";
+import Pdf from "./Pdf";
 import Unknown from "./Unknown";
 
 import Draggable from "react-draggable"; // Both at the same time
@@ -22,8 +23,10 @@ export default function Window(props) {
 
   function setWindowContent(dir) {
     if (dir.indexOf(".") === -1) return <Explorer {...props} />;
-    else if (dir === "Alumni.zip") return <Textfile {...props} />;
+    else if (dir.endsWith(".txt") || dir.endsWith(".zip"))
+      return <Textfile {...props} />;
     else if (dir.endsWith(".png")) return <ImageViewer {...props} />;
+    else if (dir === "Guidelines.pdf") return <Pdf {...props} />;
     else if (dir === "Team.pdf") return <Team {...props} />;
     else if (dir === "Contact.pdf") return <Contact {...props} />;
     else if (dir === "Unknown.exe") return <Unknown {...props} />;

@@ -4,6 +4,8 @@ import star_src from "../../images/homeinfocard-star.png";
 import info_src from "../../images/homeinfocard-info.png";
 import call_src from "../../images/homeinfocard-call.png";
 
+import invitepdf_src from "../../PDFs/invite.pdf";
+
 export default function HomeInfoCards() {
   return (
     <>
@@ -13,7 +15,7 @@ export default function HomeInfoCards() {
           <h2>2022</h2>
           <p>
             ProjectBeta 6.0 invites out! Click{" "}
-            <a href="https://raw.githubusercontent.com/Project-Beta/projectbeta-website/master/src/invite.pdf">
+            <a href={invitepdf_src} target="_blank" rel="noreferrer">
               here
             </a>{" "}
             to view. <br />

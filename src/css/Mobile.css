@@ -253,28 +253,31 @@ all and (max-aspect-ratio:1/1) {
 
   .titlescreen--date {
     font-size: 17.5px;
-    bottom: 190px;
+    bottom: 170px;
   }
 
   .titlescreen--downarrow {
     width: 30px;
     left: calc(50% - 15px);
-    bottom: 120px;
+    bottom: 80px;
   }
 
   .titlescreen--register {
-    font-size: 13px;
-    padding: 15px;
-    width: 70%;
+    font-size: 15px;
+    padding: 0px;
+    width: min(400px, 70%);
     backdrop-filter: blur(0px);
-    bottom: 140px;
+    bottom: 120px;
   }
 
-  .titlescreen--register:hover {
-    letter-spacing: initial;
-    color: var(--fontWhite);
-    background-color: var(--shadowWhite);
+  .titlescreen--register p {
+    padding: 20px;
   }
+
+  .titlescreen--register hr {
+    margin: 10px 0px;
+  }
+
 
   .home_infocards--container {
     display: flex;
@@ -353,14 +356,13 @@ all and (max-aspect-ratio:1/1) {
   }
 
   .explorer--foldergrid {
-    justify-content: space-evenly;
+    justify-content: flex-start;
   }
 
   .explorer--foldergrid>div {
     margin-bottom: 0px;
     margin-right: 0px;
-    min-width: 100px;
-    flex: 1;
+    flex: 1 0 100px;
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -373,8 +375,8 @@ all and (max-aspect-ratio:1/1) {
   }
 
   .explorer--foldergrid>div>img {
-    width: 50px;
-    max-height: 50px;
+    width: 75px;
+    /* max-height: 50px; */
     margin: 0px 5px 10px;
     user-select: none;
   }
@@ -387,7 +389,15 @@ all and (max-aspect-ratio:1/1) {
     text-shadow: 1px 1px 3px var(--shadowBlack), -1px -1px 3px var(--shadowBlack), 1px -1px 3px var(--shadowBlack), -1px 1px 3px var(--shadowBlack);
   }
 
+  .zipfile div {
+    font-size: 15px;
+  }
+
   .textfile {
+    padding: 20px;
+  }
+
+  .zipfile {
     background-color: var(--bgWhite);
     color: var(--fontBlack);
     padding: 5px;
@@ -395,10 +405,19 @@ all and (max-aspect-ratio:1/1) {
   }
 
   .textfile div {
-    font-family: "Ubuntu Mono";
-    white-space: pre-line;
     font-size: 15px;
   }
+
+  .textfile h1 {
+    font-size: 25px;
+    margin: 10px;
+  }
+
+  .textfile ul,
+  .textfile ol {
+    padding-left: 25px;
+  }
+
 
   .imageviewer a .downloadicon {
     width: 20px;
@@ -547,11 +566,11 @@ all and (max-aspect-ratio:1/1) {
   .events--fieldscontainer div {
     margin: 5px;
     flex: 1;
-    flex-basis: 100px;
+    flex-basis: 120px;
     height: auto;
     width: calc(50% - 20px);
     border-radius: 5px;
-    padding: 20px 10px;
+    padding: 20px 0px;
     backdrop-filter: blur(0px);
   }
 
@@ -570,19 +589,19 @@ all and (max-aspect-ratio:1/1) {
 
   .events--fieldscontainer p {
     margin-bottom: 15px;
-    font-size: min(11px, 2.3vw);
+    font-size: 12px;
   }
 
   .events--fieldscontainer h2 {
-    font-size: min(20px, 4vw);
+    font-size: 18px;
   }
 
   .events--fieldscontainer h3 {
-    font-size: min(15px, 3vw);
+    font-size: 15px;
   }
 
   .events--fieldscontainer h4 {
-    font-size: min(12px, 2.6vw);
+    font-size: 13px;
   }
 
   .events--desc {

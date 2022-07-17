@@ -390,23 +390,47 @@ body {
 .titlescreen--register {
   left: 50%;
   transform: translateX(-50%);
-  width: 400px;
+  width: 350px;
   text-align: center;
-  bottom: 90px;
+  bottom: 110px;
   font-size: 20px;
   position: absolute;
-  padding: 20px;
+  padding: 0px;
   background-color: var(--shadowWhite);
   backdrop-filter: blur(10px);
   border-radius: 40px;
   cursor: pointer;
-  transition: 0.3s;
   user-select: none;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
-.titlescreen--register:hover {
+.titlescreen--register p {
+  transition: 0.3s;
+  margin: 0;
+  height: 100%;
+  padding: 20px;
+  flex: 1;
+}
+
+.titlescreen--register p:nth-child(1) {
+  border-radius: 50px 0 0 50px;
+}
+
+.titlescreen--register p:nth-child(3) {
+  border-radius: 0 50px 50px 0;
+}
+
+.titlescreen--register p:hover {
   background-color: var(--bgWhite);
   color: var(--fontBlack);
+}
+
+.titlescreen--register hr {
+  margin: 20px 0px;
+  width: 0;
+  height: auto;
 }
 
 
@@ -667,15 +691,47 @@ footer {
 }
 
 .textfile {
-  background-color: var(--bgWhite);
-  color: var(--fontBlack);
   padding: 10px;
 }
 
 .textfile div {
+  font-size: 17px;
+}
+
+.textfile h1 {
+  text-align: center;
+  font-size: 50px;
+  margin: 30px 0 10px;
+  color: var(--PBorange);
+}
+
+.zipfile {
+  background-color: var(--bgWhite);
+  color: var(--fontBlack);
+  padding: 10px;
   font-family: "Ubuntu Mono";
+}
+
+.zipfile div {
   white-space: pre-line;
   font-size: 20px;
+}
+
+.window--content .pdfcontainer {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.pdfviewer {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .imageviewer {

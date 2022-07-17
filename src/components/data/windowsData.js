@@ -5,11 +5,12 @@ export default function windowsData() {
     { id: "0.1", dir: "Unknown.exe" },
     { id: "0.2", dir: "Shortcuts.png" },
     { id: "1", dir: "Events" },
-    { id: "2", dir: "Schedule.png" },
-    { id: "3", dir: "Sponsors" },
-    { id: "4", dir: "Team.pdf" },
-    { id: "5", dir: "Alumni.zip" },
-    { id: "6", dir: "Contact.pdf" },
+    { id: "2", dir: "Guidelines.txt" },
+    { id: "3", dir: "Schedule.png" },
+    { id: "4", dir: "Sponsors" },
+    { id: "5", dir: "Team.pdf" },
+    { id: "6", dir: "Alumni.zip" },
+    { id: "7", dir: "Contact.pdf" },
   ];
   eventsData.map((e, i) =>
     returnValue.push({

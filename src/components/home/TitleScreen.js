@@ -13,12 +13,15 @@ export default function TitleScreen() {
         </h1>
       </div>
       <p className="titlescreen--date">07|08|2022 - 13|08|2022</p>
-      <p
-        className="titlescreen--register"
-        onClick={() => window.open("https://forms.gle/hX8SZ9T5UXQeaJ72A")}
-      >
-        CLICK HERE TO REGISTER
-      </p>
+      <div className="titlescreen--register">
+        <p onClick={() => window.open("https://forms.gle/hX8SZ9T5UXQeaJ72A")}>
+          REGISTER
+        </p>
+        <hr />
+        <p onClick={() => window.open("https://discord.gg/pPBFbARv")}>
+          DISCORD
+        </p>
+      </div>
       <a href="#lookdown">
         <img
           className="titlescreen--downarrow"

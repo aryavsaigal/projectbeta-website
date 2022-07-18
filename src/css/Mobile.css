@@ -450,17 +450,6 @@ all and (max-aspect-ratio:1/1) {
     margin: 15px 0 5px;
   }
 
-
-  .team--category {
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    user-select: none;
-    transform: translateY(-2.5px);
-  }
-
   .team--category img {
     width: 20px;
   }

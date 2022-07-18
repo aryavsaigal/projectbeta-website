@@ -798,7 +798,9 @@ footer {
   user-select: none;
   position: sticky;
   top: 0;
-  background: linear-gradient(var(--windowColor), var(--windowColor), transparent);
+  transform: translateY(-2.5px);
+  background-color: var(--windowColor);
+  box-shadow: 0 5px 10px var(--windowColor);
 }
 
 .team--category img {

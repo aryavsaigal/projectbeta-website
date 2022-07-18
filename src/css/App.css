@@ -790,12 +790,15 @@ footer {
 
 
 .team--category {
-  padding: 10px;
+  padding: 5px 10px;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: row;
   user-select: none;
+  position: sticky;
+  top: 0;
+  background: linear-gradient(var(--windowColor), var(--windowColor), transparent);
 }
 
 .team--category img {

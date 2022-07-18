@@ -23,7 +23,7 @@ export default function SideQuest() {
           <h3>Prelims:</h3>
           <ul>
             <li>
-              <p>Custom Deathmatches</p>
+              <p>Custom Deathmatches.</p>
             </li>
             <li>
               <p>

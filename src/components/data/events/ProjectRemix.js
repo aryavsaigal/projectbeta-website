@@ -25,7 +25,7 @@ export default function ProjectRemix() {
         <li>
           <p>
             Participants must send the project file (.flp file ) along with the
-            samples and final exported audio (preferably .mp3 or .wav file )
+            samples and final exported audio (preferably .mp3 or .wav file).
           </p>
         </li>
         <li>

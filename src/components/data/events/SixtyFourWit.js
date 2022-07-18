@@ -46,7 +46,7 @@ export default function SixtyFourWit() {
             A google form will be shared with the participants in which they
             must write the answers against the question numbers. [note that the
             questions will only be shown on the slide and not be available on
-            the google form]
+            the google form.]
           </p>
         </li>
         <li>
@@ -57,7 +57,7 @@ export default function SixtyFourWit() {
             would be allocated one question to answer which may be passed due to
             inability of a team to answer. <br /> <br />
             The second half would function off a buzzer system, wherein the
-            participants answer on a first cum basis
+            participants answer on a first cum basis.
           </p>
         </li>
       </ul>

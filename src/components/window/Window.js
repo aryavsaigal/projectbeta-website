@@ -57,15 +57,15 @@ export default function Window(props) {
           <img src={logo_src} alt="PB Logo" draggable="false" />
           <h3>C:/ProjectBeta/{props.dir}</h3>
           {/* <h1>{props.z}</h1> */}
-          <img
-            src={close_src}
-            className="window--close"
-            alt="Close button"
-            onClick={(event) => {
-              props.removeWindow(props.dir);
-            }}
-          />
         </div>
+        <img
+          src={close_src}
+          className="window--close"
+          alt="Close button"
+          onClick={() => {
+            props.removeWindow(props.dir);
+          }}
+        />
         <div className="window--content">{windowContent}</div>
       </div>
     </Draggable>

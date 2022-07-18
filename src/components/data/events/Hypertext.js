@@ -73,6 +73,7 @@ export default function Hypertext() {
             >
               projectbeta@sanskritischool.edu.in
             </a>
+            .
           </p>
         </li>
       </ol>

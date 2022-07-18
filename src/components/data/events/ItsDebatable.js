@@ -45,6 +45,7 @@ export default function ItsDebatable() {
             >
               https://forms.gle/89fmeJ6zgev51RGcA
             </a>
+            .
           </p>
         </li>
       </ul>

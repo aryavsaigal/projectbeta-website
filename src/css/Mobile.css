@@ -221,7 +221,7 @@ all and (max-aspect-ratio:1/1) {
 
   .mobile--sidebar--social {
     display: flex;
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 10px;
     justify-content: space-evenly;
   }
@@ -343,8 +343,7 @@ all and (max-aspect-ratio:1/1) {
   }
 
 
-  .window--header .window--close {
-    margin-left: auto;
+  .window--close {
     border-radius: 0 10px 0 0;
     padding: 7.5px 10px;
   }

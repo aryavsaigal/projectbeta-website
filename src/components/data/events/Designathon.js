@@ -27,7 +27,7 @@ export default function Designathon() {
             <strong>Task 1:</strong> To edit a promotional video for the event
             of length
             <strong> 60-90 seconds</strong>. The videos for the same will be
-            <strong> outsourced</strong> by the participants
+            <strong> outsourced</strong> by the participants.
             <br />
             <strong>Format</strong>: <strong>.mp4</strong> or{" "}
             <strong>.wmv</strong>, <strong>source file</strong> and a{" "}
@@ -39,7 +39,7 @@ export default function Designathon() {
           <p>
             <strong>Task 2:</strong> To create <strong>2-4 flyers</strong> and a{" "}
             <strong>video thumbnail</strong> for the aforementioned promotional
-            edit
+            edit.
             <br />
             <strong>Format: .png</strong> and <strong>source files</strong>
           </p>
@@ -64,7 +64,7 @@ export default function Designathon() {
           <p>
             <strong>Task 1</strong>: To edit a video from the{" "}
             <strong>clips provided</strong>. The music and sound effects may be
-            outsourced
+            outsourced.
             <br />
             <strong>Format:</strong> .mp4 or .wmv as well as source files
           </p>
@@ -72,7 +72,7 @@ export default function Designathon() {
         <li>
           <p>
             <strong>Task 2:</strong> To design flyers, logos and apparel
-            (hoodies only) centred around the given topic
+            (hoodies only) centred around the given topic.
             <br />
             <strong>Format: .png</strong> and <strong>source files</strong>
           </p>
@@ -81,7 +81,7 @@ export default function Designathon() {
           <p>
             <strong>Task 3:</strong> To prepare a business model centred around
             the given topic, and to use the above creations as a means to pitch
-            this idea
+            this idea.
           </p>
         </li>
       </ul>
@@ -92,12 +92,12 @@ export default function Designathon() {
         <li>
           <p>
             Deadlines must be strictly adhered to; delay in submission will lead
-            to disqualification
+            to disqualification.
           </p>
         </li>
         <li>
           <p>
-            Decisions taken by the judges are final, and will not up for debate
+            Decisions taken by the judges are final, and will not up for debate.
           </p>
         </li>
       </ol>

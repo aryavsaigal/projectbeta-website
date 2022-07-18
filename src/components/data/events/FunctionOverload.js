@@ -21,7 +21,7 @@ export default function FunctionOverload() {
           </ul>
         </li>
         <li>
-          <p>The event will take place on Hackerrank</p>
+          <p>The event will take place on Hackerrank.</p>
         </li>
         <li>
           <p>

@@ -9,7 +9,7 @@ export default function GuidelinesData() {
           <p>
             Schools are requested to reach the venue maximum by 8.30 a.m.
             Opening ceremony will start sharp at 8.45 a.m. If they are to arrive
-            late, they must inform us beforehand
+            late, they must inform us beforehand.
           </p>
         </li>
         <li>

@@ -10,7 +10,7 @@ import windowsData from "../data/windowsData";
 
 export default function Homepage() {
   // {app:"explorer","id":"1"}
-  const zMax = 500;
+  const zMax = 750;
   const isMobile = React.useState(
     window.innerWidth <= 900 || window.innerHeight >= window.innerWidth
   )[0];
@@ -18,7 +18,7 @@ export default function Homepage() {
     windowsData().map((e, i) => ({
       ...e,
       visible: false,
-      z: 500,
+      z: zMax,
     }))
   );
 
@@ -50,7 +50,9 @@ export default function Homepage() {
     const newWindowArray = windowHandler.map((e) =>
       e.dir === app
         ? { ...e, visible: false }
-        : { ...e, z: e.z + (zMax - nextZmax) }
+        : e.z === nextZmax
+        ? { ...e, z: zMax }
+        : e
     );
     setWindowHandler(newWindowArray);
   }

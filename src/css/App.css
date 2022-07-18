@@ -220,6 +220,7 @@ body {
   flex-direction: column;
   justify-content: center;
   outline: 1px solid transparent;
+  user-select: none;
 }
 
 .desktopbtn:hover {
@@ -236,7 +237,6 @@ body {
   width: 45px;
   margin: 0 auto;
   filter: drop-shadow(0 5px 2px var(--shadowBlack));
-  user-select: none;
 }
 
 .desktopbtn--name {
@@ -400,7 +400,6 @@ body {
   background-color: var(--shadowWhite);
   backdrop-filter: blur(10px);
   border-radius: 40px;
-  cursor: pointer;
   user-select: none;
   display: flex;
   justify-content: space-between;
@@ -408,6 +407,7 @@ body {
 }
 
 .titlescreen--register p {
+  cursor: pointer;
   transition: 0.3s;
   margin: 0;
   height: 100%;
@@ -497,7 +497,7 @@ body {
   position: relative;
   transition: 0.3s;
   overflow: hidden;
-  border: 1px solid var(--fontBlack);
+  outline: 1px solid var(--fontBlack);
   border-bottom: 10px solid var(--PBwhite);
 }
 
@@ -592,7 +592,7 @@ footer {
   user-select: none;
 }
 
-.window--header .window--close {
+.window--close {
   width: 15px;
   position: absolute;
   top: 0;
@@ -601,9 +601,10 @@ footer {
   cursor: pointer;
   padding: 12.5px 20px;
   transition: 0.2s;
+  user-select: none;
 }
 
-.window--header .window--close:hover {
+.window--close:hover {
   background-color: var(--alertRed);
 }
 
@@ -670,6 +671,7 @@ footer {
   flex-direction: column;
   justify-items: center;
   padding: min(10px, 0.8vw);
+  user-select: none;
 }
 
 .explorer--foldergrid>div:hover {

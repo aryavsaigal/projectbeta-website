@@ -5,6 +5,7 @@ import Window from "../window/Window";
 import MobileMenu from "../main/MobileMenu";
 import Background from "./Background";
 import Desktop from "./../main/Desktop";
+import Advancement from "../home/Advancement";
 
 import windowsData from "../data/windowsData";
 
@@ -115,6 +116,7 @@ export default function Homepage() {
         <div className="window--collection">{createWindows()}</div>
         <TitleScreen />
         <HomeInfoCards />
+        <Advancement windowData={windowHandler} />
         <MobileMenu addWindow={addWindow} isMobile={isMobile} />
         <Background isMobile={isMobile} />
       </div>

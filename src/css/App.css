@@ -555,6 +555,36 @@ footer {
   transition: 0.3s;
 }
 
+.advancement {
+  position: fixed;
+  background-color: var(--windowColor);
+  right: 10px;
+  width: 350px;
+  height: 60px;
+  border: 5px solid var(--windowOutlineColor);
+  padding: 10px;
+  display: flex;
+  transition: 0.5s;
+  top: -100px;
+  opacity: 0;
+  z-index: 10010;
+}
+
+.advancement h1 {
+  font-size: 20px;
+  margin: 5px;
+  color: rgb(195, 122, 255);
+}
+
+.advancement p {
+  margin: 5px;
+}
+
+.advancement img {
+  margin-right: 10px;
+  user-select: none;
+}
+
 .window {
   position: fixed;
   width: 55vw;
@@ -707,7 +737,7 @@ footer {
 
 .textfile h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   margin: 30px 0 10px;
   color: var(--PBorange);
 }
@@ -790,17 +820,17 @@ footer {
 
 
 .team--category {
-  padding: 5px 10px;
+  padding: 0px 10px;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: row;
   user-select: none;
   position: sticky;
-  top: 0;
+  top: 0px;
   transform: translateY(-2.5px);
   background-color: var(--windowColor);
-  box-shadow: 0 5px 10px var(--windowColor);
+  width: calc(100% - 20px);
 }
 
 .team--category img {

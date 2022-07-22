@@ -27,8 +27,8 @@ export default function Hypertext() {
         </li>
         <li>
           <p>
-            The use of templates/tools from other sites such as Wix,
-            Webflow,colorlib, etc. is not allowed.
+            The use of templates/tools from other sites such as Wix, Webflow,
+            colorlib, etc. is not allowed.
           </p>
         </li>
         <li>

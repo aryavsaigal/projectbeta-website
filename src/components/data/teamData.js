@@ -227,6 +227,7 @@ export default function teamData() {
       "Kartik Singh",
       "Anvee Choudary",
       "Kashvi Pathak",
+      "Arnav Garg",
     ].sort(),
   };
 }

@@ -322,6 +322,21 @@ all and (max-aspect-ratio:1/1) {
     margin-bottom: 80px;
   }
 
+  .advancement {
+    width: calc(100vw - 30px);
+    height: 50px;
+    right: 0;
+    border-radius: 10px;
+  }
+
+  .advancement h1 {
+    font-size: 17.5px;
+  }
+
+  .advancement p {
+    font-size: 14px;
+  }
+
   .window {
     width: calc(100% - 20px);
     margin: 0 10px;
@@ -408,7 +423,7 @@ all and (max-aspect-ratio:1/1) {
     background-color: var(--bgWhite);
     color: var(--fontBlack);
     padding: 5px;
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 10px 10px;
   }
 
   .textfile div {
@@ -629,6 +644,10 @@ all and (max-aspect-ratio:1/1) {
     border-radius: 5px;
   }
 
+  .contact--grid div a {
+    font-size: 13px;
+  }
+
   .contact--grid div h2 {
     margin: 5px;
     font-size: 20px;
@@ -641,7 +660,13 @@ all and (max-aspect-ratio:1/1) {
   }
 
   .contact--grid .contact--phone div p {
-    margin: 10px 0;
+    margin: 5px 0;
+    font-size: 12px;
+  }
+
+  .contact--grid .contact--phone div p:nth-child(1) {
+    margin: 5px 0;
+    font-size: 14px;
   }
 
   .contact--grid div div {
@@ -662,15 +687,11 @@ all and (max-aspect-ratio:1/1) {
   .contact--socialgrid {
     display: grid;
     grid-auto-flow: column;
-    grid-template: repeat(3, auto) / 30px 150px;
-    grid-gap: 5px;
+    grid-template: repeat(3, auto) / 30px auto;
+    grid-gap: 10px;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-  }
-
-  .contact--socialgrid>* {
-    text-align: left;
   }
 
   .contact--socialgrid img {

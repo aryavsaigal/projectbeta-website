@@ -29,7 +29,7 @@ export default function AlumniData() {
       <div>Jayani Tripathi - Head of AI and IoT</div>
       <div>Amartya Charkrborthy - Head of Graphic Design</div>
       <div>Kartikay Kataria - Head of Graphic Design</div>
-      <div>Yashwin Chaudhary - head of PC Gaming</div>
+      <div>Yashwin Chaudhary - Head of PC Gaming</div>
       <div>Tejas Gandhi - Head of Console Gaming</div>
       <div>{"\n"}</div>
       <div>-----</div>

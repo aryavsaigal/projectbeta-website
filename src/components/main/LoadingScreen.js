@@ -22,6 +22,7 @@ export default function LoadingScreen() {
     setTimeout(() => {
       skip_button.current.style.opacity = 1;
     }, 10000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function handleEnd() {

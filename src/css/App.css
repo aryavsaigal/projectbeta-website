@@ -125,6 +125,7 @@ body {
 
 .loadingscreen .skip:hover {
   transition: 0.2s;
+  opacity: 1;
   background-color: var(--bgWhite);
   color: var(--accentBgColor);
 }
@@ -170,7 +171,7 @@ body {
 .taskbar--searchbar {
   outline: 3px solid var(--windowOutlineColor);
   background-color: var(--bgGrey);
-  width: 300px;
+  width: 350px;
   height: 34px;
   position: relative;
   user-select: none;
@@ -339,6 +340,79 @@ body {
   margin: 5px;
   margin-top: 15px;
   font-family: "Ubuntu Mono";
+}
+
+.setting--container {
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  background-color: var(--windowColor);
+  width: 300px;
+  height: fit-content;
+  z-index: 9999;
+  box-shadow: 0 10px 20px var(--taskbarColor);
+  transition: 0.5s;
+}
+
+.setting--main h2 {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.setting--main {
+  height: fit-content;
+  max-height: 75vh;
+  width: auto;
+  margin: 10px;
+  padding: 10px;
+  /* display: grid;
+  grid-template-rows: 30px 25px 1fr;
+  grid-template-columns: 1fr; */
+}
+
+.setting--option {
+  margin: 20px 0;
+}
+
+.setting--option h4 {
+  margin: 0;
+}
+
+.setting--option p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.setting--alert {
+  text-align: center;
+  display: inline;
+}
+
+button {
+  margin: 0 auto;
+  text-align: center;
+  padding: 7.5px 5px;
+  width: 100%;
+  background-color: var(--bgGrey);
+  color: var(--fontWhite);
+  margin: 10px 0;
+  font-size: 16px;
+  font-family: "Ubuntu";
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  background-color: var(--PBorange);
+}
+
+button:disabled {
+  color: var(--fontGrey);
+}
+
+button:disabled:hover {
+  background-color: var(--bgGrey);
 }
 
 .homepage {

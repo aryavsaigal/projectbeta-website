@@ -3,13 +3,13 @@ import React from "react";
 import SocialMedia from "../main/SocialMedia";
 
 export default function Contact() {
-  const [phonerecord, unused] = React.useState([
+  const phonerecord = React.useState([
     ["Simar Tandon - President", "91 98715 99988", "critto#3569"],
     ["Aadi Jain - Vice President", "91 97735 00570"],
     ["Adit Magotra - Secretary", "91 99588 77036", "The_AlphaLaser#0227"],
     ["Anuja Mittal - Faculty In-charge", "91 99539 5074"],
     ["Ruchi Mehra - Faculty In-charge", "91 98110 89272"],
-  ]);
+  ])[0];
 
   const phoneRecordElems = phonerecord.map((e, i) => (
     <div key={i}>

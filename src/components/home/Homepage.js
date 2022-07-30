@@ -107,6 +107,7 @@ export default function Homepage() {
 
   React.useEffect(() => {
     document.addEventListener("keydown", secretCombos);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

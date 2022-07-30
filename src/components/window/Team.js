@@ -5,7 +5,7 @@ import teamData from "../data/teamData";
 import right_arrow from "../../images/navigation/nav-right.png";
 
 export default function Team() {
-  const [rawTeamData, unused] = React.useState(teamData);
+  const rawTeamData = React.useState(teamData)[0];
 
   const boardCards = rawTeamData.board.map((e, i) => (
     <div className="team--boardcore" key={i}>

@@ -17,6 +17,7 @@ export default function Advancement(props) {
       }
     });
     if (visiblecount === totalcount) displayAdvancement();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.windowData]);
 
   function displayAdvancement() {

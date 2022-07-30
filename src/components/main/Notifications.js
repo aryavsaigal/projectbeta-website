@@ -21,6 +21,7 @@ export default function Notifications(props) {
       const elapsed = Date.now() - new Date(e.time);
       if (elapsed < expiryDuration) setNewNotifs((e) => e + 1);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function isNew(current, previous) {

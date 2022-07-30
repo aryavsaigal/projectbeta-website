@@ -1,6 +1,6 @@
 import React from "react";
 
-import { VANTA } from "vanta";
+// import { VANTA } from "vanta";
 import NET from "vanta/dist/vanta.net.min";
 
 export default function Background(props) {
@@ -47,6 +47,7 @@ export default function Background(props) {
     return () => {
       if (vantaEffect) vantaEffect.destroy();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [vantaEffect]);
 
   return <div className="background" ref={obj}></div>;

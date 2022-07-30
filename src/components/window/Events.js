@@ -10,11 +10,11 @@ import medium_src from "../../images/events/events-medium.png";
 import infinity_symbol_src from "../../images/infinity_symbol.png";
 
 export default function Events(props) {
-  const [rawEventsData, setRawEventsData] = React.useState(
+  const rawEventsData = React.useState(
     eventsData.filter(
       (e) => e.name === props.dir.replace(".pdf", "").replace("Events/", "")
     )[0]
-  );
+  )[0];
 
   const EventsFields = () => {
     return rawEventsData.fields.map((e, i) => {
@@ -99,7 +99,7 @@ export default function Events(props) {
           return (
             <>
               <h2>{e.value}</h2>
-              <h3>Grade{e.value == "Open to All" ? "s" : ""}</h3>
+              <h3>Grade{e.value === "Open to All" ? "s" : ""}</h3>
             </>
           );
         }

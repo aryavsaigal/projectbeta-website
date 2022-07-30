@@ -7,14 +7,16 @@ import SocialMedia from "./SocialMedia";
 import notif_off_src from "../../images/navigation/notif-off.png";
 import notif_on_src from "../../images/navigation/notif-on.png";
 import notif_unread_src from "../../images/navigation/notif-unread.png";
+import setting_src from "../../images/navigation/nav-setting.png";
 
 import Timer from "./Timer";
 import Notifications from "./Notifications";
+import Setting from "../main/Settings";
 
 import { notifData } from "../data/notifData";
 
 export default function Taskbar() {
-  const [newNotifs, setNewNotifs] = React.useState(countNewNotifs());
+  const newNotifs = React.useState(countNewNotifs())[0];
 
   function countNewNotifs() {
     let count = 0;
@@ -31,6 +33,7 @@ export default function Taskbar() {
     "-85vh",
     newNotifs > 0 ? notif_unread_src : notif_off_src,
   ]);
+  const [settingToggled, setSettingToggled] = React.useState("-85vh");
 
   function toggleNotif() {
     setNotifToggled((e) => [
@@ -38,6 +41,9 @@ export default function Taskbar() {
       e[0] ? "-85vh" : "50px",
       e[2] === notif_on_src ? notif_off_src : notif_on_src,
     ]);
+  }
+  function toggleSetting() {
+    setSettingToggled((e) => (e === "-85vh" ? "50px" : "-85vh"));
   }
 
   return (
@@ -50,10 +56,14 @@ export default function Taskbar() {
         </div>
         <SocialMedia />
         <Timer />
+        <img src={setting_src} alt="Setting" onClick={toggleSetting} />
         <img src={notifToggled[2]} alt="Notification" onClick={toggleNotif} />
       </div>
       <div className="notif--container" style={{ bottom: notifToggled[1] }}>
         <Notifications />
+      </div>
+      <div className="setting--container" style={{ bottom: settingToggled }}>
+        <Setting />
       </div>
     </>
   );

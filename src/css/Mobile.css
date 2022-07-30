@@ -215,6 +215,10 @@ all and (max-aspect-ratio:1/1) {
     margin-top: 5px;
   }
 
+  .setting--container {
+    display: none;
+  }
+
   .taskbar--timer {
     margin: 10px;
   }
@@ -458,6 +462,7 @@ all and (max-aspect-ratio:1/1) {
   .team {
     background-color: transparent;
     width: 100%;
+    border-radius: 10px;
   }
 
   .team h2 {

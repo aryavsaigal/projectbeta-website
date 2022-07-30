@@ -8,7 +8,7 @@ import { eventsData } from "../data/eventsData";
 import SponsorsFolder from "../data/SponsorsFolder";
 
 export default function Explorer(props) {
-  const [eventsGrid, unused] = React.useState(
+  const eventsGrid = React.useState(
     eventsData.map((e) => (
       <div
         key={e.name + ".pdf"}
@@ -23,7 +23,7 @@ export default function Explorer(props) {
         <p>{e.name + ".pdf"}</p>
       </div>
     ))
-  );
+  )[0];
 
   return (
     <div className="explorer">

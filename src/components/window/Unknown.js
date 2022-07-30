@@ -68,6 +68,11 @@ export default function Unknown(props) {
           setIsCorrect(true);
           setHintArray(data.answer);
         } else displayIncorrect_obj.current.innerText = "Incorrect Password";
+      })
+      .catch((e) => {
+        text_obj.current.disabled = false;
+        displayIncorrect_obj.current.innerText =
+          "Unexpected Server-side Error. Please contact us for support.";
       });
   }
 

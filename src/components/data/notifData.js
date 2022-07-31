@@ -2,7 +2,7 @@ export const notifData = [
   // sample: { notif:"This is a notification", time: "Jan 1, 2022 12:34:56"}
   {
     notif: "Registrations for ProjectBeta 6.0 are now closed.",
-    time: "Aug 5, 2022 00:00:00",
+    time: "Aug 6, 2022 00:00:00",
   },
   {
     notif: "New PB website officially launched!",

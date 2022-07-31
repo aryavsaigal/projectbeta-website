@@ -462,12 +462,16 @@ all and (max-aspect-ratio:1/1) {
   .team {
     background-color: transparent;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
   }
 
   .team h2 {
     font-size: 25px;
     margin: 15px 0 5px;
+  }
+
+  .team--category {
+    border-radius: 0;
   }
 
   .team--category img {

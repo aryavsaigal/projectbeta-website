@@ -894,7 +894,7 @@ footer {
 
 
 .team--category {
-  padding: 0px 10px;
+  padding: 0px;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
@@ -904,7 +904,7 @@ footer {
   top: 0px;
   transform: translateY(-2.5px);
   background-color: var(--windowColor);
-  width: calc(100% - 20px);
+  width: 100%;
 }
 
 .team--category img {

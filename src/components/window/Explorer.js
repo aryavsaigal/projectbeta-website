@@ -1,8 +1,8 @@
 import React from "react";
 
-import star_src from "../../images/explorer-star.png";
-import thispc_src from "../../images/explorer-thispc.png";
-import network_src from "../../images/explorer-network.png";
+import star_src from "../../images/misc/explorer-star.png";
+import thispc_src from "../../images/misc/explorer-thispc.png";
+import network_src from "../../images/misc/explorer-network.png";
 
 import { eventsData } from "../data/eventsData";
 import SponsorsFolder from "../data/SponsorsFolder";
@@ -18,6 +18,7 @@ export default function Explorer(props) {
         onClick={() => {
           if (props.isMobile) props.addWindow(`Events/${e.name}.pdf`);
         }}
+        className="eventbtns"
       >
         <img src={e.img_src} alt={`${e.name} Logo`} />
         <p>{e.name + ".pdf"}</p>

@@ -1,8 +1,8 @@
 import React from "react";
 
-import star_src from "../../images/homeinfocard-star.png";
-import info_src from "../../images/homeinfocard-info.png";
-import call_src from "../../images/homeinfocard-call.png";
+import star_src from "../../images/homecards/homeinfocard-star.png";
+import info_src from "../../images/homecards/homeinfocard-info.png";
+import call_src from "../../images/homecards/homeinfocard-call.png";
 
 import invitepdf_src from "../../PDFs/invite.pdf";
 

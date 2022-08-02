@@ -385,7 +385,7 @@ all and (max-aspect-ratio:1/1) {
     justify-content: flex-start;
   }
 
-  .explorer--foldergrid>div {
+  .eventbtns {
     margin-bottom: 0px;
     margin-right: 0px;
     flex: 1 0 100px;
@@ -396,22 +396,53 @@ all and (max-aspect-ratio:1/1) {
     padding: 10px;
   }
 
-  .explorer--foldergrid>div:hover {
+  .eventbtns:hover {
     border-radius: 10px;
   }
 
-  .explorer--foldergrid>div>img {
+  .eventbtns>img {
     width: 75px;
     /* max-height: 50px; */
     margin: 0px 5px 10px;
     user-select: none;
   }
 
-  .explorer--foldergrid>div>p {
+  .eventbtns>p {
     width: 100%;
     text-align: center;
     margin: 0;
     font-size: 11px;
+    text-shadow: 1px 1px 3px var(--shadowBlack), -1px -1px 3px var(--shadowBlack), 1px -1px 3px var(--shadowBlack), -1px 1px 3px var(--shadowBlack);
+  }
+
+  .sponsorbtns {
+    margin-bottom: 0px;
+    margin-right: 0px;
+    flex: 1 0 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .sponsorbtns:hover {
+    border-radius: 10px;
+  }
+
+  .sponsorbtns>img {
+    width: 200px;
+    /* max-height: 50px; */
+    margin: 0px 5px 10px;
+    user-select: none;
+  }
+
+  .sponsorbtns>p {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
     text-shadow: 1px 1px 3px var(--shadowBlack), -1px -1px 3px var(--shadowBlack), 1px -1px 3px var(--shadowBlack), -1px 1px 3px var(--shadowBlack);
   }
 

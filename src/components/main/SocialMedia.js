@@ -1,8 +1,8 @@
 import React from "react";
 
-import ig_src from "../../images/link-ig.png";
-import gh_src from "../../images/link-gh.png";
-import fb_src from "../../images/link-fb.png";
+import ig_src from "../../images/misc/link-ig.png";
+import gh_src from "../../images/misc/link-gh.png";
+import fb_src from "../../images/misc/link-fb.png";
 
 export default function SocialMedia() {
   return (

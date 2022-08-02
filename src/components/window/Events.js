@@ -7,7 +7,7 @@ import ppl_src from "../../images/events/events-ppl.png";
 import pass_src from "../../images/events/events-pass.png";
 import medium_src from "../../images/events/events-medium.png";
 
-import infinity_symbol_src from "../../images/infinity_symbol.png";
+import infinity_symbol_src from "../../images/misc/infinity_symbol.png";
 
 export default function Events(props) {
   const rawEventsData = React.useState(

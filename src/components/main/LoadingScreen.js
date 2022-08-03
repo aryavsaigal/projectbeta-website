@@ -22,6 +22,8 @@ export default function LoadingScreen() {
     setTimeout(() => {
       skip_button.current.style.opacity = 1;
     }, 10000);
+    let checkkey = document.addEventListener("keydown", () => handleEnd());
+    return () => document.removeEventListener(checkkey);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

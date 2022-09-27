@@ -3,7 +3,7 @@ export const notifData = [
   {
     notif:
       "Due to an unforeseen error, the background is temporarily disabled.",
-    time: "Aug 14, 2022 00:00:00",
+    time: "Sep 27, 2022 00:00:00",
   },
   {
     notif: "ProjectBeta 6.0 has ended.",

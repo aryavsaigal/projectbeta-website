@@ -10,7 +10,10 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-draggable": "^4.4.5",
+    "react-particles": "^2.3.3",
     "react-scripts": "^5.0.1",
+    "tsparticles": "^2.3.4",
+    "tsparticles-engine": "^2.3.3",
     "vanta": "^0.5.22",
     "web-vitals": "^2.1.4"
   },

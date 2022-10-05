@@ -1,11 +1,9 @@
 import React from "react";
-
-// import { VANTA } from "vanta";
-import NET from "vanta/dist/vanta.net.min";
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
+import particles_config from "../../particles.json";
 
 export default function Background(props) {
-  const [vantaEffect, setVantaEffect] = React.useState(0);
-  const obj = React.useRef(null);
   // React.useEffect(() => {
   //   if (!vantaEffect) {
   //     if (!props.isMobile)
@@ -50,5 +48,23 @@ export default function Background(props) {
   //   // eslint-disable-next-line react-hooks/exhaustive-deps
   // }, [vantaEffect]);
 
-  return <div className="background" ref={obj}></div>;
+  const particlesInit = React.useCallback(async (engine) => {
+    console.log(engine);
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = React.useCallback(async (container) => {
+    await console.log(container);
+  }, []);
+
+  return (
+    <Particles
+      options={particles_config}
+      init={particlesInit}
+      loaded={particlesLoaded}
+    />
+  );
 }

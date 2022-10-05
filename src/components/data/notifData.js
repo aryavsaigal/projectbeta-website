@@ -1,9 +1,8 @@
 export const notifData = [
   // sample: { notif:"This is a notification", time: "Jan 1, 2022 12:34:56"}
   {
-    notif:
-      "Due to an unforeseen error, the background is temporarily disabled.",
-    time: "Sep 27, 2022 00:00:00",
+    notif: "The site has adopted a new, simpler and lighter background.",
+    time: "Oct 5, 2022 13:15:00",
   },
   {
     notif: "ProjectBeta 6.0 has ended.",

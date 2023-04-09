@@ -9,12 +9,27 @@ import Advancement from "../home/Advancement";
 
 import windowsData from "../data/windowsData";
 
+// Homepage contains the majority of the site's content and functionality
+// including the desktop/home webpage, desktop icons and the windows
+
+// WARNING!!!
+// Code of this specific file is extremely fragile and may break the entire site
+// if changed. Please avoid editing this file.
+
 export default function Homepage() {
-  // {app:"explorer","id":"1"}
+  // zMax is the default z-index of all windows in the page.
+  // Selecting a window to set its z-index to zMax
+  // while the z-index of all windows will decrement
   const zMax = 750;
+
+  // React state identifies if site should be readjusted to accomodate for smaller screens
   const isMobile = React.useState(
     window.innerWidth <= 900 || window.innerHeight >= window.innerWidth
   )[0];
+
+  // React state manages the relative order and visibility of windows
+  // Default data of all windows are imported from windowsData.js
+  // You may view the defined properties and methods to understand the context of these functions
   const [windowHandler, setWindowHandler] = React.useState(
     windowsData().map((e, i) => ({
       ...e,
@@ -23,14 +38,16 @@ export default function Homepage() {
     }))
   );
 
+  // Makes a window visible and position on the top when triggered from the desktop icons
   function addWindow(app) {
+    // Exception: On clicking the 'Desktop' icon, all opened windows will be closed
     if (app === "Desktop") {
       let newWindowArray = windowHandler.map((e) => ({ ...e, visible: false }));
       setWindowHandler(newWindowArray);
       return;
     } else {
-      setWindowHandler((prev) =>
-        prev.map((e) => {
+      setWindowHandler((windowHandler) =>
+        windowHandler.map((e) => {
           if (e.dir === app) {
             return {
               ...e,
@@ -43,37 +60,40 @@ export default function Homepage() {
     }
   }
 
+  // Makes the window invisible when clicking on the close button
   function removeWindow(app) {
-    let nextZmax = 0;
+    let nextZMax = 0;
     windowHandler.forEach((e) => {
-      if (e.z > nextZmax && e.z !== zMax) nextZmax = e.z;
+      if (e.z > nextZMax && e.z !== zMax) nextZMax = e.z;
     });
-    const newWindowArray = windowHandler.map((e) =>
+    const newWindowHandler = windowHandler.map((e) =>
       e.dir === app
         ? { ...e, visible: false }
-        : e.z === nextZmax
+        : e.z === nextZMax
         ? { ...e, z: zMax }
         : e
     );
-    setWindowHandler(newWindowArray);
+    setWindowHandler(newWindowHandler);
   }
 
+  // Brings the window to the top when user clicks on its header
   function focusWindow(app) {
-    const newWindowArray = windowHandler.map((e) => {
+    const newWindowHandler = windowHandler.map((e) => {
       return e.dir === app && e.z <= zMax
         ? { ...e, z: zMax }
         : { ...e, z: e.z - 1 };
     });
-    setWindowHandler(newWindowArray);
+    setWindowHandler(newWindowHandler);
   }
 
+  // Initializes all windows when website launches
   function createWindows() {
     return windowHandler.map((item, i) => (
       <Window
         {...item}
         key={item.id}
-        x={100 + i * 15}
-        y={50 + i * 15}
+        x={100 + i * 15} // All windows are placed to be offest by 15 pixels
+        y={50 + i * 15} // when first loaded to avoid clutter
         zMax={zMax}
         isMobile={isMobile}
         removeWindow={removeWindow}
@@ -83,13 +103,17 @@ export default function Homepage() {
     ));
   }
 
+  // Does various functions to windows and the websites
+  // when certain keystrokes are detected
   function secretCombos(e) {
     if (e.ctrlKey && e.altKey) {
       switch (e.key) {
+        // Used to open the secret BetaTest hint/login page
         case "z": {
           addWindow("Unknown.exe");
           break;
         }
+        // Used to add 'matrix' styling in website
         case "p": {
           document.querySelectorAll("*:not(img)").forEach((e) => {
             e.style.color = "lime";
@@ -105,6 +129,7 @@ export default function Homepage() {
     }
   }
 
+  // Listens for keystrokes and triggers the above function
   React.useEffect(() => {
     document.addEventListener("keydown", secretCombos);
     // eslint-disable-next-line react-hooks/exhaustive-deps

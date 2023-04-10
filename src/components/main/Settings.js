@@ -1,8 +1,16 @@
 import React from "react";
 
+// Settings displays the settings panel in the taskbar that allows to configure different
+// parts of the front-end side of the site.
+
+// Only one setting exists: Low Performance Mode.
+// There is modular support for addition of more settings
+
 export default function Settings() {
+  const numberOfSettings = 1; // Set the number of settings currently defined
+
   const [settingBtns, setSettingBtns] = React.useState(
-    new Array(1).fill(false)
+    new Array(numberOfSettings).fill(false)
   );
 
   function settingHandler(num) {

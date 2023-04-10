@@ -1,9 +1,13 @@
 import React from "react";
 
+// DesktopButtons displays the individually selectable desktop button,
+// with the icon and the name
+
 export default function DesktopButtons(props) {
   return (
     <div
       className="desktopbtn"
+      // Triggers the window on different inputs based on the device used
       onDoubleClick={(event) => {
         if (event.detail === 2) props.addWindow(props.name);
       }}

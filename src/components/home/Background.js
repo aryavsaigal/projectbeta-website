@@ -1,7 +1,13 @@
 import React from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
-import particles_config from "../../particles.json";
+import particlesConfig from "../../particles.json";
+
+// Background displays the animated network background of the site
+
+// Note: A different version of the background was used previously, but
+// was noticed to break in certain browsers and replaced.
+// Its source code is still retained in case the team wishes to reimplement it
 
 export default function Background(props) {
   // React.useEffect(() => {
@@ -48,6 +54,9 @@ export default function Background(props) {
   //   // eslint-disable-next-line react-hooks/exhaustive-deps
   // }, [vantaEffect]);
 
+  // A Particles component is initiated containing the configuration data
+  // stored in particles.json
+
   const particlesInit = React.useCallback(async (engine) => {
     console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -62,7 +71,7 @@ export default function Background(props) {
 
   return (
     <Particles
-      options={particles_config}
+      options={particlesConfig}
       init={particlesInit}
       loaded={particlesLoaded}
     />

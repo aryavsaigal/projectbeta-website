@@ -1,33 +1,35 @@
 import React from "react";
 import DesktopButtons from "./DesktopButtons.js";
 
-import desktop_src from "../../images/folders/desktop.png";
-import folder_1_src from "../../images/folders/folder-1.png";
-import folder_2_src from "../../images/folders/folder-2.png";
-import file_img_src from "../../images/folders/file-img.png";
-import file_rules_src from "../../images/folders/file-rules.png";
-import file_zip_src from "../../images/folders/file-zip.png";
-import file_team_src from "../../images/folders/file-team.png";
-import file_contact_src from "../../images/folders/file-contact.png";
+import desktopSrc from "../../images/folders/desktop.png";
+import folder1Src from "../../images/folders/folder-1.png";
+import folder2Src from "../../images/folders/folder-2.png";
+import fileImgSrc from "../../images/folders/file-img.png";
+import fileRulesSrc from "../../images/folders/file-rules.png";
+import fileZipSrc from "../../images/folders/file-zip.png";
+import fileTeamSrc from "../../images/folders/file-team.png";
+import fileContactSrc from "../../images/folders/file-contact.png";
+
+// Desktop shows all windows-themed links to the webpages in form of desktop icons.
 
 export default function Desktop(props) {
-  const desktopbtndata = [
-    { src: desktop_src, btn_name: "Desktop" },
-    { src: folder_1_src, btn_name: "Events" },
-    { src: file_rules_src, btn_name: "Guidelines.txt" },
-    { src: file_img_src, btn_name: "Schedule.png" },
-    { src: folder_2_src, btn_name: "Sponsors" },
-    { src: file_team_src, btn_name: "Team.pdf" },
-    { src: file_zip_src, btn_name: "Alumni.zip" },
-    { src: file_contact_src, btn_name: "Contact.pdf" },
+  const desktopButtonData = [
+    { src: desktopSrc, buttonName: "Desktop" },
+    { src: folder1Src, buttonName: "Events" },
+    { src: fileRulesSrc, buttonName: "Guidelines.txt" },
+    { src: fileImgSrc, buttonName: "Schedule.png" },
+    { src: folder2Src, buttonName: "Sponsors" },
+    { src: fileTeamSrc, buttonName: "Team.pdf" },
+    { src: fileZipSrc, buttonName: "Alumni.zip" },
+    { src: fileContactSrc, buttonName: "Contact.pdf" },
   ];
 
   function CreateDesktopButtons() {
-    return desktopbtndata.map((e) => (
+    return desktopButtonData.map((e) => (
       <DesktopButtons
-        key={e.btn_name}
+        key={e.buttonName}
         src={e.src}
-        name={e.btn_name}
+        name={e.buttonName}
         id={e.src}
         isMobile={props.isMobile}
         {...props}
@@ -36,6 +38,8 @@ export default function Desktop(props) {
   }
 
   return (
+    // The desktop buttons collection is provided to the desktop or mobile container
+    // depending on what the user is detected to use
     <div className={!props.mobile ? "desktopbtn--container" : "mobile--shelf"}>
       {CreateDesktopButtons()}
     </div>

@@ -27,10 +27,12 @@ export default function Taskbar() {
     let count = 0;
     const expiryDay = 3; // Set how many days old a recent notification can be
     const expiryDuration = 60 * 1000 * 60 * 24 * expiryDay;
+
     notifData.forEach((e) => {
       const elapsed = Date.now() - new Date(e.time);
       if (elapsed < expiryDuration) count++;
     });
+
     return count;
   }
   const newNotifs = React.useState(countNewNotifs())[0];

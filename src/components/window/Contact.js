@@ -2,16 +2,22 @@ import React from "react";
 
 import SocialMedia from "../main/SocialMedia";
 
+// Contact is the Contact webpage of the site
+
 export default function Contact() {
-  const phonerecord = React.useState([
-    ["Simar Tandon - President", "91 98715 99988", "critto#3569"],
-    ["Aadi Jain - Vice President", "91 97735 00570"],
-    ["Adit Magotra - Secretary", "91 99588 77036", "The_AlphaLaser#0227"],
-    ["Anuja Mittal - Faculty In-charge", "91 99539 5074"],
-    ["Ruchi Mehra - Faculty In-charge", "91 98110 89272"],
+  // Contact details of the club team
+  // Format: "Name - Designation", "91 XXXXX XXXXX", "Discord username (Optional)"
+  // Note: Do not try to add, remove or rearrange the arrays of designations since
+  // their allocations are fixed in the front-end of the page
+  const phoneRecord = React.useState([
+    ["Simar Tandon - President", "91 98715 99988", "critto#3569"], // President
+    ["Aadi Jain - Vice President", "91 97735 00570"], // Vice President
+    ["Adit Magotra - Secretary", "91 99588 77036", "The_AlphaLaser#0227"], // Secretary
+    ["Anuja Mittal - Faculty In-charge", "91 99539 5074"], // Faculty In-charge
+    ["Ruchi Mehra - Faculty In-charge", "91 98110 89272"], // Faculty In-charge
   ])[0];
 
-  const phoneRecordElems = phonerecord.map((e, i) => (
+  const phoneRecordElems = phoneRecord.map((e, i) => (
     <div key={i}>
       <p>{e[0]}</p>
       <p>

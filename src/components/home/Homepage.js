@@ -12,9 +12,10 @@ import windowsData from "../data/windowsData";
 // Homepage contains the majority of the site's content and functionality
 // including the desktop/home webpage, desktop icons and the windows
 
-// WARNING!!!
-// Code of this specific file is extremely fragile and may break the entire site
-// if changed. Please avoid editing this file.
+// !!! WARNING !!!
+// CODE OF THIS FILE IS DANGEROUSLY FRAGILE AND MAY BREAK THE ENTIRE SITE IF
+// MODIFIED CARELESSLY. PLEASE AVOID EDITING THIS FILE OR EXERCISE
+// EXTREME CAUTION WHILE DOING SO.
 
 export default function Homepage() {
   // zMax is the default z-index of all windows in the page.

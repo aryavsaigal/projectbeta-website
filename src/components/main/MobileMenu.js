@@ -1,15 +1,17 @@
 import React from "react";
 
-import pb_logo_src from "../../images/logo-white.png";
-import nav_menu_src from "../../images/navigation/nav-menu.png";
-import nav_close_src from "../../images/navigation/close.png";
-import nav_shelf_close_src from "../../images/navigation/nav-shelf-close.png";
-import nav_shelf_open_src from "../../images/navigation/nav-shelf-open.png";
+import pbLogoSrc from "../../images/logo-white.png";
+import navMenuSrc from "../../images/navigation/nav-menu.png";
+import navCloseSrc from "../../images/navigation/close.png";
+import navShelfCloseSrc from "../../images/navigation/nav-shelf-close.png";
+import navShelfOpenSrc from "../../images/navigation/nav-shelf-open.png";
 
 import Desktop from "../main/Desktop";
 import Notifications from "../main/Notifications";
 import Timer from "../main/Timer";
 import SocialMedia from "../main/SocialMedia";
+
+// MobileMenu displays a separate set of Taskbar elements made specially for mobile devices
 
 export default function MobileMenu(props) {
   const [mobileToggled, setMobileToggled] = React.useState({
@@ -27,13 +29,13 @@ export default function MobileMenu(props) {
     <>
       <div className="mobile--navbar">
         <img
-          src={mobileToggled.shelf ? nav_shelf_open_src : nav_shelf_close_src}
+          src={mobileToggled.shelf ? navShelfOpenSrc : navShelfCloseSrc}
           onClick={toggleShelf}
           alt="Mobile Shelf Icon"
         />
-        <img src={pb_logo_src} alt="PB Logo" />
+        <img src={pbLogoSrc} alt="PB Logo" />
         <img
-          src={mobileToggled.sidebar ? nav_close_src : nav_menu_src}
+          src={mobileToggled.sidebar ? navCloseSrc : navMenuSrc}
           onClick={toggleSidebar}
           alt="Mobile Menu Icon"
         />

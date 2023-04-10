@@ -1,44 +1,59 @@
 import React from "react";
 
-export default function Timer() {
-  let entry = {
-    dd: 0,
-    hh: 0,
-    mm: 0,
-    ss: 0,
-    sign: "-",
-  };
-  const [countdown, setCountdown] = React.useState(entry);
+// Timer displays the countdown timer for the beginning of the ProjectBeta event.
+// The timer can count both ways (time left and time elapsed).
 
+export default function Timer() {
+  // Stores the different time parts of the countdown timer
+  const countdownEntry = {
+    dd: 0, // Days
+    hh: 0, // Hours
+    mm: 0, // Minutes
+    ss: 0, // Seconds
+    sign: "-", // Whether countdown is moving forwards or backwards
+  };
+  const [countdownData, setCountdownData] = React.useState(countdownEntry);
+
+  // The recursive function keeps updating the countdown timer every second
   React.useEffect(() => {
     updateTimer();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [countdown]);
+  }, [countdownData]);
 
   function updateTimer() {
     setTimeout(() => {
-      const target = new Date("Aug 7, 2022 00:00:00").getTime();
-      const time = new Date().getTime();
-      const diff = target - time > 0 ? target - time : time - target;
-      let newsign = "-";
-      if (target - time < 0) newsign = "+";
+      const eventDate = "Aug 7, 2022 00:00:00"; // <- Set the date for upcoming PB event here
+      const countdownTarget = new Date(eventDate).getTime();
 
-      var newdd = Math.floor(diff / (1000 * 60 * 60 * 24));
-      var newhh = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var newmm = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      var newss = Math.floor((diff % (1000 * 60)) / 1000);
+      const currentTime = new Date().getTime();
 
-      let countdown = {
-        dd: newdd,
-        hh: newhh,
-        mm: newmm,
-        ss: newss,
-        sign: newsign,
+      const timeDifference =
+        countdownTarget - currentTime > 0
+          ? countdownTarget - currentTime
+          : currentTime - countdownTarget;
+
+      const newSign = countdownTarget - currentTime < 0 ? "+" : "-";
+
+      var newDd = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+      var newHh = Math.floor(
+        (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      var newMm = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+      var newSs = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+      const countdown = {
+        dd: newDd,
+        hh: newHh,
+        mm: newMm,
+        ss: newSs,
+        sign: newSign,
       };
 
-      setCountdown(countdown);
+      setCountdownData(countdown);
     }, 1000);
   }
+  // If any time part of the timer is single digit,
+  // manually add a zero digit to make it two digit
   function addDoubleZero(num) {
     if (num < 10) {
       return `0${String(num)}`;
@@ -47,9 +62,9 @@ export default function Timer() {
 
   return (
     <div className="taskbar--timer">
-      T {countdown.sign} {addDoubleZero(countdown.dd)}d:{" "}
-      {addDoubleZero(countdown.hh)}h: {addDoubleZero(countdown.mm)}m:{" "}
-      {addDoubleZero(countdown.ss)}s
+      T {countdownData.sign} {addDoubleZero(countdownData.dd)}d:{" "}
+      {addDoubleZero(countdownData.hh)}h: {addDoubleZero(countdownData.mm)}m:{" "}
+      {addDoubleZero(countdownData.ss)}s
     </div>
   );
 }

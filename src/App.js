@@ -3,14 +3,20 @@ import "./css/Mobile.css";
 import Taskbar from "./components/main/Taskbar";
 import Homepage from "./components/home/Homepage";
 import LoadingScreen from "./components/main/LoadingScreen";
+/**
+ Hlo there! Looks like you are editing the source files for the website.
+ I have tried to create a proper documentation of the code whenever necessary
+ and refactored some variables/functions so the codebase may be updated conveniently
 
-// Hlo there! Looks like you are editing the source files for the website.
-// I have tried to create a proper documentation of the code whenever necessary
-// and refactored some variables/functions so the codebase may be updated conveniently
-//
-// Hope the documentation is useful
-//
-// Change the status quo!
+ Do note that it is ncessary to have some knowledge of React when going through the code,
+ as some parts utilize logics derived from React that may not be understood by javascript alone.
+
+ Hope the documentation is useful. Please reach out to me in case you have any suggestions.
+
+ Change the status quo!
+
+- Suyash Chandel
+*/
 
 function App() {
   // Important things to be logged in the console, inclusing necessary attribution to the icons

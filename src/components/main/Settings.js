@@ -44,6 +44,9 @@ export default function Settings() {
   return (
     <div className="setting--main">
       <h2>Settings</h2>
+
+      {/* Settings list */}
+
       <div className="setting--option">
         <h4>Low Performance Mode</h4>
         <p>Disables blur effects and animations</p>
@@ -55,6 +58,7 @@ export default function Settings() {
           Enable
         </button>
       </div>
+
       <div className="setting--alert">
         <small>To revert the enabled settings, reload this website</small>
       </div>

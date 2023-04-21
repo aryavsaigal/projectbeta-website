@@ -23,6 +23,8 @@ import Hypertext from "./events/Hypertext";
 import SideQuest from "./events/SideQuest";
 import SixtyFourWit from "./events/SixtyFourWit";
 
+import hypertext_md from "./events/Hypertext.md";
+
 export const eventsData = [
   {
     name: "Hypertext{}",
@@ -34,6 +36,7 @@ export const eventsData = [
       { name: "medium", value: "Online" },
     ],
     desc: <Hypertext />,
+    md: hypertext_md,
   },
   {
     name: "Function Overload",
@@ -45,6 +48,7 @@ export const eventsData = [
       { name: "medium", value: "Offline" },
     ],
     desc: <FunctionOverload />,
+    md: hypertext_md,
   },
   {
     name: "Design Syndicate",
@@ -56,6 +60,7 @@ export const eventsData = [
       { name: "medium", value: "Both" },
     ],
     desc: <Designathon />,
+    md: hypertext_md,
   },
   {
     name: "Dual Wield",
@@ -67,6 +72,7 @@ export const eventsData = [
       { name: "medium", value: "Online" },
     ],
     desc: <DualWield />,
+    md: hypertext_md,
   },
   {
     name: "Side Quest",
@@ -78,6 +84,7 @@ export const eventsData = [
       { name: "medium", value: "Online" },
     ],
     desc: <SideQuest />,
+    md: hypertext_md,
   },
   {
     name: "It's Debatable",
@@ -89,6 +96,7 @@ export const eventsData = [
       { name: "medium", value: "Both" },
     ],
     desc: <ItsDebatable />,
+    md: hypertext_md,
   },
   {
     name: "ProjectRemix",
@@ -100,6 +108,7 @@ export const eventsData = [
       { name: "medium", value: "Online" },
     ],
     desc: <ProjectRemix />,
+    md: hypertext_md,
   },
   {
     name: "Authority_450",
@@ -111,6 +120,7 @@ export const eventsData = [
       { name: "medium", value: "Offline" },
     ],
     desc: <Authority450 />,
+    md: hypertext_md,
   },
   {
     name: "BetaTest",
@@ -122,6 +132,7 @@ export const eventsData = [
       { name: "medium", value: "Online" },
     ],
     desc: <BetaTest />,
+    md: hypertext_md,
   },
   {
     name: "64 Wit",
@@ -133,5 +144,6 @@ export const eventsData = [
       { name: "medium", value: "Both" },
     ],
     desc: <SixtyFourWit />,
+    md: hypertext_md,
   },
 ];

@@ -1,5 +1,5 @@
 import React from "react";
-
+import "react-markdown";
 import { eventsData } from "../data/eventsData";
 
 import school_src from "../../images/events/events-school.png";
@@ -8,8 +8,13 @@ import pass_src from "../../images/events/events-pass.png";
 import medium_src from "../../images/events/events-medium.png";
 
 import infinity_symbol_src from "../../images/misc/infinity_symbol.png";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+
+// Events is the boilerplate code for all event sub-webpages in the site
 
 export default function Events(props) {
+  // Retrieves the HTML page from the directory to be displayed for the webpage
+  // the instance is supposed to show
   const rawEventsData = React.useState(
     eventsData.filter(
       (e) => e.name === props.dir.replace(".pdf", "").replace("Events/", "")
@@ -114,12 +119,34 @@ export default function Events(props) {
     });
   };
 
+  const [markdownFile, setMarkdownFile] = React.useState("");
+
+  React.useEffect(() => {
+    fetch(rawEventsData.md)
+      .then((e) => {
+        e = e.text();
+      })
+      .then((e) => {
+        console.log(e);
+        setMarkdownFile(e);
+      })
+      .catch((e) => console.log(e));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  console.log(markdownFile);
+
   return (
     <div className="events">
       <img src={rawEventsData.img_src} alt="Event" className="events--bg" />
       <h1>{rawEventsData.name}</h1>
       <div className="events--fieldscontainer">{EventsFields()}</div>
-      <div className="events--desc">{rawEventsData.desc}</div>
+      <div className="events--desc">
+        {rawEventsData.desc}
+        {/* <ReactMarkdown>{markdownFile}</ReactMarkdown> */}
+        {/* <ReactMarkdown>{markdownFile}</ReactMarkdown> */}
+        {/* <ReactMarkdown children={markdownFile} /> */}
+      </div>
     </div>
   );
 }

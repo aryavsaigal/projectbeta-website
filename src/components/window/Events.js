@@ -122,19 +122,11 @@ export default function Events(props) {
   const [markdownFile, setMarkdownFile] = React.useState("");
 
   React.useEffect(() => {
-    fetch(rawEventsData.md)
-      .then((e) => {
-        e = e.text();
-      })
-      .then((e) => {
-        console.log(e);
-        setMarkdownFile(e);
-      })
-      .catch((e) => console.log(e));
+    fetch(rawEventsData.desc)
+      .then((res) => res.text())
+      .then((text) => setMarkdownFile(text));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  console.log(markdownFile);
 
   return (
     <div className="events">
@@ -142,10 +134,7 @@ export default function Events(props) {
       <h1>{rawEventsData.name}</h1>
       <div className="events--fieldscontainer">{EventsFields()}</div>
       <div className="events--desc">
-        {rawEventsData.desc}
-        {/* <ReactMarkdown>{markdownFile}</ReactMarkdown> */}
-        {/* <ReactMarkdown>{markdownFile}</ReactMarkdown> */}
-        {/* <ReactMarkdown children={markdownFile} /> */}
+        <ReactMarkdown>{markdownFile}</ReactMarkdown>
       </div>
     </div>
   );

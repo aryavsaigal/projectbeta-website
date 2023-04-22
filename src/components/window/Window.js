@@ -51,7 +51,7 @@ export default function Window(props) {
   return (
     <Draggable
       // Prevent mobile users from moving the windows
-      handle={props.isMobile ? "<non-existing element>" : ".window--header"}
+      handle={props.isMobile ? "#a-non-existing-element" : ".window--header"}
       // If mobile, all windows will be placed on top of one another
       // If not, the windows will take the position given by Homepage.js
       defaultPosition={{

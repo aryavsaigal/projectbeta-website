@@ -22,7 +22,7 @@ Rules
     
 8.  Straying away from the provided theme will result in a deduction of points and/or disqualification.
     
-9.  Participants have to mail their submissions to{" "} [projectbeta@sanskritischool.edu.in](mailto:projectbeta@sanskritischool.edu.in) .
+9.  Participants have to mail their submissions to  [projectbeta@sanskritischool.edu.in](mailto:projectbeta@sanskritischool.edu.in) .
     
 
 Judgment Criteria
@@ -40,10 +40,10 @@ Contestants will be judged based on:
     
 5.  Responsiveness
     
-6.  Submission method {"&"} punctuality (link and .zip)
+6.  Submission method & punctuality (link and .zip)
     
 
-**Positions:** There will be 3 winners, and 2 hon{"'"}ble mentions.
+**Positions:** There will be 3 winners, and 2 hon'ble mentions.
 
 **Theme / Plot:** (To be released on the day of event)
 

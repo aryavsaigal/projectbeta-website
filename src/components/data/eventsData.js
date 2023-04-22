@@ -1,5 +1,3 @@
-import React from "react";
-
 // import sample_src from "../../images/folders/file-sample.png";
 import hypertext_src from "../../images/events/hypertext.png";
 import designathon_src from "../../images/events/designathon.png";
@@ -12,18 +10,16 @@ import itsdebatable_src from "../../images/events/itsdebatable.png";
 import projectremix_src from "../../images/events/projectremix.png";
 import betatest_src from "../../images/events/betatest.png";
 
-import ProjectRemix from "./events/ProjectRemix";
-import Authority450 from "./events/Authority450";
-import BetaTest from "./events/BetaTest";
-import Designathon from "./events/Designathon";
-import DualWield from "./events/DualWield";
-import FunctionOverload from "./events/FunctionOverload";
-import ItsDebatable from "./events/ItsDebatable";
-import Hypertext from "./events/Hypertext";
-import SideQuest from "./events/SideQuest";
-import SixtyFourWit from "./events/SixtyFourWit";
-
-import hypertext_md from "./events/Hypertext.md";
+import ProjectRemix from "./events/ProjectRemix.md";
+import Authority450 from "./events/Authority450.md";
+import BetaTest from "./events/BetaTest.md";
+import Designathon from "./events/Designathon.md";
+import DualWield from "./events/DualWield.md";
+import FunctionOverload from "./events/FunctionOverload.md";
+import ItsDebatable from "./events/ItsDebatable.md";
+import Hypertext from "./events/Hypertext.md";
+import SideQuest from "./events/SideQuest.md";
+import SixtyFourWit from "./events/SixtyFourWit.md";
 
 export const eventsData = [
   {
@@ -35,8 +31,7 @@ export const eventsData = [
       { name: "eligible", value: "9-12th" },
       { name: "medium", value: "Online" },
     ],
-    desc: <Hypertext />,
-    md: hypertext_md,
+    desc: Hypertext,
   },
   {
     name: "Function Overload",
@@ -47,8 +42,7 @@ export const eventsData = [
       { name: "eligible", value: "9-12th" },
       { name: "medium", value: "Offline" },
     ],
-    desc: <FunctionOverload />,
-    md: hypertext_md,
+    desc: FunctionOverload,
   },
   {
     name: "Design Syndicate",
@@ -59,8 +53,7 @@ export const eventsData = [
       { name: "eligible", value: "8-12th" },
       { name: "medium", value: "Both" },
     ],
-    desc: <Designathon />,
-    md: hypertext_md,
+    desc: Designathon,
   },
   {
     name: "Dual Wield",
@@ -71,8 +64,7 @@ export const eventsData = [
       { name: "eligible", value: "9-12th" },
       { name: "medium", value: "Online" },
     ],
-    desc: <DualWield />,
-    md: hypertext_md,
+    desc: DualWield,
   },
   {
     name: "Side Quest",
@@ -83,8 +75,7 @@ export const eventsData = [
       { name: "eligible", value: "9-12th" },
       { name: "medium", value: "Online" },
     ],
-    desc: <SideQuest />,
-    md: hypertext_md,
+    desc: SideQuest,
   },
   {
     name: "It's Debatable",
@@ -95,8 +86,7 @@ export const eventsData = [
       { name: "eligible", value: "9-12th" },
       { name: "medium", value: "Both" },
     ],
-    desc: <ItsDebatable />,
-    md: hypertext_md,
+    desc: ItsDebatable,
   },
   {
     name: "ProjectRemix",
@@ -107,8 +97,7 @@ export const eventsData = [
       { name: "eligible", value: "9-12th" },
       { name: "medium", value: "Online" },
     ],
-    desc: <ProjectRemix />,
-    md: hypertext_md,
+    desc: ProjectRemix,
   },
   {
     name: "Authority_450",
@@ -119,8 +108,7 @@ export const eventsData = [
       { name: "eligible", value: "9-12th" },
       { name: "medium", value: "Offline" },
     ],
-    desc: <Authority450 />,
-    md: hypertext_md,
+    desc: Authority450,
   },
   {
     name: "BetaTest",
@@ -131,8 +119,7 @@ export const eventsData = [
       { name: "eligible", value: "Open to All" },
       { name: "medium", value: "Online" },
     ],
-    desc: <BetaTest />,
-    md: hypertext_md,
+    desc: BetaTest,
   },
   {
     name: "64 Wit",
@@ -143,7 +130,6 @@ export const eventsData = [
       { name: "eligible", value: "9-12th" },
       { name: "medium", value: "Both" },
     ],
-    desc: <SixtyFourWit />,
-    md: hypertext_md,
+    desc: SixtyFourWit,
   },
 ];

@@ -1,20 +1,36 @@
 import React from "react";
 
-import download_src from "../../images/navigation/nav-download.png";
+import downloadSrc from "../../images/navigation/nav-download.png";
 
-import schedule_src from "../../images/schedule.png";
-import shortcuts_src from "../../images/shortcutkeys.png";
+import scheduleSrc from "../../images/schedule.png";
+import shortcutsSrc from "../../images/shortcutkeys.png";
+
+// ImageViewer acts as a placeholder for displaying image files along with a download button
 
 export default function ImageViewer(props) {
-  let img_src;
-  if (props.dir.endsWith("Schedule.png")) img_src = schedule_src;
-  if (props.dir.endsWith("Shortcuts.png")) img_src = shortcuts_src;
+  const [imgSrc, setImgSrc] = React.useState("");
+
+  // Manual switch-case to determine which image to display based on the webpage it is opened in
+  React.useEffect(() => {
+    switch (true) {
+      case props.dir.endsWith("Schedule.png"):
+        setImgSrc(scheduleSrc);
+        break;
+      case props.dir.endsWith("Shortcuts.png"):
+        setImgSrc(shortcutsSrc);
+        break;
+      default:
+        break;
+    }
+    return () => {};
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="imageviewer">
-      <img src={img_src} alt={props.dir} />
-      <a href={img_src} download>
-        <img src={download_src} alt="Download Icon" className="downloadicon" />
+      <img src={imgSrc} alt={props.dir} />
+      <a href={imgSrc} download>
+        <img src={downloadSrc} alt="Download Icon" className="downloadicon" />
       </a>
     </div>
   );

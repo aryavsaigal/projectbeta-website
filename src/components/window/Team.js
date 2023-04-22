@@ -2,11 +2,16 @@ import React from "react";
 
 import teamData from "../data/teamData";
 
-import right_arrow from "../../images/navigation/nav-right.png";
+import rightArrow from "../../images/navigation/nav-right.png";
+
+// Team displays the webpage with the list of names all club members, with
+// HoDs and Board additionally showing their photos, designations and quotes
 
 export default function Team() {
   const rawTeamData = React.useState(teamData)[0];
 
+  // Creates the child components for showing the name, photo, designation
+  // and quotes of Board members
   const boardCards = rawTeamData.board.map((e, i) => (
     <div className="team--boardcore" key={i}>
       <img src={e.img_src} alt={i} />
@@ -20,6 +25,8 @@ export default function Team() {
       </div>
     </div>
   ));
+  // Creates the child components for showing the name, photo, designation
+  // and quotes of HoDs
   const coreCards = rawTeamData.core.map((e, i) => (
     <div className="team--boardcore" key={i}>
       <img src={e.img_src} alt={i} />
@@ -35,23 +42,30 @@ export default function Team() {
       </div>
     </div>
   ));
+  // Creates the child components for showing the name of regular members
   const memberCards = rawTeamData.members.map((e, i) => <p key={i}>{e}</p>);
 
   return (
     <div className="team">
       <h2>Team</h2>
+      {/* Board Members */}
       <div className="team--category">
-        <img src={right_arrow} alt="Right Arrow Icon" />
+        {/* Sticky headers as seen in Windows Start Menu app list*/}
+        <img src={rightArrow} alt="Right Arrow Icon" />
         <p>Board {`(${rawTeamData.board.length})`}</p> <hr />
       </div>
       <div className="team--boardcore--container">{boardCards}</div>
+
+      {/* HoDs */}
       <div className="team--category">
-        <img src={right_arrow} alt="Right Arrow Icon" />
+        <img src={rightArrow} alt="Right Arrow Icon" />
         <p>Core {`(${rawTeamData.core.length})`}</p> <hr />
       </div>
       <div className="team--boardcore--container">{coreCards}</div>
+
+      {/* Regular Members */}
       <div className="team--category">
-        <img src={right_arrow} alt="Right Arrow Icon" />
+        <img src={rightArrow} alt="Right Arrow Icon" />
         <p>Members {`(${rawTeamData.members.length})`}</p> <hr />
       </div>
       <div className="team--membergrid">{memberCards}</div>

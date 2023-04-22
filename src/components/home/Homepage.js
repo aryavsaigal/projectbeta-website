@@ -23,12 +23,12 @@ export default function Homepage() {
   // while the z-index of all windows will decrement
   const zMax = 750;
 
-  // React state identifies if site should be readjusted to accomodate for smaller screens
+  // Identifies if site should be readjusted to accomodate for smaller screens
   const isMobile = React.useState(
     window.innerWidth <= 900 || window.innerHeight >= window.innerWidth
   )[0];
 
-  // React state manages the relative order and visibility of windows
+  // Manages the relative order and visibility of windows
   // Default data of all windows are imported from windowsData.js
   // You may view the defined properties and methods to understand the context of these functions
   const [windowHandler, setWindowHandler] = React.useState(

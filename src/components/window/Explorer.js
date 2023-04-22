@@ -1,13 +1,19 @@
 import React from "react";
 
-import star_src from "../../images/misc/explorer-star.png";
-import thispc_src from "../../images/misc/explorer-thispc.png";
-import network_src from "../../images/misc/explorer-network.png";
+// UI Icons
+import starSrc from "../../images/misc/explorer-star.png";
+import thispcSrc from "../../images/misc/explorer-thispc.png";
+import networkSrc from "../../images/misc/explorer-network.png";
 
+// Explorer content data source
 import { eventsData } from "../data/eventsData";
 import SponsorsFolder from "../data/SponsorsFolder";
 
+// Explorer displays the Windows Explorer window with customizable interactive child elements
+
 export default function Explorer(props) {
+  // This eventsGrid variable specifically stores the list of file icons for the events
+  // folder when clicked on open their corresponding sub-webpage
   const eventsGrid = React.useState(
     eventsData.map((e) => (
       <div
@@ -26,30 +32,50 @@ export default function Explorer(props) {
     ))
   )[0];
 
+  const [explorerContent, setExplorerContent] = React.useState();
+
+  // Manual switch-case to determine which content to display in the explorer
+  // based on the webpage it is opened in
+  React.useEffect(() => {
+    switch (props.dir) {
+      case "Events":
+        setExplorerContent(eventsGrid);
+        break;
+      case "Sponsors":
+        setExplorerContent(<SponsorsFolder {...props} />);
+        break;
+      default:
+        break;
+    }
+
+    return () => {};
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div className="explorer">
+      {/* Sidebar (Shown exclusively for desktop users) */}
       <div className="explorer--sidebar">
         <div>
-          <img src={star_src} alt="Quick Access icon" />
+          <img src={starSrc} alt="Quick Access icon" />
           <p>Quick Access</p>
         </div>
         <div>
-          <img src={thispc_src} alt="This PC icon" />
+          <img src={thispcSrc} alt="This PC icon" />
           <p>This PC</p>
         </div>
         <div
+          // If rapidly clicked on 5 times, opens a secret shortcuts window for
+          // BetaTest 2022
           onClick={(event) => {
             if (event.detail === 5) props.addWindow("Shortcuts.png");
           }}
         >
-          <img src={network_src} alt="Network icon" />
+          <img src={networkSrc} alt="Network icon" />
           <p>Network</p>
         </div>
       </div>
-      <div className="explorer--foldergrid">
-        {props.dir === "Events" && eventsGrid}
-        {props.dir === "Sponsors" && <SponsorsFolder {...props} />}
-      </div>
+      <div className="explorer--foldergrid">{explorerContent}</div>
     </div>
   );
 }

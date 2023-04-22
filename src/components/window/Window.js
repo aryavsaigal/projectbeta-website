@@ -1,8 +1,11 @@
 import React from "react";
-import logo_src from "../../images/logo-white.png";
-import close_src from "../../images/navigation/close.png";
+
+// UI icons
+import logoSrc from "../../images/logo-white.png";
+import closeSrc from "../../images/navigation/close.png";
 // import move_src from "../../images/navigation/nav-move.png";
 
+// Types of webpages
 import Explorer from "./Explorer";
 import Textfile from "./Textfile";
 import ImageViewer from "./ImageViewer";
@@ -14,7 +17,8 @@ import Unknown from "./Unknown";
 
 import Draggable from "react-draggable";
 
-// Window acts as a placeholder for all the different pages of the site
+// Window acts as the master placeholder for all the different pages of the
+// site, with the ability to be dragged around, and be opened/closed.
 
 export default function Window(props) {
   const windowRef = React.useRef();
@@ -26,9 +30,9 @@ export default function Window(props) {
   // Returns the content the window instance will hold depending on
   // the type of file it receives
   function setWindowContent(dir) {
-    // Very poor if/else block, but switch will not work here as effectively.
-    // The function receives the actual name and extension of the file selected
-    // by the user and determines what type of window should be used for showing that file
+    // The function receives the actual name and extension of the file
+    // selected by the user and determines what type of window should be used
+    // for showing that file
 
     // If file doesn't have extension/ it is a folder,
     // this will return a Windows Explorer window
@@ -45,10 +49,13 @@ export default function Window(props) {
     else if (dir === "Contact.pdf") return <Contact {...props} />;
     else if (dir === "Unknown.exe") return <Unknown {...props} />;
     else if (dir.search("/Events/")) return <Events {...props} />;
+    // Very poor if/else block, but switch-case will not work here as
+    // effectively.
   }
   const windowContent = setWindowContent(props.dir);
 
   return (
+    // External component used for the window dragging functionality
     <Draggable
       // Prevent mobile users from moving the windows
       handle={props.isMobile ? "#a-non-existing-element" : ".window--header"}
@@ -72,19 +79,21 @@ export default function Window(props) {
         }}
       >
         <div className="window--header">
-          <img src={logo_src} alt="PB Logo" draggable="false" />
+          <img src={logoSrc} alt="PB Logo" draggable="false" />
           <h3>C:/ProjectBeta/{props.dir}</h3>
           {/* <h1>{props.z}</h1> */}
           {/* ^^^ above line used to debug the position of windows */}
         </div>
+        {/* Close Button */}
         <img
-          src={close_src}
+          src={closeSrc}
           className="window--close"
           alt="Close button"
           onClick={() => {
             props.removeWindow(props.dir);
           }}
         />
+        {/* Content that the window will hold */}
         <div className="window--content">{windowContent}</div>
       </div>
     </Draggable>

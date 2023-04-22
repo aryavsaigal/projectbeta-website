@@ -2,31 +2,37 @@ import React from "react";
 import "react-markdown";
 import { eventsData } from "../data/eventsData";
 
-import school_src from "../../images/events/events-school.png";
-import ppl_src from "../../images/events/events-ppl.png";
-import pass_src from "../../images/events/events-pass.png";
-import medium_src from "../../images/events/events-medium.png";
+import schoolSrc from "../../images/events/events-school.png";
+import pplSrc from "../../images/events/events-ppl.png";
+import passSrc from "../../images/events/events-pass.png";
+import mediumSrc from "../../images/events/events-medium.png";
 
-import infinity_symbol_src from "../../images/misc/infinity_symbol.png";
+import infinitySymbolSrc from "../../images/misc/infinity_symbol.png";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 // Events is the boilerplate code for all event sub-webpages in the site
 
+// IMPORTANT:
+// Make sure to edit both the file eventsData.js and the .md files within the events
+// folder in order to update the information for each department event
+
 export default function Events(props) {
-  // Retrieves the HTML page from the directory to be displayed for the webpage
-  // the instance is supposed to show
+  // Retrieves the data pertaining to the file that the instance webpage is
+  // supposed to show
   const rawEventsData = React.useState(
     eventsData.filter(
       (e) => e.name === props.dir.replace(".pdf", "").replace("Events/", "")
     )[0]
   )[0];
 
+  // Reads the data above to display the appropriate values for the four cards
+  // displayed in each events sub-webpage
   const EventsFields = () => {
     return rawEventsData.fields.map((e, i) => {
       const isIndividual =
         rawEventsData.fields[0].name === "team" &&
         rawEventsData.fields[0].value === "0";
-      const eventname =
+      const eventName =
         e.name === "team"
           ? "Participation Mode"
           : e.name === "max"
@@ -36,15 +42,15 @@ export default function Events(props) {
           : e.name === "medium"
           ? "Medium"
           : null;
-      const img_src =
+      const imgSrc =
         e.name === "team"
-          ? ppl_src
+          ? pplSrc
           : e.name === "max"
-          ? school_src
+          ? schoolSrc
           : e.name === "eligible"
-          ? pass_src
+          ? passSrc
           : e.name === "medium"
-          ? medium_src
+          ? mediumSrc
           : null;
       function FieldValue() {
         if (e.name === "team") {
@@ -81,9 +87,10 @@ export default function Events(props) {
         } else if (e.name === "max") {
           return (
             <>
+              {/* Infinity symbol shown for events with unlimited participants from one school */}
               {e.value === "0" && (
                 <img
-                  src={infinity_symbol_src}
+                  src={infinitySymbolSrc}
                   alt="Infinity Symbol"
                   className="infinity"
                 />
@@ -111,14 +118,15 @@ export default function Events(props) {
       }
       return (
         <div key={e.name}>
-          <img src={img_src} alt="" />
-          <p>{eventname}</p>
+          <img src={imgSrc} alt="" />
+          <p>{eventName}</p>
           <FieldValue />
         </div>
       );
     });
   };
 
+  // Retrieves the contents of the correspoding Markdown file
   const [markdownFile, setMarkdownFile] = React.useState("");
 
   React.useEffect(() => {

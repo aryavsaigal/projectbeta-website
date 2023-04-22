@@ -1,14 +1,14 @@
 // import sample_src from "../../images/folders/file-sample.png";
-import hypertext_src from "../../images/events/hypertext.png";
-import designathon_src from "../../images/events/designathon.png";
-import authority450_src from "../../images/events/authority450.png";
-import functionoverload_src from "../../images/events/functionoverload.png";
-import sidequest_src from "../../images/events/sidequest.png";
-import dualwield_src from "../../images/events/dualwield.png";
-import sixtyfourwit_src from "../../images/events/sixtyfourwit.png";
-import itsdebatable_src from "../../images/events/itsdebatable.png";
-import projectremix_src from "../../images/events/projectremix.png";
-import betatest_src from "../../images/events/betatest.png";
+import hypertextImgSrc from "../../images/events/hypertext.png";
+import designathonImgSrc from "../../images/events/designathon.png";
+import authority450ImgSrc from "../../images/events/authority450.png";
+import functionoverloadImgSrc from "../../images/events/functionoverload.png";
+import sidequestImgSrc from "../../images/events/sidequest.png";
+import dualwieldImgSrc from "../../images/events/dualwield.png";
+import sixtyfourwitImgSrc from "../../images/events/sixtyfourwit.png";
+import itsdebatableImgSrc from "../../images/events/itsdebatable.png";
+import projectremixImgSrc from "../../images/events/projectremix.png";
+import betatestImgSrc from "../../images/events/betatest.png";
 
 import ProjectRemix from "./events/ProjectRemix.md";
 import Authority450 from "./events/Authority450.md";
@@ -24,7 +24,7 @@ import SixtyFourWit from "./events/SixtyFourWit.md";
 export const eventsData = [
   {
     name: "Hypertext{}",
-    img_src: hypertext_src,
+    img_src: hypertextImgSrc,
     fields: [
       { name: "team", value: "2" },
       { name: "max", value: "2" },
@@ -35,7 +35,7 @@ export const eventsData = [
   },
   {
     name: "Function Overload",
-    img_src: functionoverload_src,
+    img_src: functionoverloadImgSrc,
     fields: [
       { name: "team", value: "0" },
       { name: "max", value: "1" },
@@ -46,7 +46,7 @@ export const eventsData = [
   },
   {
     name: "Design Syndicate",
-    img_src: designathon_src,
+    img_src: designathonImgSrc,
     fields: [
       { name: "team", value: "3-5" },
       { name: "max", value: "1" },
@@ -57,7 +57,7 @@ export const eventsData = [
   },
   {
     name: "Dual Wield",
-    img_src: dualwield_src,
+    img_src: dualwieldImgSrc,
     fields: [
       { name: "team", value: "2" },
       { name: "max", value: "1" },
@@ -68,7 +68,7 @@ export const eventsData = [
   },
   {
     name: "Side Quest",
-    img_src: sidequest_src,
+    img_src: sidequestImgSrc,
     fields: [
       { name: "team", value: "5" },
       { name: "max", value: "1" },
@@ -79,7 +79,7 @@ export const eventsData = [
   },
   {
     name: "It's Debatable",
-    img_src: itsdebatable_src,
+    img_src: itsdebatableImgSrc,
     fields: [
       { name: "team", value: "0" },
       { name: "max", value: "2" },
@@ -90,7 +90,7 @@ export const eventsData = [
   },
   {
     name: "ProjectRemix",
-    img_src: projectremix_src,
+    img_src: projectremixImgSrc,
     fields: [
       { name: "team", value: "0" },
       { name: "max", value: "1" },
@@ -101,7 +101,7 @@ export const eventsData = [
   },
   {
     name: "Authority_450",
-    img_src: authority450_src,
+    img_src: authority450ImgSrc,
     fields: [
       { name: "team", value: "3-5" },
       { name: "max", value: "2" },
@@ -112,7 +112,7 @@ export const eventsData = [
   },
   {
     name: "BetaTest",
-    img_src: betatest_src,
+    img_src: betatestImgSrc,
     fields: [
       { name: "team", value: "0" },
       { name: "max", value: "0" },
@@ -123,7 +123,7 @@ export const eventsData = [
   },
   {
     name: "64 Wit",
-    img_src: sixtyfourwit_src,
+    img_src: sixtyfourwitImgSrc,
     fields: [
       { name: "team", value: "1" },
       { name: "max", value: "1" },

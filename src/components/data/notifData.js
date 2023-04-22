@@ -1,5 +1,16 @@
+// notifData holds all the notifications that are displayed in the notification
+// panel.
+// New notifications (less than 3 days old) will be highlighted in the panel
+// and a red mark in the notification icon in the taskbar will indicate
+// the same.
+
+// Note:
+// There is currently no support to load notifications from an external API due
+// to lack of need for real time notifications in the website. However, you are
+// welcome to add it if required.
+
 export const notifData = [
-  // sample: { notif:"This is a notification", time: "Jan 1, 2022 12:34:56"}
+  // Format: { notif:"This is a notification", time: "Jan 1, 2022 12:34:56"}
   {
     notif: "The site has adopted a new, simpler and lighter background.",
     time: "Oct 5, 2022 13:15:00",

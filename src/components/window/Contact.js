@@ -7,7 +7,9 @@ import SocialMedia from "../main/SocialMedia";
 export default function Contact() {
   // Contact details of the club team
   // Format: "Name - Designation", "91 XXXXX XXXXX", "Discord username (Optional)"
-  // Note: Do not try to add, remove or rearrange the arrays of designations since
+
+  // Warning:
+  // Do not try to add, remove or rearrange the arrays of designations since
   // their allocations are fixed in the front-end of the page
   const phoneRecord = React.useState([
     ["Simar Tandon - President", "91 98715 99988", "critto#3569"], // President

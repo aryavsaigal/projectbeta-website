@@ -1,24 +1,34 @@
 import React from "react";
 
 // Data to retrieve text from
-import AlumniData from "../data/alumniData";
-import GuidelinesData from "../data/guidelinesData.js";
+import AlumniData from "../data/alumniData.md";
+import GuidelinesData from "../data/guidelinesData.md";
+
+import "react-markdown";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 // Textfile acts as a placeholder for displaying text in a notepad like window for
 // .txt (in black bg) and .zip files (in white bg)
 
 export default function Textfile(props) {
-  const [textFileContent, setTextFileContent] = React.useState();
+  const [markdownFile, setMarkdownFile] = React.useState("");
+
+  // Set the state of a variable with setState to the data fetched from src
+  function fetchMd(src, setState) {
+    fetch(src)
+      .then((res) => res.text())
+      .then((text) => setState(text));
+  }
 
   // Manual switch-case to determine which text file to display based on the
   // webpage it is opened in
   React.useEffect(() => {
     switch (props.dir) {
       case "Alumni.zip":
-        setTextFileContent(<AlumniData />);
+        fetchMd(AlumniData, setMarkdownFile);
         break;
       case "Guidelines.txt":
-        setTextFileContent(<GuidelinesData />);
+        fetchMd(GuidelinesData, setMarkdownFile);
         break;
       default:
         break;
@@ -28,7 +38,9 @@ export default function Textfile(props) {
 
   return (
     <div className={props.dir.endsWith(".zip") ? "zipfile" : "textfile"}>
-      <div className="txtcontent">{textFileContent}</div>
+      <div className="txtcontent">
+        <ReactMarkdown children={markdownFile} />
+      </div>
     </div>
   );
 }

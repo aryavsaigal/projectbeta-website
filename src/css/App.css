@@ -33,6 +33,7 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Custom colors and properties */
 :root {
   --PBorange: #cb4b16;
   --PBwhite: #eee8d5;
@@ -61,6 +62,7 @@ body {
   --desktopIconBorderActive: #7bb4ff;
 }
 
+/* Background hidden behind the network dynamic background */
 .background {
   height: 100vh;
   width: 100vw;
@@ -70,6 +72,7 @@ body {
   left: 0
 }
 
+/* Background of the loading screen */
 .loadingscreen {
   position: fixed;
   top: 0;
@@ -85,6 +88,7 @@ body {
   text-align: center;
 }
 
+/* Animated PB Logo in the loading screen */
 .loadingscreen video {
   width: 50vw;
   height: auto;
@@ -93,6 +97,7 @@ body {
   display: none;
 }
 
+/* Static PB Logo in the loading screen */
 .loadingscreen img {
   width: 35vw;
   height: auto;
@@ -101,6 +106,7 @@ body {
   /* display: none; */
 }
 
+/*  */
 .loadingscreen--safaricontainer {
   display: none;
   top: 50%;
@@ -109,6 +115,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* Skip button in the loading screen */
 .loadingscreen .skip {
   position: fixed;
   bottom: 20px;
@@ -130,6 +137,7 @@ body {
   color: var(--accentBgColor);
 }
 
+/* Fading out animation for the loading screen */
 @keyframes loadingFadeOut {
   from {
     opacity: 1
@@ -140,6 +148,7 @@ body {
   }
 }
 
+/* Taskbar */
 .taskbar {
   width: 100%;
   background-color: var(--taskbarColor);
@@ -153,12 +162,14 @@ body {
   z-index: 10001;
 }
 
+/* PB logo on the far left of the taskbar */
 .taskbar>.taskbar--logo {
   padding: 5px;
   margin: 0 5px;
   width: 30px;
 }
 
+/* All icons in the taskbar */
 .taskbar a img,
 .taskbar img {
   padding: 7.5px 10px;
@@ -168,6 +179,7 @@ body {
   cursor: pointer;
 }
 
+/* Search bar on the left of the taskbar */
 .taskbar--searchbar {
   outline: 3px solid var(--windowOutlineColor);
   background-color: var(--bgGrey);
@@ -181,11 +193,13 @@ body {
   justify-content: flex-start;
 }
 
+/* Search icon inside the search bar */
 .taskbar--searchbar img {
   margin: 0 5px;
   width: 20px;
 }
 
+/* Text written in the search bar */
 .taskbar--searchbar p {
   margin: auto 0;
   width: fit-content;
@@ -193,12 +207,14 @@ body {
   color: var(--fontGrey);
 }
 
+/* Countdown timer in the taskbar */
 .taskbar--timer {
   margin: 0 10px;
   padding: 0;
   font-family: "Ubuntu Mono";
 }
 
+/* Grid holding the file/folder icons in the desktop */
 .desktopbtn--container {
   display: flex;
   flex-direction: column;
@@ -211,6 +227,7 @@ body {
   padding-top: 10px;
 }
 
+/* Individual file/folder icons in the desktop */
 .desktopbtn {
   margin-bottom: 20px;
   margin-right: 10px;
@@ -234,12 +251,14 @@ body {
   outline: 1px solid var(--desktopIconBorderActive);
 }
 
+/* Image part of the file/folder icon */
 .desktopbtn--icon {
   width: 45px;
   margin: 0 auto;
   filter: drop-shadow(0 5px 2px var(--shadowBlack));
 }
 
+/* Name of the file/folder icon */
 .desktopbtn--name {
   width: 100%;
   text-align: center;
@@ -250,6 +269,7 @@ body {
   text-shadow: 1px 1px 3px var(--shadowBlack), -1px -1px 3px var(--shadowBlack), 1px -1px 3px var(--shadowBlack), -1px 1px 3px var(--shadowBlack);
 }
 
+/* Notification Panel Box */
 .notif--container {
   position: fixed;
   bottom: 50px;
@@ -262,6 +282,7 @@ body {
   transition: 0.5s;
 }
 
+/* Notification Panel nested within the above box */
 .notif--main {
   height: fit-content;
   max-height: 75vh;
@@ -272,25 +293,30 @@ body {
   grid-template-columns: 1fr;
 }
 
+/* Notifications Panel Title */
 .notif--main h2 {
   margin: 10px;
   font-size: 20px;
 }
 
+/* Text below Notifcation Panel Title i.e. "X New Notifications" */
 .notif--main p {
   margin: 7.5px 10px 0;
   font-size: 15px;
 }
 
+/* Text below Notifcation Panel Title i.e. "X Total Notifications" */
 .notif--main small {
   margin: 0px 10px 15px;
   font-size: 12px;
 }
 
+/* Div containing the list of all notifications */
 .notif--list {
   overflow-y: auto;
 }
 
+/* Individual notification */
 .notif--list .notif--self {
   margin: 15px 5px 0;
   height: fit-content;
@@ -301,7 +327,7 @@ body {
   border: 1px solid var(--windowOutlineColor);
 }
 
-
+/* Header of notification */
 .notif--heading {
   display: flex;
   height: fit-content;
@@ -309,6 +335,7 @@ body {
   align-items: center;
 }
 
+/* Highlighting of notification if it is new */
 #notif--new {
   border: 1px solid var(--bgWhite);
   border-style: double;
@@ -320,11 +347,13 @@ body {
   margin: 1px 1px 10px;
 }
 
+/* Notification Title */
 .notif--self h4 {
   font-size: 15px;
   margin: 0;
 }
 
+/* PB Logo on left of each individual notification's header */
 .notif--self img {
   width: 30px;
   height: 30px;
@@ -332,16 +361,19 @@ body {
   user-select: none;
 }
 
+/* Main content of the notification */
 .notif--self p {
   margin: 5px;
 }
 
+/* Relative timestamp of notification */
 .notif--self small {
   margin: 5px;
   margin-top: 15px;
   font-family: "Ubuntu Mono";
 }
 
+/* Settings Panel Box */
 .setting--container {
   position: fixed;
   bottom: 50px;
@@ -354,11 +386,13 @@ body {
   transition: 0.5s;
 }
 
+/* Settings Panel Title */
 .setting--main h2 {
   font-size: 20px;
   margin: 5px 0;
 }
 
+/* Settings Panel nested within in the above box */
 .setting--main {
   height: fit-content;
   max-height: 75vh;
@@ -370,24 +404,29 @@ body {
   grid-template-columns: 1fr; */
 }
 
+/* Each individual setting */
 .setting--option {
   margin: 20px 0;
 }
 
+/* Title of the setting */
 .setting--option h4 {
   margin: 0;
 }
 
+/* Main description of the setting */
 .setting--option p {
   margin: 0;
   font-size: 15px;
 }
 
+/* Text below Settings panel asking user to reload site to reset changes */
 .setting--alert {
   text-align: center;
   display: inline;
 }
 
+/* General Buttons */
 button {
   margin: 0 auto;
   text-align: center;
@@ -415,6 +454,7 @@ button:disabled:hover {
   background-color: var(--bgGrey);
 }
 
+/* All content above the taskbar i.e. the desktop */
 .homepage {
   height: calc(100vh - 25px);
   width: 100%;
@@ -423,6 +463,8 @@ button:disabled:hover {
   margin: 0;
 }
 
+/* Introduction screen appearing at the start of the page */
+/* i.e. the PB logo and text, date, link buttons and down arrow*/
 .titlescreen {
   width: 100%;
   height: calc(100vh - 40px);
@@ -430,6 +472,7 @@ button:disabled:hover {
   position: relative;
 }
 
+/* Div containing only the PB logo and text */
 .titlescreen--title_container {
   position: absolute;
   top: 50%;
@@ -442,26 +485,30 @@ button:disabled:hover {
   z-index: 50;
 }
 
+/* PB Logo */
 .titlescreen--title_container>img {
   width: 200px;
 }
 
+/* PB Text */
 .titlescreen--title_container>h1 {
   margin: 40px;
   font-size: 70px;
 }
 
-
+/* 'Project' part of PB */
 #h1_light {
   font-family: "Code Pro Light";
   font-weight: lighter;
   letter-spacing: -2.5px;
 }
 
+/* 'Beta' part of PB */
 #h1_bold {
   font-family: "Code Bold";
 }
 
+/* Capsule link embedded buttons */
 .titlescreen--register {
   left: 50%;
   transform: translateX(-50%);
@@ -480,6 +527,7 @@ button:disabled:hover {
   overflow: hidden;
 }
 
+/* Text on the capsule button */
 .titlescreen--register p {
   cursor: pointer;
   transition: 0.3s;
@@ -489,10 +537,12 @@ button:disabled:hover {
   flex: 1;
 }
 
+/* Left part of the capsule button */
 .titlescreen--register p:nth-child(1) {
   border-radius: 50px 0 0 50px;
 }
 
+/* Right part of the capsule button */
 .titlescreen--register p:nth-child(3) {
   border-radius: 0 50px 50px 0;
 }
@@ -502,6 +552,7 @@ button:disabled:hover {
   color: var(--fontBlack);
 }
 
+/* Vertical divider inside the capsule button */
 .titlescreen--register hr {
   margin: 20px 0px;
   width: 0;
@@ -512,7 +563,7 @@ button:disabled:hover {
   outline-color: var(--bgWhite);
 }
 
-
+/* Date of commencement of event */
 .titlescreen--date {
   color: var(--PBorange);
   position: absolute;
@@ -526,6 +577,7 @@ button:disabled:hover {
   text-align: center;
 }
 
+/* Slowly oscillating clickable down arrow */
 .titlescreen--downarrow {
   position: absolute;
   left: calc(50% - 20px);
@@ -539,6 +591,7 @@ button:disabled:hover {
   user-select: none;
 }
 
+/* Oscillatory motion of the down arrow */
 @keyframes idle_move {
   0% {
     transform: translateY(0);
@@ -553,6 +606,7 @@ button:disabled:hover {
   }
 }
 
+/* Div containing the three infocards at the bottom of the main page */
 .home_infocards--container {
   height: fit-content;
   width: 85vw;
@@ -563,6 +617,7 @@ button:disabled:hover {
   grid-gap: 25px;
 }
 
+/* Individual infocard */
 .home_infocards--container>div {
   background-color: #00000049;
   backdrop-filter: blur(5px);
@@ -580,12 +635,7 @@ button:disabled:hover {
   transform: translateY(-10px);
 }
 
-.home_infocards--2022:hover img,
-.home_infocards--about:hover img,
-.home_infocards--contact:hover img {
-  width: 200px;
-}
-
+/* Title of the Infocard */
 .home_infocards--container h2 {
   color: var(--PBwhite);
   font-size: 35px;
@@ -593,6 +643,7 @@ button:disabled:hover {
   margin: 20px 0px;
 }
 
+/* General links */
 a {
   color: var(--PBwhite);
   font-weight: bold;
@@ -609,16 +660,19 @@ footer {
   opacity: 0.75;
 }
 
+/* Infocard description */
 .home_infocards--container>div p {
   padding: 0px;
   font-size: 16px;
   text-align: justify;
 }
 
+/* Double the width of the Contact infocard */
 .home_infocards--contact {
   grid-column: span 2;
 }
 
+/* Corner image of the infocards */
 .home_infocards--container img {
   opacity: 0.5;
   position: absolute;
@@ -629,6 +683,14 @@ footer {
   transition: 0.3s;
 }
 
+/* Enlarge the corner image on hover */
+.home_infocards--2022:hover img,
+.home_infocards--about:hover img,
+.home_infocards--contact:hover img {
+  width: 200px;
+}
+
+/* Secret advancement banner mimicking the style of Minecraft advancements */
 .advancement {
   position: fixed;
   background-color: var(--windowColor);
@@ -644,21 +706,25 @@ footer {
   z-index: 10010;
 }
 
+/* Title of advancement */
 .advancement h1 {
   font-size: 20px;
   margin: 5px;
   color: rgb(195, 122, 255);
 }
 
+/* Description of advancement */
 .advancement p {
   margin: 5px;
 }
 
+/* Image at left of the advancement */
 .advancement img {
   margin-right: 10px;
   user-select: none;
 }
 
+/* Draggable placeholders for the webpages */
 .window {
   position: fixed;
   width: 55vw;
@@ -669,6 +735,7 @@ footer {
   display: none;
 }
 
+/* Header of the window with PB logo, window title and close button */
 .window--header {
   position: absolute;
   top: 0;
@@ -685,17 +752,20 @@ footer {
   user-select: none;
 }
 
+/* Window Title */
 .window--header h3 {
   margin: 0;
   font-size: 15px;
   font-weight: normal;
 }
 
+/* PB logo and close icon */
 .window--header img {
   width: 30px;
   user-select: none;
 }
 
+/* Close button */
 .window--close {
   width: 15px;
   position: absolute;
@@ -712,6 +782,7 @@ footer {
   background-color: var(--alertRed);
 }
 
+/* Portion of the window below the header */
 .window--content {
   position: absolute;
   width: 100%;
@@ -720,6 +791,7 @@ footer {
   left: 0px;
 }
 
+/* Content of the window with ability to scroll */
 .window--content>div {
   height: 100%;
   position: absolute;
@@ -729,11 +801,13 @@ footer {
   max-height: 100%;
 }
 
+/* Explorer window mimicking the style of Windows Explorer */
 .explorer {
   display: grid;
   grid-template: 1fr / 120px auto;
 }
 
+/* Sidebar on the left of the Explorer window */
 .explorer--sidebar {
   border-right: 1px solid var(--windowOutlineColor);
   flex-direction: column;
@@ -743,20 +817,24 @@ footer {
   user-select: none;
 }
 
+/* Tabs inside the Explorer sidebar */
 .explorer--sidebar>div {
   align-items: center;
   display: flex;
 }
 
+/* Tab text */
 .explorer--sidebar>div>p {
   font-size: 12px;
   margin-left: 5px;
 }
 
+/* Tab image */
 .explorer--sidebar>div>img {
   width: 18px;
 }
 
+/* Content inside the  */
 .explorer--foldergrid {
   display: flex;
   padding: 10px;
@@ -765,6 +843,7 @@ footer {
   flex-wrap: wrap;
 }
 
+/* File icons for department level events in Events folder */
 .eventbtns {
   margin-bottom: 10px;
   margin-right: 10px;
@@ -862,6 +941,16 @@ footer {
   color: var(--fontBlack);
   padding: 10px;
   font-family: "Ubuntu Mono";
+}
+
+.zipfile div {
+  white-space: pre-line;
+  font-size: 20px;
+}
+
+.zipfile div p {
+  white-space: pre-line;
+  margin: 0;
 }
 
 .zipfile div {

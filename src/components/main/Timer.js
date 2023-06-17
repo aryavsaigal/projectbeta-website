@@ -2,6 +2,9 @@
 // in the taskbar.
 // The timer can count both ways (time left and time elapsed).
 
+// Visit maindata.js to set the starting date of the event for the countdown
+// to count down from
+
 import React from "react";
 import { maindata } from "../data/maindata";
 

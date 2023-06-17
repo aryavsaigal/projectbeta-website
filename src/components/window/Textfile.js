@@ -13,6 +13,7 @@ import "react-markdown";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 export default function Textfile(props) {
+  // Stores the contents of the mardkwon file for the specific window instance
   const [markdownFile, setMarkdownFile] = React.useState("");
 
   // Set the state of a variable with setState to the data fetched from src

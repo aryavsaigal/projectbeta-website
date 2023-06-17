@@ -1,6 +1,9 @@
 // Contact is the Contact webpage of the site, holding contact information of
 // board members, teachers and social handles
 
+// Visit maindata.js to update the contact details of the contactable
+// club members
+
 import React from "react";
 
 import SocialMedia from "../main/SocialMedia";
@@ -45,6 +48,7 @@ export default function Contact() {
           <h2>Social</h2>
           <div className="contact--socialgrid">
             <SocialMedia />
+            {/* Text parts of the links are not included in the SocialMedia component */}
             <a
               href="https://www.instagram.com/projectbeta.club/"
               target="_blank"

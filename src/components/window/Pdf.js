@@ -4,14 +4,14 @@
 
 import React from "react";
 
-import guidelines_src from "../../PDFs/guidelines.pdf";
+import guidelinesSrc from "../../PDFs/guidelines.pdf";
 
 export default function Pdf(props) {
   function setIframe() {
     // Manual switch-case to determine which PDF to display based on the webpage it is opened in
     switch (props.dir) {
       case "Guidelines.pdf": {
-        return guidelines_src;
+        return guidelinesSrc;
         // return "https://drive.google.com/file/d/1Jv_ZrE-Brk8Bcf_3va0ZBlrSNcRzbbns/view?usp=sharing";
       }
       default: {

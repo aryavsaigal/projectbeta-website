@@ -1,6 +1,9 @@
 // TitleScreen shows the frontmost portion of the home page that the user first
 // sees when opening the site
 
+// Visit maindata.js to update the registration link, discord server link and
+// the event date range
+
 import React from "react";
 import logo_src from "../../images/logo-white.png";
 import downarrow_src from "../../images/navigation/nav-down.png";

@@ -1,6 +1,8 @@
 // windowsData contains the information of all windows in the site.
 // There will be as many windows as there are individual elements in the array.
 
+// Visit Desktop.js to modify the listing of the defined windows in the desktop
+
 // Note:
 // Two additional fields for each element are added at the time of execution:
 // 1. visible: sets the visibility of the window

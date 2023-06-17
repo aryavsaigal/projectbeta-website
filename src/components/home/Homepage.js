@@ -20,6 +20,7 @@ import Desktop from "./../main/Desktop";
 import Advancement from "../home/Advancement";
 
 import windowsData from "../data/windowsData";
+import { maindata } from "../data/maindata";
 
 export default function Homepage() {
   // zMax is the default z-index of all windows in the page.
@@ -134,8 +135,11 @@ export default function Homepage() {
     }
   }
 
-  // Listens for keystrokes and triggers the above function
   React.useEffect(() => {
+    // Sets document title to match current year
+    document.title = `ProjectBeta ${maindata.current_year}`;
+
+    // Listens for keystrokes and triggers the above function
     document.addEventListener("keydown", secretCombos);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

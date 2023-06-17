@@ -1,10 +1,10 @@
 Hlo there! Looks like you are editing the source files for the website.
 I have tried to create a proper documentation of the code whenever necessary
-and refactored some variables/functions so the codebase may be updated conveniently
+and refactored some variables/functions so the codebase may be updated conveniently.
 
-Do note that it is ncessary to have some knowledge of React when going through the code,
-as some parts utilize logics derived from React that may not be understood by javascript
-alone.
+Do note that it is ncessary to have some knowledge of React when going throughout
+the code, as some parts utilize logics derived from React that may not be
+understood by javascript alone.
 
 
 The source folder (src) contains the followings:
@@ -26,13 +26,68 @@ The components folder further contains the following folders:
 data    MD and JS files (with json/react components) storing large data of a particular subject
 home    The scrollable desktop part of the site
 main    Smaller OS wide elements of the site
-window  all the types of windows used for specific files or topics
+window  All the types of windows used for specific files or topics
 
+Other folders and directories are self explainatory.
+
+
+All the parts of the React code which are most probable to be updated frequently have
+been refactored into the 'data' folder. This means that 99% of all your changes to 
+the codebase will be done in the 'data' folder.
+You would most likely not concern yourself with component files outside this folder.
+However you are completely welcome to view the source code of these files or even
+modify them if necessary. Things like
+> Updating background wallpaper
+> Updating the hidden window
+> Adding new windows instances or templates
+> Adding new components
+> Disabling or deleting existing components
+would need to be done by accessing these files as per your own requirements.
+
+
+Specifically for creating new windows, you will have to do the following:
+
+1. Determine the type of file the window would be, and choose the
+appropriate extension for it.
+> Visit the window folder to view existing extensions or make your own by
+  creating a new window template and incorporating that component in
+  the setWindowContent() function in Window.js
+
+2. Add a new element in the returnValue array in windowsData.js in the format:
+    { id: "<unique int>", dir: "<name of file>.<extension>" },
+>  Make sure the extension used is correct
+
+3. Set a way for the user to open that window
+> By default, you can add an element in the DesktopButtons file in 
+  Desktop.js in the format:
+    { src: <location of icon>, buttonName: "<name of file>.<extension>" },
+> It is also possible to trigger the window by a user action event by
+  calling the following function:
+    addWindow("<name of file>.<extension>")
+  Make sure to call it within the scope of Homepage.js
+
+Changes can be done to the images folder as deemed necessary.
+
+
+Once all changes to the code are ready, run 'npm run deploy' to correctly
+deploy the site in Github Pages. 
+
+<---!!! IMPORTANT !!!--->
+
+Due to unknown technical issues, Github removes the custom domain set for
+the site to display to.
+To manually set the custom domain, visit the following link:
+https://github.com/Project-Beta/projectbeta-website/settings/pages
+go to the Custom Domain section, enter 'projectbeta.info' into the field
+and save the change.
+
+<---!!!----!!!----!!!--->
 
 Other important information about each component as well as the explaination for
 their functionalities are given in their respective files' comments
 
-Hope the documentation is useful. Please reach out to me in case you have any suggestions.
+Hope the documentation is useful. Please reach out to me in case you have any
+suggestions.
 
 Change the status quo!
 

@@ -1,4 +1,4 @@
-// Stores all metadata, icon and description of each event page
+// eventsData stores all metadata, icon and description of each event page
 
 // Icon links of respective event departments
 // import sample_src from "../../images/folders/file-sample.png";

@@ -1,4 +1,4 @@
-// Maindata consolidates all small frequently modified data used throughout the site
+// maindata consolidates all small frequently modified data used throughout the site
 
 // You would still need to modify other bigger parts of the data for the site
 // stored in other files

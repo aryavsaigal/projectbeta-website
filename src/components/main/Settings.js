@@ -9,10 +9,12 @@ import React from "react";
 export default function Settings() {
   const numberOfSettings = 1; // Set the number of settings currently defined
 
+  // Keeps state of all enables and disabled settings
   const [settingBtns, setSettingBtns] = React.useState(
     new Array(numberOfSettings).fill(false)
   );
 
+  // Toggles the setting corresponding to its number
   function settingHandler(num) {
     setSettingBtns((e) => {
       e[num] = true;
@@ -32,6 +34,7 @@ export default function Settings() {
     }
   }
 
+  // Removes all animations and filter effects from UI
   function lowPerf() {
     document.querySelectorAll("*").forEach((e) => {
       // console.log(e);

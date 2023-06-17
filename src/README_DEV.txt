@@ -49,9 +49,9 @@ Specifically for creating new windows, you will have to do the following:
 
 1. Determine the type of file the window would be, and choose the
 appropriate extension for it.
-> Visit the window folder to view existing extensions or make your own by
-  creating a new window template and incorporating that component in
-  the setWindowContent() function in Window.js
+> Visit the window folder to view the existing extensions
+> You can also make your own by creating a new window template and incorporating
+  that component in the setWindowContent() function in Window.js
 
 2. Add a new element in the returnValue array in windowsData.js in the format:
     { id: "<unique int>", dir: "<name of file>.<extension>" },
@@ -66,7 +66,13 @@ appropriate extension for it.
     addWindow("<name of file>.<extension>")
   Make sure to call it within the scope of Homepage.js
 
-Changes can be done to the images folder as deemed necessary.
+4. Add the required content for the window
+> If the window instance was from a preexisting template, visit that template's
+  file to accomodate the new content
+> If the window template was custom made, it will depend on whether it requires
+  additional content to be inputted or is already complete
+
+Changes to miscellaenous assets and files can be done as deemed necessary.
 
 
 Once all changes to the code are ready, run 'npm run deploy' to correctly
@@ -87,11 +93,11 @@ Other important information about each component as well as the explaination for
 their functionalities are given in their respective files' comments
 
 Hope the documentation is useful. Please reach out to me in case you have any
-suggestions.
+suggestions or queries.
 
 Change the status quo!
 
 Suyash Chandel
 
 
-Last updated: 14/06/2023
+Last updated: 17/06/2023

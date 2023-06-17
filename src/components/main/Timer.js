@@ -25,20 +25,25 @@ export default function Timer() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [countdownData]);
 
+  // Sets the value of the timer
   function updateTimer() {
     setTimeout(() => {
-      const eventDate = maindata.event_starting_date;
-      const countdownTarget = new Date(eventDate).getTime();
-
+      // Get the initial and final dates
+      const countdownTarget = new Date(maindata.event_starting_date).getTime();
       const currentTime = new Date().getTime();
 
+      // Calculate the time difference
       const timeDifference =
         countdownTarget - currentTime > 0
           ? countdownTarget - currentTime
           : currentTime - countdownTarget;
 
+      // Determines sign of the time difference
       const newSign = countdownTarget - currentTime < 0 ? "+" : "-";
+      // '-' means target date is yet to come
+      // '+' means target date has surpassed
 
+      // Divides time difference into different units
       var newDd = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
       var newHh = Math.floor(
         (timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -46,6 +51,7 @@ export default function Timer() {
       var newMm = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
       var newSs = Math.floor((timeDifference % (1000 * 60)) / 1000);
 
+      // Save all segmented units of time into single object
       const countdown = {
         dd: newDd,
         hh: newHh,
@@ -54,6 +60,7 @@ export default function Timer() {
         sign: newSign,
       };
 
+      // Update the timar variable
       setCountdownData(countdown);
     }, 1000);
   }

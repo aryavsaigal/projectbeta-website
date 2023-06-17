@@ -6,7 +6,9 @@
 
 import React from "react";
 
+// Social Media icons with links
 import SocialMedia from "../main/SocialMedia";
+
 import { maindata } from "../data/maindata";
 
 export default function Contact() {

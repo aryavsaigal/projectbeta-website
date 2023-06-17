@@ -5,6 +5,8 @@
 // Its source code is still retained in case the team wishes to reimplement it
 
 import React from "react";
+
+// Particules library and configuration imported
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import particlesConfig from "../../particles.json";

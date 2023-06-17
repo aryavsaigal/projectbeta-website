@@ -8,6 +8,7 @@
 
 import React from "react";
 
+// PB Logos
 import PBAnimatedLogoSource from "../../images/PBbootup.mp4";
 import PBStaticLogoSource from "../../images/logo-white.png";
 

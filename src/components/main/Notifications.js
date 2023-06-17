@@ -3,25 +3,32 @@
 
 // Visit notifData.js to modify the notifications shown in the panel
 // Visit maindata.js to modify the number of days the notification has to be
-//  young to be marked as 'new'
+// young to be marked as 'new'
 
 import React from "react";
 
 import { notifData } from "../data/notifData";
 
+// Pb Logo
 import logo_src from "../../images/logo-white.png";
+
 import { maindata } from "../data/maindata";
 
 export default function Notifications(props) {
+  // Original notification data from source file
   const rawNotifData = React.useState(notifData)[0];
+
+  // Number of new notifications
   const [newNotifs, setNewNotifs] = React.useState(0);
 
+  // Units of time in form of seconds
   const msPerMinute = 60 * 1000;
   const msPerHour = msPerMinute * 60;
   const msPerDay = msPerHour * 24;
   const msPerMonth = msPerDay * 30;
   const msPerYear = msPerDay * 365;
 
+  // Number of days for which a notification can be 'new'
   const expiryDuration = msPerDay * maindata.notif_recent_expiry_duration;
 
   React.useEffect(() => {
@@ -40,6 +47,7 @@ export default function Notifications(props) {
     } else return false;
   }
 
+  // Creates relative timestamps for each notification
   function timeDifference(current, previous) {
     const elapsed = current - previous;
     let msg = "";

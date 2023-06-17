@@ -5,6 +5,8 @@
 // the event date range
 
 import React from "react";
+
+// Icons
 import logo_src from "../../images/logo-white.png";
 import downarrow_src from "../../images/navigation/nav-down.png";
 

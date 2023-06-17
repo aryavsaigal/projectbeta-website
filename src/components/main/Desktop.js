@@ -3,8 +3,11 @@
 // Visit windowsData.js to define more windows instances
 
 import React from "react";
+
+// Component template for the data to be converted to
 import DesktopButtons from "./DesktopButtons.js";
 
+// Desktop icons
 import desktopSrc from "../../images/folders/desktop.png";
 import folder1Src from "../../images/folders/folder-1.png";
 import folder2Src from "../../images/folders/folder-2.png";

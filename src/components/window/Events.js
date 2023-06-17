@@ -8,12 +8,15 @@ import React from "react";
 import "react-markdown";
 import { eventsData } from "../data/eventsData";
 
+// Icons for the four cards
 import schoolSrc from "../../images/events/events-school.png";
 import pplSrc from "../../images/events/events-ppl.png";
 import passSrc from "../../images/events/events-pass.png";
 import mediumSrc from "../../images/events/events-medium.png";
 
+// Infinity symbol
 import infinitySymbolSrc from "../../images/misc/infinity_symbol.png";
+
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 export default function Events(props) {

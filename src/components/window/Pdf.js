@@ -4,6 +4,7 @@
 
 import React from "react";
 
+// PDF file sources
 import guidelinesSrc from "../../PDFs/guidelines.pdf";
 
 export default function Pdf(props) {

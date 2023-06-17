@@ -1,14 +1,18 @@
 // HomeInfoCards displays the three information boxes in the site when scrolled down
 // as well as the footer
 
+// Visit InfoCardsData.js to edit the descriptions for the boxes
+
 import React from "react";
 
+// Card corner icons
 import starSrc from "../../images/homecards/homeinfocard-star.png";
 import infoSrc from "../../images/homecards/homeinfocard-info.png";
 import callSrc from "../../images/homecards/homeinfocard-call.png";
 
 import { maindata } from "../data/maindata";
 
+// Description for the information boxes
 import {
   InfoCardYear,
   InfoCardAbout,

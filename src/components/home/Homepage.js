@@ -11,6 +11,8 @@
 // WHAT YOU ARE DOING.
 
 import React from "react";
+
+// Child components
 import TitleScreen from "./TitleScreen";
 import HomeInfoCards from "./HomeInfoCards";
 import Window from "../window/Window";
@@ -19,7 +21,9 @@ import Background from "./Background";
 import Desktop from "./../main/Desktop";
 import Advancement from "../home/Advancement";
 
+// Data of all windows instances
 import windowsData from "../data/windowsData";
+
 import { maindata } from "../data/maindata";
 
 export default function Homepage() {
@@ -54,12 +58,14 @@ export default function Homepage() {
     } else {
       setWindowHandler((windowHandler) =>
         windowHandler.map((e) => {
+          // If element window in array matches target window, make it visible and bring it to top
           if (e.dir === app) {
             return {
               ...e,
               visible: true,
               z: zMax,
             };
+            // Push all other opened windows one z-index value behind
           } else return { ...e, z: e.z - 1 };
         })
       );
@@ -69,13 +75,16 @@ export default function Homepage() {
   // Makes the window invisible when clicking on the close button
   function removeWindow(app) {
     let nextZMax = 0;
+    // Saves the next biggest z-index value among windows after zMax
     windowHandler.forEach((e) => {
       if (e.z > nextZMax && e.z !== zMax) nextZMax = e.z;
     });
     const newWindowHandler = windowHandler.map((e) =>
+      // If element window in array matches target window, make it invisible
       e.dir === app
         ? { ...e, visible: false }
-        : e.z === nextZMax
+        : // If element window's z-index matches nextZMax, bring it to top
+        e.z === nextZMax
         ? { ...e, z: zMax }
         : e
     );
@@ -85,9 +94,11 @@ export default function Homepage() {
   // Brings the window to the top when user clicks on its header
   function focusWindow(app) {
     const newWindowHandler = windowHandler.map((e) => {
+      // If element window in array matches target window, bring it to top
       return e.dir === app && e.z <= zMax
         ? { ...e, z: zMax }
-        : { ...e, z: e.z - 1 };
+        : // Push other windows one z-index value behind
+          { ...e, z: e.z - 1 };
     });
     setWindowHandler(newWindowHandler);
   }

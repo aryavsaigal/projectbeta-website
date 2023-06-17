@@ -5,8 +5,10 @@
 
 import React from "react";
 
+// Team members' details
 import teamData from "../data/teamData";
 
+// Navigation Icons
 import rightArrow from "../../images/navigation/nav-right.png";
 
 export default function Team() {

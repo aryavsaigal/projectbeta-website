@@ -2,8 +2,10 @@
 
 import React from "react";
 
+// Navigation Icons
 import downloadSrc from "../../images/navigation/nav-download.png";
 
+// Source of photos used in ImageViewer
 import scheduleSrc from "../../images/schedule.png";
 import shortcutsSrc from "../../images/shortcutkeys.png";
 

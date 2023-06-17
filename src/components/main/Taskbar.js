@@ -3,20 +3,22 @@
 
 import React from "react";
 
+// Navigation icons and logo
 import logoSrc from "../../images/logo-white.png";
 import searchSrc from "../../images/navigation/search.png";
-
-import SocialMedia from "./SocialMedia";
 import notifOffSrc from "../../images/navigation/notif-off.png";
 import notifOnSrc from "../../images/navigation/notif-on.png";
 import notifUnreadSrc from "../../images/navigation/notif-unread.png";
 import settingSrc from "../../images/navigation/nav-setting.png";
 
+// Child taskbar components
+import SocialMedia from "./SocialMedia";
 import Timer from "./Timer";
 import Notifications from "./Notifications";
 import Setting from "../main/Settings";
 
 import { notifData } from "../data/notifData";
+import { maindata } from "../data/maindata";
 
 export default function Taskbar() {
   // Returns number of recent notifications
@@ -25,7 +27,7 @@ export default function Taskbar() {
     // If data of object is newer than expiryDuration, it will count as
     // a recent notification.
     let count = 0;
-    const expiryDay = 3; // Set how many days old a recent notification can be
+    const expiryDay = maindata.notif_recent_expiry_duration;
     const expiryDuration = 60 * 1000 * 60 * 24 * expiryDay;
 
     notifData.forEach((e) => {

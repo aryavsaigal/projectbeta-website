@@ -7,6 +7,7 @@
 
 import React from "react";
 
+// PB Logo
 import logo_src from "../../images/logo-white.png";
 
 export default function Advancement(props) {

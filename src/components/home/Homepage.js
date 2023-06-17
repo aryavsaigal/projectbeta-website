@@ -1,3 +1,15 @@
+// Homepage contains the majority of the site's content and functionality
+// including the desktop/home webpage, desktop icons and the windows
+
+// Visit Window.js to add new placeholder windows
+// Visit windowsData.js to define new instances of windows
+// Visit Desktop.js to modify the listing of the defined windows in the desktop
+
+// !!! WARNING !!!
+// CODE OF THIS FILE IS DANGEROUSLY FRAGILE AND MAY BREAK THE ENTIRE SITE IF
+// MODIFIED CARELESSLY. PLEASE AVOID EDITING THIS FILE UNLESS YOU KNOW
+// WHAT YOU ARE DOING.
+
 import React from "react";
 import TitleScreen from "./TitleScreen";
 import HomeInfoCards from "./HomeInfoCards";
@@ -9,17 +21,9 @@ import Advancement from "../home/Advancement";
 
 import windowsData from "../data/windowsData";
 
-// Homepage contains the majority of the site's content and functionality
-// including the desktop/home webpage, desktop icons and the windows
-
-// !!! WARNING !!!
-// CODE OF THIS FILE IS DANGEROUSLY FRAGILE AND MAY BREAK THE ENTIRE SITE IF
-// MODIFIED CARELESSLY. PLEASE AVOID EDITING THIS FILE OR EXERCISE
-// EXTREME CAUTION WHILE DOING SO.
-
 export default function Homepage() {
   // zMax is the default z-index of all windows in the page.
-  // Selecting a window to set its z-index to zMax
+  // Selecting a window will set its z-index to zMax
   // while the z-index of all windows will decrement
   const zMax = 750;
 

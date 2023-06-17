@@ -1,3 +1,7 @@
+// Desktop displays all windows-themed links to the webpages in form of desktop icons.
+
+// Visit windowsData.js to define more windows instances
+
 import React from "react";
 import DesktopButtons from "./DesktopButtons.js";
 
@@ -9,8 +13,6 @@ import fileRulesSrc from "../../images/folders/file-rules.png";
 import fileZipSrc from "../../images/folders/file-zip.png";
 import fileTeamSrc from "../../images/folders/file-team.png";
 import fileContactSrc from "../../images/folders/file-contact.png";
-
-// Desktop shows all windows-themed links to the webpages in form of desktop icons.
 
 export default function Desktop(props) {
   const desktopButtonData = [

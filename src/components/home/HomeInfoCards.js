@@ -1,3 +1,6 @@
+// HomeInfoCards displays the three information boxes in the site when scrolled down
+// as well as the footer
+
 import React from "react";
 
 import starSrc from "../../images/homecards/homeinfocard-star.png";
@@ -6,8 +9,7 @@ import callSrc from "../../images/homecards/homeinfocard-call.png";
 
 import invitePdfSrc from "../../PDFs/invite.pdf";
 
-// HomeInfoCards displays the three rounded information boxes in the site when scrolled down
-// as well as the footer
+import { maindata } from "../data/maindata";
 
 export default function HomeInfoCards() {
   return (
@@ -16,7 +18,7 @@ export default function HomeInfoCards() {
       <div className="home_infocards--container">
         {/* 1st box: 2022 */}
         <div className="home_infocards--2022">
-          <h2>2022</h2>
+          <h2>{maindata.current_year}</h2>
           <p>
             ProjectBeta 6.0 invites out! Click{" "}
             <a href={invitePdfSrc} target="_blank" rel="noreferrer">
@@ -70,7 +72,7 @@ export default function HomeInfoCards() {
           <img src={callSrc} alt="Star icon" />
         </div>
       </div>
-      <footer>© ProjectBeta 2022</footer>
+      <footer>© ProjectBeta {maindata.current_year}</footer>
     </>
   );
 }

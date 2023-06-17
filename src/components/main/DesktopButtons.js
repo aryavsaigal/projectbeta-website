@@ -1,7 +1,7 @@
-import React from "react";
-
 // DesktopButtons displays the individually selectable desktop button,
 // with the icon and the name
+
+import React from "react";
 
 export default function DesktopButtons(props) {
   return (

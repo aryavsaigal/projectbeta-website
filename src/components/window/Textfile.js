@@ -1,3 +1,8 @@
+// Textfile acts as a placeholder for displaying text in a notepad like window for
+// .txt (in black bg) and .zip files (in white bg)
+
+// Visit alumniData.md and guidelinesData.md to modify/update the text within
+
 import React from "react";
 
 // Data to retrieve text from
@@ -6,9 +11,6 @@ import GuidelinesData from "../data/guidelinesData.md";
 
 import "react-markdown";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-
-// Textfile acts as a placeholder for displaying text in a notepad like window for
-// .txt (in black bg) and .zip files (in white bg)
 
 export default function Textfile(props) {
   const [markdownFile, setMarkdownFile] = React.useState("");

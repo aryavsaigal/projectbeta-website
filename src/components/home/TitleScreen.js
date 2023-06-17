@@ -1,8 +1,11 @@
+// TitleScreen shows the frontmost portion of the home page that the user first
+// sees when opening the site
+
 import React from "react";
 import logo_src from "../../images/logo-white.png";
 import downarrow_src from "../../images/navigation/nav-down.png";
 
-// TitleScreen shows the portion of the home page that the user first sees when opening the site
+import { maindata } from "../data/maindata";
 
 export default function TitleScreen() {
   return (
@@ -17,16 +20,12 @@ export default function TitleScreen() {
         </h1>
       </div>
       {/* Duration of event */}
-      <p className="titlescreen--date">07|08|2022 - 13|08|2022</p>
+      <p className="titlescreen--date">{maindata.event_date_range}</p>
       <div className="titlescreen--register">
         {/* Buttons for link to registration form and discord server */}
-        <p onClick={() => window.open("https://forms.gle/hX8SZ9T5UXQeaJ72A")}>
-          REGISTER
-        </p>
+        <p onClick={() => window.open(maindata.registration_link)}>REGISTER</p>
         <hr />
-        <p onClick={() => window.open("https://discord.gg/h9FJkvcJWt")}>
-          DISCORD
-        </p>
+        <p onClick={() => window.open(maindata.discord_link)}>DISCORD</p>
       </div>
       {/* Oscillating down arrow */}
       <a href="#lookdown">

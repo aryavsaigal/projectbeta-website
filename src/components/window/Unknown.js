@@ -1,6 +1,3 @@
-import React from "react";
-import "../../css/Unknown.css";
-
 // Unknown is a secret window that can be used for easter eggs or challenges
 // like BetaTest, with support for custom elements and triggering, along
 // with a dedicated CSS File.
@@ -15,6 +12,9 @@ import "../../css/Unknown.css";
 // The password inputted in the field yet to be submitted is prone to deletion
 // if the window is moved by the user.
 
+import React from "react";
+import "../../css/Unknown.css";
+
 export default function Unknown(props) {
   // Stores the hints fetched from the API upon successful login
   const [hintArray, setHintArray] = React.useState([
@@ -23,6 +23,7 @@ export default function Unknown(props) {
     undefined,
   ]);
   let password = "";
+
   const UserInputtedPassword = React.useRef();
   const PasswordPromptScreen = React.useRef();
   const SubmitButton = React.useRef();

@@ -1,11 +1,11 @@
+// ImageViewer acts as a placeholder for displaying image files along with a download button
+
 import React from "react";
 
 import downloadSrc from "../../images/navigation/nav-download.png";
 
 import scheduleSrc from "../../images/schedule.png";
 import shortcutsSrc from "../../images/shortcutkeys.png";
-
-// ImageViewer acts as a placeholder for displaying image files along with a download button
 
 export default function ImageViewer(props) {
   const [imgSrc, setImgSrc] = React.useState("");

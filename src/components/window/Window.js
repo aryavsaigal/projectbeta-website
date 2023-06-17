@@ -1,3 +1,8 @@
+// Window acts as the master placeholder for all the different pages of the
+// site, with the ability to be dragged around, and be opened/closed.
+
+// Visit windowsData.js to define new instances of windows
+
 import React from "react";
 
 // UI icons
@@ -15,13 +20,13 @@ import Contact from "./Contact";
 import Pdf from "./Pdf";
 import Unknown from "./Unknown";
 
+// Library allowing draggable movement of the windows
 import Draggable from "react-draggable";
-
-// Window acts as the master placeholder for all the different pages of the
-// site, with the ability to be dragged around, and be opened/closed.
 
 export default function Window(props) {
   const windowRef = React.useRef();
+
+  // Defines two additional fields for each window that will be frequently changed
   React.useEffect(() => {
     windowRef.current.style.zIndex = `${props.z}`;
     windowRef.current.style.display = props.visible ? "initial" : "none";

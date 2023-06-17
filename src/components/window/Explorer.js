@@ -1,3 +1,5 @@
+// Explorer displays the Windows Explorer window with customizable interactive child elements
+
 import React from "react";
 
 // UI Icons
@@ -8,8 +10,6 @@ import networkSrc from "../../images/misc/explorer-network.png";
 // Explorer content data source
 import { eventsData } from "../data/eventsData";
 import SponsorsFolder from "../data/SponsorsFolder";
-
-// Explorer displays the Windows Explorer window with customizable interactive child elements
 
 export default function Explorer(props) {
   // This eventsGrid variable specifically stores the list of file icons for the events

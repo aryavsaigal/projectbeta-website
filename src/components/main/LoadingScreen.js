@@ -1,12 +1,15 @@
+// LoadingScreen shows the loading screen while other elements of the site finish loading
+
+// Note:
+// For Safari browsers, a static image of the PB Logo and text 'Please wait is displayed'
+// For others, the animated PB logo video is played.
+// This is because Safari does not allow autoplay of videos, meaning the
+// animated PB Logo would not work
+
 import React from "react";
 
 import PBAnimatedLogoSource from "../../images/PBbootup.mp4";
 import PBStaticLogoSource from "../../images/logo-white.png";
-
-// LoadingScreen shows the loading screen while other elements of the site finish loading
-// Note:
-// For Safari browsers, a static image of the PB Logo and text 'Please wait is displayed'
-// For others, the animated PB logo video is played
 
 export default function LoadingScreen() {
   const loadingScreenParent = React.useRef();
@@ -18,7 +21,6 @@ export default function LoadingScreen() {
     navigator.userAgent
   );
   // const browserException = /chrome/i.test(navigator.userAgent);
-
   //  ^^^ above line can be used to debug to test how both versions of loading screens look
 
   React.useLayoutEffect(() => {

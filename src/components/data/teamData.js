@@ -1,3 +1,8 @@
+// TeamData stores the information of the club members for the Team webpage
+// Board Members and HoDs are displayed with their names, photos,
+// designations and quotes.
+// Regular members are displayed with only their names.
+
 // import undefined_photo from "../../images/team/undefined.png";
 
 // Images of Board Members and HoDs
@@ -25,11 +30,6 @@ import siaJhaNath from "../../images/team/sia_jha_nath.jpeg";
 import simarTandon from "../../images/team/simar_tandon.jpeg";
 import taranSingh from "../../images/team/taran_singh.jpeg";
 import vidushiJain from "../../images/team/vidhushi_jain.jpeg";
-
-// TeamData stores the information of the club members for the Team webpage
-// Board Members and HoDs are displayed with their names, photos,
-// designations and quotes.
-// Regular members are displayed with only their names.
 
 export default function teamData() {
   return {

@@ -1,3 +1,9 @@
+// Events is the boilerplate code for all event sub-webpages in the site
+
+// IMPORTANT:
+// Make sure to edit both the file eventsData.js and the .md files within the events
+// folder in order to update the information for each department event
+
 import React from "react";
 import "react-markdown";
 import { eventsData } from "../data/eventsData";
@@ -9,12 +15,6 @@ import mediumSrc from "../../images/events/events-medium.png";
 
 import infinitySymbolSrc from "../../images/misc/infinity_symbol.png";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
-
-// Events is the boilerplate code for all event sub-webpages in the site
-
-// IMPORTANT:
-// Make sure to edit both the file eventsData.js and the .md files within the events
-// folder in order to update the information for each department event
 
 export default function Events(props) {
   // Retrieves the data pertaining to the file that the instance webpage is

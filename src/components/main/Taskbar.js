@@ -1,3 +1,6 @@
+// Taskbar displays the taskbar on the screen, with usual taskbar elements, ProjectBeta social links,
+// the countdown timer, the notification panel and the settings panel
+
 import React from "react";
 
 import logoSrc from "../../images/logo-white.png";
@@ -14,9 +17,6 @@ import Notifications from "./Notifications";
 import Setting from "../main/Settings";
 
 import { notifData } from "../data/notifData";
-
-// Taskbar displays the taskbar on the screen, with usual taskbar elements, ProjectBeta social links,
-// the countdown timer, the notification panel and the settings panel
 
 export default function Taskbar() {
   // Returns number of recent notifications

@@ -1,4 +1,6 @@
 /* Mobile Compatibility */
+
+/* The navigation bar on the bottom containing three icons */
 .mobile--navbar {
   position: fixed;
   bottom: 10px;
@@ -17,14 +19,17 @@
   z-index: 10001;
 }
 
+/* Icons on the navigation bar */
 .mobile--navbar img {
   width: 25px;
 }
 
+/* PB Logo on the navigation bar */
 .mobile--navbar img:nth-child(2) {
   width: 35px;
 }
 
+/* Popup container for the bottom toolbar  */
 .mobile--shelf--container {
   position: fixed;
   bottom: 80px;
@@ -36,6 +41,7 @@
   transition: 0.3s;
 }
 
+/* Bottom toolbar containing the list of desktop windows buttons */
 .mobile--shelf {
   width: 100%;
   height: 100%;
@@ -49,17 +55,20 @@
   box-shadow: 0 10px 20px var(--shadowBlack);
 }
 
+/* Individual dektop buttons */
 .mobile--shelf .desktopbtn {
   margin-bottom: 0;
   margin-right: 5px;
   border-radius: 7.5px;
 }
 
+/* Highlight effect of mobile desktop button on hover */
 .mobile--shelf .desktopbtn:hover {
   outline: none;
   background-color: var(--tintWhite);
 }
 
+/* Highlight effect of mobile desktop button on hover */
 .mobile--shelf .desktopbtn:active {
   outline: none;
   background-color: var(--bgWhite);

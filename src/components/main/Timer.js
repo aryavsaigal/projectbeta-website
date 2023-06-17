@@ -1,7 +1,9 @@
-import React from "react";
-
-// Timer displays the countdown timer for the beginning of the ProjectBeta event.
+// Timer displays the countdown timer for the beginning of the ProjectBeta event
+// in the taskbar.
 // The timer can count both ways (time left and time elapsed).
+
+import React from "react";
+import { maindata } from "../data/maindata";
 
 export default function Timer() {
   // Stores the different time parts of the countdown timer
@@ -22,7 +24,7 @@ export default function Timer() {
 
   function updateTimer() {
     setTimeout(() => {
-      const eventDate = "Aug 7, 2022 00:00:00"; // <- Set the date for upcoming PB event here
+      const eventDate = maindata.event_starting_date;
       const countdownTarget = new Date(eventDate).getTime();
 
       const currentTime = new Date().getTime();

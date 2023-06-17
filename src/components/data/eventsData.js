@@ -1,3 +1,6 @@
+// Stores all metadata, icon and description of each event page
+
+// Icon links of respective event departments
 // import sample_src from "../../images/folders/file-sample.png";
 import hypertextImgSrc from "../../images/events/hypertext.png";
 import designathonImgSrc from "../../images/events/designathon.png";
@@ -10,6 +13,7 @@ import itsdebatableImgSrc from "../../images/events/itsdebatable.png";
 import projectremixImgSrc from "../../images/events/projectremix.png";
 import betatestImgSrc from "../../images/events/betatest.png";
 
+// Description/instructions of respective event departments
 import ProjectRemix from "./events/ProjectRemix.md";
 import Authority450 from "./events/Authority450.md";
 import BetaTest from "./events/BetaTest.md";

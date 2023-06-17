@@ -1,3 +1,7 @@
+// SponsorsFolder stores the list of images attached with a link to redirect to
+// the corresponding sponsor website.
+// This component is exclusively for display in the Explorer window.
+
 import React from "react";
 
 // import sample_src from "../../images/folders/file-sample.png";
@@ -7,11 +11,8 @@ import React from "react";
 import geeksforgeeksSrc from "../../images/sponsors/geeksforgeeks.png";
 import xyzSrc from "../../images/sponsors/xyz.png";
 
-// SponsorsFolder stores the list of images attached with a link to redirect to
-// the corresponding sponsor website.
-// This component is exclusively for display in the Explorer window.
-
 export default function SponsorFolders(props) {
+  // Metadata for the Sponsor buttons
   const currentSponsorsMetadata = React.useState([
     // Format : ["Name of sponsor", SponsorLogo, "sponsor_url"]
     ["GeeksforGeeks", geeksforgeeksSrc, "https://geeksforgeeks.org"],

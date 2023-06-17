@@ -1,7 +1,3 @@
-import React from "react";
-
-import logo_src from "../../images/logo-white.png";
-
 // Advancement shows a pop up box in a theme similar to that of Minecraft advancements.
 // It is used as an easter egg
 
@@ -9,8 +5,15 @@ import logo_src from "../../images/logo-white.png";
 // and displays only one advancement. You are welcome to add more advancements by
 // manually adding conditional statements or recreating the code to be modular
 
+import React from "react";
+
+import logo_src from "../../images/logo-white.png";
+
 export default function Advancement(props) {
+  // isAchieved prevents the advancement from triggering more than once
   const [isAchieved, setIsAchieved] = React.useState(false);
+  // isDisplaying prevents the advancement from displaying if the banner is
+  // already being displayed for another advancement
   const [isDisplaying, setIsDisplaying] = React.useState(false);
   const advancementRef = React.useRef();
 

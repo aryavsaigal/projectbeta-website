@@ -1,8 +1,10 @@
+// Pdf acts as a placeholder for displaying PDF files
+
+//  Note: Currently unused
+
 import React from "react";
 
 import guidelines_src from "../../PDFs/guidelines.pdf";
-
-// Pdf acts as a placeholder for displaying PDF files
 
 export default function Pdf(props) {
   function setIframe() {

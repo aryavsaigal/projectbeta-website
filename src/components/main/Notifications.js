@@ -1,8 +1,16 @@
+// Notification contains the notification panel and displays all defined notifications
+// New notifications are explicitly highlighted
+
+// Visit notifData.js to modify the notifications shown in the panel
+// Visit maindata.js to modify the number of days the notification has to be
+//  young to be marked as 'new'
+
 import React from "react";
 
 import { notifData } from "../data/notifData";
 
 import logo_src from "../../images/logo-white.png";
+import { maindata } from "../data/maindata";
 
 export default function Notifications(props) {
   const rawNotifData = React.useState(notifData)[0];
@@ -14,7 +22,7 @@ export default function Notifications(props) {
   const msPerMonth = msPerDay * 30;
   const msPerYear = msPerDay * 365;
 
-  const expiryDuration = msPerDay * 3;
+  const expiryDuration = msPerDay * maindata.notif_recent_expiry_duration;
 
   React.useEffect(() => {
     rawNotifData.forEach((e) => {
@@ -49,11 +57,14 @@ export default function Notifications(props) {
       msg = Math.round(elapsed / msPerYear) + " year ago";
     }
 
+    // Checks if the number is more than 1 or not
+    // and makes the unit of time singular or plural accordingly
     let determiner = msg.split(" ");
     if (determiner[0] !== "1") determiner[1] += "s";
     return determiner.join(" ");
   }
 
+  // Creates box elements of all notifications for the panel
   const notifs = rawNotifData.map((e, i) => (
     <div
       className={`notif--self`}

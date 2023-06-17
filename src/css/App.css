@@ -1,23 +1,28 @@
+/* 'Beta' part of ProjectBeta */
 @font-face {
   font-family: "Code Bold";
   src: url("../fonts/Code\ Bold.otf");
 }
 
+/* 'Project' part of ProjectBeta */
 @font-face {
   font-family: "Code Pro Light";
   src: url("../fonts/Code\ Pro\ Light.otf");
 }
 
+/* Default monospace font */
 @font-face {
   font-family: "Ubuntu Mono";
   src: url("../fonts/UbuntuMono-Regular.ttf");
 }
 
+/* Default site-wide font */
 @font-face {
   font-family: "Ubuntu";
   src: url("../fonts/Ubuntu-Regular.ttf");
 }
 
+/* Main HTML body and root CSS properties declarations */
 html,
 body {
   color: var(--fontWhite);
@@ -106,7 +111,7 @@ body {
   /* display: none; */
 }
 
-/*  */
+/* Div containing the static PB Logo and 'Please wait' text for Safari browsers */
 .loadingscreen--safaricontainer {
   display: none;
   top: 50%;
@@ -858,20 +863,24 @@ footer {
   text-align: center;
 }
 
+/* Highlight the icon with a half white square on hover  */
 .eventbtns:hover {
   background-color: var(--shadowWhite);
 }
 
+/* Highlight the icon with a stronger white square on click  */
 .eventbtns:active {
   background-color: var(--tintWhite);
 }
 
+/* Image of the icon button */
 .eventbtns>img {
   width: min(90px, 7vw);
   margin: 0px auto 20px;
   user-select: none;
 }
 
+/* Name of the icon button */
 .eventbtns>p {
   width: 100%;
   text-align: center;
@@ -880,6 +889,7 @@ footer {
   text-shadow: 1px 1px 3px var(--shadowBlack), -1px -1px 3px var(--shadowBlack), 1px -1px 3px var(--shadowBlack), -1px 1px 3px var(--shadowBlack);
 }
 
+/* File icons for sponsor image links in Sponsors folder */
 .sponsorbtns {
   margin-bottom: 10px;
   margin-right: 10px;
@@ -894,20 +904,24 @@ footer {
   width: min(180px, 15vw);
 }
 
+/* Highlight the icon with a half white square on hover  */
 .sponsorbtns:hover {
   background-color: var(--shadowWhite);
 }
 
+/* Highlight the icon with a stronger white square on click  */
 .sponsorbtns:active {
   background-color: var(--tintWhite);
 }
 
+/* Image of the icon button */
 .sponsorbtns img {
   width: min(180px, 15vw);
   margin: 0px auto 20px;
   user-select: none;
 }
 
+/* Name of the icon button */
 .sponsorbtns>p {
   width: 100%;
   text-align: center;
@@ -916,14 +930,13 @@ footer {
   text-shadow: 1px 1px 3px var(--shadowBlack), -1px -1px 3px var(--shadowBlack), 1px -1px 3px var(--shadowBlack), -1px 1px 3px var(--shadowBlack);
 }
 
+/* Text file window */
 .textfile {
   padding: 20px;
-}
-
-.textfile div {
   font-size: 17px;
 }
 
+/* Title text/ heading inside the text file */
 .textfile h1 {
   text-align: center;
   font-size: 40px;
@@ -931,33 +944,33 @@ footer {
   color: var(--PBorange);
 }
 
+/* Lists */
 .textfile ul,
 .textfile ol {
   padding-left: 20px;
 }
 
+/* .zip file window with explicitly defined whie bg */
 .zipfile {
   background-color: var(--bgWhite);
   color: var(--fontBlack);
   padding: 10px;
   font-family: "Ubuntu Mono";
-}
-
-.zipfile div {
-  white-space: pre-line;
   font-size: 20px;
 }
 
+/* Keeps each sentence / p element in separate lines */
+.zipfile div {
+  white-space: pre-line;
+}
+
+/* Keeps each sentence / p element in separate lines */
 .zipfile div p {
   white-space: pre-line;
   margin: 0;
 }
 
-.zipfile div {
-  white-space: pre-line;
-  font-size: 20px;
-}
-
+/* PDF viewer window */
 .window--content .pdfcontainer {
   box-sizing: border-box;
   overflow-x: hidden;
@@ -968,6 +981,7 @@ footer {
   padding: 0;
 }
 
+/* The nested element loading the actual PDF file */
 .pdfviewer {
   width: 100%;
   height: 100%;
@@ -975,12 +989,14 @@ footer {
   padding: 0;
 }
 
+/* Image viewer window */
 .imageviewer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
+/* The actual image loaded in the image viewer window */
 .imageviewer img {
   width: auto;
   height: auto;
@@ -988,6 +1004,7 @@ footer {
   margin: auto;
 }
 
+/* Download button for the image */
 .imageviewer a .downloadicon {
   margin: 10px;
   position: fixed;
@@ -999,6 +1016,7 @@ footer {
   opacity: 0.6;
 }
 
+/* Highlight the download button on hover */
 .imageviewer .downloadicon:hover {
   opacity: 1;
   background-color: var(--accentBgColor);
@@ -1006,10 +1024,12 @@ footer {
   box-shadow: 0 10px 20px var(--shadowBlack);
 }
 
+/* Teams window */
 .team {
   background-color: transparent;
 }
 
+/* Title text for the window */
 .team h2 {
   text-align: center;
   font-size: 50px;
@@ -1017,7 +1037,7 @@ footer {
   color: var(--PBorange);
 }
 
-
+/* Sticky headers for title indicating categories of club members */
 .team--category {
   padding: 0px;
   display: flex;
@@ -1032,28 +1052,34 @@ footer {
   width: 100%;
 }
 
+/* The right arrow icon on the left of the sticky headers */
 .team--category img {
   width: 30px;
 }
 
+/* The horizontal line in the sticky headers */
 .team--category hr {
   flex-grow: 1;
   margin: 10px;
 }
 
+/* Text label indicating the category */
 .team--category p {
   margin: 0;
 }
 
+/* Div containers for each individual Board & Core member's info card */
 .team--boardcore {
   display: flex;
   margin: 35px 30px;
 }
 
+/* Text part of the above card */
 .team--boardcore div {
   width: 70%;
 }
 
+/* Image part of the above card */
 .team--boardcore>img {
   width: min(150px, 10vw);
   height: min(150px, 10vw);
@@ -1061,11 +1087,13 @@ footer {
   user-select: none;
 }
 
+/* Name of the Board & Core member */
 .team--boardcore h1 {
   margin: 0;
   font-size: min(32px, 2.6vw);
 }
 
+/* Designation of the Board / Core member */
 .team--boardcore h3 {
   margin: 10px 0;
   font-weight: lighter;
@@ -1073,6 +1101,7 @@ footer {
   margin-bottom: 10px;
 }
 
+/* Separator between the designation and the quote of info card */
 .team--boardcore hr {
   width: 50%;
   margin: 10px 0;
@@ -1080,6 +1109,7 @@ footer {
   border-color: transparent;
 }
 
+/* Quote of the Board / Core member */
 .team--boardcore p {
   font-style: italic;
   color: var(--fontGrey);
@@ -1087,6 +1117,7 @@ footer {
   margin: 0;
 }
 
+/* Grid containing names of the regular club members */
 .team--membergrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -1096,6 +1127,7 @@ footer {
   padding: 30px;
 }
 
+/* Name of the individual club member */
 .team--membergrid p {
   display: flex;
   padding: 5px;
@@ -1107,16 +1139,19 @@ footer {
   margin: 0;
 }
 
+/* The department level events window */
 .events {
   padding: 10px;
 }
 
+/* Title of the Event window containing the name */
 .events h1 {
   text-align: center;
   color: var(--PBorange);
   z-index: 1000;
 }
 
+/* Background image of department icon of the window */
 .events--bg {
   opacity: 0.25;
   position: absolute;
@@ -1130,6 +1165,7 @@ footer {
   user-select: none;
 }
 
+/* Div containing the four info cards on the event */
 .events--fieldscontainer {
   height: fit-content;
   width: 100%;
@@ -1139,6 +1175,8 @@ footer {
   z-index: 1000;
 }
 
+
+/* Individual four event info cards */
 .events--fieldscontainer div {
   height: min(200px, 15vw);
   margin: 5px;
@@ -1154,11 +1192,13 @@ footer {
   padding: min(20px, 1vw) 10px;
 }
 
+/* Infinity symbol shown for the 'Students per School' field */
 .events--fieldscontainer div .infinity {
   width: min(8vw, 45px);
   margin-bottom: 5px;
 }
 
+/* Icon included with the individual event info card */
 .events--fieldscontainer img {
   width: min(100px, 6vw);
   margin-bottom: 10px;
@@ -1166,43 +1206,52 @@ footer {
 
 }
 
+/* Text inside the event info card */
+.events--fieldscontainer p,
 .events--fieldscontainer h2,
 .events--fieldscontainer h3,
-.events--fieldscontainer h4,
-.events--fieldscontainer p {
+.events--fieldscontainer h4 {
   margin: 2px;
   text-align: center;
 }
 
+/* Topic of the event info card */
 .events--fieldscontainer p {
   margin-bottom: auto;
   padding-bottom: 5px;
   font-size: min(16px, 1vw);
 }
 
+/* Upper part of emphasised answer of the event info card */
 .events--fieldscontainer h2 {
   margin-top: 15px;
   font-size: 30px;
   font-size: min(26px, 1.7vw);
 }
 
+/* Lower part of emphasied answer of the event info card */
 .events--fieldscontainer h3 {
   font-size: min(19px, 1.2vw);
 }
 
+/* Regular answer of the event info card */
+/* (Seen only for participation mode being hybrid) */
 .events--fieldscontainer h4 {
   font-size: min(17.5px, 1.02vw);
 }
 
+/* Div containing the textual description of the event */
 .events--desc {
   padding: 20px;
 }
 
+/* Contact window */
 .contact {
   background-color: transparent;
   padding: 20px;
 }
 
+/* Title text of the contact window */
 .contact h1 {
   text-align: center;
   font-size: 40px;
@@ -1210,7 +1259,7 @@ footer {
   color: var(--PBorange);
 }
 
-
+/* Grid defined for the various rectangular sections of the page */
 .contact--grid {
   display: grid;
   grid-template-rows: 90px 1fr 150px;
@@ -1219,12 +1268,14 @@ footer {
   grid-auto-columns: auto;
 }
 
+/* Restructures all grid elements into a vertical list */
 @media screen and (max-width: 1300px) {
   .contact--grid {
     grid-template-columns: 1fr;
   }
 }
 
+/* Individual rectangular section */
 .contact--grid div {
   background-color: var(--windowElementColor);
   border: 1px solid var(--windowOutlineColor);
@@ -1233,10 +1284,12 @@ footer {
   text-align: center;
 }
 
+/* Heading of the rectangular section */
 .contact--grid div h2 {
   margin: 5px;
 }
 
+/* Individual cards of the Phone section holding contact info of the Board members */
 .contact--grid .contact--phone div {
   padding: 20px;
   text-align: center;
@@ -1246,30 +1299,37 @@ footer {
   box-shadow: 0 10px 20px var(--shadowBlack);
 }
 
+/* Text inside the contact cards */
 .contact--grid .contact--phone div p {
   font-size: 14px;
 }
 
+/* Names of the members in the cards made bold */
 .contact--grid .contact--phone div p:nth-child(1) {
   font-size: 16px;
   font-weight: bold;
 }
 
+/* Prevents the grid inside the Socials section to form a border around it */
+/* similar to the contact cards in the Phone section */
 .contact--grid div div {
   background-color: unset;
   border: unset;
   box-shadow: unset;
 }
 
+/* Removes general padding from the text inside the contact cards*/
 .contact--grid div div p {
   text-align: center;
   margin: 0px;
 }
 
+/* Phone section taking 3 vertical cells in a 3x2 table */
 .contact--phone {
   grid-row: span 3;
 }
 
+/* Grid defined inside the Socials section to hold the icon and text links  */
 .contact--socialgrid {
   display: grid;
   grid-auto-flow: column;
@@ -1280,10 +1340,12 @@ footer {
   margin: 0 auto;
 }
 
+/* Text inside the Socials section's grid */
 .contact--socialgrid>* {
   text-align: left;
 }
 
+/* Icon for an individual social link */
 .contact--socialgrid img {
   width: 40px;
   user-select: none;

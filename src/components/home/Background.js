@@ -1,13 +1,13 @@
-import React from "react";
-import Particles from "react-particles";
-import { loadFull } from "tsparticles";
-import particlesConfig from "../../particles.json";
-
 // Background displays the animated network background of the site
 
 // Note: A different version of the background was used previously, but
 // was noticed to break in certain browsers and replaced.
 // Its source code is still retained in case the team wishes to reimplement it
+
+import React from "react";
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
+import particlesConfig from "../../particles.json";
 
 export default function Background(props) {
   // React.useEffect(() => {

@@ -1,3 +1,5 @@
+// MobileMenu displays a separate set of Taskbar elements made specially for mobile devices
+
 import React from "react";
 
 import pbLogoSrc from "../../images/logo-white.png";
@@ -11,12 +13,11 @@ import Notifications from "../main/Notifications";
 import Timer from "../main/Timer";
 import SocialMedia from "../main/SocialMedia";
 
-// MobileMenu displays a separate set of Taskbar elements made specially for mobile devices
-
 export default function MobileMenu(props) {
+  // Stores state of visibility of the mobile exclusive panels
   const [mobileToggled, setMobileToggled] = React.useState({
-    shelf: false,
-    sidebar: false,
+    shelf: false, // Bottom toolbar containing all desktop icons
+    sidebar: false, // Sidebar with notifications, countdown
   });
 
   function toggleShelf() {

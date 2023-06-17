@@ -1,11 +1,13 @@
+// Team displays the webpage with the list of names all club members, with
+// HoDs and Board additionally showing their photos, designations and quotes
+
+// Visit teamData.js to update the club members' list
+
 import React from "react";
 
 import teamData from "../data/teamData";
 
 import rightArrow from "../../images/navigation/nav-right.png";
-
-// Team displays the webpage with the list of names all club members, with
-// HoDs and Board additionally showing their photos, designations and quotes
 
 export default function Team() {
   const rawTeamData = React.useState(teamData)[0];

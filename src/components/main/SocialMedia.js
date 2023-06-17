@@ -1,10 +1,11 @@
+// SocialMedia returns the three social links of ProjectBeta in form icon buttons
+
 import React from "react";
 
+// Social Media icons
 import igSrc from "../../images/misc/link-ig.png";
 import ghSrc from "../../images/misc/link-gh.png";
 import fbSrc from "../../images/misc/link-fb.png";
-
-// SocialMedia returns the three social links of ProjectBeta in form icon buttons
 
 export default function SocialMedia() {
   return (

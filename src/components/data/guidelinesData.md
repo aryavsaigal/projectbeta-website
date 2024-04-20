@@ -11,4 +11,4 @@ General Guidelines
     
 *   All individual registration participants are required to carry their school ID card as identity proof.
     
-*   Participants who do not have any event on the 13th are not required to attend the offline symposium. In case they win, certificates will be posted to their school.
+*   Participants who do not have any event on the 10th are not required to attend the offline symposium. In case they win, certificates will be posted to their school.

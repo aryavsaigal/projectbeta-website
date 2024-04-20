@@ -21,7 +21,7 @@ export default function Authority_450() {
         </li>
         <li>
           <p>
-            The event topic will be released on the first day of 6.0,
+            The event topic will be released on the first day of 7.0,
             participants will be given a whole week to prepare their AI{"'"}s.
             The Results will be given on the 13th in the Venue.
           </p>

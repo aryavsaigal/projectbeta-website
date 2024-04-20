@@ -12,6 +12,10 @@
 export const notifData = [
   // Format: { notif:"This is a notification", time: "Jan 1, 2022 12:34:56"}
   {
+    notif: "ProjectBeta 7.0 has started.",
+    time: "May 3, 2024 00:00:00",
+  },
+  {
     notif: "The site has adopted a new, simpler and lighter background.",
     time: "Oct 5, 2022 13:15:00",
   },

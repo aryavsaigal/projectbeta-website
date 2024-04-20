@@ -8,14 +8,12 @@ import React from "react";
 // ^^^ Use this sample image for development purposes
 
 // Sponsor images
-import geeksforgeeksSrc from "../../images/sponsors/geeksforgeeks.png";
 import xyzSrc from "../../images/sponsors/xyz.png";
 
 export default function SponsorFolders(props) {
   // Metadata for the Sponsor buttons
   const currentSponsorsMetadata = React.useState([
     // Format : ["Name of sponsor", SponsorLogo, "sponsor_url"]
-    ["GeeksforGeeks", geeksforgeeksSrc, "https://geeksforgeeks.org"],
     ["xyzdomains", xyzSrc, "https://gen.xyz/"],
   ])[0];
 

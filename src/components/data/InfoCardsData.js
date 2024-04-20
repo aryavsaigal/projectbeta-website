@@ -7,13 +7,13 @@ import invitePdfSrc from "../../PDFs/invite.pdf";
 export function InfoCardYear() {
   return (
     <p>
-      ProjectBeta 6.0 invites out! Click{" "}
+      ProjectBeta 7.0 invites out! Click{" "}
       <a href={invitePdfSrc} target="_blank" rel="noreferrer">
         here
       </a>{" "}
       to view. <br />
       <br />
-      ProjectBeta is back in the year 2022, with its 6th Annual Inter-School
+      ProjectBeta is back in the year 2024, with its 7th Annual Inter-School
       Conference on Technology and Entrepreneurship, bringing along its vast
       wealth of experience while also introducing unprecedented innovation.
       Continuing the tradition of passing on a unique skillset, the tech guild

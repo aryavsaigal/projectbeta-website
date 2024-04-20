@@ -4,7 +4,7 @@
     
 *   Authority\_450 will require knowledge of artificial intelligence algorithms, deep learning and experience in coding.
     
-*   The event topic will be released on the first day of 6.0, participants will be given a whole week to prepare their AI's. The Results will be given on the 13th in the Venue.
+*   The event topic will be released on the first day of 7.0, participants will be given a whole week to prepare their AI's. The Results will be given on the 13th in the Venue.
     
 *   Participants will be restricted to Python and JS.
     

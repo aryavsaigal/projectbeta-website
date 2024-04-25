@@ -42,6 +42,7 @@ import vedantPrakash from "../../images/team/Vedant.jpeg"
 import medhaShrivastava from "../../images/team/Medha.jpg"
 import reyhaanAryan from "../../images/team/Reyhaan.jpg"
 import anmolKumarDabral from "../../images/team/Anmol.jpg"
+import vandanParakh from "../../images/team/Vandan.jpg"
 
 export default function teamData() {
   return {
@@ -116,6 +117,12 @@ export default function teamData() {
         hod: "Surprise",
         img_src: reyhaanAryan,
         quote: ""
+      },
+      {
+        name: "Vandan Parakh",
+        hod: "Web Development",
+        img_src: vandanParakh,
+        quote: "type shit"
       },
       
 

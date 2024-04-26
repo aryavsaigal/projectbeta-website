@@ -35,14 +35,19 @@ import aryavSaigal from "../../images/team/Aryav.jpeg";
 import gauriTandon from "../../images/team/Gauri.jpg";
 import gaurangKhera from "../../images/team/gaurang.png";
 import arnavGarg from "../../images/team/Arnav.jpg";
-import shreyMehra from "../../images/team/Shrey.jpg"
-import arjanMinocha from "../../images/team/Arjan.jpg"
-import naiwritJoyShukla from "../../images/team/Naiwrit.jpg"
-import vedantPrakash from "../../images/team/Vedant.jpeg"
-import medhaShrivastava from "../../images/team/Medha.jpg"
-import reyhaanAryan from "../../images/team/Reyhaan.jpg"
-import anmolKumarDabral from "../../images/team/Anmol.jpg"
-import vandanParakh from "../../images/team/Vandan.jpg"
+import shreyMehra from "../../images/team/Shrey.jpg";
+import arjanMinocha from "../../images/team/Arjan.jpg";
+import naiwritJoyShukla from "../../images/team/Naiwrit.jpg";
+import vedantPrakash from "../../images/team/Vedant.jpeg";
+import medhaShrivastava from "../../images/team/Medha.jpg";
+import reyhaanAryan from "../../images/team/Reyhaan.jpg";
+import anmolKumarDabral from "../../images/team/Anmol.jpg";
+import vandanParakh from "../../images/team/Vandan.jpg";
+import seemonSaraogi from "../../images/team/Seemon.jpg";
+import ishmeetWadhwa from "../../images/team/Ishmeet.png";
+import hardikKhurana from "../../images/team/Hardik.jpg";
+import avikaSingh from "../../images/team/Avika.jpg";
+import bhriguUppal from "../../images/team/undefined.png"
 
 export default function teamData() {
   return {
@@ -67,8 +72,7 @@ export default function teamData() {
         name: "Gaurang Khera",
         hod: "Web Development",
         img_src: gaurangKhera,
-        quote:
-          "checkmate.",
+        quote: "checkmate.",
       },
       {
         name: "Arnav Garg",
@@ -86,46 +90,74 @@ export default function teamData() {
         name: "Arjan Minocha",
         hod: "Gaming",
         img_src: arjanMinocha,
-        quote: "\"I love little kids\" - Dhimant Nath"
+        quote: "Assistant (to the) president",
       },
       {
         name: "Naiwrit Joy Shukla",
         hod: "Gaming",
         img_src: naiwritJoyShukla,
-        quote: "I love little kids"
+        quote: "No",
       },
       {
         name: "Vedant Prakash",
         hod: "Gaming",
         img_src: vedantPrakash,
-        quote: "sMoOoOOoTH oPerAtOrRrR"
+        quote: "sMoOoOOoTH oPerAtOrRrR",
       },
       {
         name: "Medha Shrivastava",
         hod: "Pitching",
         img_src: medhaShrivastava,
-        quote: "Hey there! JavaScript is using me. "
+        quote: "Hey there! JavaScript is using me. ",
       },
       {
         name: "Anmol Kumar Dabral",
         hod: "Robotics and IoT",
         img_src: anmolKumarDabral,
-        quote: ""
+        quote: "When in doubt, look intelligent.",
       },
       {
         name: "Reyhaan Aryan",
         hod: "Surprise",
         img_src: reyhaanAryan,
-        quote: ""
+        quote: "",
       },
       {
         name: "Vandan Parakh",
-        hod: "Web Development",
+        hod: "Web Development & Cryptic Hunt",
         img_src: vandanParakh,
-        quote: "type shit"
+        quote: "type shi",
       },
-      
-
+      {
+        name: "Seemon Saraogi",
+        hod: "Graphic Designing",
+        img_src: seemonSaraogi,
+        quote: "",
+      },
+      {
+        name: "Ishmeet Wadhwa",
+        hod: "Video Editing",
+        img_src: ishmeetWadhwa,
+        quote: "mai gira hoya banda",
+      },
+      {
+        name: "Hardik Khurana",
+        hod: "Cryptic Hunt",
+        img_src: hardikKhurana,
+        quote: "Jack of all master of.....some",
+      },
+      {
+        name: "Avika Singh",
+        hod: "Video Editing",
+        img_src: avikaSingh,
+        quote: "",
+      },
+      {
+        name: "Bhrigu Uppal",
+        hod: "Robotics and IoT",
+        img_src: bhriguUppal,
+        quote: "",
+      },
     ],
     // Enter names of club members in any order; they will be automatically
     // sorted alphabetically

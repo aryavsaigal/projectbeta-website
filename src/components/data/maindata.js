@@ -11,7 +11,7 @@ export const maindata = {
   // Do not change the formatting of the date of the above two fields
 
   registration_link: "https://docs.google.com/forms/d/e/1FAIpQLSco6oM8CcPCOhk7RqqH3WUOX3ZrYGxTVwkGXUOrbYOyF_wV2g/viewform",
-  discord_link: "https://discord.com/invite/E5QMdgkf",
+  discord_link: "https://discord.gg/32SySPwQse",
 
   notif_recent_expiry_duration: 3, // Days for which new notifications are marked recent in panel
 

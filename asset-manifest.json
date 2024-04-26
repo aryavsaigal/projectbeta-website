@@ -1,21 +1,26 @@
 {
   "files": {
     "main.css": "/static/css/main.ffb83c61.css",
-    "main.js": "/static/js/main.9c5ccc7c.js",
+    "main.js": "/static/js/main.689745ba.js",
     "static/media/gaurang.png": "/static/media/gaurang.ec5d3f7225bd5d110875.png",
     "static/media/invite.pdf": "/static/media/invite.667a4c70edb0da7d58fc.pdf",
+    "static/media/Hardik.jpg": "/static/media/Hardik.78f0529a126eaa07943f.jpg",
     "static/media/Medha.jpg": "/static/media/Medha.55ae1f90c2a7a02322fa.jpg",
+    "static/media/Ishmeet.png": "/static/media/Ishmeet.6e741c7ab7018003f600.png",
     "static/media/PBbootup.mp4": "/static/media/PBbootup.c2934ae2a9ae2a768b89.mp4",
     "static/media/Aryav.jpeg": "/static/media/Aryav.9259521098d105723f22.jpeg",
     "static/media/Ubuntu-Regular.ttf": "/static/media/Ubuntu-Regular.1cbb1b79a23478cc89ad.ttf",
     "static/media/infinity_symbol.png": "/static/media/infinity_symbol.5e22a50717237e45f2cf.png",
     "static/media/guidelines.pdf": "/static/media/guidelines.3e31dd80b46ba3dce5cc.pdf",
-    "static/media/schedule.png": "/static/media/schedule.ea131f600b269f2f0675.png",
+    "static/media/Seemon.jpg": "/static/media/Seemon.82fa5148dbeaa0f620cf.jpg",
     "static/media/UbuntuMono-Regular.ttf": "/static/media/UbuntuMono-Regular.9fa7d55c51063608f793.ttf",
+    "static/media/schedule.png": "/static/media/schedule.5ddb7a850aaf0d750f1a.png",
     "static/media/projectremix.png": "/static/media/projectremix.79c5539ee54068b35bb7.png",
+    "static/media/Avika.jpg": "/static/media/Avika.ec2540f3cdc51ce67df5.jpg",
     "static/media/designathon.png": "/static/media/designathon.7a5025add14cc3e54394.png",
     "static/media/Gauri.jpg": "/static/media/Gauri.7fc3523f7acbae5637bd.jpg",
     "static/media/Vedant.jpeg": "/static/media/Vedant.654d8bf552a0db61dd73.jpeg",
+    "static/media/Vandan.jpg": "/static/media/Vandan.d83c765797d11539aadc.jpg",
     "static/media/Arjan.jpg": "/static/media/Arjan.4bc65f4544f7a91f185b.jpg",
     "static/media/Code Pro Light.otf": "/static/media/Code Pro Light.80a66cbd7b0657d3d181.otf",
     "static/media/Arnav.jpg": "/static/media/Arnav.f84c2e5fc68f32146d42.jpg",
@@ -37,12 +42,12 @@
     "static/media/sidequest.png": "/static/media/sidequest.90be53bad5c278185d11.png",
     "static/media/sixtyfourwit.png": "/static/media/sixtyfourwit.d9d5e5473aa28269489d.png",
     "static/media/dualwield.png": "/static/media/dualwield.1cd0daead841720af16e.png",
+    "static/media/alumniData.md": "/static/media/alumniData.585e1111f5205c8fe01b.md",
     "static/media/Hypertext.md": "/static/media/Hypertext.c61a418ca785260e5d7a.md",
     "static/media/Designathon.md": "/static/media/Designathon.86af6257f24afcbb66d4.md",
     "static/media/SixtyFourWit.md": "/static/media/SixtyFourWit.8b487ce315e75e19e9d6.md",
     "index.html": "/index.html",
     "static/media/BetaTest.md": "/static/media/BetaTest.14a82c1d7f8b6558d3e4.md",
-    "static/media/alumniData.md": "/static/media/alumniData.fcd744204cddd4460b38.md",
     "static/media/Authority450.md": "/static/media/Authority450.7a36732435b36385915a.md",
     "static/media/ItsDebatable.md": "/static/media/ItsDebatable.dbfa36fe52ed34a85c85.md",
     "static/media/FunctionOverload.md": "/static/media/FunctionOverload.94bf59294f67aaaa98a8.md",
@@ -51,10 +56,10 @@
     "static/media/ProjectRemix.md": "/static/media/ProjectRemix.b3616c96cd200c94dc71.md",
     "static/media/DualWield.md": "/static/media/DualWield.af5d6abc88a28d6568dc.md",
     "main.ffb83c61.css.map": "/static/css/main.ffb83c61.css.map",
-    "main.9c5ccc7c.js.map": "/static/js/main.9c5ccc7c.js.map"
+    "main.689745ba.js.map": "/static/js/main.689745ba.js.map"
   },
   "entrypoints": [
     "static/css/main.ffb83c61.css",
-    "static/js/main.9c5ccc7c.js"
+    "static/js/main.689745ba.js"
   ]
 }

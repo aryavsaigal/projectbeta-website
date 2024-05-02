@@ -9,7 +9,7 @@ import DesktopButtons from "./DesktopButtons.js";
 
 // Desktop icons
 import desktopSrc from "../../images/folders/desktop.png";
-import folder1Src from "../../images/folders/folder-1.png";
+// import folder1Src from "../../images/folders/folder-1.png";
 import folder2Src from "../../images/folders/folder-2.png";
 import fileImgSrc from "../../images/folders/file-img.png";
 import fileRulesSrc from "../../images/folders/file-rules.png";

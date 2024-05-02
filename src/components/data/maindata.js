@@ -20,7 +20,7 @@ export const maindata = {
 
     ["Gauri Tandon - President", "91 93104 55249", "udontknow.me"], // President
     ["Aryav Saigal - Vice President", "91 95192 41079", "darkdragon532"], // Vice President
-    ["", "", ""], // Secretary
+    // ["", "", ""], // Secretary
     ["Promila Sang - Faculty In-charge", "91 99687 21909"], // Faculty In-charge
     ["Punita Ahuja - Faculty In-charge", "91 98102 44730"], // Faculty In-charge
 

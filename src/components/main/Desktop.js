@@ -20,7 +20,7 @@ import fileContactSrc from "../../images/folders/file-contact.png";
 export default function Desktop(props) {
   const desktopButtonData = [
     { src: desktopSrc, buttonName: "Desktop" },
-    { src: folder1Src, buttonName: "Events" },
+    // { src: folder1Src, buttonName: "Events" },
     { src: fileRulesSrc, buttonName: "Guidelines.txt" },
     { src: fileImgSrc, buttonName: "Schedule.png" },
     { src: folder2Src, buttonName: "Sponsors" },

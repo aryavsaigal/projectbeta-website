@@ -63,7 +63,7 @@ export default function teamData() {
         name: "Aryav Saigal",
         hod: "Programming and Cryptic Hunt",
         img_src: aryavSaigal,
-        quote: "i love cp",
+        quote: "One-Pint Blue Bell Mint Chocolate Chip Every Friday",
         title: "Vice President",
       },
     ],
@@ -206,6 +206,7 @@ export default function teamData() {
       "Anvee Choudary",
       "Kashvi Pathak",
       "Arnav Garg",
+      "Shaurya Pratap Singh",
     ].sort(),
   };
 }
